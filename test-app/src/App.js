@@ -1,25 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+function Profile() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <img className=" rounded-full w-[100px]"
+      src="https://i.imgur.com/MK3eW3Am.jpg"
+      alt="Katherine Johnson"
+    />
+  )
 }
 
-export default App;
+export default function Gallery() {
+  return (
+    <div>
+      <h1 className="text-4xl text-gray-400">Amazing Scientist</h1>
+      <div className="flex space-x-8 p-8">
+        <Profile />
+        <Profile />
+        <Profile />
+      </div>
+    </div>
+  )
+}
