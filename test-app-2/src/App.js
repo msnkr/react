@@ -17,15 +17,15 @@ export default function Images() {
   return (
     <div className="flex space-x-8 justify-center mt-20">
       <img
-        className="w-[200px]"
+        className="w-[200px] rounded-xl"
         src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       />
       <img
-        className="w-[200px]"
+        className="w-[200px] rounded-xl"
         src="https://images.pexels.com/photos/115655/pexels-photo-115655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       />
       <img
-        className="w-[200px]"
+        className="w-[200px] rounded-xl"
         src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
       />
     </div>
