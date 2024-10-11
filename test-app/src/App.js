@@ -1,31 +1,24 @@
-
-const baseUrl = 'https://i.imgur.com/';
-const person = {
-  name: 'Gregorio Y. Zara',
-  imageId: '7vQD0fP',
-  imageSize: 'b',
-  theme: {
-    backgroundColor: 'black',
-    color: 'pink'
-  }
-};
-
-const url = baseUrl + person.imageId + person.imageSize + ".jpg"
-
-export default function TodoList() {
+function Drink({ name }) {
   return (
-    <div style={person.theme}>
-      <h1>{person.name}'s Todos</h1>
-      <img
-        className="avatar"
-        src={url}
-        alt={person.name}
-      />
-      <ul>
-        <li>Improve the videophone</li>
-        <li>Prepare aeronautics lectures</li>
-        <li>Work on the alcohol-fuelled engine</li>
-      </ul>
+    <section>
+      <h1>{name}</h1>
+      <dl>
+        <dt>Part of plant</dt>
+        <dd>{name === 'tea' ? 'leaf' : 'bean'}</dd>
+        <dt>Caffeine content</dt>
+        <dd>{name === 'tea' ? '15–70 mg/cup' : '80–185 mg/cup'}</dd>
+        <dt>Age</dt>
+        <dd>{name === 'tea' ? '4,000+ years' : '1,000+ years'}</dd>
+      </dl>
+    </section>
+  );
+}
+
+export default function DrinkList() {
+  return (
+    <div>
+      <Drink name="tea" />
+      <Drink name="coffee" />
     </div>
   );
 }
