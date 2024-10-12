@@ -32,16 +32,27 @@
 //   );
 // }
 
-let year = new Date();
-const name = "msn";
+// let year = new Date();
+// const name = "msn";
+
+// export default function App() {
+//   return (
+//     <div className="mt-20 ml-20">
+//       <h1 className="text-2xl font-semibold">
+//         Created by <span className="text-red-300">{name}</span>
+//       </h1>
+//       <p className="font-xs text-gray-400">Copyright: {year.getFullYear()}</p>
+//     </div>
+//   );
+// }
 
 export default function App() {
   return (
-    <div className="mt-20 ml-20">
-      <h1 className="text-2xl font-semibold">
-        Created by <span className="text-red-300">{name}</span>
+    <div>
+      <h1 style={{ color: "green", padding: "12px", fontSize: "24px" }}>
+        Hello, World!
       </h1>
-      <p className="font-xs text-gray-400">Copyright: {year.getFullYear()}</p>
+      <p></p>
     </div>
   );
 }
