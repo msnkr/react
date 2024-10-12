@@ -46,14 +46,27 @@
 //   );
 // }
 
-import { ShowDate } from "./ShowDate";
+// import { ShowDate } from "./ShowDate";
+
+// export default function App() {
+//   return (
+//     <div>
+//       <p>
+//         <ShowDate />
+//       </p>
+//     </div>
+//   );
+// }
+
+import { Add, Multiply, Subtract, Divide } from "./Math";
 
 export default function App() {
   return (
-    <div>
-      <p>
-        <ShowDate />
-      </p>
-    </div>
+    <ul>
+      <li>{Add(1, 2)}</li>
+      <li>{Multiply(2, 3)}</li>
+      <li>{Subtract(7, 2)}</li>
+      <li>{Divide(5, 2)}</li>
+    </ul>
   );
 }
