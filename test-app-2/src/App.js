@@ -58,15 +58,66 @@
 //   );
 // }
 
-import { Add, Multiply, Subtract, Divide } from "./Math";
+// import { Add, Multiply, Subtract, Divide } from "./Math";
+
+// export default function App() {
+//   return (
+//     <ul>
+//       <li>{Add(1, 2)}</li>
+//       <li>{Multiply(2, 3)}</li>
+//       <li>{Subtract(7, 2)}</li>
+//       <li>{Divide(5, 2)}</li>
+//     </ul>
+//   );
+// }
+
+// function Card(props) {
+//   return (
+//     <div>
+//       <h2>{props.name}</h2>
+//       <img src={props.img} className="w-[300px]" alt="avatar_img" />
+//       <p>{props.number}</p>
+//       <p>{props.email}</p>
+//     </div>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <div className="mt-16 ml-16">
+//       <h1>My Contacts</h1>
+//       <div className="flex space-x-8">
+//         <Card
+//           name="Beyonce"
+//           img="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+//           number="+123 456 789"
+//           email="b@beyonce.com"
+//         />
+//         <Card
+//           name="Gustavo"
+//           img="https://avatars.githubusercontent.com/u/93255737"
+//           number="+23 123 7262"
+//           email="Gustavo@testmail.com"
+//         />
+//       </div>
+//     </div>
+//   );
+// }
+
+import "./styles.css";
+import { Card } from "./components/Card";
+import { contacts } from "./components/Contact";
 
 export default function App() {
   return (
-    <ul>
-      <li>{Add(1, 2)}</li>
-      <li>{Multiply(2, 3)}</li>
-      <li>{Subtract(7, 2)}</li>
-      <li>{Divide(5, 2)}</li>
-    </ul>
+    <div>
+      <h1 className="heading">My Contacts</h1>
+      <Card
+        name="Beyonce"
+        image="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+        number="+123 456 789"
+        email="b@beyonce.com"
+      />
+    </div>
   );
 }
