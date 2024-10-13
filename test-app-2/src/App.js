@@ -106,18 +106,29 @@
 
 import "./styles.css";
 import { Card } from "./components/Card";
-import { LoopContact } from "./components/LoopContact";
+import { contacts } from "./components/Contact";
 
 export default function App() {
-  <LoopContact />;
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
       <Card
-        name="Beyonce"
-        image="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-        number="+123 456 789"
-        email="b@beyonce.com"
+        name={contacts[0].name}
+        image={contacts[0].imgURL}
+        number={contacts[0].phone}
+        email={contacts[0].email}
+      />
+      <Card
+        name={contacts[1].name}
+        image={contacts[1].imgURL}
+        number={contacts[1].phone}
+        email={contacts[1].email}
+      />
+      <Card
+        name={contacts[2].name}
+        image={contacts[2].imgURL}
+        number={contacts[2].phone}
+        email={contacts[2].email}
       />
     </div>
   );
