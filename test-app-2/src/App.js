@@ -106,9 +106,10 @@
 
 import "./styles.css";
 import { Card } from "./components/Card";
-import { contacts } from "./components/Contact";
+import { LoopContact } from "./components/LoopContact";
 
 export default function App() {
+  <LoopContact />;
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
