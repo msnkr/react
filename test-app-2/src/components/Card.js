@@ -6,8 +6,8 @@ export function Card(props) {
         <img src={props.image} className="circle-img" />
       </div>
       <div className="bottom">
-        <p>{props.number}</p>
-        <p>{props.email}</p>
+        <p className="info">{props.number}</p>
+        <p className="info">{props.email}</p>
       </div>
     </div>
   );
