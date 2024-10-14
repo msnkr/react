@@ -92,7 +92,7 @@ function ShowImages({ imageArr }) {
         {imageArr.map((image, index) => (
           <div key={index}>
             <img
-              className="rounded-xl shadow-lg"
+              className="rounded-xl hover:shadow-2xl transistion duration-500 ease-in-out"
               src={image}
               alt="random image"
             />
