@@ -77,36 +77,36 @@
 //     )
 // }
 
-let imageArr = [];
+// let imageArr = [];
 
-for (let index = 0; index < 100; index++) {
-  let random = Math.floor(Math.random() * 1000);
-  let image = "https://picsum.photos/300/300?random=" + random;
-  imageArr.push(image);
-}
+// for (let index = 0; index < 100; index++) {
+//   let random = Math.floor(Math.random() * 1000);
+//   let image = "https://picsum.photos/300/300?random=" + random;
+//   imageArr.push(image);
+// }
 
-function ShowImages({ imageArr }) {
-  return (
-    <div>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-10">
-        {imageArr.map((image, index) => (
-          <div key={index}>
-            <img
-              className="rounded-xl hover:shadow-2xl transistion duration-500 ease-in-out"
-              src={image}
-              alt="random image"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+// function ShowImages({ imageArr }) {
+//   return (
+//     <div>
+//       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-10">
+//         {imageArr.map((image, index) => (
+//           <div key={index}>
+//             <img
+//               className="rounded-xl hover:shadow-2xl transistion duration-500 ease-in-out"
+//               src={image}
+//               alt="random image"
+//             />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
 
-export default function App() {
-  return (
-    <div className="p-8">
-      <ShowImages imageArr={imageArr} />
-    </div>
-  );
-}
+// export default function App() {
+//   return (
+//     <div className="p-8">
+//       <ShowImages imageArr={imageArr} />
+//     </div>
+//   );
+// }
