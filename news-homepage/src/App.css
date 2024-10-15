@@ -11,24 +11,40 @@ body {
   padding: 24px;
 }
 
+.icon {
+  cursor: pointer;
+}
+
 .navbar-list {
   display: none;
 }
 
-.section-1 {
+.navbar-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin: 12px 0 12px 0;
 }
 
-.section-1 .logo-file {
+.navbar-section .logo-file {
   font-size: 42px;
 }
 
-.section-2-img {
-  background-image: url("../public/images/image-web-3-desktop.jpg");
+.hero-section {
+  margin: 12px 0 12px 0;
+}
+
+.hero-section img {
   max-width: 100%;
-  height: 500px;
+  height: auto;
+}
+
+.hero-section-wording {
+  margin: 12px 0 12px 0;
+}
+
+.wording-component {
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 150%;
 }
