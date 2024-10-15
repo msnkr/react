@@ -24,6 +24,9 @@ function App() {
           <button className="uppercase font-lg bg-orange-600 px-8 py-2 font-bold">Read More</button>
         </div>
       </div>
+      <div className="new-section">
+
+      </div>
     </div>
   );
 }
