@@ -22,6 +22,14 @@ body {
   text-align: end;
 }
 
+.burger-icon {
+  display: block;
+}
+
+.burger-icon.clicked {
+  display: none;
+}
+
 .close {
   position: absolute;
   top: 6px;
@@ -29,7 +37,13 @@ body {
   display: none;
 }
 
+.close.clicked {
+  display: block;
+  z-index: 1;
+}
+
 .navbar-list {
+  z-index: 0;
   display: none;
   list-style-type: none;
   position: absolute;
@@ -46,6 +60,10 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin: 18px 0;
+}
+
+.navbar-list.clicked {
+  display: block;
 }
 
 .navbar-section {

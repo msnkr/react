@@ -26,7 +26,7 @@ export function Navbar() {
         </svg>
       </div>
       <div>
-        <ul className="navbar-list clicked">
+        <ul className="navbar-list">
           <li className="list-item">Home</li>
           <li className="list-item">New</li>
           <li className="list-item">Popular</li>
