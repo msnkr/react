@@ -1,3 +1,19 @@
+const handleClick = () => {
+  let burgerIcon = document.querySelector(".burger-icon");
+  let closeIcon = document.querySelector(".close");
+  let navList = document.querySelector(".navbar-list");
+  burgerIcon.addEventListener("click", () => {
+    burgerIcon.classList.add("clicked");
+    closeIcon.classList.add("clicked");
+    navList.classList.add("clicked");
+  });
+  closeIcon.addEventListener("click", () => {
+    burgerIcon.classList.remove("clicked");
+    closeIcon.classList.remove("clicked");
+    navList.classList.remove("clicked");
+  });
+};
+
 export function Navbar() {
   return (
     <div>
@@ -7,6 +23,7 @@ export function Navbar() {
           width="40"
           height="17"
           xmlns="http://www.w3.org/2000/svg"
+          onClick={handleClick}
         >
           <g fill="#00001A" fill-rule="evenodd">
             <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
