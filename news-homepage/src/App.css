@@ -13,12 +13,39 @@ body {
   background-color: hsl(36, 100%, 99%);
 }
 
+.navbar-section {
+  position: relative;
+}
+
 .icon {
   cursor: pointer;
+  text-align: end;
+}
+
+.close {
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  display: none;
 }
 
 .navbar-list {
   display: none;
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  text-align: start;
+  background-color: hsl(36, 100%, 99%);
+  width: 70%;
+  height: 100vh;
+  padding-top: 50%;
+  padding-left: 18px;
+}
+
+.list-item {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 18px 0;
 }
 
 .navbar-section {
