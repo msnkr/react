@@ -1,6 +1,5 @@
 // https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl
 
-
 import Navbar from "./components/navbar";
 import HeroImage from "./images/image-web-3-mobile.jpg";
 
@@ -15,17 +14,27 @@ function App() {
           <img src={HeroImage} />
         </div>
         <div className="hero-heading px-8 py-2">
-          <h1 className="text-5xl w-[80%] font-bold capitalize">The bright future of web 3.0?</h1>
+          <h1 className="text-5xl w-[80%] font-bold capitalize">
+            The bright future of web 3.0?
+          </h1>
         </div>
         <div className="hero-wording px-8 py-2 text-lg text-gray-400">
-          <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
         </div>
         <div className="hero-button px-8 py-2">
-          <button className="uppercase font-lg bg-orange-600 px-8 py-2 font-bold">Read More</button>
+          <button className="uppercase font-lg bg-orange-600 px-8 py-2 font-bold">
+            Read More
+          </button>
         </div>
       </div>
       <div className="new-section">
-
+        <div className="new">
+          <NewSection />
+        </div>
       </div>
     </div>
   );
