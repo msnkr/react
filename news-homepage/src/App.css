@@ -41,14 +41,14 @@ body {
   height: auto;
 }
 
-.hero-section-wording {
-  margin: 12px 0 12px 0;
+.hero-section .heading-component {
+  margin: 20px 0 0 0;
+  font-size: 46px;
+  width: 80%;
 }
 
-.wording-component {
-  font-weight: 300;
-  letter-spacing: 1px;
-  line-height: 150%;
+.hero-section .wording-component {
+  margin: 12px 0;
 }
 
 .section-2 {
@@ -97,7 +97,8 @@ body {
 }
 
 .cards-2-wording {
-  padding: 0 18px;
+  padding: 4px 18px;
+  margin-left: 22px;
 }
 
 .cards-2 .heading-component {
@@ -110,6 +111,7 @@ body {
   position: absolute;
   top: 0;
   font-weight: 900;
+  padding: 2px 0;
 }
 
 .button-component {
@@ -118,5 +120,5 @@ body {
   font-size: 18px;
   font-weight: 600;
   border: none;
-  margin-bottom: 40px;
+  margin: 20px 0 20px 0;
 }
