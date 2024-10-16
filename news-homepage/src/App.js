@@ -48,23 +48,39 @@ function App() {
           />
           <div className="w-full h-[2px] bg-black"></div>
           <NewSection
-            heading={"New Hydrogen VS Electric Cars"}
-            wording={"Will hydrogen-fueled cars ever catch up to EVs?"}
+            heading={"The Downsides of AI Artistry"}
+            wording={
+              "What are the possible adverse effects of on-demand AI image generation?"
+            }
           />
           <div className="w-full h-[2px] bg-black"></div>
           <NewSection
-            heading={"New Hydrogen VS Electric Cars"}
-            wording={"Will hydrogen-fueled cars ever catch up to EVs?"}
+            heading={"Is VC Funding Drying Up?"}
+            wording={
+              "Private funding by VC firms is down 50% YOY. We take a look at what that means."
+            }
           />
         </div>
       </div>
       <div className="card-section">
-        <div className="card-list">
+        <div className="card-list p-8 space-y-2">
           <ShowCard
             img={Card1}
             number={"01"}
             title={"Reviving Retro PCs"}
             text={"What happens when old PCs are given modern upgrades?"}
+          />
+          <ShowCard
+            img={Card2}
+            number={"02"}
+            title={"Top 10 Laptops of 2022"}
+            text={"Our best picks for various needs and budgets."}
+          />
+          <ShowCard
+            img={Card3}
+            number={"03"}
+            title={"The Growth of Gaming"}
+            text={"How the pandemic has sparked fresh opportunities."}
           />
         </div>
       </div>
