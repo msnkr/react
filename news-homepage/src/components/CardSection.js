@@ -1,11 +1,11 @@
 function ShowCard({ img, number, title, text }) {
   return (
     <div className="card-section">
-      <div className="card flex items-end">
+      <div className="card grid grid-cols-3  items-end">
         <div className="card-image">
           <img src={img} alt="card-image" />
         </div>
-        <div className="card-text ml-8 space-y-3">
+        <div className="card-text ml-8 space-y-3 col-span-2">
           <div className="card-number">
             <h1 className="text-4xl font-bold text-soft-red">{number}</h1>
           </div>
