@@ -12,11 +12,11 @@ import Card3 from "./images/image-gaming-growth.jpg";
 
 function App() {
   return (
-    <div className="font-customFont lg:p-8">
+    <div className="font-customFont lg:p-8 xl:px-[200px] xl:pt-4">
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="desktop-flex lg:flex lg:px-8 pt-2">
+      <div className="desktop-flex lg:flex lg:px-8 xl:px-18 pt-2">
         <div className="hero-section">
           <div className="img-container px-4">
             <img className="lg:hidden" src={HeroImage} alt="homepage" />
@@ -76,7 +76,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="card-section">
+      <div className="card-section lg:px-8">
         <div className="card-list p-8 space-y-2 lg:space-y-0 lg:grid grid-cols-3 lg:space-x-8">
           <ShowCard
             img={Card1}
