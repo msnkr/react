@@ -16,7 +16,7 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="desktop-flex lg:flex lg:p-8">
+      <div className="desktop-flex lg:flex lg:px-8 pt-2">
         <div className="hero-section">
           <div className="img-container px-4">
             <img className="lg:hidden" src={HeroImage} alt="homepage" />
@@ -77,7 +77,7 @@ function App() {
         </div>
       </div>
       <div className="card-section">
-        <div className="card-list p-8 space-y-2 lg:space-y-0 lg:grid grid-cols-3 lg:space-x-0">
+        <div className="card-list p-8 space-y-2 lg:space-y-0 lg:grid grid-cols-3 lg:space-x-8">
           <ShowCard
             img={Card1}
             number={"01"}
