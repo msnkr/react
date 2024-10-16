@@ -1,6 +1,22 @@
+const burgerIcon = document.querySelector(".burger-icon");
+const closeIcon = document.querySelector(".close-icon");
+const navbarList = document.querySelector(".nav-list");
+
+function OpenNavbar() {
+  burgerIcon.classList.add("hidden");
+  closeIcon.classList.remove("hidden");
+  navbarList.classList.remove("hidden");
+}
+
+function CloseNavbar() {
+  burgerIcon.classList.remove("hidden");
+  closeIcon.classList.add("hidden");
+  navbarList.classList.add("hidden");
+}
+
 function Navbar() {
   return (
-    <div className="flex justify-between p-8 items-center">
+    <div className="flex justify-between p-8 items-center relative">
       <div className="logo-container">
         <svg
           className="cursor-pointer"
@@ -15,7 +31,7 @@ function Navbar() {
         </svg>
       </div>
       <div>
-        <div className="burger-icon">
+        <div className="burger-icon" onClick={OpenNavbar}>
           <svg
             className="cursor-pointer"
             width="40"
@@ -30,7 +46,8 @@ function Navbar() {
         </div>
         <div>
           <svg
-            className="hidden"
+            className="close-icon z-50 absolute top-8 right-8 cursor-pointer hidden"
+            onClick={CloseNavbar}
             width="32"
             height="31"
             xmlns="http://www.w3.org/2000/svg"
@@ -42,13 +59,25 @@ function Navbar() {
           </svg>
         </div>
         <div>
-          <ul className="hidden">
-            <li>Home</li>
-            <li>New</li>
-            <li>Popular</li>
-            <li>Trending</li>
-            <li>Categories</li>
-          </ul>
+          <div className="bg-off-white h-screen w-[400px] absolute top-0 right-0 -z-0 nav-list hidden">
+            <ul className="mt-[200px] text-xl font-semibold space-y-6 px-8 flex flex-col">
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+                Home
+              </li>
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+                New
+              </li>
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+                Popular
+              </li>
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+                Trending
+              </li>
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+                Categories
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
