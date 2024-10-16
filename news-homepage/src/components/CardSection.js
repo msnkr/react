@@ -9,7 +9,7 @@ function ShowCard({ img, number, title, text }) {
           <div className="card-number">
             <h1 className="text-4xl font-bold text-soft-red">{number}</h1>
           </div>
-          <div className="card-heading text-very-dark-blue">
+          <div className="card-heading text-very-dark-blue ">
             <h1 className="font-semibold text-xl text-very-dark-blue">
               {title}
             </h1>
