@@ -31,7 +31,7 @@ function Navbar() {
         </svg>
       </div>
       <div>
-        <div className="burger-icon" onClick={OpenNavbar}>
+        <div className="burger-icon lg:hidden" onClick={OpenNavbar}>
           <svg
             className="cursor-pointer"
             width="40"
@@ -46,7 +46,7 @@ function Navbar() {
         </div>
         <div>
           <svg
-            className="close-icon z-50 absolute top-8 right-8 cursor-pointer hidden opacity-0 transistion duration-500"
+            className="close-icon z-50 absolute top-8 right-8 cursor-pointer hidden"
             onClick={CloseNavbar}
             width="32"
             height="31"
@@ -59,21 +59,21 @@ function Navbar() {
           </svg>
         </div>
         <div>
-          <div className="bg-off-white h-screen w-[400px] absolute top-0 right-0 -z-0 nav-list hidden">
-            <ul className="mt-[200px] text-xl font-semibold space-y-6 px-8 flex flex-col">
-              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+          <div className="bg-off-white h-screen w-[400px] absolute top-0 right-0 -z-0 nav-list hidden lg:block lg:h-0">
+            <ul className="mt-[200px] text-lg text-dark-grayish-blue space-y-6 px-8 flex flex-col lg:flex-row lg:mt-8 lg:space-x-8 lg:space-y-0 lg:absolute top-0 right-9">
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-dark-grayish-blue transition duration-500">
                 Home
               </li>
-              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-dark-grayish-blue transition duration-500">
                 New
               </li>
-              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-dark-grayish-blue transition duration-500">
                 Popular
               </li>
-              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-dark-grayish-blue transition duration-500">
                 Trending
               </li>
-              <li className="cursor-pointer border-b-2 border-off-white hover:border-very-dark-blue transition duration-500">
+              <li className="cursor-pointer border-b-2 border-off-white hover:border-dark-grayish-blue transition duration-500">
                 Categories
               </li>
             </ul>
