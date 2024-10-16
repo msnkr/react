@@ -3,6 +3,11 @@
 import Navbar from "./components/navbar";
 import HeroImage from "./images/image-web-3-mobile.jpg";
 import NewSection from "./components/NewSection";
+import ShowCard from "./components/CardSection";
+
+import Card1 from "./images/image-retro-pcs.jpg";
+import Card2 from "./images/image-top-laptops.jpg";
+import Card3 from "./images/image-gaming-growth.jpg";
 
 function App() {
   return (
@@ -32,11 +37,34 @@ function App() {
           </button>
         </div>
       </div>
-      <div className="new-section">
-        <div className="new">
+      <div className="new-section p-8 bg-gray-300">
+        <div className="heading">
+          <h1 className="mb-4 text-4xl font-semibold">New</h1>
+        </div>
+        <div className="new space-y-5">
           <NewSection
             heading={"New Hydrogen VS Electric Cars"}
             wording={"Will hydrogen-fueled cars ever catch up to EVs?"}
+          />
+          <div className="w-full h-[2px] bg-black"></div>
+          <NewSection
+            heading={"New Hydrogen VS Electric Cars"}
+            wording={"Will hydrogen-fueled cars ever catch up to EVs?"}
+          />
+          <div className="w-full h-[2px] bg-black"></div>
+          <NewSection
+            heading={"New Hydrogen VS Electric Cars"}
+            wording={"Will hydrogen-fueled cars ever catch up to EVs?"}
+          />
+        </div>
+      </div>
+      <div className="card-section">
+        <div className="card-list">
+          <ShowCard
+            img={Card1}
+            number={"01"}
+            title={"Reviving Retro PCs"}
+            text={"What happens when old PCs are given modern upgrades?"}
           />
         </div>
       </div>
