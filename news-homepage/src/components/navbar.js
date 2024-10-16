@@ -46,7 +46,7 @@ function Navbar() {
         </div>
         <div>
           <svg
-            className="close-icon z-50 absolute top-8 right-8 cursor-pointer hidden"
+            className="close-icon z-50 absolute top-8 right-8 cursor-pointer hidden opacity-0 transistion duration-500"
             onClick={CloseNavbar}
             width="32"
             height="31"
