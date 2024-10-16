@@ -2,6 +2,7 @@
 
 import Navbar from "./components/navbar";
 import HeroImage from "./images/image-web-3-mobile.jpg";
+import NewSection from "./components/NewSection";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       </div>
       <div className="hero-section">
         <div className="img-container px-4">
-          <img src={HeroImage} />
+          <img src={HeroImage} alt="homepage" />
         </div>
         <div className="hero-heading px-8 py-2">
           <h1 className="text-5xl w-[80%] font-bold capitalize">
@@ -33,7 +34,10 @@ function App() {
       </div>
       <div className="new-section">
         <div className="new">
-          <NewSection />
+          <NewSection
+            heading={"New Hydrogen VS Electric Cars"}
+            wording={"Will hydrogen-fueled cars ever catch up to EVs?"}
+          />
         </div>
       </div>
     </div>
