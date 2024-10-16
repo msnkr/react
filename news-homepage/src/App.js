@@ -19,41 +19,41 @@ function App() {
         <div className="img-container px-4">
           <img src={HeroImage} alt="homepage" />
         </div>
-        <div className="hero-heading px-8 py-2">
-          <h1 className="text-5xl w-[80%] font-bold capitalize">
+        <div className="hero-heading px-8 py-2 mt-4">
+          <h1 className="text-5xl w-[80%] font-bold capitalize text-very-dark-blue">
             The bright future of web 3.0?
           </h1>
         </div>
-        <div className="hero-wording px-8 py-2 text-lg text-gray-400">
+        <div className="hero-wording px-8 py-2 text-lg text-dark-grayish-blue">
           <p>
             We dive into the next evolution of the web that claims to put the
             power of the platforms back into the hands of the people. But is it
             really fulfilling its promise?
           </p>
         </div>
-        <div className="hero-button px-8 py-2">
-          <button className="uppercase font-lg bg-orange-600 px-8 py-2 font-bold">
+        <div className="hero-button px-8 py-2 mb-4">
+          <button className="uppercase font-lg bg-soft-red px-8 py-2 font-bold text-very-dark-blue">
             Read More
           </button>
         </div>
       </div>
-      <div className="new-section p-8 bg-gray-300">
+      <div className="new-section px-8 py-9 bg-very-dark-blue">
         <div className="heading">
-          <h1 className="mb-4 text-4xl font-semibold">New</h1>
+          <h1 className="mb-4 text-4xl font-semibold text-soft-orange">New</h1>
         </div>
         <div className="new space-y-5">
           <NewSection
             heading={"New Hydrogen VS Electric Cars"}
             wording={"Will hydrogen-fueled cars ever catch up to EVs?"}
           />
-          <div className="w-full h-[2px] bg-black"></div>
+          <div className="w-full h-[2px] bg-off-white"></div>
           <NewSection
             heading={"The Downsides of AI Artistry"}
             wording={
               "What are the possible adverse effects of on-demand AI image generation?"
             }
           />
-          <div className="w-full h-[2px] bg-black"></div>
+          <div className="w-full h-[2px] bg-off-white"></div>
           <NewSection
             heading={"Is VC Funding Drying Up?"}
             wording={
