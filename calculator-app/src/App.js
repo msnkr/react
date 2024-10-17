@@ -8,7 +8,7 @@ import CurrentTasks from "./components/CurrentTasks";
 function App() {
   return (
     <div>
-      <div className="main-container font-customFont">
+      <div className="main-container font-customFont relative">
         <div className="background-container">
           <img className="w-full" src={backgroundImage} alt="home" />
         </div>
