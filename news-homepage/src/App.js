@@ -50,9 +50,7 @@ function App() {
         </div>
         <div className="new-section px-8 py-9 bg-very-dark-blue">
           <div className="heading">
-            <h1 className="mb-4 text-4xl font-semibold text-soft-orange">
-              New
-            </h1>
+            <h1 className="mb-4 text-4xl font-semibold text-soft-red">New</h1>
           </div>
           <div className="new space-y-5">
             <NewSection

@@ -1,14 +1,16 @@
-const burgerIcon = document.querySelector(".burger-icon");
-const closeIcon = document.querySelector(".close-icon");
-const navbarList = document.querySelector(".nav-list");
-
 function OpenNavbar() {
+  const burgerIcon = document.querySelector(".burger-icon");
+  const closeIcon = document.querySelector(".close-icon");
+  const navbarList = document.querySelector(".nav-list");
   burgerIcon.classList.add("hidden");
   closeIcon.classList.remove("hidden");
   navbarList.classList.remove("hidden");
 }
 
 function CloseNavbar() {
+  const burgerIcon = document.querySelector(".burger-icon");
+  const closeIcon = document.querySelector(".close-icon");
+  const navbarList = document.querySelector(".nav-list");
   burgerIcon.classList.remove("hidden");
   closeIcon.classList.add("hidden");
   navbarList.classList.add("hidden");

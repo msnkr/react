@@ -16,7 +16,7 @@ function ShowCard({ img, number, title, text }) {
             </h1>
           </div>
           <div className="card-heading text-very-dark-blue ">
-            <h1 className="font-semibold text-xl lg:text-lg text-very-dark-blue">
+            <h1 className="font-semibold text-xl lg:text-lg text-very-dark-blue cursor-pointer">
               {title}
             </h1>
           </div>
