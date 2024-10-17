@@ -2,13 +2,13 @@ function LogoComponent() {
   return (
     <div className="logo-main">
       <div className="logo">
-        <h1 className="uppercase tracking-widest font-semibold text-white text-4xl absolute top-8 left-8">
+        <h1 className="uppercase tracking-widest font-semibold text-white text-4xl absolute top-8 left-8 cursor-pointer">
           Todo
         </h1>
       </div>
       <div className="mode-container">
         <svg
-          className="absolute top-8 right-8"
+          className="absolute top-8 right-8 cursor-pointer"
           xmlns="http://www.w3.org/2000/svg"
           width="26"
           height="26"
