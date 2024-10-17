@@ -8,7 +8,7 @@ import CurrentTasks from "./components/CurrentTasks";
 function App() {
   return (
     <div>
-      <div className="main-container font-customFont relative">
+      <div className="main-container font-customFont">
         <div className="background-container">
           <img className="w-full" src={backgroundImage} alt="home" />
         </div>
@@ -18,7 +18,7 @@ function App() {
         <div className="create-task-container">
           <CreateTask />
         </div>
-        <div className="current-tasks mt-[100px] text-center">
+        <div className="current-tasks mt-[100px] text-center relative">
           <CurrentTasks prop={"get cheese"} />
         </div>
       </div>

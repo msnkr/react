@@ -1,14 +1,10 @@
 function CreateTask() {
   return (
-    <div className="create-task-container flex">
-      <div className="check-icon-container"></div>
-      <div className="input-container">
-        <input
-          type="text"
-          className="w-4/5 h-[60px] rounded-xl bg-very-dark-desaturated-blue focus:outline-none focus:text-white absolute top-1/4 right-1/2 translate translate-x-1/2 text-center font-semibold tracking-wider"
-          placeholder="Create a new todo"
-        />
-      </div>
+    <div>
+      <input
+        className="w-3/4 h-[60px] bg-very-dark-desaturated-blue rounded-xl pl-4 absolute top-0 mt-[240px] left-1/2 translate -translate-x-1/2 focus:outline-none"
+        placeholder="Enter a todo"
+      />
     </div>
   );
 }
