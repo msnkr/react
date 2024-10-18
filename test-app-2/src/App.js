@@ -104,32 +104,42 @@
 //   );
 // }
 
-import "./styles.css";
-import { Card } from "./components/Card";
-import { contacts } from "./components/Contact";
+// import "./styles.css";
+// import { Card } from "./components/Card";
+// import { contacts } from "./components/Contact";
 
-export default function App() {
+// export default function App() {
+//   return (
+//     <div>
+//       <h1 className="heading">My Contacts</h1>
+//       <Card
+//         name={contacts[0].name}
+//         image={contacts[0].imgURL}
+//         number={contacts[0].phone}
+//         email={contacts[0].email}
+//       />
+//       <Card
+//         name={contacts[1].name}
+//         image={contacts[1].imgURL}
+//         number={contacts[1].phone}
+//         email={contacts[1].email}
+//       />
+//       <Card
+//         name={contacts[2].name}
+//         image={contacts[2].imgURL}
+//         number={contacts[2].phone}
+//         email={contacts[2].email}
+//       />
+//     </div>
+//   );
+// }
+
+function App() {
   return (
-    <div>
-      <h1 className="heading">My Contacts</h1>
-      <Card
-        name={contacts[0].name}
-        image={contacts[0].imgURL}
-        number={contacts[0].phone}
-        email={contacts[0].email}
-      />
-      <Card
-        name={contacts[1].name}
-        image={contacts[1].imgURL}
-        number={contacts[1].phone}
-        email={contacts[1].email}
-      />
-      <Card
-        name={contacts[2].name}
-        image={contacts[2].imgURL}
-        number={contacts[2].phone}
-        email={contacts[2].email}
-      />
-    </div>
+    <>
+      <h1>Hello, World!</h1>
+    </>
   );
 }
+
+export default App;
