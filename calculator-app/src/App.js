@@ -18,8 +18,11 @@ function App() {
         <div className="create-task-container">
           <CreateTask />
         </div>
-        <div className="current-tasks mt-[100px] text-center flex flex-col justify-center bg-very-dark-desaturated-blue p-4 w-3/4 mx-auto rounded-xl pb-8 space-y-4">
+        <div className="current-tasks mt-[100px] text-center flex flex-col justify-center bg-very-dark-desaturated-blue p-4 w-3/4 mx-auto rounded-xl pb-4 space-y-8">
           <CurrentTasks prop={"get bepsi"} />
+          <CurrentTasks prop={"get carpet tape"} />
+          <CurrentTasks prop={"give bub treats"} />
+          <CurrentTasks prop={"washing"} />
         </div>
       </div>
     </div>
