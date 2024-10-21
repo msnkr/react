@@ -8,11 +8,11 @@ import {
 function App() {
   return (
     <div>
-      <div className="main font-customFont lg:flex lg:justify-center lg:mt-[200px] items-center lg:mx-auto">
+      <div className="main font-customFont lg:flex lg:justify-center lg:mt-[200px] items-center lg:mx-auto lg:rounded-xl lg:w-[1000px] lg:shadow-2xl">
         <div className="section-1">
           <div
             className="results-section text-center bg-gradient-to-t from-light-royal-blue-background 
-          to-light-slate-blue-background px-12 py-4 text-pale-blue rounded-b-[50px] lg:rounded-xl lg:h-[400px]"
+          to-light-slate-blue-background px-12 py-4 text-pale-blue rounded-b-[50px] lg:rounded-xl lg:h-[500px] lg:flex flex-col lg:justify-center lg:space-y-8 lg:w-[400px]"
           >
             <p className="text-xl">Your Result</p>
             <div
@@ -30,7 +30,7 @@ function App() {
           </div>
         </div>
         <div className="section-2">
-          <div className="summary px-8 my-4">
+          <div className="summary px-8 my-4 lg:h-[500px] lg:w-[400px] lg:flex flex-col lg:justify-center">
             <p className="text-2xl text-dark-gray-blue">Summary</p>
             <div className="summaries mt-4 space-y-2">
               <ReactionSummary score={22} />
