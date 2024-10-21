@@ -25,7 +25,10 @@ export function ReactionSummary({ score }) {
       </div>
       <div>
         <p>
-          <span className="font-semibold text-lg">{score}</span> / 100
+          <span className="font-semibold text-xl text-dark-gray-blue">
+            {score}
+          </span>{" "}
+          / 100
         </p>
       </div>
     </div>
@@ -73,7 +76,10 @@ export function MemorySummary({ score }) {
       </div>
       <div>
         <p>
-          <span className="font-semibold text-lg">{score}</span> / 100
+          <span className="font-semibold text-xl text-dark-gray-blue">
+            {score}
+          </span>{" "}
+          / 100
         </p>
       </div>
     </div>
@@ -107,7 +113,10 @@ export function VerbalSummary({ score }) {
       </div>
       <div>
         <p>
-          <span className="font-semibold text-lg">{score}</span> / 100
+          <span className="font-semibold text-xl text-dark-gray-blue">
+            {score}
+          </span>{" "}
+          / 100
         </p>
       </div>
     </div>
@@ -148,7 +157,10 @@ export function VisualSummary({ score }) {
       </div>
       <div>
         <p>
-          <span className="font-semibold text-lg">{score}</span> / 100
+          <span className="font-semibold text-xl text-dark-gray-blue">
+            {score}
+          </span>{" "}
+          / 100
         </p>
       </div>
     </div>
