@@ -14,7 +14,7 @@ module.exports = {
         "persian-blue-circle": "hsla(241, 72%, 46%, 0)",
         "pale-blue": "hsl(221, 100%, 96%)",
         "light-lavender": "hsl(241, 100%, 89%)",
-        "dark-gray blue": "hsl(224, 30%, 27%)",
+        "dark-gray-blue": "hsl(224, 30%, 27%)",
       },
       fontFamily: {
         customFont: "Hanken Grotesk",

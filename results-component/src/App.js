@@ -1,3 +1,10 @@
+import {
+  ReactionSummary,
+  MemorySummary,
+  VerbalSummary,
+  VisualSummary,
+} from "./images/components/Summaries";
+
 function App() {
   return (
     <div>
@@ -19,7 +26,17 @@ function App() {
         <div className="section-2">
           <div className="summary px-8 my-4">
             <p className="text-lg font-semibold">Summary</p>
-            <div className="summaries"></div>
+            <div className="summaries mt-4 space-y-2">
+              <ReactionSummary score={22} />
+              <MemorySummary score={32} />
+              <VerbalSummary score={75} />
+              <VisualSummary score={45} />
+            </div>
+            <div className="button-div mt-4">
+              <button className="bg-dark-gray-blue w-full py-2 text-white text-2xl rounded-full">
+                Continue
+              </button>
+            </div>
           </div>
         </div>
       </div>
