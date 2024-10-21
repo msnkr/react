@@ -16,7 +16,12 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="section-2"></div>
+        <div className="section-2">
+          <div className="summary px-8 my-4">
+            <p className="text-lg font-semibold">Summary</p>
+            <div className="summaries"></div>
+          </div>
+        </div>
       </div>
     </div>
   );
