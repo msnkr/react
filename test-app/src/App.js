@@ -55,26 +55,26 @@
 //   );
 // }
 
-// import {vehicle} from "./fakerVehicle"
+// import { vehicle } from "./data/fakerVehicle";
 
-// function VehicleItems({vehicle}) {
-//     return (
-//         <div className="grid grid-cols-2 text-center gap-12">
-//             {vehicle.map((v, index) => (
-//                 <div key={index}>
-//                     <h1 className="text-xl font-semibold">{v.manufacturer}</h1>
-//                 </div>
-//             ))}
+// function VehicleItems({ vehicle }) {
+//   return (
+//     <div className="grid grid-cols-2 text-center gap-12">
+//       {vehicle.map((v, index) => (
+//         <div key={index}>
+//           <h1 className="text-xl font-semibold">{v.manufacturer}</h1>
 //         </div>
-//     )
+//       ))}
+//     </div>
+//   );
 // }
 
 // export default function App() {
-//     return (
-//         <div className="p-8">
-//             <VehicleItems vehicle={vehicle} />
-//         </div>
-//     )
+//   return (
+//     <div className="p-8">
+//       <VehicleItems vehicle={vehicle} />
+//     </div>
+//   );
 // }
 
 // let imageArr = [];
@@ -111,18 +111,24 @@
 //   );
 // }
 
-import { products } from "./data/products";
+import { products } from "./data/productsFaker";
 
-function App({ products }) {
+function NameProducts() {
   return (
-    <div>
+    <div className="p-8 space-y-4 ">
       {products.map((product, index) => (
         <div key={index}>
-          <h1>{product.productName}</h1>
+          <h1 className="text-xl cursor-pointer">{product.productName}</h1>
         </div>
       ))}
     </div>
   );
 }
 
-export default App();
+export default function App() {
+  return (
+    <div>
+      <NameProducts />
+    </div>
+  );
+}
