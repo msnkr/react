@@ -115,15 +115,22 @@ import { products } from "./data/productsFaker";
 
 function NameProducts() {
   return (
-    <div className="p-8 space-y-4 ">
+    <div className="p-8 space-y-4">
       {products.map((product, index) => (
-        <div key={index}>
-          <h1 className="text-xl cursor-pointer">{product.productName}</h1>
-          <div className="flex space-x-4">
-            <p className="text-gray-400">{product.department}</p>
-            <p className="text-gray-400">{product.isbn}</p>
+        <div key={index} className="border p-4 rounded-xl space-y-4">
+          <h1 className="text-2xl cursor-pointer font-semibold tracking-widest">
+            {product.productName}
+          </h1>
+          <div className="flex items-center space-x-4">
+            <p className="text-gray-600 w-[250px] tracking-tighter">
+              {product.productDescription}
+            </p>
+            <p className="text-2xl">R {product.price}</p>
           </div>
-          <p className="text-lg">R {product.price}</p>
+          <div className="text-gray-400 flex space-x-4">
+            <p>{product.department}</p>
+            <p>{product.productMaterial}</p>
+          </div>
         </div>
       ))}
     </div>
