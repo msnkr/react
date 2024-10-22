@@ -147,6 +147,10 @@
 
 import { persons } from "./data/person";
 
+function Avatar({ prop }) {
+  return <img className="w-[120px] h-[120px] rounded-full" src={prop} />;
+}
+
 function ShowProfile() {
   return (
     <div className="space-y-8 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3 gap-8">
@@ -156,10 +160,7 @@ function ShowProfile() {
           className="cursor-pointer flex items-center border rounded-xl border-2 shadow-sm p-8 space-x-8 md:w-[350] md:h-[200px] hover:shadow-xl"
         >
           <div>
-            <img
-              className="w-[120px] h-[120px] rounded-full"
-              src={person.avatarGitHub}
-            />
+            <Avatar prop={person.avatarGitHub} />
           </div>
           <div className="space-y-2">
             <h1 className="text-xl font-semibold">{person.fullName}</h1>
