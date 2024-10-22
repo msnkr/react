@@ -117,7 +117,7 @@ function NameProducts() {
   return (
     <div className="p-8 space-y-4">
       {products.map((product, index) => (
-        <div key={index} className="border p-4 rounded-xl space-y-4">
+        <div key={index} className="border p-4 rounded-xl space-y-4 shadow-md">
           <h1 className="text-2xl cursor-pointer font-semibold tracking-widest">
             {product.productName}
           </h1>
