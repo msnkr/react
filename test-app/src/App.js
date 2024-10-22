@@ -111,25 +111,61 @@
 //   );
 // }
 
-import { products } from "./data/productsFaker";
+// import { products } from "./data/productsFaker";
 
-function NameProducts() {
+// function NameProducts() {
+//   return (
+//     <div className="p-8 space-y-4">
+//       {products.map((product, index) => (
+//         <div key={index} className="border p-4 rounded-xl space-y-4 shadow-md">
+//           <h1 className="text-2xl cursor-pointer font-semibold tracking-widest">
+//             {product.productName}
+//           </h1>
+//           <div className="flex items-center space-x-4">
+//             <p className="text-gray-600 w-[250px] tracking-tighter">
+//               {product.productDescription}
+//             </p>
+//             <p className="text-2xl font-semibold">R {product.price}</p>
+//           </div>
+//           <div className="text-gray-400 flex space-x-4">
+//             <p>{product.department}</p>
+//             <p>{product.productMaterial}</p>
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <div>
+//       <NameProducts />
+//     </div>
+//   );
+// }
+
+import { persons } from "./data/person";
+
+function ShowProfile() {
   return (
-    <div className="p-8 space-y-4">
-      {products.map((product, index) => (
-        <div key={index} className="border p-4 rounded-xl space-y-4 shadow-md">
-          <h1 className="text-2xl cursor-pointer font-semibold tracking-widest">
-            {product.productName}
-          </h1>
-          <div className="flex items-center space-x-4">
-            <p className="text-gray-600 w-[250px] tracking-tighter">
-              {product.productDescription}
-            </p>
-            <p className="text-2xl">R {product.price}</p>
+    <div className="space-y-3 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3">
+      {persons.map((person, index) => (
+        <div
+          key={index}
+          className="cursor-pointer flex items-center border rounded-xl border-2 shadow-sm p-8 space-x-8 md:w-[350] md:h-[200px] hover:shadow-xl"
+        >
+          <div>
+            <img
+              className="w-[120px] h-[120px] rounded-full"
+              src={person.avatarGitHub}
+            />
           </div>
-          <div className="text-gray-400 flex space-x-4">
-            <p>{product.department}</p>
-            <p>{product.productMaterial}</p>
+          <div className="space-y-2">
+            <h1 className="text-xl font-semibold">{person.fullName}</h1>
+            <p>{person.gender}</p>
+            <p className="text-gray-400">{person.jobTitle}</p>
+            <p className="capitalize">{person.bio}</p>
           </div>
         </div>
       ))}
@@ -139,8 +175,8 @@ function NameProducts() {
 
 export default function App() {
   return (
-    <div>
-      <NameProducts />
+    <div className="flex">
+      <ShowProfile />
     </div>
   );
 }
