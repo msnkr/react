@@ -149,7 +149,7 @@ import { persons } from "./data/person";
 
 function ShowProfile() {
   return (
-    <div className="space-y-3 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3">
+    <div className="space-y-8 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3 gap-8">
       {persons.map((person, index) => (
         <div
           key={index}
@@ -165,7 +165,10 @@ function ShowProfile() {
             <h1 className="text-xl font-semibold">{person.fullName}</h1>
             <p>{person.gender}</p>
             <p className="text-gray-400">{person.jobTitle}</p>
-            <p className="capitalize">{person.bio}</p>
+            <p className="capitalize">
+              <span className="text-gray-400">About:</span>{" "}
+              <span className="font-semibold">{person.bio}</span>
+            </p>
           </div>
         </div>
       ))}
@@ -175,7 +178,7 @@ function ShowProfile() {
 
 export default function App() {
   return (
-    <div className="flex">
+    <div className="p-8">
       <ShowProfile />
     </div>
   );
