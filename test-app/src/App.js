@@ -119,6 +119,11 @@ function NameProducts() {
       {products.map((product, index) => (
         <div key={index}>
           <h1 className="text-xl cursor-pointer">{product.productName}</h1>
+          <div className="flex space-x-4">
+            <p className="text-gray-400">{product.department}</p>
+            <p className="text-gray-400">{product.isbn}</p>
+          </div>
+          <p className="text-lg">R {product.price}</p>
         </div>
       ))}
     </div>
