@@ -145,42 +145,77 @@
 //   );
 // }
 
-import { persons } from "./data/person";
+// import { persons } from "./data/person";
 
-function Avatar({ prop }) {
-  return <img className="w-[120px] h-[120px] rounded-full" src={prop} />;
-}
+// function Avatar({ prop }) {
+//   return <img className="w-[120px] h-[120px] rounded-full" src={prop} />;
+// }
 
-function ShowProfile() {
-  return (
-    <div className="space-y-8 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3 gap-8">
-      {persons.map((person, index) => (
-        <div
-          key={index}
-          className="cursor-pointer flex items-center border rounded-xl border-2 shadow-sm p-8 space-x-8 md:w-[350] md:h-[200px] hover:shadow-xl"
-        >
-          <div>
-            <Avatar prop={person.avatarGitHub} />
-          </div>
-          <div className="space-y-2">
-            <h1 className="text-xl font-semibold">{person.fullName}</h1>
-            <p>{person.gender}</p>
-            <p className="text-gray-400">{person.jobTitle}</p>
-            <p className="capitalize">
-              <span className="text-gray-400">About:</span>{" "}
-              <span className="font-semibold">{person.bio}</span>
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
+// function ShowProfile() {
+//   return (
+//     <div className="space-y-8 md:space-y-0 md:grid grid-cols-2 lg:grid-cols-3 gap-8">
+//       {persons.map((person, index) => (
+//         <div
+//           key={index}
+//           className="cursor-pointer flex items-center border rounded-xl border-2 shadow-sm p-8 space-x-8 md:w-[350] md:h-[200px] hover:shadow-xl"
+//         >
+//           <div>
+//             <Avatar prop={person.avatarGitHub} />
+//           </div>
+//           <div className="space-y-2">
+//             <h1 className="text-xl font-semibold">{person.fullName}</h1>
+//             <p>{person.gender}</p>
+//             <p className="text-gray-400">{person.jobTitle}</p>
+//             <p className="capitalize">
+//               <span className="text-gray-400">About:</span>{" "}
+//               <span className="font-semibold">{person.bio}</span>
+//             </p>
+//           </div>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <div className="p-8">
+//       <ShowProfile />
+//     </div>
+//   );
+// }
+
+import { useState } from "react";
 
 export default function App() {
+  const [count, setCount] = useState(0);
+
+  function increase() {
+    setCount(count + 1);
+  }
+  function decrease() {
+    setCount(count - 1);
+  }
+
   return (
-    <div className="p-8">
-      <ShowProfile />
+    <div>
+      <div className="space-y-4 mt-[200px]">
+        <h1 className="text-4xl font-bold text-center">{count}</h1>
+        <div className="space-x-4 text-center">
+          <button
+            className="bg-red-200 font-semibold py-3 px-4 rounded-xl"
+            onClick={decrease}
+          >
+            Decrease
+          </button>
+          <button
+            className="bg-green-200 font-semibold py-3 px-4 rounded-xl"
+            onClick={increase}
+          >
+            Increase
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
