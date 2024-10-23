@@ -193,28 +193,27 @@ export default function App() {
   function increase() {
     setCount(count + 1);
   }
+
   function decrease() {
     setCount(count - 1);
   }
 
   return (
-    <div>
-      <div className="space-y-4 mt-[200px]">
-        <h1 className="text-4xl font-bold text-center">{count}</h1>
-        <div className="space-x-4 text-center">
-          <button
-            className="bg-red-200 font-semibold py-3 px-4 rounded-xl"
-            onClick={decrease}
-          >
-            Decrease
-          </button>
-          <button
-            className="bg-green-200 font-semibold py-3 px-4 rounded-xl"
-            onClick={increase}
-          >
-            Increase
-          </button>
-        </div>
+    <div className="text-center">
+      <h1 className=" mt-[200px] text-8xl font-semibold mb-20">{count}</h1>
+      <div className="space-x-4">
+        <button
+          className="text-xl font-semibold bg-red-100 px-5 py-3 rounded-xl"
+          onClick={decrease}
+        >
+          Decrease
+        </button>
+        <button
+          className="text-xl font-semibold bg-green-100 px-5 py-3 rounded-xl"
+          onClick={increase}
+        >
+          Increase
+        </button>
       </div>
     </div>
   );
