@@ -256,7 +256,7 @@ import { useState } from "react";
 
 let imageArr = [];
 
-for (let index = 0; index < 6; index++) {
+for (let index = 0; index < 5; index++) {
   let random = Math.floor(Math.random() * 1000);
   let image = "https://picsum.photos/300/300?random=" + random;
   imageArr.push(image);
@@ -266,14 +266,15 @@ export default function App() {
   const [count, changeCount] = useState(0);
 
   function ChangeImageNext(image) {
-    if (count > imageArr.length - 1) {
+    if (count >= imageArr.length - 1) {
+      changeCount(0);
     } else {
       changeCount(count + 1);
     }
   }
 
   function ChangeImagePrev() {
-    if (count < 0) {
+    if (count <= 0) {
       changeCount(imageArr.length - 1);
     } else {
       changeCount(count - 1);
@@ -283,7 +284,11 @@ export default function App() {
   return (
     <div>
       <div>
-        <img className="w-full h-[400px] object-cover" src={imageArr[count]} />
+        <img
+          className="mx-auto mt-[200px] rounded-xl"
+          src={imageArr[count]}
+          alt="random"
+        />
       </div>
       <div className="mt-8 space-x-4 text-center">
         <button
