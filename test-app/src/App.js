@@ -252,58 +252,66 @@
 //   );
 // }
 
-import { useState } from "react";
+// import { useState } from "react";
 
-let imageArr = [];
+// let imageArr = [];
 
-for (let index = 0; index < 5; index++) {
-  let random = Math.floor(Math.random() * 1000);
-  let image = "https://picsum.photos/300/300?random=" + random;
-  imageArr.push(image);
-}
+// for (let index = 0; index < 5; index++) {
+//   let random = Math.floor(Math.random() * 1000);
+//   let image = "https://picsum.photos/300/300?random=" + random;
+//   imageArr.push(image);
+// }
+
+// export default function App() {
+//   const [count, changeCount] = useState(0);
+
+//   function ChangeImageNext(image) {
+//     if (count >= imageArr.length - 1) {
+//       changeCount(0);
+//     } else {
+//       changeCount(count + 1);
+//     }
+//   }
+
+//   function ChangeImagePrev() {
+//     if (count <= 0) {
+//       changeCount(imageArr.length - 1);
+//     } else {
+//       changeCount(count - 1);
+//     }
+//   }
+
+//   return (
+//     <div>
+//       <div>
+//         <img
+//           className="mx-auto mt-[200px] rounded-xl"
+//           src={imageArr[count]}
+//           alt="random"
+//         />
+//       </div>
+//       <div className="mt-8 space-x-4 text-center">
+//         <button
+//           onClick={ChangeImagePrev}
+//           className="text-2xl font-semibold bg-black text-white p-4 rounded-xl"
+//         >
+//           prev
+//         </button>
+//         <button
+//           onClick={ChangeImageNext}
+//           className="text-2xl font-semibold bg-black text-white p-4 rounded-xl"
+//         >
+//           next
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default function App() {
-  const [count, changeCount] = useState(0);
-
-  function ChangeImageNext(image) {
-    if (count >= imageArr.length - 1) {
-      changeCount(0);
-    } else {
-      changeCount(count + 1);
-    }
-  }
-
-  function ChangeImagePrev() {
-    if (count <= 0) {
-      changeCount(imageArr.length - 1);
-    } else {
-      changeCount(count - 1);
-    }
-  }
-
   return (
     <div>
-      <div>
-        <img
-          className="mx-auto mt-[200px] rounded-xl"
-          src={imageArr[count]}
-          alt="random"
-        />
-      </div>
-      <div className="mt-8 space-x-4 text-center">
-        <button
-          onClick={ChangeImagePrev}
-          className="text-2xl font-semibold bg-black text-white p-4 rounded-xl"
-        >
-          prev
-        </button>
-        <button
-          onClick={ChangeImageNext}
-          className="text-2xl font-semibold bg-black text-white p-4 rounded-xl"
-        >
-          next
-        </button>
-      </div>
+      <h1>Hello, World!</h1>
     </div>
   );
 }
