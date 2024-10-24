@@ -185,34 +185,118 @@
 //   );
 // }
 
+// import { useState } from "react";
+
+// export default function App() {
+//   const [count, setCount] = useState(0);
+
+//   function increase() {
+//     setCount(count + 1);
+//   }
+
+//   function decrease() {
+//     setCount(count - 1);
+//   }
+
+//   return (
+//     <div className="text-center">
+//       <h1 className=" mt-[200px] text-8xl font-semibold mb-20">{count}</h1>
+//       <div className="space-x-4">
+//         <button
+//           className="text-xl font-semibold bg-red-100 px-5 py-3 rounded-xl"
+//           onClick={decrease}
+//         >
+//           Decrease
+//         </button>
+//         <button
+//           className="text-xl font-semibold bg-green-100 px-5 py-3 rounded-xl"
+//           onClick={increase}
+//         >
+//           Increase
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// import { useState } from "react";
+
+// export default function App() {
+//   const [name, setName] = useState("No Name");
+
+//   function HandleClick(newName) {
+//     setName(newName);
+//   }
+
+//   return (
+//     <div className="p-8 text-center mt-[200px]">
+//       <h1 className="text-4xl font-semibold">Hello, {name}!</h1>
+//       <div className="flex space-x-8 mt-28 justify-center mb-28">
+//         <h1 className="cursor-pointer" onClick={() => HandleClick("John Swim")}>
+//           John Swim
+//         </h1>
+//         <h1
+//           className="cursor-pointer"
+//           onClick={() => HandleClick("John Swimmers")}
+//         >
+//           John Swimmers
+//         </h1>
+//         <h1 className="cursor-pointer" onClick={() => HandleClick("Swim Burn")}>
+//           Swim Burn
+//         </h1>
+//       </div>
+//       <h1 className="cursor-pointer" onClick={() => HandleClick("No Name")}>
+//         Reset
+//       </h1>
+//     </div>
+//   );
+// }
+
 import { useState } from "react";
 
-export default function App() {
-  const [count, setCount] = useState(0);
+let imageArr = [];
 
-  function increase() {
-    setCount(count + 1);
+for (let index = 0; index < 6; index++) {
+  let random = Math.floor(Math.random() * 1000);
+  let image = "https://picsum.photos/300/300?random=" + random;
+  imageArr.push(image);
+}
+
+export default function App() {
+  const [count, changeCount] = useState(0);
+
+  function ChangeImageNext(image) {
+    if (count > imageArr.length - 1) {
+    } else {
+      changeCount(count + 1);
+    }
   }
 
-  function decrease() {
-    setCount(count - 1);
+  function ChangeImagePrev() {
+    if (count < 0) {
+      changeCount(imageArr.length - 1);
+    } else {
+      changeCount(count - 1);
+    }
   }
 
   return (
-    <div className="text-center">
-      <h1 className=" mt-[200px] text-8xl font-semibold mb-20">{count}</h1>
-      <div className="space-x-4">
+    <div>
+      <div>
+        <img className="w-full h-[400px] object-cover" src={imageArr[count]} />
+      </div>
+      <div className="mt-8 space-x-4 text-center">
         <button
-          className="text-xl font-semibold bg-red-100 px-5 py-3 rounded-xl"
-          onClick={decrease}
+          onClick={ChangeImagePrev}
+          className="text-2xl font-semibold bg-black text-white p-4 rounded-xl"
         >
-          Decrease
+          prev
         </button>
         <button
-          className="text-xl font-semibold bg-green-100 px-5 py-3 rounded-xl"
-          onClick={increase}
+          onClick={ChangeImageNext}
+          className="text-2xl font-semibold bg-black text-white p-4 rounded-xl"
         >
-          Increase
+          next
         </button>
       </div>
     </div>
