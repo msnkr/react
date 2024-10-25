@@ -6,7 +6,7 @@ export default function Card({ img, subheading, heading, price }) {
       <div>
         <div className="card-start relative">
           <div className="card-image relative">
-            <img className="w-full rounded-xl" src={img} />
+            <img className="w-full rounded-xl" src={img} alt={heading} />
           </div>
           <div>
             <AddToBasket />
