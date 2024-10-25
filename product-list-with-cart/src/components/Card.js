@@ -4,8 +4,8 @@ function AddToBasket() {
   return (
     <div>
       <div
-        className="flex w-[180px] h-[40px] rounded-full mx-auto bg-white border-2 border-rose-700 items-center justify-evenly absolute 
-        top-[280px] left-1/2 translate -translate-x-1/2"
+        className="flex w-[180px] h-[60px] rounded-full mx-auto bg-white border-2 border-rose-700 items-center justify-evenly absolute 
+        top-[260px] left-1/2 translate -translate-x-1/2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
