@@ -8,12 +8,14 @@ export default function App() {
     <div>
       <div className="p-8">
         <h1 className="text-5xl font-bold mb-8">Desserts</h1>
-        <Card
-          img={waffle}
-          subheading={data[0].category}
-          heading={data[0].name}
-          price={data[0].price}
-        />
+        <div className="relative">
+          <Card
+            img={waffle}
+            subheading={data[0].category}
+            heading={data[0].name}
+            price={data[0].price}
+          />
+        </div>
       </div>
     </div>
   );
