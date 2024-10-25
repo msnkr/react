@@ -308,10 +308,48 @@
 //   );
 // }
 
+import { useState } from "react";
+
 export default function App() {
+  const [name, setName] = useState("name");
+
+  function HandleClick(name) {
+    return setName(name);
+  }
+
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <div>
+        <h1 className="text-4xl font-bold text-center mt-72">Hello {name}!</h1>
+      </div>
+      <div className="flex space-x-4 justify-center">
+        <p
+          className="text-xl font-semibold mt-12 cursor-pointer"
+          onClick={() => HandleClick("John")}
+        >
+          John
+        </p>
+        <p
+          className="text-xl font-semibold mt-12 cursor-pointer"
+          onClick={() => HandleClick("Mike")}
+        >
+          Mike
+        </p>
+        <p
+          className="text-xl font-semibold mt-12 cursor-pointer"
+          onClick={() => HandleClick("Sean")}
+        >
+          Sean
+        </p>
+      </div>
+      <div>
+        <p
+          className="text-center font-semibold text-xl mt-8 text-gray-400 cursor-pointer"
+          onClick={() => HandleClick("Name")}
+        >
+          Reset
+        </p>
+      </div>
     </div>
   );
 }
