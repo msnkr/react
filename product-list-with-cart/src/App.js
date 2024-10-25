@@ -1,20 +1,22 @@
 import Card from "./components/Card";
-import data from "./data.json";
-
-import waffle from "./images/image-waffle-mobile.jpg";
+import dataFile from "./data.json";
 
 export default function App() {
   return (
     <div>
       <div className="p-8">
         <h1 className="text-5xl font-bold mb-8">Desserts</h1>
-        <div className="relative">
-          <Card
-            img={waffle}
-            subheading={data[0].category}
-            heading={data[0].name}
-            price={data[0].price}
-          />
+        <div className="space-y-8">
+          {dataFile.map((data, index) => (
+            <div key={index}>
+              <Card
+                img={require(`${data.image.mobile}`)}
+                subheading={data.category}
+                heading={data.name}
+                price={data.price}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

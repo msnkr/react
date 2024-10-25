@@ -4,8 +4,8 @@ function AddToBasket() {
   return (
     <div>
       <div
-        className="flex w-[250px] h-[70px] rounded-full mx-auto bg-white border-2 border-black items-center justify-evenly absolute 
-        top-[250px] left-1/2 translate -translate-x-1/2"
+        className="flex w-[180px] h-[40px] rounded-full mx-auto bg-white border-2 border-rose-700 items-center justify-evenly absolute 
+        top-[280px] left-1/2 translate -translate-x-1/2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ function AddToBasket() {
             </clipPath>
           </defs>
         </svg>
-        <p className="font-semibold text-rose-700 mr-4">Add To Basket</p>
+        <p className="font-semibold ">Add To Basket</p>
       </div>
     </div>
   );
@@ -34,7 +34,7 @@ export default function Card({ img, subheading, heading, price }) {
   return (
     <div>
       <div>
-        <div className="card-start">
+        <div className="card-start relative">
           <div className="card-image relative">
             <img className="w-full rounded-xl" src={img} />
           </div>
