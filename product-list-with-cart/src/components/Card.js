@@ -1,10 +1,24 @@
 import { useState } from "react";
 
 function AddToBasket() {
+  const [quantity, setQuantity] = useState(0);
+
+  function IncreaseQuantity() {
+    setQuantity(quantity + 1);
+  }
+
+  function DecreaseQuantity() {
+    if (quantity <= 0) {
+      setQuantity(0);
+    } else {
+      setQuantity(quantity - 1);
+    }
+  }
+
   return (
     <div>
       <div
-        className="flex w-[180px] h-[60px] rounded-full mx-auto bg-white border-2 border-rose-700 items-center justify-evenly absolute 
+        className="flex w-[180px] h-[60px] rounded-full mx-auto bg-white border-2 border-rose-900 items-center justify-evenly absolute 
         top-[260px] left-1/2 translate -translate-x-1/2"
       >
         <svg
@@ -26,6 +40,45 @@ function AddToBasket() {
         </svg>
         <p className="font-semibold ">Add To Basket</p>
       </div>
+      <div
+        className="flex w-[180px] h-[60px] rounded-full mx-auto bg-rose-900 border-2 border-rose-900 items-center justify-evenly absolute 
+        top-[260px] left-1/2 translate -translate-x-1/2 hidden"
+      >
+        <div
+          className="decrease-icon cursor-pointer"
+          onClick={DecreaseQuantity}
+        >
+          <svg
+            className="border rounded-full border-white w-5 h-5 p-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="2"
+            fill="none"
+            viewBox="0 0 10 2"
+          >
+            <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+          </svg>
+        </div>
+        <p className="text-white font-semibold">{quantity}</p>
+        <div
+          className="increase-icon cursor-pointer"
+          onClick={IncreaseQuantity}
+        >
+          <svg
+            className="border rounded-full border-white w-5 h-5 p-1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            fill="none"
+            viewBox="0 0 10 10"
+          >
+            <path
+              fill="#fff"
+              d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }
@@ -42,7 +95,7 @@ export default function Card({ img, subheading, heading, price }) {
             <AddToBasket />
           </div>
           <div className="card-wording mt-8">
-            <p className="text-gray-400">{subheading}</p>
+            <p className="text-gray-400 text-sm">{subheading}</p>
             <p className="font-semibold text-lg">{heading}</p>
             <p className="text-xl font-semibold text-rose-600">${price}0</p>
           </div>
