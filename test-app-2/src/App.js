@@ -181,13 +181,29 @@
 // }
 
 import { DisplayEmoji } from "./components/DisplayEmoji";
+import { emojipedia } from "./components/emojipedia";
+
+// function App() {
+//   return (
+//     <div>
+//       <DisplayEmoji />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 function App() {
   return (
     <div>
-      <DisplayEmoji />
+      <h1>Hello, World!</h1>
     </div>
   );
 }
+
+const numbers = [3, 5, 7, 45, 775, 34, 234, 656, 34, 775, 86];
+const newArr = numbers.reduce((total, number) => total + number);
+
+console.log(newArr);
 
 export default App;
