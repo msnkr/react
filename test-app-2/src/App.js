@@ -154,28 +154,40 @@
 
 // export default App;
 
-import "./styles.css";
-import { Card } from "./components/Card";
-import { contact, contacts } from "./components/Contact";
+// import "./styles.css";
+// import { Card } from "./components/Card";
+// import { contact, contacts } from "./components/Contact";
 
-function CreateCard(contact) {
-  return (
-    <Card
-      key={contact.id}
-      id={contact.id}
-      name={contact.name}
-      image={contact.imgURL}
-      number={contact.phone}
-      email={contact.email}
-    />
-  );
-}
+// function CreateCard(contact) {
+//   return (
+//     <Card
+//       key={contact.id}
+//       id={contact.id}
+//       name={contact.name}
+//       image={contact.imgURL}
+//       number={contact.phone}
+//       email={contact.email}
+//     />
+//   );
+// }
 
-export default function App() {
+// export default function App() {
+//   return (
+//     <div>
+//       <h1 className="heading">My Contacts</h1>
+//       {contacts.map(CreateCard)}
+//     </div>
+//   );
+// }
+
+import { DisplayEmoji } from "./components/DisplayEmoji";
+
+function App() {
   return (
     <div>
-      <h1 className="heading">My Contacts</h1>
-      {contacts.map(CreateCard)}
+      <DisplayEmoji />
     </div>
   );
 }
+
+export default App;
