@@ -144,12 +144,38 @@
 
 // export default SayHello;
 
-function App() {
+// function App() {
+//   return (
+//     <div>
+//       <h1>Hello, World!</h1>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import "./styles.css";
+import { Card } from "./components/Card";
+import { contact, contacts } from "./components/Contact";
+
+function CreateCard(contact) {
   return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
+    <Card
+      key={contact.id}
+      id={contact.id}
+      name={contact.name}
+      image={contact.imgURL}
+      number={contact.phone}
+      email={contact.email}
+    />
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <div>
+      <h1 className="heading">My Contacts</h1>
+      {contacts.map(CreateCard)}
+    </div>
+  );
+}
