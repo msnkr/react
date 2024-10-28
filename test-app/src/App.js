@@ -308,50 +308,157 @@
 //   );
 // }
 
-import { useState } from "react";
+// import { useState } from "react";
+
+// export default function App() {
+//   const [greeting, setGreeting] = useState("Greeting");
+
+//   function HandleClick(greeting) {
+//     return setGreeting(greeting);
+//   }
+
+//   return (
+//     <div>
+//       <div>
+//         <h1 className="text-4xl font-bold text-center mt-72">
+//           {greeting} there!
+//         </h1>
+//       </div>
+//       <div className="flex space-x-4 justify-center">
+//         <p
+//           className="text-xl font-semibold mt-12 cursor-pointer"
+//           onClick={() => HandleClick("Hey")}
+//         >
+//           Hey
+//         </p>
+//         <p
+//           className="text-xl font-semibold mt-12 cursor-pointer"
+//           onClick={() => HandleClick("Hi")}
+//         >
+//           Hi
+//         </p>
+//         <p
+//           className="text-xl font-semibold mt-12 cursor-pointer"
+//           onClick={() => HandleClick("Ho")}
+//         >
+//           Ho
+//         </p>
+//       </div>
+//       <div>
+//         <p
+//           className="text-center font-semibold text-xl mt-8 text-gray-400 cursor-pointer"
+//           onClick={() => HandleClick("")}
+//         >
+//           Reset
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
+// function Item({ name, isPacked }) {
+//   return <p>{isPacked ? <del>{name + " ✅"}</del> : name}</p>;
+// }
+
+// function App() {
+//   return (
+//     <div>
+//       <div className=" ml-[40px] mt-[200px] space-y-5">
+//         <Item name={"Chicken"} isPacked={true} />
+//         <Item name={"Pasta"} isPacked={true} />
+//         <Item name={"Oregano"} isPacked={false} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// function Item({ name, isPacked }) {
+//   let itemConteent = name;
+//   if (isPacked) {
+//     itemConteent = name + " ✅";
+//   }
+//   return <p>{itemConteent}</p>;
+// }
+
+// function App() {
+//   return (
+//     <div>
+//       <div className=" ml-[40px] mt-[200px] space-y-5">
+//         <Item name={"Chicken"} isPacked={true} />
+//         <Item name={"Pasta"} isPacked={true} />
+//         <Item name={"Oregano"} isPacked={false} />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+const people = [
+  {
+    id: 0, // Used in JSX as a key
+    name: "Creola Katherine Johnson",
+    profession: "mathematician",
+    accomplishment: "spaceflight calculations",
+    imageId: "MK3eW3A",
+  },
+  {
+    id: 1, // Used in JSX as a key
+    name: "Mario José Molina-Pasquel Henríquez",
+    profession: "chemist",
+    accomplishment: "discovery of Arctic ozone hole",
+    imageId: "mynHUSa",
+  },
+  {
+    id: 2, // Used in JSX as a key
+    name: "Mohammad Abdus Salam",
+    profession: "physicist",
+    accomplishment: "electromagnetism theory",
+    imageId: "bE7W1ji",
+  },
+  {
+    id: 3, // Used in JSX as a key
+    name: "Percy Lavon Julian",
+    profession: "chemist",
+    accomplishment:
+      "pioneering cortisone drugs, steroids and birth control pills",
+    imageId: "IOjWm71",
+  },
+  {
+    id: 4, // Used in JSX as a key
+    name: "Subrahmanyan Chandrasekhar",
+    profession: "astrophysicist",
+    accomplishment: "white dwarf star mass calculations",
+    imageId: "lrWQx8l",
+  },
+];
+
+function getImageUrl(person) {
+  return "https://i.imgur.com/" + person.imageId + "s.jpg";
+}
 
 export default function App() {
-  const [greeting, setGreeting] = useState("Greeting");
-
-  function HandleClick(greeting) {
-    return setGreeting(greeting);
-  }
-
+  const listItems = people.map((person) => (
+    <div key={person.id}>
+      <div>
+        <img
+          src={getImageUrl(person)}
+          alt={person.name}
+          className="rounded-full"
+        />
+      </div>
+      <div>
+        <p className="text-xl font-semibold">{person.name}</p>
+        <p className="text-xl">{person.accomplishment}</p>
+        <p className="text-gray-400">{person.profession}</p>
+      </div>
+    </div>
+  ));
   return (
     <div>
-      <div>
-        <h1 className="text-4xl font-bold text-center mt-72">
-          {greeting} there!
-        </h1>
-      </div>
-      <div className="flex space-x-4 justify-center">
-        <p
-          className="text-xl font-semibold mt-12 cursor-pointer"
-          onClick={() => HandleClick("Hey")}
-        >
-          Hey
-        </p>
-        <p
-          className="text-xl font-semibold mt-12 cursor-pointer"
-          onClick={() => HandleClick("Hi")}
-        >
-          Hi
-        </p>
-        <p
-          className="text-xl font-semibold mt-12 cursor-pointer"
-          onClick={() => HandleClick("Ho")}
-        >
-          Ho
-        </p>
-      </div>
-      <div>
-        <p
-          className="text-center font-semibold text-xl mt-8 text-gray-400 cursor-pointer"
-          onClick={() => HandleClick("")}
-        >
-          Reset
-        </p>
-      </div>
+      <ul className="space-y-8 w-1/2">{listItems}</ul>
     </div>
   );
 }
