@@ -465,50 +465,72 @@
 
 // export default App;
 
-const recipes = [
-  {
-    id: "greek-salad",
-    name: "Greek Salad",
-    ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
-  },
-  {
-    id: "hawaiian-pizza",
-    name: "Hawaiian Pizza",
-    ingredients: [
-      "pizza crust",
-      "pizza sauce",
-      "mozzarella",
-      "ham",
-      "pineapple",
-    ],
-  },
-  {
-    id: "hummus",
-    name: "Hummus",
-    ingredients: ["chickpeas", "olive oil", "garlic cloves", "lemon", "tahini"],
-  },
-];
+// const recipes = [
+//   {
+//     id: "greek-salad",
+//     name: "Greek Salad",
+//     ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
+//   },
+//   {
+//     id: "hawaiian-pizza",
+//     name: "Hawaiian Pizza",
+//     ingredients: [
+//       "pizza crust",
+//       "pizza sauce",
+//       "mozzarella",
+//       "ham",
+//       "pineapple",
+//     ],
+//   },
+//   {
+//     id: "hummus",
+//     name: "Hummus",
+//     ingredients: ["chickpeas", "olive oil", "garlic cloves", "lemon", "tahini"],
+//   },
+// ];
 
-function App() {
+// function App() {
+//   return (
+//     <div>
+//       <div className="p-8 space-y-8">
+//         <h1 className="text-4xl font-semibold">Recipes</h1>
+//         {recipes.map((recipe) => (
+//           <div key={recipe.id}>
+//             <h1 className="text-2xl font-semibold text-gray-400">
+//               {recipe.name}
+//             </h1>
+//             <ul>
+//               {recipe.ingredients.map((ingredient, index) => (
+//                 <li key={index}>{ingredient}</li>
+//               ))}
+//             </ul>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+const poem = {
+  lines: [
+    "I write, erase, rewrite",
+    "Erase again, and then",
+    "A poppy blooms.",
+  ],
+};
+
+export default function App() {
   return (
     <div>
-      <div className="p-8 space-y-8">
-        <h1 className="text-4xl font-semibold">Recipes</h1>
-        {recipes.map((recipe) => (
-          <div key={recipe.id}>
-            <h1 className="text-2xl font-semibold text-gray-400">
-              {recipe.name}
-            </h1>
-            <ul>
-              {recipe.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      {poem.lines.map((line, index) => (
+        <div key={index}>
+          {index > 0 && <hr />}
+          <p>{line}</p>
+          <br />
+        </div>
+      ))}
     </div>
   );
 }
-
-export default App;
