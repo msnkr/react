@@ -435,17 +435,19 @@ const people = [
   },
 ];
 
-const newArr = people.filter((person) => person.profession === "chemist");
+export function getImageUrl(person) {
+  return "https://i.imgur.com/" + person.imageId + "s.jpg";
+}
 
 function App() {
-  const listItem = newArr.map((person) => (
-    <div key={person.id}>
-      <p>{person.name}</p>
-    </div>
-  ));
   return (
     <div>
-      <div>{listItem}</div>
+      {people.map((person) => (
+        <div key={person.id}>
+          <p>{person.name}</p>
+          <img src={getImageUrl(person)} />
+        </div>
+      ))}
     </div>
   );
 }
