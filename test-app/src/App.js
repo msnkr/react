@@ -513,24 +513,24 @@
 
 // export default App;
 
-const poem = {
-  lines: [
-    "I write, erase, rewrite",
-    "Erase again, and then",
-    "A poppy blooms.",
-  ],
-};
+// const poem = {
+//   lines: [
+//     "I write, erase, rewrite",
+//     "Erase again, and then",
+//     "A poppy blooms.",
+//   ],
+// };
 
-export default function App() {
-  return (
-    <div>
-      {poem.lines.map((line, index) => (
-        <div key={index}>
-          {index > 0 && <hr />}
-          <p>{line}</p>
-          <br />
-        </div>
-      ))}
-    </div>
-  );
-}
+// export default function App() {
+//   return (
+//     <div>
+//       {poem.lines.map((line, index) => (
+//         <div key={index}>
+//           {index > 0 && <hr />}
+//           <p>{line}</p>
+//           <br />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }

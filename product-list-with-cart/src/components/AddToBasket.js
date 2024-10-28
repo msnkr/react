@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function AddToBasket() {
   const [quantity, setQuantity] = useState(0);
+  const [mouseOver, setMouseOver] = useState(false);
 
   function IncreaseQuantity() {
     setQuantity(quantity + 1);
