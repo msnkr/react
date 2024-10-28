@@ -535,10 +535,34 @@
 //   );
 // }
 
+import { useState } from "react";
+
 export default function App() {
+  const [isActive, setIsActive] = useState(false);
+  const [isActiveText, setIsActiveText] = useState("Test");
+
+  function Button() {
+    return (
+      <button className="bg-black text-white font-semibold px-4 py-2 rounded-xl">
+        Click Me
+      </button>
+    );
+  }
+
+  function HandleMouseOver() {
+    setIsActive(true);
+  }
+
+  function HandleMouseLeave() {
+    setIsActive(false);
+  }
+
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <h1 onMouseOver={HandleMouseOver} onMouseLeave={HandleMouseLeave}>
+        {isActiveText}
+        {isActive && <Button />}
+      </h1>
     </div>
   );
 }
