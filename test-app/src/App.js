@@ -492,7 +492,7 @@ const recipes = [
 function App() {
   return (
     <div>
-      <div className="p-8">
+      <div className="p-8 space-y-8">
         <h1 className="text-4xl font-semibold">Recipes</h1>
         {recipes.map((recipe) => (
           <div key={recipe.id}>
@@ -500,8 +500,8 @@ function App() {
               {recipe.name}
             </h1>
             <ul>
-              {recipe.ingredients.map((ingredient) => (
-                <li>{ingredient}</li>
+              {recipe.ingredients.map((ingredient, index) => (
+                <li key={index}>{ingredient}</li>
               ))}
             </ul>
           </div>
