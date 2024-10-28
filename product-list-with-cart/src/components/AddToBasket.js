@@ -8,11 +8,7 @@ export default function AddToBasket() {
   }
 
   function DecreaseQuantity() {
-    if (quantity <= 0) {
-      setQuantity(0);
-    } else {
-      setQuantity(quantity - 1);
-    }
+    quantity <= 0 ? setQuantity(0) : setQuantity(quantity - 1);
   }
 
   return (
