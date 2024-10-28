@@ -396,58 +396,117 @@
 
 // export default App;
 
-const people = [
+// const people = [
+//   {
+//     id: 0, // Used in JSX as a key
+//     name: "Creola Katherine Johnson",
+//     profession: "mathematician",
+//     accomplishment: "spaceflight calculations",
+//     imageId: "MK3eW3A",
+//   },
+//   {
+//     id: 1, // Used in JSX as a key
+//     name: "Mario José Molina-Pasquel Henríquez",
+//     profession: "chemist",
+//     accomplishment: "discovery of Arctic ozone hole",
+//     imageId: "mynHUSa",
+//   },
+//   {
+//     id: 2, // Used in JSX as a key
+//     name: "Mohammad Abdus Salam",
+//     profession: "physicist",
+//     accomplishment: "electromagnetism theory",
+//     imageId: "bE7W1ji",
+//   },
+//   {
+//     id: 3, // Used in JSX as a key
+//     name: "Percy Lavon Julian",
+//     profession: "chemist",
+//     accomplishment:
+//       "pioneering cortisone drugs, steroids and birth control pills",
+//     imageId: "IOjWm71",
+//   },
+//   {
+//     id: 4, // Used in JSX as a key
+//     name: "Subrahmanyan Chandrasekhar",
+//     profession: "astrophysicist",
+//     accomplishment: "white dwarf star mass calculations",
+//     imageId: "lrWQx8l",
+//   },
+// ];
+
+// export function getImageUrl(person) {
+//   return "https://i.imgur.com/" + person.imageId + "s.jpg";
+// }
+
+// function App() {
+//   const chemArr = people.filter((person) => person.profession === "chemist");
+//   const nonChemArr = people.filter((person) => person.profession !== "chemist");
+
+//   return (
+//     <div>
+//       {chemArr.map((person) => (
+//         <div>
+//           <li>
+//             {person.name} {person.profession}
+//           </li>
+//         </div>
+//       ))}
+//       {nonChemArr.map((person) => (
+//         <div>
+//           <li>
+//             {person.name} {person.profession}
+//           </li>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+const recipes = [
   {
-    id: 0, // Used in JSX as a key
-    name: "Creola Katherine Johnson",
-    profession: "mathematician",
-    accomplishment: "spaceflight calculations",
-    imageId: "MK3eW3A",
+    id: "greek-salad",
+    name: "Greek Salad",
+    ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
   },
   {
-    id: 1, // Used in JSX as a key
-    name: "Mario José Molina-Pasquel Henríquez",
-    profession: "chemist",
-    accomplishment: "discovery of Arctic ozone hole",
-    imageId: "mynHUSa",
+    id: "hawaiian-pizza",
+    name: "Hawaiian Pizza",
+    ingredients: [
+      "pizza crust",
+      "pizza sauce",
+      "mozzarella",
+      "ham",
+      "pineapple",
+    ],
   },
   {
-    id: 2, // Used in JSX as a key
-    name: "Mohammad Abdus Salam",
-    profession: "physicist",
-    accomplishment: "electromagnetism theory",
-    imageId: "bE7W1ji",
-  },
-  {
-    id: 3, // Used in JSX as a key
-    name: "Percy Lavon Julian",
-    profession: "chemist",
-    accomplishment:
-      "pioneering cortisone drugs, steroids and birth control pills",
-    imageId: "IOjWm71",
-  },
-  {
-    id: 4, // Used in JSX as a key
-    name: "Subrahmanyan Chandrasekhar",
-    profession: "astrophysicist",
-    accomplishment: "white dwarf star mass calculations",
-    imageId: "lrWQx8l",
+    id: "hummus",
+    name: "Hummus",
+    ingredients: ["chickpeas", "olive oil", "garlic cloves", "lemon", "tahini"],
   },
 ];
-
-export function getImageUrl(person) {
-  return "https://i.imgur.com/" + person.imageId + "s.jpg";
-}
 
 function App() {
   return (
     <div>
-      {people.map((person) => (
-        <div key={person.id}>
-          <p>{person.name}</p>
-          <img src={getImageUrl(person)} />
-        </div>
-      ))}
+      <div className="p-8">
+        <h1 className="text-4xl font-semibold">Recipes</h1>
+        {recipes.map((recipe) => (
+          <div key={recipe.id}>
+            <h1 className="text-2xl font-semibold text-gray-400">
+              {recipe.name}
+            </h1>
+            <ul>
+              {recipe.ingredients.map((ingredient) => (
+                <li>{ingredient}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
