@@ -4,7 +4,7 @@ function AddToBasketButton() {
   return (
     <div>
       <div
-        className="absolute w-[180px] h-[60px] bg-white px-4 py-2 
+        className="absolute w-[180px] h-[50px] bg-white px-4 py-2 
       rounded-full left-1/2 
       translate -translate-x-1/2 border-2 border-rose-700 -top-8 flex items-center justify-between"
       >
