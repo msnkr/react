@@ -32,7 +32,7 @@ function Card({ img, category, title, price }) {
             <p className="text-xl font-semibold">{title}</p>
           </div>
           <div className="card-price">
-            <p className="text-2xl font-semibold text-rose-700">${price}0</p>
+            <p className="text-2xl font-semibold text-rose-700">${price}</p>
           </div>
         </div>
       </div>
