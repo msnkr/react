@@ -535,33 +535,33 @@
 //   );
 // }
 
-import { useState } from "react";
+// import { useState } from "react";
 
-function App() {
-  const [greeting, setGreeting] = useState("Hello");
+// function App() {
+//   const [greeting, setGreeting] = useState("Hello");
 
-  function HandleMouseLeave() {
-    setGreeting("Hello");
-  }
+//   function HandleMouseLeave() {
+//     setGreeting("Hello");
+//   }
 
-  function HandleMouseOver() {
-    setGreeting("Hello, World!");
-  }
+//   function HandleMouseOver() {
+//     setGreeting("Hello, World!");
+//   }
 
-  return (
-    <div className="p-8">
-      <h1
-        className="text-4xl font-semibold"
-        onMouseOver={HandleMouseOver}
-        onMouseLeave={HandleMouseLeave}
-      >
-        {greeting}
-      </h1>
-    </div>
-  );
-}
+//   return (
+//     <div className="p-8">
+//       <h1
+//         className="text-4xl font-semibold"
+//         onMouseOver={HandleMouseOver}
+//         onMouseLeave={HandleMouseLeave}
+//       >
+//         {greeting}
+//       </h1>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 // import "./login.css";
 // function Form() {
@@ -640,3 +640,39 @@ export default App;
 // }
 
 // export default App;
+
+import { useState } from "react";
+
+const imageArr = [
+  "https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/1036621/pexels-photo-1036621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://images.pexels.com/photos/1586973/pexels-photo-1586973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+];
+
+function LoadImages() {
+  const [img, setImg] = setImg(false);
+
+  return (
+    <div className="flex">
+      {imageArr.map((image, index) => (
+        <div key={index}>
+          <img
+            src={image}
+            className="w-[50px] h-screen object-cover object-[40%_45%]"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function Slides() {
+  return (
+    <div>
+      <LoadImages />
+    </div>
+  );
+}
+
+export default Slides;
