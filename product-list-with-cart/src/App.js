@@ -1,5 +1,6 @@
 import Card from "./components/Card";
 import data from "./data.json";
+import YourCart from "./components/YourCart";
 
 export default function App() {
   return (
@@ -22,6 +23,9 @@ export default function App() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="section-2">
+        <YourCart />
       </div>
     </div>
   );
