@@ -640,3 +640,15 @@
 // }
 
 // export default App;
+
+function App() {
+  return (
+    <div className="overflow-hidden">
+      <h1 className="text-2xl font-semibold text-center animate-translateX py-20 z-50">
+        Hello, World!
+      </h1>
+    </div>
+  );
+}
+
+export default App;
