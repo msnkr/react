@@ -535,37 +535,33 @@
 //   );
 // }
 
-// import { useState } from "react";
+import { useState } from "react";
 
-// export default function App() {
-//   const [isActive, setIsActive] = useState(false);
-//   const [isActiveText, setIsActiveText] = useState("Test");
+function App() {
+  const [greeting, setGreeting] = useState("Hello");
 
-//   function Button() {
-//     return (
-//       <button className="bg-black text-white font-semibold px-4 py-2 rounded-xl">
-//         Click Me
-//       </button>
-//     );
-//   }
+  function HandleMouseLeave() {
+    setGreeting("Hello");
+  }
 
-//   function HandleMouseOver() {
-//     setIsActive(true);
-//   }
+  function HandleMouseOver() {
+    setGreeting("Hello, World!");
+  }
 
-//   function HandleMouseLeave() {
-//     setIsActive(false);
-//   }
+  return (
+    <div className="p-8">
+      <h1
+        className="text-4xl font-semibold"
+        onMouseOver={HandleMouseOver}
+        onMouseLeave={HandleMouseLeave}
+      >
+        {greeting}
+      </h1>
+    </div>
+  );
+}
 
-//   return (
-//     <div>
-//       <h1 onMouseOver={HandleMouseOver} onMouseLeave={HandleMouseLeave}>
-//         {isActiveText}
-//         {isActive && <Button />}
-//       </h1>
-//     </div>
-//   );
-// }
+export default App;
 
 // import "./login.css";
 // function Form() {
@@ -587,60 +583,60 @@
 
 // export default App;
 
-import { useState } from "react";
+// import { useState } from "react";
 
-function LogInScreen({ setIsLoggedIn }) {
-  function LogOut() {
-    setIsLoggedIn(false);
-  }
-  return (
-    <div>
-      <h1 className="text-center text-4xl font-semibold">Log in</h1>
-      <div className="p-8 space-y-2">
-        <input
-          className="w-full h-12 border-2 rounded-xl p-2"
-          type="text"
-          placeholder="Username"
-        />
-        <input
-          className="w-full h-12 border-2 rounded-xl p-2"
-          type="password"
-          placeholder="Password"
-        />
-      </div>
-      <button
-        onClick={LogOut}
-        className="bg-black text-white px-4 py-2 rounded-xl"
-      >
-        Log Out
-      </button>
-    </div>
-  );
-}
+// function LogInScreen({ setIsLoggedIn }) {
+//   function LogOut() {
+//     setIsLoggedIn(false);
+//   }
+//   return (
+//     <div>
+//       <h1 className="text-center text-4xl font-semibold">Log in</h1>
+//       <div className="p-8 space-y-2">
+//         <input
+//           className="w-full h-12 border-2 rounded-xl p-2"
+//           type="text"
+//           placeholder="Username"
+//         />
+//         <input
+//           className="w-full h-12 border-2 rounded-xl p-2"
+//           type="password"
+//           placeholder="Password"
+//         />
+//       </div>
+//       <button
+//         onClick={LogOut}
+//         className="bg-black text-white px-4 py-2 rounded-xl"
+//       >
+//         Log Out
+//       </button>
+//     </div>
+//   );
+// }
 
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+// function App() {
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  function LogIn() {
-    setIsLoggedIn(true);
-  }
+//   function LogIn() {
+//     setIsLoggedIn(true);
+//   }
 
-  return (
-    <div className="p-8">
-      <div className="text-center">
-        {isLoggedIn ? (
-          <LogInScreen setIsLoggedIn={setIsLoggedIn} />
-        ) : (
-          <button
-            onClick={LogIn}
-            className="bg-black text-white px-4 py-2 rounded-xl"
-          >
-            Log In
-          </button>
-        )}
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className="p-8">
+//       <div className="text-center">
+//         {isLoggedIn ? (
+//           <LogInScreen setIsLoggedIn={setIsLoggedIn} />
+//         ) : (
+//           <button
+//             onClick={LogIn}
+//             className="bg-black text-white px-4 py-2 rounded-xl"
+//           >
+//             Log In
+//           </button>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
