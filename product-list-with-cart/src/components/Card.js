@@ -13,7 +13,7 @@ function Card({ img, category, title, price }) {
     <div className="px-8 py-2">
       <div className="card">
         <div className="card-image">
-          <img className="rounded-xl" src={img} />
+          <img className="rounded-xl" src={img} alt={title} />
           <div className="relative">
             {showQuantityBasked ? (
               <QuantityBasketButton />
