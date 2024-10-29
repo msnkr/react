@@ -567,21 +567,79 @@
 //   );
 // }
 
-import "./login.css";
-function Form() {
+// import "./login.css";
+// function Form() {
+//   return (
+//     <form className="form">
+//       <input type="text" placeholder="Username" />
+//       <input type="password" placeholder="Password" />
+//       <button type="submit">Login</button>
+//     </form>
+//   );
+// }
+
+// function App() {
+//   const loggedIn = false;
+//   return (
+//     <div className="container">{loggedIn ? <h1>Hello</h1> : <Form />}</div>
+//   );
+// }
+
+// export default App;
+
+import { useState } from "react";
+
+function LogInScreen({ setIsLoggedIn }) {
+  function LogOut() {
+    setIsLoggedIn(false);
+  }
   return (
-    <form className="form">
-      <input type="text" placeholder="Username" />
-      <input type="password" placeholder="Password" />
-      <button type="submit">Login</button>
-    </form>
+    <div>
+      <h1 className="text-center text-4xl font-semibold">Log in</h1>
+      <div className="p-8 space-y-2">
+        <input
+          className="w-full h-12 border-2 rounded-xl p-2"
+          type="text"
+          placeholder="Username"
+        />
+        <input
+          className="w-full h-12 border-2 rounded-xl p-2"
+          type="password"
+          placeholder="Password"
+        />
+      </div>
+      <button
+        onClick={LogOut}
+        className="bg-black text-white px-4 py-2 rounded-xl"
+      >
+        Log Out
+      </button>
+    </div>
   );
 }
 
 function App() {
-  const loggedIn = false;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  function LogIn() {
+    setIsLoggedIn(true);
+  }
+
   return (
-    <div className="container">{loggedIn ? <h1>Hello</h1> : <Form />}</div>
+    <div className="p-8">
+      <div className="text-center">
+        {isLoggedIn ? (
+          <LogInScreen setIsLoggedIn={setIsLoggedIn} />
+        ) : (
+          <button
+            onClick={LogIn}
+            className="bg-black text-white px-4 py-2 rounded-xl"
+          >
+            Log In
+          </button>
+        )}
+      </div>
+    </div>
   );
 }
 
