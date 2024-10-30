@@ -193,17 +193,48 @@ import { emojipedia } from "./components/emojipedia";
 
 // export default App;
 
+// function App() {
+//   return (
+//     <div>
+//       <h1>Hello, World!</h1>
+//     </div>
+//   );
+// }
+
+// const numbers = [3, 5, 7, 45, 775, 34, 234, 656, 34, 775, 86];
+// const newArr = numbers.reduce((total, number) => total + number);
+
+// console.log(newArr);
+
+// export default App;
+
+import { useState } from "react";
+
 function App() {
+  let time = new Date().toLocaleTimeString();
+
+  const [currentTime, setCurrentTime] = useState(time);
+
+  function GetTime() {
+    setInterval(() => {
+      time = new Date().toLocaleTimeString();
+      setCurrentTime(time);
+    }, 1000);
+  }
+
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <div className="text-center space-y-4 mt-[200px]">
+        <h1 className="text-4xl font-bold">{currentTime}</h1>
+        <button
+          className="bg-black text-white font-semibold px-6 py-2"
+          onClick={GetTime}
+        >
+          Get Time
+        </button>
+      </div>
     </div>
   );
 }
-
-const numbers = [3, 5, 7, 45, 775, 34, 234, 656, 34, 775, 86];
-const newArr = numbers.reduce((total, number) => total + number);
-
-console.log(newArr);
 
 export default App;
