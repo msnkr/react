@@ -7,7 +7,7 @@ module.exports = {
         fade: "fade 3s ease-in-out",
         scale: "scale 2s infinite ease-in-out",
         flip: "flip 1s",
-        translateX: "translateX 2s view",
+        translateX: "translateX 2s",
       },
       keyframes: {
         fade: {
