@@ -767,12 +767,44 @@
 
 // export default App;
 
-function App() {
-  return (
-    <div>
-      <h1>Hello, World!</h1>
-    </div>
-  );
-}
+// import { useState } from "react";
 
-export default App;
+// function App() {
+//   const [expanded, setExpanded] = useState(false);
+//   return (
+//     <div className="p-8 flex space-x-2">
+//       <div
+//         className={`h-[300px] bg-yellow-300 rounded-lg cursor-pointer duration-1000 ${
+//           expanded ? "w-full" : "w-8"
+//         }`}
+//         onClick={() => setExpanded(!expanded)}
+//       ></div>
+//       <div
+//         className={`h-[300px] bg-blue-300 rounded-lg cursor-pointer duration-1000 ${
+//           expanded ? "w-full" : "w-8"
+//         }`}
+//         onClick={() => setExpanded(!expanded)}
+//       ></div>
+//       <div
+//         className={`h-[300px] bg-rose-300 rounded-lg cursor-pointer duration-1000 ${
+//           expanded ? "w-full" : "w-8"
+//         }`}
+//         onClick={() => setExpanded(!expanded)}
+//       ></div>
+//       <div
+//         className={`h-[300px] bg-red-300 rounded-lg cursor-pointer duration-1000 ${
+//           expanded ? "w-full" : "w-8"
+//         }`}
+//         onClick={() => setExpanded(!expanded)}
+//       ></div>
+//       <div
+//         className={`h-[300px] bg-green-300 rounded-lg cursor-pointer duration-1000 ${
+//           expanded ? "w-full" : "w-8"
+//         }`}
+//         onClick={() => setExpanded(!expanded)}
+//       ></div>
+//     </div>
+//   );
+// }
+
+// export default App;
