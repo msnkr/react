@@ -5,10 +5,9 @@ module.exports = {
     extend: {
       animation: {
         fade: "fade 3s ease-in-out",
-        scale: "scale 1s",
-        rotate: "rotate 3s infinite",
+        scale: "scale 2s infinite ease-in-out",
         flip: "flip 1s",
-        translateX: "translateX 2s",
+        translateX: "translateX 2s view",
       },
       keyframes: {
         fade: {
@@ -17,12 +16,8 @@ module.exports = {
         },
         scale: {
           "0%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.5)" },
+          "50%": { transform: "scale(1.05)" },
           "100%": { transform: "scale(1)" },
-        },
-        rotate: {
-          "0%": { transform: "rotate(0)" },
-          "100%": { transform: "rotate(360deg)" },
         },
         flip: {
           "0%": { transform: "scaleX(1)" },

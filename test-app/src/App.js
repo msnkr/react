@@ -645,8 +645,8 @@ function App() {
   return (
     <div className="overflow-hidden x">
       <div>
-        <h1 className="text-2xl font-semibold text-center animate-translateX py-20 z-50 h-screen">
-          Hello, World!
+        <h1 className="text-2xl font-semibold text-center py-20  z-50">
+          <span>Hello, World!</span>
         </h1>
       </div>
       <div>
