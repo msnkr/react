@@ -1,21 +1,15 @@
 import { useState } from "react";
 
-export const basket = {};
-
 function QuantityBasketButton({ prop }) {
   const [quantity, setQuantity] = useState(0);
 
   function IncrementQuantity({ name }) {
     setQuantity(quantity + 1);
-    basket[prop.name] = quantity;
   }
 
   function DecrementQuantity({ name }) {
     quantity <= 0 ? setQuantity(0) : setQuantity(quantity - 1);
-    basket[prop.name] = quantity;
   }
-
-  console.log(basket);
 
   return (
     <div>
@@ -24,7 +18,7 @@ function QuantityBasketButton({ prop }) {
       rounded-full left-1/2 
       translate -translate-x-1/2 border-2 border-rose-700 -top-8 flex items-center justify-between"
       >
-        <div className="decrease" onClick={() => DecrementQuantity(prop.name)}>
+        <div className="decrease" onClick={DecrementQuantity}>
           <svg
             className="rounded-full w-[20px] h-[20px] border p-1 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +34,7 @@ function QuantityBasketButton({ prop }) {
         <div className="increase">
           <svg
             className="rounded-full w-[20px] h-[20px] border p-1 cursor-pointer"
-            onClick={() => IncrementQuantity(prop.name)}
+            onClick={IncrementQuantity}
             xmlns="http://www.w3.org/2000/svg"
             width="10"
             height="10"
