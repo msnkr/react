@@ -18,6 +18,7 @@ export default function App() {
                   category={d.category}
                   title={d.name}
                   price={d.price}
+                  object={d}
                 />
               </div>
             ))}

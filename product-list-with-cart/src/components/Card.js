@@ -2,7 +2,7 @@ import AddToBasketButton from "./AddToBasketButton";
 import QuantityBasketButton from "./QuantityBasketButton";
 import { useState } from "react";
 
-function Card({ img, category, title, price }) {
+function Card({ img, category, title, price, object }) {
   const [showQuantityBasked, setShowQuantityBasket] = useState(false);
 
   function ShowBasket() {
@@ -16,7 +16,7 @@ function Card({ img, category, title, price }) {
           <img className="rounded-xl" src={img} alt={title} />
           <div className="relative">
             {showQuantityBasked ? (
-              <QuantityBasketButton />
+              <QuantityBasketButton prop={object} />
             ) : (
               <div onClick={ShowBasket}>
                 <AddToBasketButton />
