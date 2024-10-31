@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-function QuantityBasketButton({ prop }) {
+function QuantityBasketButton() {
   const [quantity, setQuantity] = useState(0);
 
-  function IncrementQuantity({ name }) {
+  function IncrementQuantity() {
     setQuantity(quantity + 1);
   }
 
-  function DecrementQuantity({ name }) {
+  function DecrementQuantity() {
     quantity <= 0 ? setQuantity(0) : setQuantity(quantity - 1);
   }
 
