@@ -180,8 +180,8 @@
 //   );
 // }
 
-import { DisplayEmoji } from "./components/DisplayEmoji";
-import { emojipedia } from "./components/emojipedia";
+// import { DisplayEmoji } from "./components/DisplayEmoji";
+// import { emojipedia } from "./components/emojipedia";
 
 // function App() {
 //   return (
@@ -208,33 +208,33 @@ import { emojipedia } from "./components/emojipedia";
 
 // export default App;
 
-import { useState } from "react";
+// import { useState } from "react";
 
-function App() {
-  let time = new Date().toLocaleTimeString();
+// function App() {
+//   let time = new Date().toLocaleTimeString();
 
-  const [currentTime, setCurrentTime] = useState(time);
+//   const [currentTime, setCurrentTime] = useState(time);
 
-  function GetTime() {
-    setInterval(() => {
-      time = new Date().toLocaleTimeString();
-      setCurrentTime(time);
-    }, 1000);
-  }
+//   function GetTime() {
+//     setInterval(() => {
+//       time = new Date().toLocaleTimeString();
+//       setCurrentTime(time);
+//     }, 1000);
+//   }
 
-  return (
-    <div>
-      <div className="text-center space-y-4 mt-[200px]">
-        <h1 className="text-4xl font-bold">{currentTime}</h1>
-        <button
-          className="bg-black text-white font-semibold px-6 py-2"
-          onClick={GetTime}
-        >
-          Get Time
-        </button>
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <div className="text-center space-y-4 mt-[200px]">
+//         <h1 className="text-4xl font-bold">{currentTime}</h1>
+//         <button
+//           className="bg-black text-white font-semibold px-6 py-2"
+//           onClick={GetTime}
+//         >
+//           Get Time
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
