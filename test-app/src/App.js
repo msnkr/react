@@ -808,3 +808,96 @@
 // }
 
 // export default App;
+
+// const cars = [
+//   {
+//     model: "Honda Civic",
+//     //The top colour refers to the first item in the array below:
+//     //i.e. hondaTopColour = "black"
+//     coloursByPopularity: ["black", "silver"],
+//     speedStats: {
+//       topSpeed: 140,
+//       zeroToSixty: 8.5,
+//     },
+//   },
+//   {
+//     model: "Tesla Model 3",
+//     coloursByPopularity: ["red", "white"],
+//     speedStats: {
+//       topSpeed: 150,
+//       zeroToSixty: 3.2,
+//     },
+//   },
+// ];
+
+// export default function App() {
+//   const [honda, tesla] = cars;
+//   const {
+//     coloursByPopularity: [teslaTopColor],
+//     speedStats: { topSpeed: teslaTopSpeed },
+//   } = tesla;
+
+//   const {
+//     coloursByPopularity: [hondaTopColor],
+//     speedStats: { topSpeed: hondaTopSpeed },
+//   } = honda;
+
+//   console.log(tesla.model);
+//   console.log(teslaTopSpeed);
+//   console.log(teslaTopColor);
+
+//   console.log(honda.model);
+//   console.log(hondaTopSpeed);
+//   console.log(hondaTopColor);
+//   return <></>;
+// }
+
+import "./input.css";
+
+import { useState } from "react";
+
+function App() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [name, setName] = useState("");
+  const [newName, setNewName] = useState("");
+
+  function changeName() {
+    setNewName(name);
+  }
+
+  function handleChange(event) {
+    setName(event.target.value);
+  }
+
+  function handleMouseEnter() {
+    setIsHovered(true);
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false);
+  }
+
+  return (
+    <div className="container">
+      <h1>Hello {newName}</h1>
+      <input
+        onChange={handleChange}
+        type="text"
+        placeholder="What's your name?"
+        value={name}
+      />
+      <button
+        className={`duration-1000 ease-in-out ${
+          isHovered ? "bg-black" : "bg-white"
+        }`}
+        onMouseOver={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={changeName}
+      >
+        Submit
+      </button>
+    </div>
+  );
+}
+
+export default App;
