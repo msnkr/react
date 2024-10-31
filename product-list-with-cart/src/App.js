@@ -14,6 +14,7 @@ export default function App() {
             {data.map((d, index) => (
               <div key={index}>
                 <Card
+                  index={index}
                   img={require(`${d.image.mobile}`)}
                   category={d.category}
                   title={d.name}

@@ -1,4 +1,6 @@
-function YourCart() {
+import data from "../data.json";
+
+function YourCart(index, quantity) {
   return (
     <div>
       <div className="mt-16 px-8">

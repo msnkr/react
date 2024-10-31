@@ -1,6 +1,7 @@
 import { useState } from "react";
+import YourCart from "./YourCart";
 
-function QuantityBasketButton() {
+function QuantityBasketButton(index) {
   const [quantity, setQuantity] = useState(0);
 
   function IncrementQuantity() {
@@ -11,6 +12,7 @@ function QuantityBasketButton() {
     quantity <= 0 ? setQuantity(0) : setQuantity(quantity - 1);
   }
 
+  YourCart(index, quantity);
   return (
     <div>
       <div
