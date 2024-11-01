@@ -1,4 +1,5 @@
 import { useState } from "react";
+import YourCart from "./YourCart";
 
 function QuantityBasketButton(index) {
   const [quantity, setQuantity] = useState(0);
@@ -6,16 +7,12 @@ function QuantityBasketButton(index) {
 
   function IncrementQuantity() {
     setQuantity(quantity + 1);
-    basket(newIndex, quantity);
+    YourCart(index, quantity);
   }
 
   function DecrementQuantity() {
     quantity <= 0 ? setQuantity(0) : setQuantity(quantity - 1);
-    basket(newIndex, quantity);
-  }
-
-  function basket(index, quantity) {
-    return index, quantity;
+    YourCart(index, quantity);
   }
 
   return (
