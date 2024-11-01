@@ -2,6 +2,8 @@ import data from "../data.json";
 import { useState } from "react";
 
 function YourCart(index, quantity) {
+  const newIndex = index.onClick;
+
   return (
     <div>
       <div className="mt-16 px-8">

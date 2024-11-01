@@ -7,12 +7,12 @@ function QuantityBasketButton(index) {
 
   function IncrementQuantity() {
     setQuantity(quantity + 1);
-    YourCart(index, quantity);
+    YourCart(index, quantity + 1);
   }
 
   function DecrementQuantity() {
     quantity <= 0 ? setQuantity(0) : setQuantity(quantity - 1);
-    YourCart(index, quantity);
+    YourCart(index, quantity - 1);
   }
 
   return (
