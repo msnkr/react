@@ -4,9 +4,15 @@ import { useState } from "react";
 
 function Card({ index, img, category, title, price }) {
   const [showQuantityBasked, setShowQuantityBasket] = useState(false);
+  const [newIndex, setNewIndex] = useState("");
+
+  function showIndex(index) {
+    return index;
+  }
 
   function ShowBasket() {
     setShowQuantityBasket(true);
+    setNewIndex(index);
   }
 
   return (
@@ -16,7 +22,7 @@ function Card({ index, img, category, title, price }) {
           <img className="rounded-xl" src={img} alt={title} />
           <div className="relative">
             {showQuantityBasked ? (
-              <QuantityBasketButton index={index} />
+              <QuantityBasketButton onClick={showIndex(newIndex)} />
             ) : (
               <div onClick={ShowBasket}>
                 <AddToBasketButton />
