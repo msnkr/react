@@ -908,10 +908,33 @@ import React from "react";
 import { useState } from "react";
 
 function App() {
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [fullName, setFullName] = useState("");
   const [mouseOver, setMouseOver] = useState(false);
+  const [fullName, setFullName] = useState({
+    fName: "",
+    lName: "",
+  });
+
+  function submitChange(event) {
+    event.preventDefault();
+  }
+
+  function handleNames(event) {
+    const { value, name } = event.target;
+
+    setFullName((prevValue) => {
+      if (name === "fName") {
+        return {
+          fName: value,
+          lName: prevValue.lName,
+        };
+      } else if (name === "lName") {
+        return {
+          fName: prevValue.fName,
+          lName: value,
+        };
+      }
+    });
+  }
 
   function handleLeave() {
     setMouseOver(false);
@@ -921,37 +944,29 @@ function App() {
     setMouseOver(true);
   }
 
-  function getFullName(e) {
-    setFullName(`${fname} ${lname}`);
-    e.preventDefault();
-  }
-
-  function getFname(e) {
-    setFname(e.target.value);
-  }
-
-  function getLname(e) {
-    setLname(e.target.value);
-  }
   return (
     <div className="container">
-      <h1>Hello {fullName}</h1>
+      <h1>
+        Hello {fullName.fName} {fullName.lName}
+      </h1>
       <form>
         <input
-          onChange={(e) => getFname(e)}
           name="fName"
+          onChange={handleNames}
           placeholder="First Name"
+          value={fullName.fName}
         />
         <input
-          onChange={(e) => getLname(e)}
           name="lName"
+          onChange={handleNames}
           placeholder="Last Name"
+          value={fullName.lName}
         />
         <button
           onMouseOver={handleHover}
           onMouseLeave={handleLeave}
-          onClick={(e) => getFullName(e)}
           className={`${mouseOver ? "bg-black" : "bg-white"} duration-500`}
+          onClick={submitChange}
         >
           Submit
         </button>
