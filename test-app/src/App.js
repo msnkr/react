@@ -854,48 +854,108 @@
 
 import "./input.css";
 
+// import { useState } from "react";
+
+// function App() {
+//   const [isHovered, setIsHovered] = useState(false);
+//   const [name, setName] = useState("");
+//   const [newName, setNewName] = useState("");
+
+//   function changeName() {
+//     setNewName(name);
+//   }
+
+//   function handleChange(event) {
+//     setName(event.target.value);
+//   }
+
+//   function handleMouseEnter() {
+//     setIsHovered(true);
+//   }
+
+//   function handleMouseLeave() {
+//     setIsHovered(false);
+//   }
+
+//   return (
+//     <div className="container">
+//       <h1>Hello {newName}</h1>
+//       <input
+//         onChange={handleChange}
+//         type="text"
+//         placeholder="What's your name?"
+//         value={name}
+//       />
+//       <button
+//         className={`duration-1000 ease-in-out ${
+//           isHovered ? "bg-black" : "bg-white"
+//         }`}
+//         onMouseOver={handleMouseEnter}
+//         onMouseLeave={handleMouseLeave}
+//         onClick={changeName}
+//       >
+//         Submit
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import "./index2.css";
+
+import React from "react";
 import { useState } from "react";
 
 function App() {
-  const [isHovered, setIsHovered] = useState(false);
-  const [name, setName] = useState("");
-  const [newName, setNewName] = useState("");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [mouseOver, setMouseOver] = useState(false);
 
-  function changeName() {
-    setNewName(name);
+  function handleLeave() {
+    setMouseOver(false);
   }
 
-  function handleChange(event) {
-    setName(event.target.value);
+  function handleHover() {
+    setMouseOver(true);
   }
 
-  function handleMouseEnter() {
-    setIsHovered(true);
+  function getFullName(e) {
+    setFullName(`${fname} ${lname}`);
+    e.preventDefault();
   }
 
-  function handleMouseLeave() {
-    setIsHovered(false);
+  function getFname(e) {
+    setFname(e.target.value);
   }
 
+  function getLname(e) {
+    setLname(e.target.value);
+  }
   return (
     <div className="container">
-      <h1>Hello {newName}</h1>
-      <input
-        onChange={handleChange}
-        type="text"
-        placeholder="What's your name?"
-        value={name}
-      />
-      <button
-        className={`duration-1000 ease-in-out ${
-          isHovered ? "bg-black" : "bg-white"
-        }`}
-        onMouseOver={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={changeName}
-      >
-        Submit
-      </button>
+      <h1>Hello {fullName}</h1>
+      <form>
+        <input
+          onChange={(e) => getFname(e)}
+          name="fName"
+          placeholder="First Name"
+        />
+        <input
+          onChange={(e) => getLname(e)}
+          name="lName"
+          placeholder="Last Name"
+        />
+        <button
+          onMouseOver={handleHover}
+          onMouseLeave={handleLeave}
+          onClick={(e) => getFullName(e)}
+          className={`${mouseOver ? "bg-black" : "bg-white"} duration-500`}
+        >
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
