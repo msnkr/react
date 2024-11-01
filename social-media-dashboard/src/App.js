@@ -1,8 +1,11 @@
 import BigCard from "./components/BigCard";
 
+import { useState } from "react";
+
 export default function App() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className="p-8">
+    <div className={`p-8 ${darkMode ? "bg-black" : "bg-white"}`}>
       <div className="section-1 my-2">
         <div>
           <h1 className="text-3xl">Social Media Dashboard</h1>
