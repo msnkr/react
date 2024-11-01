@@ -908,68 +908,13 @@ import React from "react";
 import { useState } from "react";
 
 function App() {
-  const [mouseOver, setMouseOver] = useState(false);
-  const [fullName, setFullName] = useState({
-    fName: "",
-    lName: "",
-  });
-
-  function submitChange(event) {
-    event.preventDefault();
-  }
-
-  function handleNames(event) {
-    const { value, name } = event.target;
-
-    setFullName((prevValue) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prevValue.lName,
-        };
-      } else if (name === "lName") {
-        return {
-          fName: prevValue.fName,
-          lName: value,
-        };
-      }
-    });
-  }
-
-  function handleLeave() {
-    setMouseOver(false);
-  }
-
-  function handleHover() {
-    setMouseOver(true);
-  }
-
   return (
     <div className="container">
-      <h1>
-        Hello {fullName.fName} {fullName.lName}
-      </h1>
+      <h1>Hello</h1>
       <form>
-        <input
-          name="fName"
-          onChange={handleNames}
-          placeholder="First Name"
-          value={fullName.fName}
-        />
-        <input
-          name="lName"
-          onChange={handleNames}
-          placeholder="Last Name"
-          value={fullName.lName}
-        />
-        <button
-          onMouseOver={handleHover}
-          onMouseLeave={handleLeave}
-          className={`${mouseOver ? "bg-black" : "bg-white"} duration-500`}
-          onClick={submitChange}
-        >
-          Submit
-        </button>
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <button>Submit</button>
       </form>
     </div>
   );
