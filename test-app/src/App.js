@@ -904,48 +904,116 @@ import "./input.css";
 
 import "./index2.css";
 
-import React from "react";
-import { useState } from "react";
+// import React from "react";
+// import { useState } from "react";
+
+// function App() {
+//   const [name, setName] = useState({
+//     fName: "",
+//     lName: "",
+//   });
+//   const [fullName, setFullName] = useState("");
+//   const [mouseOver, setMouseOver] = useState(false);
+
+//   function handleMouseLeave() {
+//     setMouseOver(false);
+//   }
+
+//   function handleMouseOver() {
+//     setMouseOver(true);
+//   }
+
+//   function handleClear() {
+//     setName({ fName: "", lName: "" });
+//   }
+
+//   function submitName(e) {
+//     setFullName(`${name.fName} ${name.lName}`);
+//     e.preventDefault();
+//     handleClear();
+//   }
+
+//   function handleChange(e) {
+//     const { value, name } = e.target;
+
+//     setName((prevValue) => {
+//       if (name === "fName") {
+//         return {
+//           fName: value,
+//           lName: prevValue.lName,
+//         };
+//       } else if (name === "lName") {
+//         return {
+//           fName: prevValue.fName,
+//           lName: value,
+//         };
+//       }
+//     });
+//   }
+
+//   return (
+//     <div className="container">
+//       <h1>Hello {fullName}</h1>
+//       <form>
+//         <input
+//           onChange={handleChange}
+//           value={name.fName}
+//           name="fName"
+//           placeholder="First Name"
+//         />
+//         <input
+//           onChange={handleChange}
+//           value={name.lName}
+//           name="lName"
+//           placeholder="Last Name"
+//         />
+//         <button
+//           onClick={submitName}
+//           onMouseOver={handleMouseOver}
+//           onMouseLeave={handleMouseLeave}
+//           className={`${
+//             mouseOver ? "bg-black text-white" : "bg-white"
+//           } duration-1000 ease-in`}
+//         >
+//           Submit
+//         </button>
+//       </form>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React, { useState } from "react";
 
 function App() {
-  const [name, setName] = useState({
+  const [contact, setContact] = useState({
     fName: "",
     lName: "",
+    email: "",
   });
-  const [fullName, setFullName] = useState("");
-  const [mouseOver, setMouseOver] = useState(false);
-
-  function handleMouseLeave() {
-    setMouseOver(false);
-  }
-
-  function handleMouseOver() {
-    setMouseOver(true);
-  }
-
-  function handleClear() {
-    setName({ fName: "", lName: "" });
-  }
-
-  function submitName(e) {
-    setFullName(`${name.fName} ${name.lName}`);
-    e.preventDefault();
-    handleClear();
-  }
 
   function handleChange(e) {
-    const { value, name } = e.target;
+    const { name, value } = e.target;
 
-    setName((prevValue) => {
+    setContact((prevValue) => {
       if (name === "fName") {
         return {
           fName: value,
           lName: prevValue.lName,
+          email: prevValue.email,
         };
       } else if (name === "lName") {
         return {
           fName: prevValue.fName,
           lName: value,
+          email: prevValue.email,
+        };
+      } else if (name === "email") {
+        return {
+          fName: prevValue.fName,
+          lName: prevValue.lName,
+          email: value,
         };
       }
     });
@@ -953,30 +1021,30 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Hello {fullName}</h1>
+      <h1>
+        Hello {contact.fName} {contact.lName}
+      </h1>
+      <p>{contact.email}</p>
       <form>
         <input
           onChange={handleChange}
-          value={name.fName}
+          value={contact.fName}
           name="fName"
           placeholder="First Name"
         />
         <input
           onChange={handleChange}
-          value={name.lName}
+          value={contact.lName}
           name="lName"
           placeholder="Last Name"
         />
-        <button
-          onClick={submitName}
-          onMouseOver={handleMouseOver}
-          onMouseLeave={handleMouseLeave}
-          className={`${
-            mouseOver ? "bg-black text-white" : "bg-white"
-          } duration-1000 ease-in`}
-        >
-          Submit
-        </button>
+        <input
+          onChange={handleChange}
+          value={contact.email}
+          name="email"
+          placeholder="Email"
+        />
+        <button>Submit</button>
       </form>
     </div>
   );
