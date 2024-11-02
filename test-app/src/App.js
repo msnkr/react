@@ -908,13 +908,75 @@ import React from "react";
 import { useState } from "react";
 
 function App() {
+  const [name, setName] = useState({
+    fName: "",
+    lName: "",
+  });
+  const [fullName, setFullName] = useState("");
+  const [mouseOver, setMouseOver] = useState(false);
+
+  function handleMouseLeave() {
+    setMouseOver(false);
+  }
+
+  function handleMouseOver() {
+    setMouseOver(true);
+  }
+
+  function handleClear() {
+    setName({ fName: "", lName: "" });
+  }
+
+  function submitName(e) {
+    setFullName(`${name.fName} ${name.lName}`);
+    e.preventDefault();
+    handleClear();
+  }
+
+  function handleChange(e) {
+    const { value, name } = e.target;
+
+    setName((prevValue) => {
+      if (name === "fName") {
+        return {
+          fName: value,
+          lName: prevValue.lName,
+        };
+      } else if (name === "lName") {
+        return {
+          fName: prevValue.fName,
+          lName: value,
+        };
+      }
+    });
+  }
+
   return (
     <div className="container">
-      <h1>Hello</h1>
+      <h1>Hello {fullName}</h1>
       <form>
-        <input name="fName" placeholder="First Name" />
-        <input name="lName" placeholder="Last Name" />
-        <button>Submit</button>
+        <input
+          onChange={handleChange}
+          value={name.fName}
+          name="fName"
+          placeholder="First Name"
+        />
+        <input
+          onChange={handleChange}
+          value={name.lName}
+          name="lName"
+          placeholder="Last Name"
+        />
+        <button
+          onClick={submitName}
+          onMouseOver={handleMouseOver}
+          onMouseLeave={handleMouseLeave}
+          className={`${
+            mouseOver ? "bg-black text-white" : "bg-white"
+          } duration-1000 ease-in`}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
