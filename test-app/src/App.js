@@ -908,68 +908,13 @@ import React from "react";
 import { useState } from "react";
 
 function App() {
-  const [fullName, setFullName] = useState({
-    fName: "",
-    lName: "",
-  });
-  const [showName, setShowName] = useState("");
-  const [mouseEnter, setMouseEnter] = useState(false);
-
-  function handleMouseLeave() {
-    setMouseEnter(false);
-  }
-  function handleMouseEnter() {
-    setMouseEnter(true);
-  }
-
-  function submitButton(e) {
-    console.log(e);
-    setShowName(`${fullName.fName} ${fullName.lName}`);
-    e.preventDefault();
-  }
-
-  function handleChange(event) {
-    const { value, name } = event.target;
-
-    setFullName((prev) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prev.lName,
-        };
-      } else if (name === "lName") {
-        return {
-          fName: prev.fName,
-          lName: value,
-        };
-      }
-    });
-  }
-
   return (
     <div className="container">
-      <h1>Hello {showName}</h1>
+      <h1>Hello</h1>
       <form>
-        <input
-          onChange={handleChange}
-          value={fullName.fName}
-          name="fName"
-          placeholder="First Name"
-        />
-        <input
-          onChange={handleChange}
-          value={fullName.lName}
-          name="lName"
-          placeholder="Last Name"
-        />
-        <button
-          className={`${mouseEnter ? "bg-black" : "bg-white"} duration-1000`}
-          onClick={submitButton}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          Submit
-        </button>
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <button>Submit</button>
       </form>
     </div>
   );
