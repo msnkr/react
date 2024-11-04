@@ -1,6 +1,11 @@
 import BigCard from "./components/BigCard";
+import SmallCard from "./components/SmallCard";
 import iconFacebook from "./images/icon-facebook.svg";
+import iconInstagram from "./images/icon-instagram.svg";
+import iconTwitter from "./images/icon-twitter.svg";
+import iconYoutube from "./images/icon-youtube.svg";
 import iconIncrease from "./images/icon-up.svg";
+import iconDecrease from "./images/icon-down.svg";
 
 import { useState } from "react";
 
@@ -8,7 +13,7 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div
-      className={`p-8 ${
+      className={`p-20 ${
         darkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
@@ -25,18 +30,25 @@ export default function App() {
         <h1>Dark Mode</h1>
         <button>toggle</button>
       </div>
-      <div className="section-2">
+      <div className="section-2 mt-8 space-y-8">
         <BigCard
-          lineColor={"bg-yellow-500"}
+          lineColor={"bg-green-100"}
           icon={iconFacebook}
           name={"@nathanf"}
           followerCount={1987}
           followers={"followers"}
           arrowIcon={iconIncrease}
+          todayCount={"12 Today"}
         />
       </div>
-      <div className="section-3"></div>
-      <div className="section-4"></div>
+      <div className="section-3 my-8">
+        <p className="text-3xl">Overview - Today</p>
+      </div>
+      <div className="section-4">
+        <div>
+          <SmallCard />
+        </div>
+      </div>
     </div>
   );
 }
