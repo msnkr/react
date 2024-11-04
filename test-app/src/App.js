@@ -987,11 +987,34 @@ import "./input.css";
 import React, { useState } from "react";
 
 function App() {
+  const [updateName, setUpdateName] = useState("");
+  const [updateEmail, setUpdateEmail] = useState("");
+
+  const [updateButton, setUpdateButton] = useState(false);
   const [fullName, setFullName] = useState({
     fName: "",
     lName: "",
     email: "",
   });
+
+  function handleClick(e) {
+    setUpdateName(`${fullName.fName} ${fullName.lName}`);
+    setUpdateEmail(fullName.email);
+    setFullName({
+      fName: "",
+      lName: "",
+      email: "",
+    });
+    e.preventDefault();
+  }
+
+  function mouseLeave() {
+    setUpdateButton(false);
+  }
+
+  function mouseOver() {
+    setUpdateButton(true);
+  }
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -1003,10 +1026,8 @@ function App() {
   }
   return (
     <div className="container">
-      <h1>
-        Hello {fullName.fName} {fullName.lName}
-      </h1>
-      <p>{fullName.email}</p>
+      <h1>Hello {updateName}</h1>
+      <p className="mb-4">{updateEmail}</p>
       <form>
         <input
           name="fName"
@@ -1026,7 +1047,14 @@ function App() {
           placeholder="Email"
           value={fullName.email}
         />
-        <button>Submit</button>
+        <button
+          className={`${updateButton ? "bg-black" : "bg-white"} duration-700`}
+          onMouseOver={mouseOver}
+          onMouseLeave={mouseLeave}
+          onClick={handleClick}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
