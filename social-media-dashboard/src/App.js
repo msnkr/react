@@ -46,7 +46,13 @@ export default function App() {
       </div>
       <div className="section-4">
         <div>
-          <SmallCard />
+          <SmallCard
+            heading={"Page Views"}
+            socialIcon={iconFacebook}
+            amount={"87"}
+            arrowIcon={iconIncrease}
+            percentage={3}
+          />
         </div>
       </div>
     </div>
