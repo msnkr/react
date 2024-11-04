@@ -852,7 +852,7 @@
 //   return <></>;
 // }
 
-import "./input.css";
+// import "./input.css";
 
 // import { useState } from "react";
 
@@ -984,78 +984,121 @@ import "./input.css";
 
 // export default App;
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
+
+// function App() {
+//   const [updateName, setUpdateName] = useState("");
+//   const [updateEmail, setUpdateEmail] = useState("");
+
+//   const [updateButton, setUpdateButton] = useState(false);
+//   const [fullName, setFullName] = useState({
+//     fName: "",
+//     lName: "",
+//     email: "",
+//   });
+
+//   function handleClick(e) {
+//     setUpdateName(`${fullName.fName} ${fullName.lName}`);
+//     setUpdateEmail(fullName.email);
+//     setFullName({
+//       fName: "",
+//       lName: "",
+//       email: "",
+//     });
+//     e.preventDefault();
+//   }
+
+//   function mouseLeave() {
+//     setUpdateButton(false);
+//   }
+
+//   function mouseOver() {
+//     setUpdateButton(true);
+//   }
+
+//   function handleChange(event) {
+//     const { name, value } = event.target;
+
+//     setFullName((prevValue) => ({
+//       ...prevValue,
+//       [name]: value,
+//     }));
+//   }
+//   return (
+//     <div className="container">
+//       <h1>Hello {updateName}</h1>
+//       <p className="mb-4">{updateEmail}</p>
+//       <form>
+//         <input
+//           name="fName"
+//           onChange={handleChange}
+//           placeholder="First Name"
+//           value={fullName.fName}
+//         />
+//         <input
+//           name="lName"
+//           onChange={handleChange}
+//           placeholder="Last Name"
+//           value={fullName.lName}
+//         />
+//         <input
+//           name="email"
+//           onChange={handleChange}
+//           placeholder="Email"
+//           value={fullName.email}
+//         />
+//         <button
+//           className={`${updateButton ? "bg-black" : "bg-white"} duration-700`}
+//           onMouseOver={mouseOver}
+//           onMouseLeave={mouseLeave}
+//           onClick={handleClick}
+//         >
+//           Submit
+//         </button>
+//       </form>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import "./todo.css";
+
+import React from "react";
+import { useState } from "react";
 
 function App() {
-  const [updateName, setUpdateName] = useState("");
-  const [updateEmail, setUpdateEmail] = useState("");
+  const [currentItem, setCurrentItem] = useState("");
+  const [itemArr, setItemArray] = useState([]);
 
-  const [updateButton, setUpdateButton] = useState(false);
-  const [fullName, setFullName] = useState({
-    fName: "",
-    lName: "",
-    email: "",
-  });
-
-  function handleClick(e) {
-    setUpdateName(`${fullName.fName} ${fullName.lName}`);
-    setUpdateEmail(fullName.email);
-    setFullName({
-      fName: "",
-      lName: "",
-      email: "",
-    });
-    e.preventDefault();
+  function handleClick() {
+    setItemArray(currentItem);
+    console.log(itemArr);
   }
 
-  function mouseLeave() {
-    setUpdateButton(false);
+  function handleChange(e) {
+    const item = e.target.value;
+    setCurrentItem(item);
   }
 
-  function mouseOver() {
-    setUpdateButton(true);
-  }
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-
-    setFullName((prevValue) => ({
-      ...prevValue,
-      [name]: value,
-    }));
-  }
   return (
     <div className="container">
-      <h1>Hello {updateName}</h1>
-      <p className="mb-4">{updateEmail}</p>
-      <form>
-        <input
-          name="fName"
-          onChange={handleChange}
-          placeholder="First Name"
-          value={fullName.fName}
-        />
-        <input
-          name="lName"
-          onChange={handleChange}
-          placeholder="Last Name"
-          value={fullName.lName}
-        />
-        <input
-          name="email"
-          onChange={handleChange}
-          placeholder="Email"
-          value={fullName.email}
-        />
-        <button
-          className={`${updateButton ? "bg-black" : "bg-white"} duration-700`}
-          onMouseOver={mouseOver}
-          onMouseLeave={mouseLeave}
-          onClick={handleClick}
-        >
-          Submit
+      <div className="heading">
+        <h1>To-Do List</h1>
+      </div>
+      <div className="form">
+        <input type="text" name="input" onChange={handleChange} />
+        <button>
+          <span onClick={handleClick}>Add</span>
         </button>
-      </form>
+      </div>
+      <div>
+        <ul>
+          {/* {itemArr.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))} */}
+        </ul>
+      </div>
     </div>
   );
 }
