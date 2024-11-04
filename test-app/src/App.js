@@ -902,7 +902,7 @@ import "./input.css";
 
 // export default App;
 
-import "./index2.css";
+// import "./index2.css";
 
 // import React from "react";
 // import { useState } from "react";
@@ -987,63 +987,14 @@ import "./index2.css";
 import React, { useState } from "react";
 
 function App() {
-  const [contact, setContact] = useState({
-    fName: "",
-    lName: "",
-    email: "",
-  });
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-
-    setContact((prevValue) => {
-      if (name === "fName") {
-        return {
-          fName: value,
-          lName: prevValue.lName,
-          email: prevValue.email,
-        };
-      } else if (name === "lName") {
-        return {
-          fName: prevValue.fName,
-          lName: value,
-          email: prevValue.email,
-        };
-      } else if (name === "email") {
-        return {
-          fName: prevValue.fName,
-          lName: prevValue.lName,
-          email: value,
-        };
-      }
-    });
-  }
-
   return (
     <div className="container">
-      <h1>
-        Hello {contact.fName} {contact.lName}
-      </h1>
-      <p>{contact.email}</p>
+      <h1>Hello</h1>
+      <p></p>
       <form>
-        <input
-          onChange={handleChange}
-          value={contact.fName}
-          name="fName"
-          placeholder="First Name"
-        />
-        <input
-          onChange={handleChange}
-          value={contact.lName}
-          name="lName"
-          placeholder="Last Name"
-        />
-        <input
-          onChange={handleChange}
-          value={contact.email}
-          name="email"
-          placeholder="Email"
-        />
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <input name="email" placeholder="Email" />
         <button>Submit</button>
       </form>
     </div>
