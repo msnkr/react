@@ -1,7 +1,7 @@
 function SmallCard({ heading, socialIcon, amount, arrowIcon, percentage }) {
   return (
     <div>
-      <div className="bg-rose-100 w-full h-[150px] p-8 space-y-8 rounded-lg">
+      <div className="bg-dark-desaturated-blue-card-bg w-full h-[140px] px-12 space-y-4  py-8 rounded-lg">
         <div className="flex justify-between items-center">
           <div>
             <p className="font-bold">{heading}</p>
@@ -12,7 +12,7 @@ function SmallCard({ heading, socialIcon, amount, arrowIcon, percentage }) {
         </div>
         <div className="flex justify-between items-center">
           <div>
-            <p className="text-4xl">{amount}</p>
+            <p className="text-4xl text-white">{amount}</p>
           </div>
           <div className="flex justify-between items-center">
             <div>

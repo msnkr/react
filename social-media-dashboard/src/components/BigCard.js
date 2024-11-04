@@ -22,7 +22,9 @@ function BigCard({
               </div>
             </div>
             <div>
-              <p className="text-5xl mt-4 font-bold">{followerCount}</p>
+              <p className="text-5xl mt-4 font-bold text-white">
+                {followerCount}
+              </p>
             </div>
             <div>
               <p className="uppercase tracking-widest">{followers}</p>
