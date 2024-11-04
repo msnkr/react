@@ -18,7 +18,7 @@ export default function App() {
 
   return (
     <div
-      className={`text-desaturated-blue px-8 py-12 pb-[400px] ${
+      className={`text-desaturated-blue px-8 py-12 pb-[100px] ${
         darkMode ? "bg-very-dark-blue text-white" : "bg-white text-black"
       }`}
     >
@@ -82,13 +82,62 @@ export default function App() {
         <p className="text-3xl text-white">Overview - Today</p>
       </div>
       <div className="section-4">
-        <div>
+        <div className="space-y-4">
           <SmallCard
             heading={"Page Views"}
             socialIcon={iconFacebook}
             amount={"87"}
             arrowIcon={iconIncrease}
             percentage={3}
+          />
+          <SmallCard
+            heading={"Likes"}
+            socialIcon={iconFacebook}
+            amount={"52"}
+            arrowIcon={iconDecrease}
+            percentage={2}
+          />
+          <SmallCard
+            heading={"Likes"}
+            socialIcon={iconInstagram}
+            amount={"5462"}
+            arrowIcon={iconIncrease}
+            percentage={2257}
+          />
+          <SmallCard
+            heading={"Profile Views"}
+            socialIcon={iconInstagram}
+            amount={"52K"}
+            arrowIcon={iconIncrease}
+            percentage={1375}
+          />
+          <SmallCard
+            heading={"Retweets"}
+            socialIcon={iconTwitter}
+            amount={"117"}
+            arrowIcon={iconIncrease}
+            percentage={303}
+          />
+          <SmallCard
+            heading={"Likes"}
+            socialIcon={iconTwitter}
+            amount={"507"}
+            arrowIcon={iconIncrease}
+            percentage={553}
+          />
+          <SmallCard
+            heading={"Likes"}
+            socialIcon={iconYoutube}
+            amount={"107"}
+            arrowIcon={iconIncrease}
+            percentage={19}
+          />
+          <SmallCard
+            heading={"Total Views"}
+            socialIcon={iconYoutube}
+            amount={"1407"}
+            arrowIcon={iconIncrease}
+            percentage={12}
           />
         </div>
       </div>
