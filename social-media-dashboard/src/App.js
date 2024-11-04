@@ -10,7 +10,12 @@ import iconDecrease from "./images/icon-down.svg";
 import { useState } from "react";
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+  function toggleDarkMode() {
+    setDarkMode(false);
+  }
+
   return (
     <div
       className={`p-20 ${
@@ -28,7 +33,7 @@ export default function App() {
       </div>
       <div className="flex justify-between mt-2">
         <h1>Dark Mode</h1>
-        <button>toggle</button>
+        <button onClick={toggleDarkMode}>toggle</button>
       </div>
       <div className="section-2 mt-8 space-y-8">
         <BigCard

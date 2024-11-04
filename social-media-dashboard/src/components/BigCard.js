@@ -11,11 +11,11 @@ function BigCard({
     <div>
       <div className="card text-center">
         <div className={`w-full h-2 ${lineColor} rounded-t-lg`}></div>
-        <div className="w-full h-[200px] bg-orange-500 rounded-b-lg">
+        <div className="w-full h-[200px] bg-orange-100 rounded-b-lg">
           <div className="card-container p-8">
             <div className="flex justify-center space-x-4">
               <div className="icon">
-                <img src={icon} />
+                <img className="w-[10px] h-[10px]" src={icon} />
               </div>
               <div>
                 <p>{name}</p>

@@ -1,22 +1,22 @@
 function SmallCard({ heading, socialIcon, amount, arrowIcon, percentage }) {
   return (
     <div>
-      <div>
+      <div className="bg-rose-100 w-full h-[150px] p-8 space-y-8 rounded-lg">
         <div className="flex justify-between items-center">
           <div>
-            <p>{heading}</p>
+            <p className="font-bold">{heading}</p>
           </div>
           <div>
-            <img src={socialIcon} />
+            <img className="w-[25px] h-[25px]" src={socialIcon} />
           </div>
         </div>
         <div className="flex justify-between items-center">
           <div>
-            <p>{amount}</p>
+            <p className="text-4xl">{amount}</p>
           </div>
           <div className="flex justify-between items-center">
             <div>
-              <img src={arrowIcon} />
+              <img className="w-[10px] h-[10px] m-2" src={arrowIcon} />
             </div>
             <div>
               <p>{percentage}%</p>
