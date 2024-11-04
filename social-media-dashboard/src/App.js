@@ -18,8 +18,8 @@ export default function App() {
 
   return (
     <div
-      className={`p-20 ${
-        darkMode ? "bg-black text-white" : "bg-white text-black"
+      className={`p-20 pb-[400px] ${
+        darkMode ? "bg-very-dark-blue text-white" : "bg-white text-black"
       }`}
     >
       <div className="section-1 my-2">
@@ -33,11 +33,16 @@ export default function App() {
       </div>
       <div className="flex justify-between mt-2">
         <h1>Dark Mode</h1>
-        <button onClick={toggleDarkMode}>toggle</button>
+        <button
+          onClick={toggleDarkMode}
+          className="bg-white w-[70px] h-[30px] rounded-full"
+        >
+          <div className="bg-black w-[25px] h-[25px] rounded-full ml-1"></div>
+        </button>
       </div>
       <div className="section-2 mt-8 space-y-8">
         <BigCard
-          lineColor={"bg-green-100"}
+          lineColor={"bg-facebook"}
           icon={iconFacebook}
           name={"@nathanf"}
           followerCount={1987}
