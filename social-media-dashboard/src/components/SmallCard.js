@@ -1,4 +1,11 @@
-function SmallCard({ heading, socialIcon, amount, arrowIcon, percentage }) {
+function SmallCard({
+  heading,
+  socialIcon,
+  amount,
+  arrowIcon,
+  percentage,
+  highOrLow,
+}) {
   return (
     <div>
       <div className="bg-dark-desaturated-blue-card-bg w-full h-[140px] px-12 space-y-4  py-8 rounded-lg">
@@ -19,7 +26,13 @@ function SmallCard({ heading, socialIcon, amount, arrowIcon, percentage }) {
               <img className="w-[10px] h-[10px] m-2" src={arrowIcon} />
             </div>
             <div>
-              <p>{percentage}%</p>
+              <p
+                className={`${
+                  highOrLow ? "text-lime-green" : "text-bright-red"
+                }`}
+              >
+                {percentage}%
+              </p>
             </div>
           </div>
         </div>

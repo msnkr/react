@@ -5,6 +5,7 @@ function BigCard({
   followerCount,
   followers,
   arrowIcon,
+  highOrLow,
   todayCount,
 }) {
   return (
@@ -34,7 +35,13 @@ function BigCard({
                 <img src={arrowIcon} className="w-[10px] h-[10px]" />
               </div>
               <div>
-                <p>{todayCount}</p>
+                <p
+                  className={`${
+                    highOrLow ? "text-lime-green" : "text-bright-red"
+                  }`}
+                >
+                  {todayCount}
+                </p>
               </div>
             </div>
           </div>

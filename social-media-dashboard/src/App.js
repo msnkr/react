@@ -48,6 +48,7 @@ export default function App() {
           followerCount={1987}
           followers={"followers"}
           arrowIcon={iconIncrease}
+          highOrLow={true}
           todayCount={"12 Today"}
         />
         <BigCard
@@ -57,6 +58,7 @@ export default function App() {
           followerCount={1044}
           followers={"followers"}
           arrowIcon={iconIncrease}
+          highOrLow={true}
           todayCount={"99 Today"}
         />
         <BigCard
@@ -66,6 +68,7 @@ export default function App() {
           followerCount={"11K"}
           followers={"followers"}
           arrowIcon={iconIncrease}
+          highOrLow={true}
           todayCount={"1099 Today"}
         />
         <BigCard
@@ -75,6 +78,7 @@ export default function App() {
           followerCount={8239}
           followers={"subscribers"}
           arrowIcon={iconDecrease}
+          highOrLow={false}
           todayCount={"144 Today"}
         />
       </div>
@@ -88,6 +92,7 @@ export default function App() {
             socialIcon={iconFacebook}
             amount={"87"}
             arrowIcon={iconIncrease}
+            highOrLow={true}
             percentage={3}
           />
           <SmallCard
@@ -95,6 +100,7 @@ export default function App() {
             socialIcon={iconFacebook}
             amount={"52"}
             arrowIcon={iconDecrease}
+            highOrLow={false}
             percentage={2}
           />
           <SmallCard
@@ -102,6 +108,7 @@ export default function App() {
             socialIcon={iconInstagram}
             amount={"5462"}
             arrowIcon={iconIncrease}
+            highOrLow={true}
             percentage={2257}
           />
           <SmallCard
@@ -109,6 +116,7 @@ export default function App() {
             socialIcon={iconInstagram}
             amount={"52K"}
             arrowIcon={iconIncrease}
+            highOrLow={true}
             percentage={1375}
           />
           <SmallCard
@@ -116,6 +124,7 @@ export default function App() {
             socialIcon={iconTwitter}
             amount={"117"}
             arrowIcon={iconIncrease}
+            highOrLow={true}
             percentage={303}
           />
           <SmallCard
@@ -123,6 +132,7 @@ export default function App() {
             socialIcon={iconTwitter}
             amount={"507"}
             arrowIcon={iconIncrease}
+            highOrLow={true}
             percentage={553}
           />
           <SmallCard
@@ -130,6 +140,7 @@ export default function App() {
             socialIcon={iconYoutube}
             amount={"107"}
             arrowIcon={iconIncrease}
+            highOrLow={true}
             percentage={19}
           />
           <SmallCard
@@ -137,6 +148,7 @@ export default function App() {
             socialIcon={iconYoutube}
             amount={"1407"}
             arrowIcon={iconIncrease}
+            highOrLow={true}
             percentage={12}
           />
         </div>
