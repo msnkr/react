@@ -1068,17 +1068,16 @@ import React from "react";
 import { useState } from "react";
 
 function App() {
-  const [currrentItem, setCurrentItem] = useState("");
+  const [item, setItem] = useState("");
   const [arr, setArr] = useState([]);
 
   function handleClick() {
-    setArr((prevItem) => [...prevItem, currrentItem]);
-    console.log(arr);
+    setArr((prevValue) => [...prevValue, item]);
   }
 
   function handleChange(e) {
-    const { name, value } = e.target;
-    setCurrentItem(value);
+    const value = e.target.value;
+    setItem(value);
   }
 
   return (
@@ -1087,7 +1086,7 @@ function App() {
         <h1>To-Do List</h1>
       </div>
       <div className="form">
-        <input type="text" name="item" onChange={handleChange} />
+        <input type="text" onChange={handleChange} />
         <button>
           <span onClick={handleClick}>Add</span>
         </button>
