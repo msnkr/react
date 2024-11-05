@@ -21,7 +21,7 @@ function SmallCard({
             <p className="font-bold">{heading}</p>
           </div>
           <div>
-            <img className="w-[25px] h-[25px]" src={socialIcon} />
+            <img className="w-[25px] h-[25px]" src={socialIcon} alt="icon" />
           </div>
         </div>
         <div className="flex justify-between items-center">
@@ -36,7 +36,11 @@ function SmallCard({
           </div>
           <div className="flex justify-between items-center">
             <div>
-              <img className="w-[10px] h-[10px] m-2" src={arrowIcon} />
+              <img
+                className="w-[10px] h-[10px] m-2"
+                src={arrowIcon}
+                alt="icon"
+              />
             </div>
             <div>
               <p

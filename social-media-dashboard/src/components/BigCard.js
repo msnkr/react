@@ -23,7 +23,7 @@ function BigCard({
           <div className="card-container p-8 space-y-4">
             <div className="flex justify-center space-x-4">
               <div className="icon">
-                <img className="w-[25px] h-[25px]" src={icon} />
+                <img className="w-[25px] h-[25px]" src={icon} alt="icon" />
               </div>
               <div>
                 <p>{name}</p>
@@ -43,7 +43,7 @@ function BigCard({
             </div>
             <div className="mt-2 flex justify-center space-x-4 items-center font-bold">
               <div>
-                <img src={arrowIcon} className="w-[10px] h-[10px]" />
+                <img src={arrowIcon} className="w-[10px] h-[10px]" alt="icon" />
               </div>
               <div>
                 <p
