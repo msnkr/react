@@ -18,7 +18,7 @@ function BigCard({
             isDarkMode
               ? "bg-dark-desaturated-blue-card-bg"
               : "bg-very-pale-blue-top-patter"
-          } w-full h-[250px] rounded-b-lg`}
+          } duration-1000 w-full h-[250px] rounded-b-lg`}
         >
           <div className="card-container p-8 space-y-4">
             <div className="flex justify-center space-x-4">

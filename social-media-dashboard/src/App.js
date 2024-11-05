@@ -26,7 +26,11 @@ export default function App() {
     >
       <div className="section-1 my-2">
         <div>
-          <h1 className={`${darkMode ? "text-white" : "text-black"} text-3xl`}>
+          <h1
+            className={`${
+              darkMode ? "text-white" : "text-black"
+            } duration-1000 text-3xl`}
+          >
             Social Media Dashboard
           </h1>
         </div>
@@ -43,7 +47,7 @@ export default function App() {
             darkMode
               ? "bg-gradient-to-r from-toggle-start to-toggle-end"
               : "bg-dark-grayish-blued"
-          } w-[70px] h-[32px] rounded-full`}
+          } duration-1000 w-[70px] h-[32px] rounded-full`}
         >
           <div
             className={`${
@@ -113,6 +117,7 @@ export default function App() {
             percentage={3}
           />
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Likes"}
             socialIcon={iconFacebook}
             amount={"52"}
@@ -121,6 +126,7 @@ export default function App() {
             percentage={2}
           />
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Likes"}
             socialIcon={iconInstagram}
             amount={"5462"}
@@ -129,6 +135,7 @@ export default function App() {
             percentage={2257}
           />
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Profile Views"}
             socialIcon={iconInstagram}
             amount={"52K"}
@@ -137,6 +144,7 @@ export default function App() {
             percentage={1375}
           />
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Retweets"}
             socialIcon={iconTwitter}
             amount={"117"}
@@ -145,6 +153,7 @@ export default function App() {
             percentage={303}
           />
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Likes"}
             socialIcon={iconTwitter}
             amount={"507"}
@@ -153,6 +162,7 @@ export default function App() {
             percentage={553}
           />
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Likes"}
             socialIcon={iconYoutube}
             amount={"107"}
@@ -161,6 +171,7 @@ export default function App() {
             percentage={19}
           />
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Total Views"}
             socialIcon={iconYoutube}
             amount={"1407"}

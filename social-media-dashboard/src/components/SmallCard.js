@@ -1,5 +1,5 @@
 function SmallCard({
-  darkMode,
+  isDarkMode,
   heading,
   socialIcon,
   amount,
@@ -11,10 +11,10 @@ function SmallCard({
     <div>
       <div
         className={`${
-          darkMode
-            ? "bg-dark-desaturated-blue-card-bg "
+          isDarkMode
+            ? "bg-dark-desaturated-blue-card-bg"
             : "bg-very-pale-blue-top-patter"
-        } w-full h-[140px] px-12 space-y-4  py-8 rounded-lg`}
+        } duration-1000 w-full h-[140px] px-12 space-y-4  py-8 rounded-lg`}
       >
         <div className="flex justify-between items-center">
           <div>
@@ -28,8 +28,8 @@ function SmallCard({
           <div>
             <p
               className={`${
-                darkMode ? "text-white" : "text-very-dark-blue-light"
-              } text-4xl font-bold`}
+                isDarkMode ? "text-white" : "text-very-dark-blue-light"
+              } text-4xl`}
             >
               {amount}
             </p>
