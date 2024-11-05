@@ -1,4 +1,5 @@
 function BigCard({
+  isDarkMode,
   lineColor,
   icon,
   name,
@@ -12,7 +13,13 @@ function BigCard({
     <div>
       <div className="card text-center">
         <div className={`w-full h-2 ${lineColor} rounded-t-lg`}></div>
-        <div className="w-full h-[250px] bg-dark-desaturated-blue-card-bg rounded-b-lg">
+        <div
+          className={`${
+            isDarkMode
+              ? "bg-dark-desaturated-blue-card-bg"
+              : "bg-very-pale-blue-top-patter"
+          } w-full h-[250px] rounded-b-lg`}
+        >
           <div className="card-container p-8 space-y-4">
             <div className="flex justify-center space-x-4">
               <div className="icon">
@@ -23,7 +30,11 @@ function BigCard({
               </div>
             </div>
             <div>
-              <p className="text-5xl mt-4 font-bold text-white">
+              <p
+                className={`text-6xl mt-4 font-bold ${
+                  isDarkMode ? "text-white" : "text-very-dark-blue-light"
+                }`}
+              >
                 {followerCount}
               </p>
             </div>

@@ -17,10 +17,12 @@ module.exports = {
         "very-dark-blue-top-pattern": "hsl(232, 19%, 15%)",
         "dark-desaturated-blue-card-bg": " hsl(228, 28%, 20%)",
         "desaturated-blue": "hsl(228, 34%, 66%)",
+        "very-pale-blue-top-patter": "hsl(225, 100%, 98%)",
+        "light-grayish-blue": "hsl(227, 47%, 96%)",
+        "dark-grayish-blued": "hsl(228, 12%, 44%)",
+        "very-dark-blue-light": "hsl(230, 17%, 14%)",
       },
     },
   },
   plugins: [],
 };
-
-// - White (Text): hsl(0, 0%, 100%)

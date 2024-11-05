@@ -13,18 +13,22 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   function toggleDarkMode() {
-    setDarkMode(false);
+    darkMode ? setDarkMode(false) : setDarkMode(true);
   }
 
   return (
     <div
       className={`text-desaturated-blue px-8 py-12 pb-[100px] ${
-        darkMode ? "bg-very-dark-blue text-white" : "bg-white text-black"
+        darkMode
+          ? "bg-very-dark-blue text-white"
+          : "bg-white text-dark-grayish-blued"
       }`}
     >
       <div className="section-1 my-2">
         <div>
-          <h1 className="text-3xl text-white">Social Media Dashboard</h1>
+          <h1 className={`${darkMode ? "text-white" : "text-black"} text-3xl`}>
+            Social Media Dashboard
+          </h1>
         </div>
         <div className="text-xl">Total Followers: 23, 004</div>
       </div>
@@ -35,13 +39,22 @@ export default function App() {
         <h1>Dark Mode</h1>
         <button
           onClick={toggleDarkMode}
-          className="bg-gradient-to-r from-toggle-start to-toggle-end w-[70px] h-[30px] rounded-full"
+          className={`${
+            darkMode
+              ? "bg-gradient-to-r from-toggle-start to-toggle-end"
+              : "bg-dark-grayish-blued"
+          } w-[70px] h-[32px] rounded-full`}
         >
-          <div className="bg-very-dark-blue w-[25px] h-[25px] rounded-full ml-1"></div>
+          <div
+            className={`${
+              darkMode ? "bg-very-dark-blue-top-pattern" : "bg-white ml-10"
+            } w-[25px] h-[25px] rounded-full ml-1`}
+          ></div>
         </button>
       </div>
       <div className="section-2 mt-8 space-y-8">
         <BigCard
+          isDarkMode={darkMode}
           lineColor={"bg-facebook"}
           icon={iconFacebook}
           name={"@nathanf"}
@@ -52,6 +65,7 @@ export default function App() {
           todayCount={"12 Today"}
         />
         <BigCard
+          isDarkMode={darkMode}
           lineColor={"bg-facebook"}
           icon={iconTwitter}
           name={"@nathanf"}
@@ -62,6 +76,7 @@ export default function App() {
           todayCount={"99 Today"}
         />
         <BigCard
+          isDarkMode={darkMode}
           lineColor={"bg-gradient-to-r from-instagram-start to-instagram-end"}
           icon={iconInstagram}
           name={"@realnathanf"}
@@ -72,6 +87,7 @@ export default function App() {
           todayCount={"1099 Today"}
         />
         <BigCard
+          isDarkMode={darkMode}
           lineColor={"bg-youtube"}
           icon={iconYoutube}
           name={"Nathan F."}
@@ -88,6 +104,7 @@ export default function App() {
       <div className="section-4">
         <div className="space-y-4">
           <SmallCard
+            isDarkMode={darkMode}
             heading={"Page Views"}
             socialIcon={iconFacebook}
             amount={"87"}
