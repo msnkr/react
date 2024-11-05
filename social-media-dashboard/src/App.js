@@ -29,18 +29,22 @@ export default function App() {
           <h1
             className={`${
               darkMode ? "text-white" : "text-black"
-            } duration-1000 text-3xl`}
+            } duration-1000 text-3xl font-bold`}
           >
             Social Media Dashboard
           </h1>
         </div>
-        <div className="text-xl">Total Followers: 23, 004</div>
+        <div className="text-xl font-semibold">Total Followers: 23, 004</div>
       </div>
       <div>
-        <div className="bg-desaturated-blue w-full h-[2px]"></div>
+        <div
+          className={`${
+            darkMode ? "bg-desaturated-blue" : "bg-very-pale-blue-top-patter"
+          } w-full h-[3px]`}
+        ></div>
       </div>
       <div className="flex justify-between mt-2">
-        <h1>Dark Mode</h1>
+        <h1 className="font-bold text-lg">Dark Mode</h1>
         <button
           onClick={toggleDarkMode}
           className={`${
@@ -52,7 +56,7 @@ export default function App() {
           <div
             className={`${
               darkMode ? "bg-very-dark-blue-top-pattern" : "bg-white ml-10"
-            } w-[25px] h-[25px] rounded-full ml-1`}
+            } w-[25px] h-[25px] rounded-full ml-1 duration-1000`}
           ></div>
         </button>
       </div>
