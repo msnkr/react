@@ -1068,36 +1068,19 @@ import React from "react";
 import { useState } from "react";
 
 function App() {
-  const [currentItem, setCurrentItem] = useState("");
-  const [itemArr, setItemArray] = useState([]);
-
-  function handleClick() {
-    setItemArray(currentItem);
-    console.log(itemArr);
-  }
-
-  function handleChange(e) {
-    const item = e.target.value;
-    setCurrentItem(item);
-  }
-
   return (
     <div className="container">
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
       <div className="form">
-        <input type="text" name="input" onChange={handleChange} />
+        <input type="text" />
         <button>
-          <span onClick={handleClick}>Add</span>
+          <span>Add</span>
         </button>
       </div>
       <div>
-        <ul>
-          {/* {itemArr.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))} */}
-        </ul>
+        <ul></ul>
       </div>
     </div>
   );
