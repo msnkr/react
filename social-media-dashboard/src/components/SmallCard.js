@@ -29,7 +29,7 @@ function SmallCard({
             <p
               className={`${
                 isDarkMode ? "text-white" : "text-very-dark-blue-light"
-              } text-4xl`}
+              } duration-1000 text-4xl`}
             >
               {amount}
             </p>

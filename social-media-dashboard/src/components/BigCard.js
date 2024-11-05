@@ -33,7 +33,7 @@ function BigCard({
               <p
                 className={`text-6xl mt-4 font-bold ${
                   isDarkMode ? "text-white" : "text-very-dark-blue-light"
-                }`}
+                } duration-1000`}
               >
                 {followerCount}
               </p>
