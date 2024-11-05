@@ -54,11 +54,11 @@ export default function App() {
                 darkMode
                   ? "bg-gradient-to-r from-toggle-start to-toggle-end"
                   : "bg-dark-grayish-blued"
-              } duration-1000 w-[70px] h-[32px] rounded-full`}
+              } duration-1000 w-[90px] h-[32px] rounded-full`}
             >
               <div
                 className={`${
-                  darkMode ? "bg-very-dark-blue-top-pattern" : "bg-white ml-10"
+                  darkMode ? "bg-very-dark-blue-top-pattern" : "bg-white ml-14"
                 } w-[25px] h-[25px] rounded-full ml-1 duration-1000`}
               ></div>
             </button>
