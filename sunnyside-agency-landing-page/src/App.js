@@ -6,6 +6,7 @@ import Testimonial from "./components/Testimonial";
 
 import imageTransform from "./images/mobile/image-transform.jpg";
 import imageStandout from "./images/mobile/image-stand-out.jpg";
+import emily from "./images/image-emily.jpg";
 
 export default function App() {
   return (
@@ -70,7 +71,14 @@ export default function App() {
           </p>
         </div>
         <div>
-          <Testimonial />
+          <Testimonial
+            image={emily}
+            wording={
+              "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit"
+            }
+            name={"Emily R."}
+            postion={"Marketing Director"}
+          />
         </div>
       </div>
     </div>

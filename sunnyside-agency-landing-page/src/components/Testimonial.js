@@ -1,6 +1,6 @@
 function Testimonial({ image, wording, name, position }) {
   return (
-    <div>
+    <div className="text-center">
       <div>
         <img src={image} />
       </div>
