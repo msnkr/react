@@ -1,13 +1,5 @@
-const graphicDesignImage = "../images/mobile/image-graphic-design.jpg";
-
-function ImageWordingComponent() {
-  return (
-    <div>
-      <div>
-        <img src={graphicDesignImage} alt="graphic-design" />
-      </div>
-    </div>
-  );
+function ImageWordingComponent({ image }) {
+  return <image src={image} />;
 }
 
 export default ImageWordingComponent;

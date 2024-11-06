@@ -4,6 +4,7 @@ import ImageComponent from "./components/ImageComponent";
 import ImageWordingComponent from "./components/ImageWordingComponent";
 import imageTransform from "./images/mobile/image-transform.jpg";
 import imageStandout from "./images/mobile/image-stand-out.jpg";
+const graphicDesignImage = "./images/mobile/image-graphic-design.jpg";
 
 export default function App() {
   return (
@@ -59,7 +60,7 @@ export default function App() {
         </div>
       </div>
       <div className="section-6">
-        <ImageWordingComponent />
+        <ImageWordingComponent image={graphicDesignImage} />
       </div>
     </div>
   );
