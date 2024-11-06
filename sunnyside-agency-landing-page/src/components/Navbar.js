@@ -3,12 +3,20 @@ import burgerIcon from "../images/icon-hamburger.svg";
 
 function Navbar() {
   return (
-    <div className="flex justify-between items-center px-8 py-4">
+    <div className="flex">
       <div className="logo">
-        <img className="z-50" src={logo} alt="logo" />
+        <img
+          className="absolute top-8 left-4 cursor-pointer"
+          src={logo}
+          alt="logo"
+        />
       </div>
       <div className="burger-icon">
-        <img className="z-50" src={burgerIcon} alt="burger-icon" />
+        <img
+          className="absolute top-8 right-4 cursor-pointer"
+          src={burgerIcon}
+          alt="burger-icon"
+        />
       </div>
     </div>
   );
