@@ -7,6 +7,10 @@ module.exports = {
         "very-dark-desaturated-blue": "hsl(212, 27%, 19%)",
         "very-dark-grayish-blue": "hsl(213, 9%, 39%)",
       },
+      fontFamily: {
+        barlow: "Barlow",
+        fraunces: "Fraunces",
+      },
     },
   },
   plugins: [],
