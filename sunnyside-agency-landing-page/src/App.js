@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 import ImageHeader from "./components/ImageHeader";
+import ImageComponent from "./components/ImageComponent";
+import ImageWordingComponent from "./components/ImageWordingComponent";
 import imageTransform from "./images/mobile/image-transform.jpg";
 import imageStandout from "./images/mobile/image-stand-out.jpg";
 
@@ -13,9 +15,7 @@ export default function App() {
         </div>
       </div>
       <div className="section-2">
-        <div>
-          <img src={imageTransform} alt="egg-image" />
-        </div>
+        <ImageComponent image={imageTransform} />
       </div>
       <div className="section-3 p-12">
         <div>
@@ -37,11 +37,29 @@ export default function App() {
         </div>
       </div>
       <div className="section-4">
+        <ImageComponent image={imageStandout} />
+      </div>
+      <div className="section-5 p-12">
         <div>
+          <p className="text-5xl font-fraunces text-center font-bold">
+            Stand out to the right audience
+          </p>
           <div>
-            <img src={imageStandout} alt="stand-out" />
+            <p className="mt-8 text-lg font-barlow">
+              Using collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we'll build and
+              extend your brand in digital places.
+            </p>
+          </div>
+          <div className="mt-8 text-center">
+            <button className="text-xl font-fraunces font-bold">
+              Learn more
+            </button>
           </div>
         </div>
+      </div>
+      <div className="section-6">
+        <ImageWordingComponent />
       </div>
     </div>
   );
