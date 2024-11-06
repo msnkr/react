@@ -7,6 +7,7 @@ module.exports = {
         "very-dark-desaturated-blue": "hsl(212, 27%, 19%)",
         "very-dark-grayish-blue": "hsl(213, 9%, 39%)",
         "dark-saturated-cyan-graphic-design": "hsl(167, 40%, 24%)",
+        "dark-blue-photography-text": "hsl(198, 62%, 26%)",
       },
       fontFamily: {
         barlow: "Barlow",

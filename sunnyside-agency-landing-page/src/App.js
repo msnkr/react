@@ -2,12 +2,14 @@ import Navbar from "./components/Navbar";
 import ImageHeader from "./components/ImageHeader";
 import ImageComponent from "./components/ImageComponent";
 import ImageWordingComponent from "./components/ImageWordingComponent";
+import Testimonial from "./components/Testimonial";
+
 import imageTransform from "./images/mobile/image-transform.jpg";
 import imageStandout from "./images/mobile/image-stand-out.jpg";
 
 export default function App() {
   return (
-    <div>
+    <div className="text-very-dark-desaturated-blue">
       <div className="section-1 relative">
         <Navbar />
         <div className="image-header">
@@ -60,6 +62,16 @@ export default function App() {
       </div>
       <div className="section-6 relative">
         <ImageWordingComponent />
+      </div>
+      <div className="section-6 p-12 text-center">
+        <div>
+          <p className="uppercase font-barlow text-2xl tracking-wider font-bold">
+            Client testimonials
+          </p>
+        </div>
+        <div>
+          <Testimonial />
+        </div>
       </div>
     </div>
   );
