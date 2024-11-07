@@ -3,10 +3,14 @@ import ImageHeader from "./components/ImageHeader";
 import ImageComponent from "./components/ImageComponent";
 import ImageWordingComponent from "./components/ImageWordingComponent";
 import Testimonial from "./components/Testimonial";
+import GridItems from "./components/GridItems";
+import Footer from "./components/Footer";
 
 import imageTransform from "./images/mobile/image-transform.jpg";
 import imageStandout from "./images/mobile/image-stand-out.jpg";
 import emily from "./images/image-emily.jpg";
+import thomas from "./images/image-thomas.jpg";
+import jennie from "./images/image-jennie.jpg";
 
 export default function App() {
   return (
@@ -72,14 +76,36 @@ export default function App() {
         </div>
         <div>
           <Testimonial
+            position={"Marketing Director"}
             image={emily}
             wording={
               "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit"
             }
             name={"Emily R."}
-            postion={"Marketing Director"}
+          />
+          <Testimonial
+            position={"Chief Operating Officer"}
+            image={thomas}
+            wording={
+              "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience"
+            }
+            name={"Thomas S."}
+          />
+          <Testimonial
+            position={"Business Owner"}
+            image={jennie}
+            wording={
+              "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
+            }
+            name={"Jennie F."}
           />
         </div>
+      </div>
+      <div className="section-7">
+        <GridItems />
+      </div>
+      <div className="section-8 bg-footer-background">
+        <Footer />
       </div>
     </div>
   );
