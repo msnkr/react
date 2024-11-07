@@ -37,8 +37,9 @@ export default function App() {
             </p>
           </div>
           <div className="mt-8 text-center">
-            <button className="text-xl font-fraunces uppercase font-bold">
-              Learn more
+            <button className="text-xl font-fraunces uppercase font-bold relative">
+              <span className="z-50"> Learn more</span>
+              <div className="w-full h-[12px] bg-soft-yello absolute top-5 opacity-30 rounded-full -z-50"></div>
             </button>
           </div>
         </div>
@@ -52,15 +53,16 @@ export default function App() {
             Stand out to the right audience
           </p>
           <div>
-            <p className="mt-8 text-xl font-barlow text-center">
+            <p className="mt-8 text-xl font-barlow text-center font-bold tracking-wider text-dark-grayish-blue">
               Using collaborative formula of designers, researchers,
               photographers, videographers, and copywriters, we'll build and
               extend your brand in digital places.
             </p>
           </div>
           <div className="mt-8 text-center">
-            <button className="text-xl font-fraunces uppercase font-bold">
-              Learn more
+            <button className="text-xl font-fraunces uppercase font-bold relative">
+              <span className="z-50">Learn more</span>
+              <div className="w-full h-[12px] bg-soft-red absolute top-5 opacity-40 rounded-full -z-50"></div>
             </button>
           </div>
         </div>
@@ -70,7 +72,7 @@ export default function App() {
       </div>
       <div className="section-6 p-12 text-center">
         <div>
-          <p className="uppercase font-barlow text-2xl tracking-wider font-bold">
+          <p className="uppercase text-grayish-blue font-fraunces text-2xl tracking-widest font-bold">
             Client testimonials
           </p>
         </div>

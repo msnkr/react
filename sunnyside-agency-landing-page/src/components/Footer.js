@@ -7,10 +7,10 @@ function Footer() {
   return (
     <div className="text-dark-moderate-cyan-footer text-center space-y-6">
       <div className="pt-8">
-        <p className="text-4xl font-barlow font-bold">sunnyside</p>
+        <p className="text-5xl font-fraunces font-bold">sunnyside</p>
       </div>
       <div>
-        <ul className="text-xl flex space-x-12 justify-center font-bold">
+        <ul className="text-xl flex space-x-20 justify-center font-bold">
           <li className="cursor-pointer">About</li>
           <li className="cursor-pointer">Services</li>
           <li className="cursor-pointer">Projects</li>
