@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import imageTransform from "./images/mobile/image-transform.jpg";
 import imageTransformDesktop from "./images/desktop/image-transform.jpg";
 import imageStandout from "./images/mobile/image-stand-out.jpg";
+import imageStandoutDesktop from "./images/desktop/image-stand-out.jpg";
 import emily from "./images/image-emily.jpg";
 import thomas from "./images/image-thomas.jpg";
 import jennie from "./images/image-jennie.jpg";
@@ -22,11 +23,11 @@ export default function App() {
           <ImageHeader />
         </div>
       </div>
-      <div className="grid-item-2 xl:flex xl:items-center">
-        <div className="section-2">
-          <ImageComponent image={imageTransform} />
+      <div className="grid-item-2 xl:grid grid-cols-2">
+        <div className="section-2 order-2">
+          <ImageComponent image={imageTransformDesktop} />
         </div>
-        <div className="section-3 p-12">
+        <div className="section-3 p-12 xl:w-1/2 order-1 xl:flex flex-col xl:justify-center xl:items-center xl:mx-auto">
           <div className="space-y-12">
             <p className="text-5xl font-fraunces text-center font-bold">
               Transform your brand
@@ -47,26 +48,28 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="section-4">
-        <ImageComponent image={imageStandout} />
-      </div>
-      <div className="section-5 p-12">
-        <div className="space-y-12">
-          <p className="text-5xl font-fraunces text-center font-bold">
-            Stand out to the right audience
-          </p>
-          <div>
-            <p className="mt-8 text-xl font-barlow text-center font-bold tracking-wider text-dark-grayish-blue">
-              Using collaborative formula of designers, researchers,
-              photographers, videographers, and copywriters, we'll build and
-              extend your brand in digital places.
+      <div className="grid-item-3 xl:grid grid-cols-2">
+        <div className="section-4">
+          <ImageComponent image={imageStandoutDesktop} />
+        </div>
+        <div className="section-5 p-12 xl:w-1/2 xl:flex flex-col xl:justify-center xl:items-center xl:mx-auto">
+          <div className="space-y-12">
+            <p className="text-5xl font-fraunces text-center font-bold">
+              Stand out to the right audience
             </p>
-          </div>
-          <div className="mt-8 text-center">
-            <button className="text-xl font-fraunces uppercase font-bold relative">
-              <span className="z-50">Learn more</span>
-              <div className="w-full h-[10px] bg-soft-red absolute top-5 opacity-40 rounded-full -z-50"></div>
-            </button>
+            <div>
+              <p className="mt-8 text-xl font-barlow text-center font-bold tracking-wider text-dark-grayish-blue">
+                Using collaborative formula of designers, researchers,
+                photographers, videographers, and copywriters, we'll build and
+                extend your brand in digital places.
+              </p>
+            </div>
+            <div className="mt-8 text-center">
+              <button className="text-xl font-fraunces uppercase font-bold relative">
+                <span className="z-50">Learn more</span>
+                <div className="w-full h-[10px] bg-soft-red absolute top-5 opacity-40 rounded-full -z-50"></div>
+              </button>
+            </div>
           </div>
         </div>
       </div>

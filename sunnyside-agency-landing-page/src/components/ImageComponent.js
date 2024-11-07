@@ -1,7 +1,7 @@
 function ImageComponent({ image }) {
   return (
     <div>
-      <img src={image} alt={image} />
+      <img className="xl:w-full" src={image} alt={image} />
     </div>
   );
 }

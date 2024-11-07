@@ -1,9 +1,11 @@
 import graphicDesign from "../images/mobile/image-graphic-design.jpg";
 import photography from "../images/mobile/image-photography.jpg";
+import graphicDesignDesktop from "../images/desktop/image-graphic-design.jpg";
+import photographyDesktop from "../images/desktop/image-photography.jpg";
 
 function ImageWordingComponent() {
   return (
-    <div className="font-barlow">
+    <div className="font-barlow xl:grid grid-cols-2">
       <div className="relative">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center text-dark-saturated-cyan-graphic-design">
           <p className="text-5xl z-50 font-bold font-fraunces">
