@@ -82,7 +82,7 @@ export default function App() {
             Client testimonials
           </p>
         </div>
-        <div>
+        <div className="xl:grid grid-cols-3 xl:px-40 gap-20 xl:my-20">
           <Testimonial
             position={"Marketing Director"}
             image={emily}
