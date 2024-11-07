@@ -39,7 +39,7 @@ export default function App() {
           <div className="mt-8 text-center">
             <button className="text-xl font-fraunces uppercase font-bold relative">
               <span className="z-50"> Learn more</span>
-              <div className="w-full h-[12px] bg-soft-yello absolute top-5 opacity-30 rounded-full -z-50"></div>
+              <div className="w-full h-[10px] bg-soft-yello absolute top-5 opacity-30 rounded-full -z-50"></div>
             </button>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function App() {
           <div className="mt-8 text-center">
             <button className="text-xl font-fraunces uppercase font-bold relative">
               <span className="z-50">Learn more</span>
-              <div className="w-full h-[12px] bg-soft-red absolute top-5 opacity-40 rounded-full -z-50"></div>
+              <div className="w-full h-[10px] bg-soft-red absolute top-5 opacity-40 rounded-full -z-50"></div>
             </button>
           </div>
         </div>
