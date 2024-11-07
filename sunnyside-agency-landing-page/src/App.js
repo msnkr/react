@@ -7,6 +7,7 @@ import GridItems from "./components/GridItems";
 import Footer from "./components/Footer";
 
 import imageTransform from "./images/mobile/image-transform.jpg";
+import imageTransformDesktop from "./images/desktop/image-transform.jpg";
 import imageStandout from "./images/mobile/image-stand-out.jpg";
 import emily from "./images/image-emily.jpg";
 import thomas from "./images/image-thomas.jpg";
@@ -21,26 +22,28 @@ export default function App() {
           <ImageHeader />
         </div>
       </div>
-      <div className="section-2">
-        <ImageComponent image={imageTransform} />
-      </div>
-      <div className="section-3 p-12">
-        <div className="space-y-12">
-          <p className="text-5xl font-fraunces text-center font-bold">
-            Transform your brand
-          </p>
-          <div>
-            <p className="mt-8 text-xl font-barlow text-center">
-              We are a full-service creative agency specializing in helping
-              brands grow fast. Engage your clients through compelling visuals
-              that do most of the marketing for you.
+      <div className="grid-item-2 xl:flex xl:items-center">
+        <div className="section-2">
+          <ImageComponent image={imageTransform} />
+        </div>
+        <div className="section-3 p-12">
+          <div className="space-y-12">
+            <p className="text-5xl font-fraunces text-center font-bold">
+              Transform your brand
             </p>
-          </div>
-          <div className="mt-8 text-center">
-            <button className="text-xl font-fraunces uppercase font-bold relative">
-              <span className="z-50"> Learn more</span>
-              <div className="w-full h-[10px] bg-soft-yello absolute top-5 opacity-30 rounded-full -z-50"></div>
-            </button>
+            <div>
+              <p className="mt-8 text-xl font-barlow text-center">
+                We are a full-service creative agency specializing in helping
+                brands grow fast. Engage your clients through compelling visuals
+                that do most of the marketing for you.
+              </p>
+            </div>
+            <div className="mt-8 text-center">
+              <button className="text-xl font-fraunces uppercase font-bold relative">
+                <span className="z-50"> Learn more</span>
+                <div className="w-full h-[10px] bg-soft-yello absolute top-5 opacity-30 rounded-full -z-50"></div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
