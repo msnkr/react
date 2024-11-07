@@ -33,7 +33,7 @@ export default function App() {
               Transform your brand
             </p>
             <div>
-              <p className="mt-8 text-xl font-barlow text-center">
+              <p className="mt-8 text-xl font-barlow text-center font-bold tracking-wider text-dark-grayish-blue">
                 We are a full-service creative agency specializing in helping
                 brands grow fast. Engage your clients through compelling visuals
                 that do most of the marketing for you.
