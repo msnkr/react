@@ -17,13 +17,6 @@ function Navbar() {
           src={burgerIcon}
           alt="burger-icon"
         />
-        <div className="flex">
-          <div className="absolute top-8 right-8">
-            <ul className="bg-white w-[400px] h-[400px] text-center">
-              <li>About</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   );
