@@ -298,26 +298,107 @@ import { useInView } from "react-intersection-observer";
 
 export default function App() {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.8,
   });
 
   return (
     <div>
-      <div className="h-screen text-center mt-[100px]">
-        <p className="text-xl">Hello</p>
+      <div className="h-screen text-center mt-36">
+        <h1>This is a test</h1>
       </div>
-      <div className="h-screen text-center mt-[100px]">
-        <p className="text-xl">This is a test</p>
+      <div className="px-8 text-center">
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Enim duis
+          condimentum ut sed velit erat ornare. Viverra torquent vestibulum
+          curae efficitur vestibulum ultrices placerat habitasse curabitur.
+          Penatibus ante conubia semper quisque diam. Sapien etiam ligula
+          sodales iaculis maecenas auctor cursus porttitor. Mi facilisis nisl
+          euismod; interdum suscipit efficitur in lacinia. Mi ultricies
+          fermentum a scelerisque phasellus rhoncus pretium euismod. At enim
+          aliquet pellentesque auctor malesuada commodo nibh maximus ad. Aptent
+          maecenas ut habitasse vel eget. Metus iaculis tempor et placerat
+          aliquam ante tristique sapien quis. Curae ligula cubilia diam
+          torquent; habitant volutpat. Volutpat at rhoncus ad posuere parturient
+          proin torquent vehicula. Ipsum facilisi dis duis placerat nullam
+          scelerisque torquent aenean. Praesent egestas duis mus nam nascetur
+          litora tortor metus orci. Vitae duis ullamcorper sed hendrerit
+          parturient venenatis fermentum. Vitae eget placerat sed donec donec
+          semper. Est phasellus nullam lacinia sed consequat sollicitudin eu.
+          Vehicula tellus aptent; nunc tellus ante quam. Curabitur tellus
+          maecenas at dui senectus leo. Viverra nisl parturient faucibus quisque
+          pulvinar non accumsan. Nam id venenatis, pulvinar sagittis inceptos
+          rhoncus semper. Penatibus ultricies accumsan donec nisi tincidunt
+          proin semper egestas convallis. Lacinia eget urna purus justo tempor
+          cubilia facilisi. Blandit lorem ex nostra, nam tellus diam. Sodales
+          adipiscing finibus ac aliquam fringilla ut volutpat iaculis. Torquent
+          vulputate enim; mattis dapibus montes ridiculus. Finibus senectus
+          velit a per conubia velit sit metus. Elit sapien lectus mauris
+          phasellus rutrum placerat integer congue auctor. Nascetur scelerisque
+          sed nascetur condimentum dolor. Nam dui luctus cras semper egestas
+          senectus. Fames curabitur senectus ligula conubia accumsan sapien
+          lacus. Conubia nam cras sociosqu suspendisse integer morbi
+          sollicitudin. Tellus sed tortor sociosqu elementum integer. Velit
+          elementum cubilia vel commodo tincidunt habitasse condimentum diam
+          conubia. Facilisi amet mus mattis ultricies adipiscing mattis facilisi
+          mi. Laoreet ad scelerisque, facilisi habitant at nullam lobortis
+          ridiculus. Est ornare ipsum potenti magnis dui imperdiet. Euismod dui
+          auctor proin dis diam integer risus dictum. Lacinia vivamus tortor
+          dignissim ante finibus accumsan tempus. Massa praesent pellentesque
+          potenti placerat amet? Efficitur ac tempus class eros fringilla
+          euismod nec per.
+        </p>
       </div>
-      <div
-        className={`${
-          inView ? "translate-x-0" : "-translate-x-1/2"
-        } h-screen text-center mt-[100px]`}
-      >
-        <p ref={ref}>It works</p>
+      <div className="h-screen text-center mt-36">
+        <h1
+          ref={ref}
+          className={`${
+            inView ? "translate-x-0" : "-translate-x-1/2"
+          } duration-1000 text-4xl`}
+        >
+          This is a test
+        </h1>
       </div>
-      <div className="h-screen text-center mt-[100px]">
-        <p className="text-xl">This is a test</p>
+      <div className="px-8 text-center">
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Enim duis
+          condimentum ut sed velit erat ornare. Viverra torquent vestibulum
+          curae efficitur vestibulum ultrices placerat habitasse curabitur.
+          Penatibus ante conubia semper quisque diam. Sapien etiam ligula
+          sodales iaculis maecenas auctor cursus porttitor. Mi facilisis nisl
+          euismod; interdum suscipit efficitur in lacinia. Mi ultricies
+          fermentum a scelerisque phasellus rhoncus pretium euismod. At enim
+          aliquet pellentesque auctor malesuada commodo nibh maximus ad. Aptent
+          maecenas ut habitasse vel eget. Metus iaculis tempor et placerat
+          aliquam ante tristique sapien quis. Curae ligula cubilia diam
+          torquent; habitant volutpat. Volutpat at rhoncus ad posuere parturient
+          proin torquent vehicula. Ipsum facilisi dis duis placerat nullam
+          scelerisque torquent aenean. Praesent egestas duis mus nam nascetur
+          litora tortor metus orci. Vitae duis ullamcorper sed hendrerit
+          parturient venenatis fermentum. Vitae eget placerat sed donec donec
+          semper. Est phasellus nullam lacinia sed consequat sollicitudin eu.
+          Vehicula tellus aptent; nunc tellus ante quam. Curabitur tellus
+          maecenas at dui senectus leo. Viverra nisl parturient faucibus quisque
+          pulvinar non accumsan. Nam id venenatis, pulvinar sagittis inceptos
+          rhoncus semper. Penatibus ultricies accumsan donec nisi tincidunt
+          proin semper egestas convallis. Lacinia eget urna purus justo tempor
+          cubilia facilisi. Blandit lorem ex nostra, nam tellus diam. Sodales
+          adipiscing finibus ac aliquam fringilla ut volutpat iaculis. Torquent
+          vulputate enim; mattis dapibus montes ridiculus. Finibus senectus
+          velit a per conubia velit sit metus. Elit sapien lectus mauris
+          phasellus rutrum placerat integer congue auctor. Nascetur scelerisque
+          sed nascetur condimentum dolor. Nam dui luctus cras semper egestas
+          senectus. Fames curabitur senectus ligula conubia accumsan sapien
+          lacus. Conubia nam cras sociosqu suspendisse integer morbi
+          sollicitudin. Tellus sed tortor sociosqu elementum integer. Velit
+          elementum cubilia vel commodo tincidunt habitasse condimentum diam
+          conubia. Facilisi amet mus mattis ultricies adipiscing mattis facilisi
+          mi. Laoreet ad scelerisque, facilisi habitant at nullam lobortis
+          ridiculus. Est ornare ipsum potenti magnis dui imperdiet. Euismod dui
+          auctor proin dis diam integer risus dictum. Lacinia vivamus tortor
+          dignissim ante finibus accumsan tempus. Massa praesent pellentesque
+          potenti placerat amet? Efficitur ac tempus class eros fringilla
+          euismod nec per.
+        </p>
       </div>
     </div>
   );
