@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        slide: "slide 1s ",
+        slide: "slide 5s ",
         fadeItem: "fadeItem 1s",
       },
       keyframes: {
