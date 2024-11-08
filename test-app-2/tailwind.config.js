@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        slide: "slide 2s ",
-        fadeItem: "fadeItem 1s",
+        slide: "slide 5s",
+        fade: "fade 5s ease-in-out",
       },
       keyframes: {
         slide: {
           "0%": { transform: "translateX(-200%)" },
           "100%": { transform: "translateX(0)" },
         },
-        fadeItem: {
+        fade: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
