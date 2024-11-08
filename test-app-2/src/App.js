@@ -243,9 +243,16 @@ import { useState } from "react";
 
 export default function App() {
   const [slide, setSlide] = useState(false);
-  function handleClick() {
+  const [fade, setFade] = useState(false);
+
+  function handleClickFade() {
+    setFade(true);
+    setInterval(() => setFade(false), 2000);
+  }
+
+  function handleClickSlide() {
     setSlide(true);
-    setInterval(() => setSlide(false), 1000);
+    setInterval(() => setSlide(false), 2000);
   }
   return (
     <div className="text-center mt-[100px]">
@@ -257,7 +264,30 @@ export default function App() {
         <p className="">Hi. I'm Mikyle</p>
       </div>
       <div className="mt-8">
-        <button onClick={handleClick} className="border-2 px-4 py-1 rounded-xl">
+        <button
+          onClick={handleClickSlide}
+          className="border-2 px-4 py-1 rounded-xl"
+        >
+          Phew!
+        </button>
+      </div>
+      <div className="mt-20">
+        <button className="bg-green-300 rounded-xl px-4 py-2 text-xl font-semibold w-40 hover:w-96 duration-1000 ease-linear">
+          Test Button
+        </button>
+      </div>
+      <div
+        className={`${
+          fade ? "animate-fadeItem" : null
+        } border-2 rounded-xl inline-block p-8 mt-12`}
+      >
+        <p className="">Hi. I'm Mikyle</p>
+      </div>
+      <div className="mt-8">
+        <button
+          onClick={handleClickFade}
+          className="border-2 px-4 py-1 rounded-xl"
+        >
           Phew!
         </button>
       </div>
