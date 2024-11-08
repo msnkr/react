@@ -238,3 +238,29 @@
 // }
 
 // export default App;
+
+import { useState } from "react";
+
+export default function App() {
+  const [slide, setSlide] = useState(false);
+  function handleClick() {
+    setSlide(true);
+    setInterval(() => setSlide(false), 1000);
+  }
+  return (
+    <div className="text-center mt-[100px]">
+      <div
+        className={`${
+          slide ? "animate-slide" : null
+        } border-2 rounded-xl inline-block p-8`}
+      >
+        <p className="">Hi. I'm Mikyle</p>
+      </div>
+      <div className="mt-8">
+        <button onClick={handleClick} className="border-2 px-4 py-1 rounded-xl">
+          Phew!
+        </button>
+      </div>
+    </div>
+  );
+}
