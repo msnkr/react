@@ -297,8 +297,8 @@
 import { useInView } from "react-intersection-observer";
 
 export default function App() {
-  const { ref, inView, entry } = useInView({
-    threshold: 0.1,
+  const { ref, inView } = useInView({
+    threshold: 0.5,
   });
 
   return (
@@ -306,11 +306,21 @@ export default function App() {
       <div className="h-screen text-center mt-[100px]">
         <p className="text-xl">Hello</p>
       </div>
-      <div className="h-screen text-center mt-[100px]" ref={ref}>
-        <p className="text-2xl font-semibold">This is a test</p>
+      <div className="h-screen text-center mt-[100px]">
+        <p className="text-xl">This is a test</p>
       </div>
       <div className="h-screen text-center mt-[100px]">
-        <p className="text-xl">I hope it works</p>
+        <p
+          ref={ref}
+          className={`${
+            inView ? "translate-x-0" : "-translate-x-1/2"
+          } text-2xl font-semibold duration-1000`}
+        >
+          I hope it works
+        </p>
+      </div>
+      <div className="h-screen text-center mt-[100px]">
+        <p className="text-xl">This is a test</p>
       </div>
     </div>
   );
