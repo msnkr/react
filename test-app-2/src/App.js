@@ -309,15 +309,12 @@ export default function App() {
       <div className="h-screen text-center mt-[100px]">
         <p className="text-xl">This is a test</p>
       </div>
-      <div className="h-screen text-center mt-[100px]">
-        <p
-          ref={ref}
-          className={`${
-            inView ? "translate-x-0" : "-translate-x-1/2"
-          } text-2xl font-semibold duration-1000`}
-        >
-          I hope it works
-        </p>
+      <div
+        className={`${
+          inView ? "translate-x-0" : "-translate-x-1/2"
+        } h-screen text-center mt-[100px]`}
+      >
+        <p ref={ref}>It works</p>
       </div>
       <div className="h-screen text-center mt-[100px]">
         <p className="text-xl">This is a test</p>
