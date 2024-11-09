@@ -1066,6 +1066,7 @@ import "./todo.css";
 
 import React from "react";
 import { useState } from "react";
+import AddLi from "./components/AddLi";
 
 function App() {
   const [item, setItem] = useState("");
@@ -1078,6 +1079,14 @@ function App() {
   function handleChange(e) {
     const value = e.target.value;
     setItem(value);
+  }
+
+  function deleteItem(id) {
+    setArr((prevItem) => {
+      return prevItem.filter((item, index) => {
+        return index !== id;
+      });
+    });
   }
 
   return (
@@ -1094,7 +1103,9 @@ function App() {
       <div>
         <ul>
           {arr.map((item, index) => (
-            <li key={index}>{item}</li>
+            <div key={index}>
+              <AddLi text={item} id={index} onChecked={deleteItem} />
+            </div>
           ))}
         </ul>
       </div>
