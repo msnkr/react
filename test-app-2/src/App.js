@@ -312,13 +312,40 @@ export default function App() {
       <div ref={ref} className="mt-8 text-center h-screen">
         <img
           className={`${
-            inView ? "translate-x-0 opacity-100" : "-translate-x-1/2 opacity-0"
-          } duration-1000 ease-in mx-auto`}
-          src="https://picsum.photos/200/300"
+            inView
+              ? "translate-x-0 scale-100 opacity-100"
+              : "-translate-x-1/2 scale-50 opacity-0"
+          } duration-1000 rounded-xl`}
+          src="https://images.pexels.com/photos/8721339/pexels-photo-8721339.jpeg"
         />
       </div>
       <div className="mt-8 text-center h-screen">
         <p>Test</p>
+      </div>
+      <div
+        ref={ref}
+        className={`${
+          inView ? "scale-100 translate-x-0" : "-translate-x-1/2 scale-50"
+        } mt-8 text-center h-screen flex duration-1000`}
+      >
+        <div>
+          <img
+            className="p-1 rouned-xl border border-gray-400 rounded-xl hover:p-0 duration-1000"
+            src="https://images.pexels.com/photos/2128042/pexels-photo-2128042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </div>
+        <div>
+          <img
+            className="p-1 rouned-xl border border-gray-400 rounded-xl hover:p-0 duration-1000"
+            src="https://images.pexels.com/photos/1083807/pexels-photo-1083807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </div>
+        <div>
+          <img
+            className="p-1 rouned-xl border border-gray-400 rounded-xl hover:p-0 duration-1000"
+            src="https://images.pexels.com/photos/3389817/pexels-photo-3389817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          />
+        </div>
       </div>
     </div>
   );
