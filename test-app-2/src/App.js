@@ -384,7 +384,7 @@ export default function Grid() {
           inView
             ? "translate-x-0 opacity-100 scale-100"
             : "-translate-x-1/2 opacity-0 scale-0"
-        } xl:grid grid-cols-3 gap-4 items-center duration-1000 space-y-8`}
+        } xl:grid grid-cols-3 gap-4 items-center duration-1000 space-y-8 xl:space-y-0`}
       >
         <div>
           <img className="border-2 p-2 rounded-lg" src={imageOne} />
