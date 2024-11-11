@@ -358,56 +358,81 @@
 //   );
 // }
 
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
+// import { useState } from "react";
+
+// import imageOne from "./images/1.png";
+// import imageTwo from "./images/2.png";
+// import imageThree from "./images/3.png";
+// import imageFour from "./images/4.png";
+// import imageFive from "./images/5.png";
+// import imageSix from "./images/6.png";
+
+// export default function Grid() {
+//   const { ref, inView } = useInView({
+//     threshold: 0.3,
+//   });
+
+//   return (
+//     <div className="xl:px-80 px-4">
+//       <div className="h-screen">
+//         <p>This is a test</p>
+//       </div>
+//       <div
+//         ref={ref}
+//         className={`${
+//           inView
+//             ? "translate-x-0 opacity-100 scale-100"
+//             : "-translate-x-1/2 opacity-0 scale-0"
+//         } xl:grid grid-cols-3 gap-4 items-center duration-1000 space-y-8 xl:space-y-0`}
+//       >
+//         <div>
+//           <img className="border-2 p-2 rounded-lg" src={imageOne} />
+//         </div>
+//         <div>
+//           <img className="border-2 p-2 rounded-lg" src={imageTwo} />
+//         </div>
+//         <div>
+//           <img className="border-2 p-2 rounded-lg" src={imageThree} />
+//         </div>
+//         <div>
+//           <img className="border-2 p-2 rounded-lg" src={imageFour} />
+//         </div>
+//         <div>
+//           <img className="border-2 p-2 rounded-lg" src={imageFive} />
+//         </div>
+//         <div>
+//           <img className="border-2 p-2 rounded-lg" src={imageSix} />
+//         </div>
+//       </div>
+//       <div className="h-screen">
+//         <p>This is a test</p>
+//       </div>
+//     </div>
+//   );
+// }
+
 import { useState } from "react";
 
-import imageOne from "./images/1.png";
-import imageTwo from "./images/2.png";
-import imageThree from "./images/3.png";
-import imageFour from "./images/4.png";
-import imageFive from "./images/5.png";
-import imageSix from "./images/6.png";
+export default function App() {
+  const fruits = ["banana", "apple", "pear", "pineapple", "mango"];
+  const { fruitList, setFruitList } = useState([]);
 
-export default function Grid() {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-  });
+  function handleClick(idx) {
+    setFruitList("fruits[idx]");
+  }
 
   return (
-    <div className="xl:px-80 px-4">
-      <div className="h-screen">
-        <p>This is a test</p>
-      </div>
-      <div
-        ref={ref}
-        className={`${
-          inView
-            ? "translate-x-0 opacity-100 scale-100"
-            : "-translate-x-1/2 opacity-0 scale-0"
-        } xl:grid grid-cols-3 gap-4 items-center duration-1000 space-y-8 xl:space-y-0`}
-      >
-        <div>
-          <img className="border-2 p-2 rounded-lg" src={imageOne} />
-        </div>
-        <div>
-          <img className="border-2 p-2 rounded-lg" src={imageTwo} />
-        </div>
-        <div>
-          <img className="border-2 p-2 rounded-lg" src={imageThree} />
-        </div>
-        <div>
-          <img className="border-2 p-2 rounded-lg" src={imageFour} />
-        </div>
-        <div>
-          <img className="border-2 p-2 rounded-lg" src={imageFive} />
-        </div>
-        <div>
-          <img className="border-2 p-2 rounded-lg" src={imageSix} />
-        </div>
-      </div>
-      <div className="h-screen">
-        <p>This is a test</p>
-      </div>
+    <div>
+      <ul className="px-20 py-20">
+        {fruits.map((fruit, index) => (
+          <div key={index}>
+            <li className="cursor-pointer" onClick={() => handleClick(index)}>
+              {fruit}
+            </li>
+          </div>
+        ))}
+      </ul>
     </div>
   );
 }
