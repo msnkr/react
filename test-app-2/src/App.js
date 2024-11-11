@@ -411,3 +411,87 @@
 //     </div>
 //   );
 // }
+
+// import { useState } from "react";
+
+// export default function App() {
+//   const [value, setValue] = useState("");
+//   const [arr, setArr] = useState([]);
+
+//   function deleteName({ id }) {
+//     setArr((prev) => [
+//       ...prev.filter((name, index) => {
+//         return index !== id;
+//       }),
+//     ]);
+//   }
+
+//   function ShowName({ name, id, clickedItem }) {
+//     return (
+//       <li
+//         className="cursor-pointer"
+//         onClick={() => {
+//           clickedItem({ id });
+//         }}
+//       >
+//         {name}
+//       </li>
+//     );
+//   }
+
+//   function handleValue(e) {
+//     const { name, value } = e.target;
+//     setValue(value);
+//   }
+
+//   function submitValue() {
+//     setArr((prev) => {
+//       return [...prev, value];
+//     });
+//     setValue("");
+//   }
+
+//   return (
+//     <div className="p-20">
+//       <div className="space-x-8">
+//         <input
+//           type="text"
+//           value={value}
+//           onChange={handleValue}
+//           className="border"
+//         />
+//         <button onClick={submitValue}>Click me</button>
+//       </div>
+//       <div>
+//         <ul>
+//           {arr.map((a, index) => (
+//             <ShowName
+//               key={index}
+//               id={index}
+//               name={a}
+//               clickedItem={deleteName}
+//             />
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// }
+
+import { useState } from "react";
+export default function App() {
+  const [isState, setIsState] = useState(false);
+  function handleClick() {
+    setIsState((prev) => !prev);
+  }
+  return (
+    <div className="mt-40 flex justify-center items-center space-x-20">
+      <div>
+        <p className="text-4xl uppercase"> {String(isState)} </p>
+      </div>
+      <button className="border p-1" onClick={handleClick}>
+        Change state
+      </button>
+    </div>
+  );
+}
