@@ -295,59 +295,91 @@
 //   );
 // }
 
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 
-export default function App() {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-  });
-  const [ref2, inView2] = useInView({ threshold: 0.1 });
+// export default function App() {
+//   const [ref, inView] = useInView({
+//     threshold: 0.1,
+//   });
+//   const [ref2, inView2] = useInView({ threshold: 0.1 });
+//   return (
+//     <div>
+//       <div className="mt-8 text-center h-screen">
+//         <p>Test</p>
+//       </div>
+//       <div className="mt-8 text-center h-screen">
+//         <p>Test</p>
+//       </div>
+//       <div ref={ref2} className="mt-8 text-center h-screen">
+//         <img
+//           className={`${
+//             inView2
+//               ? "translate-x-0 scale-100 opacity-100"
+//               : "-translate-x-1/2 opacity-0"
+//           } duration-1000 rounded-xl`}
+//           src="https://images.pexels.com/photos/8721339/pexels-photo-8721339.jpeg"
+//           alt="test"
+//         />
+//       </div>
+//       <div className="mt-8 text-center h-screen">
+//         <p>Test</p>
+//       </div>
+//       <div
+//         ref={ref}
+//         className={`${
+//           inView
+//             ? "scale-100 translate-x-0 opacity-100"
+//             : "-translate-x-1/2 scale-50 opacity-0"
+//         } mt-8 text-center h-screen flex duration-1000`}
+//       >
+//         <div>
+//           <img
+//             className="p-2 hover:scale-95 duration-500 rounded-x hover:border-2"
+//             src="https://images.pexels.com/photos/2128042/pexels-photo-2128042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//             alt="test"
+//           />
+//         </div>
+//         <div>
+//           <img
+//             className="p-2 hover:scale-95 duration-500 rounded-xl hover:border-2"
+//             src="https://images.pexels.com/photos/1083807/pexels-photo-1083807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//             alt="test"
+//           />
+//         </div>
+//         <div>
+//           <img
+//             className="p-2 hover:scale-95 duration-500 rounded-xl hover:border-2"
+//             src="https://images.pexels.com/photos/3389817/pexels-photo-3389817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//             alt="test"
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+import imageOne from "./images/1.png";
+import imageTwo from "./images/2.png";
+import imageThree from "./images/3.png";
+import imageFour from "./images/4.png";
+import imageFive from "./images/5.png";
+import imageSix from "./images/6.png";
+
+export default function Grid() {
   return (
     <div>
-      <div className="mt-8 text-center h-screen">
-        <p>Test</p>
+      <div className="h-screen">
+        <p>This is a test</p>
       </div>
-      <div className="mt-8 text-center h-screen">
-        <p>Test</p>
-      </div>
-      <div ref={ref2} className="mt-8 text-center h-screen">
-        <img
-          className={`${
-            inView2
-              ? "translate-x-0 scale-100 opacity-100"
-              : "-translate-x-1/2 opacity-0"
-          } duration-1000 rounded-xl`}
-          src="https://images.pexels.com/photos/8721339/pexels-photo-8721339.jpeg"
-        />
-      </div>
-      <div className="mt-8 text-center h-screen">
-        <p>Test</p>
-      </div>
-      <div
-        ref={ref}
-        className={`${
-          inView
-            ? "scale-100 translate-x-0 opacity-100"
-            : "-translate-x-1/2 scale-50 opacity-0"
-        } mt-8 text-center h-screen flex duration-1000`}
-      >
+      <div className="grid grid-cols-3 gap-4 h-screen items-center">
         <div>
-          <img
-            className="p-2 hover:scale-95 duration-500 rounded-x hover:border-2"
-            src="https://images.pexels.com/photos/2128042/pexels-photo-2128042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
+          <img className="border-2 p-2 rounded-lg" src={imageOne} />
         </div>
         <div>
-          <img
-            className="p-2 hover:scale-95 duration-500 rounded-xl hover:border-2"
-            src="https://images.pexels.com/photos/1083807/pexels-photo-1083807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
+          <img className="border-2 p-2 rounded-lg" src={imageTwo} />
         </div>
         <div>
-          <img
-            className="p-2 hover:scale-95 duration-500 rounded-xl hover:border-2"
-            src="https://images.pexels.com/photos/3389817/pexels-photo-3389817.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
+          <img className="border-2 p-2 rounded-lg" src={imageThree} />
         </div>
       </div>
     </div>
