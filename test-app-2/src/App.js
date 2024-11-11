@@ -379,40 +379,41 @@ export default function Grid() {
   }
 
   return (
-    <div>
-      <div></div>
+    <div className="px-40">
       <div className="h-screen">
         <p>This is a test</p>
       </div>
-      <div
-        ref={ref}
-        className={`${
-          inView
-            ? "translate-x-0 opacity-100 scale-100"
-            : "-translate-x-1/2 opacity-0 scale-0"
-        } grid grid-cols-3 gap-4 h-screen items-center duration-1000`}
-      >
-        <div>
-          <img
-            onClick={handleClick}
-            className="border-2 p-2 rounded-lg"
-            src={imageOne}
-          />
+      <div className="h-screen">
+        <div
+          ref={ref}
+          className={`${
+            inView
+              ? "translate-x-0 opacity-100 scale-100"
+              : "-translate-x-1/2 opacity-0 scale-0"
+          } grid grid-cols-3 gap-4 items-center duration-1000`}
+        >
+          <div>
+            <img className="border-2 p-2 rounded-lg" src={imageOne} />
+          </div>
+          <div>
+            <img className="border-2 p-2 rounded-lg" src={imageTwo} />
+          </div>
+          <div>
+            <img className="border-2 p-2 rounded-lg" src={imageThree} />
+          </div>
+          <div>
+            <img className="border-2 p-2 rounded-lg" src={imageFour} />
+          </div>
+          <div>
+            <img className="border-2 p-2 rounded-lg" src={imageFive} />
+          </div>
+          <div>
+            <img className="border-2 p-2 rounded-lg" src={imageSix} />
+          </div>
         </div>
-        <div>
-          <img
-            onClick={handleClick}
-            className="border-2 p-2 rounded-lg"
-            src={imageTwo}
-          />
-        </div>
-        <div>
-          <img
-            onClick={handleClick}
-            className="border-2 p-2 rounded-lg"
-            src={imageThree}
-          />
-        </div>
+      </div>
+      <div className="h-screen">
+        <p>This is a test</p>
       </div>
     </div>
   );
