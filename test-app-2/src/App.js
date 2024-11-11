@@ -411,28 +411,3 @@
 //     </div>
 //   );
 // }
-
-import { useState } from "react";
-
-export default function App() {
-  const fruits = ["banana", "apple", "pear", "pineapple", "mango"];
-  const { fruitList, setFruitList } = useState([]);
-
-  function handleClick(idx) {
-    setFruitList("fruits[idx]");
-  }
-
-  return (
-    <div>
-      <ul className="px-20 py-20">
-        {fruits.map((fruit, index) => (
-          <div key={index}>
-            <li className="cursor-pointer" onClick={() => handleClick(index)}>
-              {fruit}
-            </li>
-          </div>
-        ))}
-      </ul>
-    </div>
-  );
-}
