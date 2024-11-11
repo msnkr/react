@@ -374,7 +374,7 @@ export default function Grid() {
   });
 
   return (
-    <div className="xl:px-40 px-4">
+    <div className="xl:px-80 px-4">
       <div className="h-screen">
         <p>This is a test</p>
       </div>
