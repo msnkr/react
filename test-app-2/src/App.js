@@ -358,6 +358,9 @@
 //   );
 // }
 
+import { useInView } from "react-intersection-observer";
+import { useState } from "react";
+
 import imageOne from "./images/1.png";
 import imageTwo from "./images/2.png";
 import imageThree from "./images/3.png";
@@ -366,20 +369,49 @@ import imageFive from "./images/5.png";
 import imageSix from "./images/6.png";
 
 export default function Grid() {
+  const [enlarge, setEnlarge] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+
+  function handleClick() {
+    setEnlarge(true);
+  }
+
   return (
     <div>
+      <div></div>
       <div className="h-screen">
         <p>This is a test</p>
       </div>
-      <div className="grid grid-cols-3 gap-4 h-screen items-center">
+      <div
+        ref={ref}
+        className={`${
+          inView
+            ? "translate-x-0 opacity-100 scale-100"
+            : "-translate-x-1/2 opacity-0 scale-0"
+        } grid grid-cols-3 gap-4 h-screen items-center duration-1000`}
+      >
         <div>
-          <img className="border-2 p-2 rounded-lg" src={imageOne} />
+          <img
+            onClick={handleClick}
+            className="border-2 p-2 rounded-lg"
+            src={imageOne}
+          />
         </div>
         <div>
-          <img className="border-2 p-2 rounded-lg" src={imageTwo} />
+          <img
+            onClick={handleClick}
+            className="border-2 p-2 rounded-lg"
+            src={imageTwo}
+          />
         </div>
         <div>
-          <img className="border-2 p-2 rounded-lg" src={imageThree} />
+          <img
+            onClick={handleClick}
+            className="border-2 p-2 rounded-lg"
+            src={imageThree}
+          />
         </div>
       </div>
     </div>
