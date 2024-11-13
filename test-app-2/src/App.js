@@ -478,20 +478,48 @@
 //   );
 // }
 
+// import { useState } from "react";
+// export default function App() {
+//   const [isState, setIsState] = useState(false);
+//   function handleClick() {
+//     setIsState((prev) => !prev);
+//   }
+//   return (
+//     <div className="mt-40 flex justify-center items-center space-x-20">
+//       <div>
+//         <p className="text-4xl uppercase"> {String(isState)} </p>
+//       </div>
+//       <button className="border p-1" onClick={handleClick}>
+//         Change state
+//       </button>
+//     </div>
+//   );
+// }
+
 import { useState } from "react";
+import Decrease from "./components/Decrease";
+import Increase from "./components/Increase";
+
 export default function App() {
-  const [isState, setIsState] = useState(false);
-  function handleClick() {
-    setIsState((prev) => !prev);
+  const [count, setCount] = useState(0);
+  function decreaseButton() {
+    setCount(count - 1);
   }
+
+  function increaseButton() {
+    setCount(count + 1);
+  }
+
   return (
-    <div className="mt-40 flex justify-center items-center space-x-20">
-      <div>
-        <p className="text-4xl uppercase"> {String(isState)} </p>
+    <div>
+      <div className="text-center mt-40 my-8">
+        <p>Change the counter</p>
+        <p className="text-4xl font-bold mt-8">{count}</p>
       </div>
-      <button className="border p-1" onClick={handleClick}>
-        Change state
-      </button>
+      <div className="flex justify-center space-x-4">
+        <Decrease pressed={decreaseButton} />
+        <Increase pressed={increaseButton} />
+      </div>
     </div>
   );
 }
