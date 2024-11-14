@@ -547,7 +547,7 @@ export default function App() {
     <div className="text-center mt-40">
       {Object.values(fruits).map((fruit, index) => (
         <p key={index} className="text-2xl font-semibold capitalize">
-          {fruit.fruit}: {fruit.quantity}{" "}
+          {fruit.fruit}: {count}{" "}
           <button className="font-bold text-4xl" onClick={increaseCount}>
             +
           </button>
