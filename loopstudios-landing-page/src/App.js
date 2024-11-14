@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 import Grid from "./components/Grid";
+import Footer from "./components/Footer";
+
 import mainImage from "./images/mobile/image-hero.jpg";
 import section2Image from "./images/mobile/image-interactive.jpg";
 import deepEarth from "./images/mobile/image-deep-earth.jpg";
@@ -65,13 +67,21 @@ function App() {
       </div>
       <div className="section-3">
         <div>
-          <p className="text-4xl uppercase text-center">Our creations</p>
+          <p className="text-4xl uppercase text-center my-8">Our creations</p>
         </div>
         <div>
           {imageArr.map((image, index) => (
             <Grid img={image} text={textArr[index]} />
           ))}
         </div>
+        <div className="text-center mt-8 mb-20">
+          <button className="text-2xl font-alata uppercase border-2 border-black px-12 py-2">
+            See all
+          </button>
+        </div>
+      </div>
+      <div className="bg-black px-12">
+        <Footer />
       </div>
     </div>
   );
