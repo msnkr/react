@@ -495,3 +495,40 @@
 //     </div>
 //   );
 // }
+
+// import { useState, UseState } from "react";
+// import DecreaseButton from "./components/DecreaseButton";
+// import IncreaseButton from "./components/IncreaseButton";
+
+// export default function App() {
+//   const [count, setCount] = useState(0);
+
+//   function decreaseCount() {
+//     setCount(count - 1);
+//   }
+
+//   function increaseCount() {
+//     setCount(count + 1);
+//   }
+
+//   return (
+//     <div>
+//       <div className="text-center mt-40">
+//         <p className="text-2xl font-semibold text-gray-400">Counter</p>
+//         <p className="text-4xl font-bold mt-4">{count}</p>
+//       </div>
+//       <div className="flex justify-center space-x-4 mt-4">
+//         <DecreaseButton itemCount={count} clicked={decreaseCount} />
+//         <IncreaseButton itemCount={count} clicked={increaseCount} />
+//       </div>
+//     </div>
+//   );
+// }
+
+export default function App() {
+  return (
+    <div>
+      <></>
+    </div>
+  );
+}
