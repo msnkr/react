@@ -495,31 +495,3 @@
 //     </div>
 //   );
 // }
-
-import { useState } from "react";
-import Decrease from "./components/Decrease";
-import Increase from "./components/Increase";
-
-export default function App() {
-  const [count, setCount] = useState(0);
-  function decreaseButton() {
-    setCount(count - 1);
-  }
-
-  function increaseButton() {
-    setCount(count + 1);
-  }
-
-  return (
-    <div>
-      <div className="text-center mt-40 my-8">
-        <p>Change the counter</p>
-        <p className="text-4xl font-bold mt-8">{count}</p>
-      </div>
-      <div className="flex justify-center space-x-4">
-        <Decrease pressed={decreaseButton} />
-        <Increase pressed={increaseButton} />
-      </div>
-    </div>
-  );
-}
