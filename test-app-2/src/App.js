@@ -524,11 +524,35 @@
 //     </div>
 //   );
 // }
+import { useState } from "react";
+
+const fruits = {
+  apple: {
+    fruit: "apple",
+    quantity: 5,
+  },
+  mango: {
+    fruit: "mango",
+    quantity: 2,
+  },
+};
 
 export default function App() {
+  const [count, setCount] = useState(0);
+  function increaseCount() {
+    setCount(count + 1);
+  }
+
   return (
-    <div>
-      <></>
+    <div className="text-center mt-40">
+      {Object.values(fruits).map((fruit, index) => (
+        <p key={index} className="text-2xl font-semibold capitalize">
+          {fruit.fruit}: {fruit.quantity}{" "}
+          <button className="font-bold text-4xl" onClick={increaseCount}>
+            +
+          </button>
+        </p>
+      ))}
     </div>
   );
 }
