@@ -524,3 +524,73 @@
 //     </div>
 //   );
 // }
+
+import { useState } from "react";
+
+const fruits = {
+  apple: {
+    fruit: "Apple",
+    quantity: 5,
+  },
+  mango: {
+    fruit: "Mango",
+    quantity: 3,
+  },
+};
+
+export default function App() {
+  const [fruitQuantities, setFruitQuantities] = useState(fruits);
+
+  const handleClick = (fruitName) => {
+    setFruitQuantities((prev) => {
+      return {
+        ...prev, // Spread the previous state to keep other fruit data unchanged
+        [fruitName]: {
+          ...prev[fruitName], // Spread the current fruit data
+          quantity: prev[fruitName].quantity + 1, // Increment the quantity
+        },
+      };
+    });
+  };
+
+  const decreaseValue = (fruitName) => {
+    setFruitQuantities((prev) => {
+      return {
+        ...prev,
+        [fruitName]: {
+          ...prev[fruitName],
+          quantity: prev[fruitName].quantity - 1,
+        },
+      };
+    });
+  };
+
+  return (
+    <div>
+      <div className="text-center mt-40 select-none">
+        {Object.values(fruitQuantities).map((fruit, index) => (
+          <div key={index}>
+            <span>{fruit.fruit}: </span>
+            <span>{fruit.quantity}</span>
+            <span>
+              <button
+                onClick={() => decreaseValue(fruit.fruit.toLowerCase())}
+                className="font-bold text-xl ml-2"
+              >
+                -
+              </button>
+            </span>
+            <span>
+              <button
+                onClick={() => handleClick(fruit.fruit.toLowerCase())}
+                className="font-bold text-xl ml-2"
+              >
+                +
+              </button>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
