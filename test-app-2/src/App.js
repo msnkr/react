@@ -601,13 +601,20 @@ export default function App() {
   const [user, setUser] = useState({
     name: "Alice",
     age: 25,
+    address: {
+      city: "New York",
+      zip: "10001",
+    },
   });
 
-  const addOne = () => {
+  const updateCity = (newCity) => {
     setUser((prev) => {
       return {
         ...prev,
-        age: prev.age + 1,
+        address: {
+          ...prev.address,
+          city: newCity,
+        },
       };
     });
   };
@@ -616,13 +623,15 @@ export default function App() {
     <div className="text-center mt-40">
       <div>
         <p>Name: {user.name}</p>
+        <p>Age: {user.age} </p>
         <p>
-          Age: {user.age}{" "}
-          <span>
-            <button onClick={addOne} className="font-bold">
-              +
-            </button>
-          </span>
+          City: {user.address.city}{" "}
+          <button
+            onClick={() => updateCity("San Franciso")}
+            className="font-bold ml-2"
+          >
+            +
+          </button>
         </p>
       </div>
     </div>
