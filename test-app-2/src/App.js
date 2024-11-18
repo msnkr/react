@@ -715,8 +715,7 @@
 // }
 
 import { useState } from "react";
-import IncreaseArrow from "./components/IncreaseArrow";
-import DecreaseArrow from "./components/DecreaseArrow";
+
 const fruitItems = {
   apple: {
     name: "Apple",
@@ -734,6 +733,29 @@ const fruitItems = {
 
 export default function App() {
   const [counts, setCounts] = useState(fruitItems);
+
+  const DecreaseValue = (name) => {
+    setCounts((prevState) => {
+      return {
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          count: prevState[name].count - 1,
+        },
+      };
+    });
+  };
+  const IncreaseValue = (name) => {
+    setCounts((prevState) => {
+      return {
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          count: prevState[name].count + 1,
+        },
+      };
+    });
+  };
   return (
     <div>
       <div className="text-center space-y-4 mt-20">
@@ -743,14 +765,46 @@ export default function App() {
               <p className="font-bold">{fruit.name}</p>
             </div>
             <div className="flex space-x-4 justify-center items-center">
-              <div>
-                <DecreaseArrow />
+              <div
+                className="cursor-left cursor-pointer"
+                onClick={() => DecreaseValue(fruit.name.toLocaleLowerCase())}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+                  />
+                </svg>
               </div>
               <div>
                 <p className="font-semibold text-2xl">{fruit.count}</p>
               </div>
-              <div>
-                <IncreaseArrow />
+              <div
+                className="curor-right cursor-pointer"
+                onClick={() => IncreaseValue(fruit.name.toLocaleLowerCase())}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                  />
+                </svg>
               </div>
             </div>
           </div>
