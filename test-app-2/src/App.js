@@ -653,6 +653,30 @@ const fruitItems = {
 
 export default function App() {
   const [fruits, setFriuts] = useState(fruitItems);
+
+  const increaseCount = (name) => {
+    setFriuts((prevState) => {
+      return {
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          count: prevState[name].count + 1,
+        },
+      };
+    });
+  };
+
+  const decreaseCount = (name) => {
+    setFriuts((prevState) => {
+      return {
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          count: prevState[name].count - 1,
+        },
+      };
+    });
+  };
   return (
     <div>
       <div className="mt-40">
@@ -670,8 +694,18 @@ export default function App() {
               </p>
             </div>
             <div className="space-x-2">
-              <button className="font-bold text-xl">-</button>
-              <button className="font-bold text-xl">+</button>
+              <button
+                className="font-bold text-xl"
+                onClick={() => decreaseCount(fruit.name.toLocaleLowerCase())}
+              >
+                -
+              </button>
+              <button
+                className="font-bold text-xl"
+                onClick={() => increaseCount(fruit.name.toLowerCase())}
+              >
+                +
+              </button>
             </div>
           </div>
         ))}
