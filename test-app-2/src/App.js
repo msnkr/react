@@ -525,6 +525,76 @@
 //   );
 // }
 
+// import { useState } from "react";
+
+// const fruits = {
+//   apple: {
+//     fruit: "Apple",
+//     quantity: 5,
+//   },
+//   mango: {
+//     fruit: "Mango",
+//     quantity: 3,
+//   },
+// };
+
+// export default function App() {
+//   const [fruitQuantities, setFruitQuantities] = useState(fruits);
+
+//   const handleClick = (fruitName) => {
+//     setFruitQuantities((prev) => {
+//       return {
+//         ...prev, // Spread the previous state to keep other fruit data unchanged
+//         [fruitName]: {
+//           ...prev[fruitName], // Spread the current fruit data
+//           quantity: prev[fruitName].quantity + 1, // Increment the quantity
+//         },
+//       };
+//     });
+//   };
+
+//   const decreaseValue = (fruitName) => {
+//     setFruitQuantities((prev) => {
+//       return {
+//         ...prev,
+//         [fruitName]: {
+//           ...prev[fruitName],
+//           quantity: prev[fruitName].quantity - 1,
+//         },
+//       };
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <div className="text-center mt-40 select-none">
+//         {Object.values(fruitQuantities).map((fruit, index) => (
+//           <div key={index}>
+//             <span>{fruit.fruit}: </span>
+//             <span>{fruit.quantity}</span>
+//             <span>
+//               <button
+//                 onClick={() => decreaseValue(fruit.fruit.toLowerCase())}
+//                 className="font-bold text-xl ml-2"
+//               >
+//                 -
+//               </button>
+//             </span>
+//             <span>
+//               <button
+//                 onClick={() => handleClick(fruit.fruit.toLowerCase())}
+//                 className="font-bold text-xl ml-2"
+//               >
+//                 +
+//               </button>
+//             </span>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
 import { useState } from "react";
 
 const fruits = {
@@ -539,55 +609,32 @@ const fruits = {
 };
 
 export default function App() {
-  const [fruitQuantities, setFruitQuantities] = useState(fruits);
+  const [fruit, setFriut] = useState(fruits);
 
-  const handleClick = (fruitName) => {
-    setFruitQuantities((prev) => {
-      return {
-        ...prev, // Spread the previous state to keep other fruit data unchanged
-        [fruitName]: {
-          ...prev[fruitName], // Spread the current fruit data
-          quantity: prev[fruitName].quantity + 1, // Increment the quantity
-        },
-      };
-    });
-  };
-
-  const decreaseValue = (fruitName) => {
-    setFruitQuantities((prev) => {
-      return {
-        ...prev,
-        [fruitName]: {
-          ...prev[fruitName],
-          quantity: prev[fruitName].quantity - 1,
-        },
-      };
-    });
+  const decreaseCount = (fruitName) => {
+    console.log(fruitName);
   };
 
   return (
     <div>
       <div className="text-center mt-40 select-none">
-        {Object.values(fruitQuantities).map((fruit, index) => (
-          <div key={index}>
-            <span>{fruit.fruit}: </span>
-            <span>{fruit.quantity}</span>
-            <span>
+        {Object.values(fruits).map((fruitItems, index) => (
+          <div key={index} className="flex justify-center items-center">
+            <div className="flex">
+              <p>{fruitItems.fruit}:</p>
+              <p className="ml-4 font-semibold">{fruitItems.quantity}</p>
+            </div>
+            <div>
               <button
-                onClick={() => decreaseValue(fruit.fruit.toLowerCase())}
-                className="font-bold text-xl ml-2"
+                className="font-bold ml-4 text-xl"
+                onClick={() =>
+                  decreaseCount(fruitItems.fruit.toLocaleLowerCase())
+                }
               >
                 -
               </button>
-            </span>
-            <span>
-              <button
-                onClick={() => handleClick(fruit.fruit.toLowerCase())}
-                className="font-bold text-xl ml-2"
-              >
-                +
-              </button>
-            </span>
+              <button className="font-bold ml-1 text-xl">+</button>
+            </div>
           </div>
         ))}
       </div>
