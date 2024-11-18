@@ -1,5 +1,9 @@
-const IncreaseButton = () => {
-  return <button className="text-xl font-bold">+</button>;
+const IncreaseButton = ({ handleClick }) => {
+  return (
+    <button onClick={handleClick} className="text-xl font-bold">
+      +
+    </button>
+  );
 };
 
 export default IncreaseButton;

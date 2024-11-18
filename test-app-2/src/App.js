@@ -733,23 +733,36 @@ const fruitDict = {
 };
 const App = () => {
   const [fruits, setFruits] = useState(fruitDict);
+
+  const DecreaseCount = (fruit) => {};
+  const IncreaseCount = (fruit) => {
+    console.log(fruit);
+  };
   return (
     <div>
       <div className="text-center mt-40 space-y-8">
         {Object.values(fruits).map((fruit, index) => (
-          <div>
+          <div key={index}>
             <div>
               <p className="font-bold text-xl">{fruit.name}</p>
             </div>
-            <div className="flex  justify-center space-x-8 items-center">
+            <div className="flex justify-center space-x-8 items-center">
               <div>
-                <DecreaseButton />
+                <DecreaseButton
+                  handleClick={() =>
+                    DecreaseCount(fruit.name.toLocaleLowerCase())
+                  }
+                />
               </div>
               <div>
                 <p className="font-semibold text-lg mt-2">{fruit.count}</p>
               </div>
               <div>
-                <IncreaseButton />
+                <IncreaseButton
+                  handleClick={() =>
+                    IncreaseCount(fruit.name.toLocaleLowerCase())
+                  }
+                />
               </div>
             </div>
           </div>
