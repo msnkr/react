@@ -713,3 +713,49 @@
 //     </div>
 //   );
 // }
+
+import { useState } from "react";
+import IncreaseArrow from "./components/IncreaseArrow";
+import DecreaseArrow from "./components/DecreaseArrow";
+const fruitItems = {
+  apple: {
+    name: "Apple",
+    count: 0,
+  },
+  mango: {
+    name: "Mango",
+    count: 0,
+  },
+  pineapple: {
+    name: "Pineapple",
+    count: 0,
+  },
+};
+
+export default function App() {
+  const [counts, setCounts] = useState(fruitItems);
+  return (
+    <div>
+      <div className="text-center space-y-4 mt-20">
+        {Object.values(counts).map((fruit, index) => (
+          <div key={index}>
+            <div>
+              <p className="font-bold">{fruit.name}</p>
+            </div>
+            <div className="flex space-x-4 justify-center items-center">
+              <div>
+                <DecreaseArrow />
+              </div>
+              <div>
+                <p className="font-semibold text-2xl">{fruit.count}</p>
+              </div>
+              <div>
+                <IncreaseArrow />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
