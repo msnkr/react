@@ -595,66 +595,86 @@
 //   );
 // }
 
+// import { useState } from "react";
+
+// export default function App() {
+//   const [user, setUser] = useState({
+//     name: "Alice",
+//     age: 25,
+//     address: {
+//       city: "New York",
+//       zip: "10001",
+//     },
+//   });
+
+//   const updateCity = (newCity) => {
+//     setUser((prev) => {
+//       return {
+//         ...prev,
+//         address: {
+//           ...prev.address,
+//           city: newCity,
+//         },
+//       };
+//     });
+//   };
+
+//   return (
+//     <div className="text-center mt-40">
+//       <div>
+//         <p>Name: {user.name}</p>
+//         <p>Age: {user.age} </p>
+//         <p>
+//           City: {user.address.city}{" "}
+//           <button
+//             onClick={() => updateCity("San Franciso")}
+//             className="font-bold ml-2"
+//           >
+//             +
+//           </button>
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
 import { useState } from "react";
 
+const fruits = {
+  apple: {
+    fruit: "Apple",
+    quantity: 5,
+  },
+  mango: {
+    fruit: "Mango",
+    quantity: 3,
+  },
+};
+
 export default function App() {
-  const [user, setUser] = useState({
-    name: "Alice",
-    age: 25,
-    address: {
-      city: "New York",
-      zip: "10001",
-    },
-  });
-
-  const updateCity = (newCity) => {
-    setUser((prev) => {
-      return {
-        ...prev,
-        address: {
-          ...prev.address,
-          city: newCity,
-        },
-      };
-    });
+  const [fruitQuantity, setFruitQuantity] = useState(fruits);
+  const decreaseFruit = (name) => {
+    console.log(fruitQuantity);
   };
-
   return (
-    <div className="text-center mt-40">
-      <div>
-        <p>Name: {user.name}</p>
-        <p>Age: {user.age} </p>
-        <p>
-          City: {user.address.city}{" "}
-          <button
-            onClick={() => updateCity("San Franciso")}
-            className="font-bold ml-2"
+    <div>
+      <div className="mt-40">
+        {Object.values(fruits).map((fruit, index) => (
+          <div
+            key={index}
+            className="flex space-x-4 items-center justify-center"
           >
-            +
-          </button>
-        </p>
+            <div className="flex space-x-2">
+              <p>{fruit.fruit}:</p>
+              <p className="font-semibold">{fruit.quantity}</p>
+            </div>
+            <div className="font-bold text-xl space-x-2">
+              <button onClick={() => decreaseFruit(fruit.fruit)}>-</button>
+              <button>+</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
-
-// import { useState } from "react";
-
-// const fruits = {
-//   apple: {
-//     fruit: "Apple",
-//     quantity: 5,
-//   },
-//   mango: {
-//     fruit: "Mango",
-//     quantity: 3,
-//   },
-// };
-
-// export default function App() {
-//   return (
-//     <div>
-//       <div>Hello, World!</div>
-//     </div>
-//   );
-// }
