@@ -637,3 +637,45 @@
 //     </div>
 //   );
 // }
+
+import { useState } from "react";
+const fruitItems = {
+  apple: {
+    name: "apple",
+    count: 5,
+  },
+
+  mango: {
+    name: "mango",
+    count: 4,
+  },
+};
+
+export default function App() {
+  const [fruits, setFriuts] = useState(fruitItems);
+  return (
+    <div>
+      <div className="mt-40">
+        {Object.values(fruits).map((fruit, index) => (
+          <div
+            className="flex justify-center items-center space-x-4"
+            key={index}
+          >
+            <div className="flex">
+              <p>
+                Name: <span className="font-bold capitalize">{fruit.name}</span>
+              </p>
+              <p className="ml-4">
+                Quantity: <span className="font-bold">{fruit.count}</span>
+              </p>
+            </div>
+            <div className="space-x-2">
+              <button className="font-bold text-xl">-</button>
+              <button className="font-bold text-xl">+</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
