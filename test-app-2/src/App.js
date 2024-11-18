@@ -734,13 +734,35 @@ const fruitDict = {
 const App = () => {
   const [fruits, setFruits] = useState(fruitDict);
 
-  const DecreaseCount = (fruit) => {};
+  const DecreaseCount = (fruit) => {
+    setFruits((prevState) => {
+      if (prevState[fruit].count > 0) {
+        return {
+          ...prevState,
+          [fruit]: {
+            ...prevState[fruit],
+            count: prevState[fruit].count - 1,
+          },
+        };
+      } else {
+        return prevState;
+      }
+    });
+  };
   const IncreaseCount = (fruit) => {
-    console.log(fruit);
+    setFruits((prevState) => {
+      return {
+        ...prevState,
+        [fruit]: {
+          ...prevState[fruit],
+          count: prevState[fruit].count + 1,
+        },
+      };
+    });
   };
   return (
     <div>
-      <div className="text-center mt-40 space-y-8">
+      <div className="text-center mt-40 space-y-8 select-none">
         {Object.values(fruits).map((fruit, index) => (
           <div key={index}>
             <div>
