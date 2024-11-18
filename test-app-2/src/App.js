@@ -609,35 +609,9 @@ const fruits = {
 };
 
 export default function App() {
-  const [fruit, setFriut] = useState(fruits);
-
-  const decreaseCount = (fruitName) => {
-    console.log(fruitName);
-  };
-
   return (
     <div>
-      <div className="text-center mt-40 select-none">
-        {Object.values(fruits).map((fruitItems, index) => (
-          <div key={index} className="flex justify-center items-center">
-            <div className="flex">
-              <p>{fruitItems.fruit}:</p>
-              <p className="ml-4 font-semibold">{fruitItems.quantity}</p>
-            </div>
-            <div>
-              <button
-                className="font-bold ml-4 text-xl"
-                onClick={() =>
-                  decreaseCount(fruitItems.fruit.toLocaleLowerCase())
-                }
-              >
-                -
-              </button>
-              <button className="font-bold ml-1 text-xl">+</button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <div>Hello, World!</div>
     </div>
   );
 }
