@@ -713,3 +713,50 @@
 //     </div>
 //   );
 // }
+
+import { useState } from "react";
+import IncreaseButton from "./components/IncreaseButton";
+import DecreaseButton from "./components/DecreaseButton";
+const fruitDict = {
+  apple: {
+    name: "Apple",
+    count: 10,
+  },
+  mango: {
+    name: "Mango",
+    count: 1,
+  },
+  pineapple: {
+    name: "Pineapple",
+    count: 3,
+  },
+};
+const App = () => {
+  const [fruits, setFruits] = useState(fruitDict);
+  return (
+    <div>
+      <div className="text-center mt-40 space-y-8">
+        {Object.values(fruits).map((fruit, index) => (
+          <div>
+            <div>
+              <p className="font-bold text-xl">{fruit.name}</p>
+            </div>
+            <div>
+              <div>
+                <DecreaseButton />
+              </div>
+              <div>
+                <p className="font-semibold text-lg mt-2">{fruit.count}</p>
+              </div>
+              <div>
+                <IncreaseButton />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
