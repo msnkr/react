@@ -741,7 +741,7 @@ const App = () => {
             <div>
               <p className="font-bold text-xl">{fruit.name}</p>
             </div>
-            <div>
+            <div className="flex  justify-center space-x-8 items-center">
               <div>
                 <DecreaseButton />
               </div>
