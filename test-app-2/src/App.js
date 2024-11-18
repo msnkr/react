@@ -736,13 +736,17 @@ export default function App() {
 
   const DecreaseValue = (name) => {
     setCounts((prevState) => {
-      return {
-        ...prevState,
-        [name]: {
-          ...prevState[name],
-          count: prevState[name].count - 1,
-        },
-      };
+      if (prevState[name].count > 0) {
+        return {
+          ...prevState,
+          [name]: {
+            ...prevState[name],
+            count: prevState[name].count - 1,
+          },
+        };
+      } else {
+        return prevState;
+      }
     });
   };
   const IncreaseValue = (name) => {
@@ -757,7 +761,7 @@ export default function App() {
     });
   };
   return (
-    <div>
+    <div className="select-none">
       <div className="text-center space-y-4 mt-20">
         {Object.values(counts).map((fruit, index) => (
           <div key={index}>
