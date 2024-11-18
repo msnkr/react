@@ -597,21 +597,55 @@
 
 import { useState } from "react";
 
-const fruits = {
-  apple: {
-    fruit: "Apple",
-    quantity: 5,
-  },
-  mango: {
-    fruit: "Mango",
-    quantity: 3,
-  },
-};
-
 export default function App() {
+  const [user, setUser] = useState({
+    name: "Alice",
+    age: 25,
+  });
+
+  const addOne = () => {
+    setUser((prev) => {
+      return {
+        ...prev,
+        age: prev.age + 1,
+      };
+    });
+  };
+
   return (
-    <div>
-      <div>Hello, World!</div>
+    <div className="text-center mt-40">
+      <div>
+        <p>Name: {user.name}</p>
+        <p>
+          Age: {user.age}{" "}
+          <span>
+            <button onClick={addOne} className="font-bold">
+              +
+            </button>
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
+
+// import { useState } from "react";
+
+// const fruits = {
+//   apple: {
+//     fruit: "Apple",
+//     quantity: 5,
+//   },
+//   mango: {
+//     fruit: "Mango",
+//     quantity: 3,
+//   },
+// };
+
+// export default function App() {
+//   return (
+//     <div>
+//       <div>Hello, World!</div>
+//     </div>
+//   );
+// }
