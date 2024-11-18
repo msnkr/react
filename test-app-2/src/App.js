@@ -654,7 +654,7 @@ const fruits = {
 export default function App() {
   const [fruitQuantity, setFruitQuantity] = useState(fruits);
   const decreaseFruit = (name) => {
-    console.log(fruitQuantity);
+    console.log(fruitQuantity[name].quantity);
   };
   return (
     <div>
@@ -669,7 +669,11 @@ export default function App() {
               <p className="font-semibold">{fruit.quantity}</p>
             </div>
             <div className="font-bold text-xl space-x-2">
-              <button onClick={() => decreaseFruit(fruit.fruit)}>-</button>
+              <button
+                onClick={() => decreaseFruit(fruit.fruit.toLocaleLowerCase())}
+              >
+                -
+              </button>
               <button>+</button>
             </div>
           </div>
