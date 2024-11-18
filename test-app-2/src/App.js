@@ -733,7 +733,6 @@ const fruitDict = {
 };
 const App = () => {
   const [fruits, setFruits] = useState(fruitDict);
-  const [basket, setBasket] = useState({});
 
   const DecreaseCount = (fruit) => {
     setFruits((prevState) => {
@@ -791,15 +790,6 @@ const App = () => {
           </div>
         ))}
       </div>
-      <p>Your Basket</p>
-      {Object.values(basket).map((fruit, index) => {
-        <div key={index}>
-          <div className="flex justify-center -space-x-28">
-            <p>{fruit.fruit}</p>
-            <p>{fruit.count}</p>
-          </div>
-        </div>;
-      })}
     </div>
   );
 };
