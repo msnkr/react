@@ -870,7 +870,7 @@ export default function App() {
 
   return (
     <div>
-      <div className="mt-40">
+      <div className="mt-12">
         {Object.values(fruitArr).map((fruit, index) => (
           <div key={index} className="text-center mt-12 select-none">
             <div>
@@ -910,7 +910,7 @@ export default function App() {
             return (
               <div
                 key={index}
-                className="grid grid-cols-4 px-8 mb-4 items-center"
+                className="grid grid-cols-4 xl:px-[800px] px-8 mb-4 items-center"
               >
                 <div>
                   <p>{fruit.name}</p>
