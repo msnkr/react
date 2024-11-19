@@ -714,9 +714,91 @@
 //   );
 // }
 
+// import { useState } from "react";
+// import IncreaseButton from "./components/IncreaseButton";
+// import DecreaseButton from "./components/DecreaseButton";
+// const fruitDict = {
+//   apple: {
+//     name: "Apple",
+//     count: 0,
+//   },
+//   mango: {
+//     name: "Mango",
+//     count: 0,
+//   },
+//   pineapple: {
+//     name: "Pineapple",
+//     count: 0,
+//   },
+// };
+// const App = () => {
+//   const [fruits, setFruits] = useState(fruitDict);
+
+//   const DecreaseCount = (fruit) => {
+//     setFruits((prevState) => {
+//       if (prevState[fruit].count > 0) {
+//         return {
+//           ...prevState,
+//           [fruit]: {
+//             ...prevState[fruit],
+//             count: prevState[fruit].count - 1,
+//           },
+//         };
+//       } else {
+//         return prevState;
+//       }
+//     });
+//   };
+//   const IncreaseCount = (fruit) => {
+//     setFruits((prevState) => {
+//       return {
+//         ...prevState,
+//         [fruit]: {
+//           ...prevState[fruit],
+//           count: prevState[fruit].count + 1,
+//         },
+//       };
+//     });
+//   };
+//   return (
+//     <div>
+//       <div className="text-center mt-40 space-y-8 select-none">
+//         {Object.values(fruits).map((fruit, index) => (
+//           <div key={index}>
+//             <div>
+//               <p className="font-bold text-xl">{fruit.name}</p>
+//             </div>
+//             <div className="flex justify-center space-x-8 items-center">
+//               <div>
+//                 <DecreaseButton
+//                   handleClick={() =>
+//                     DecreaseCount(fruit.name.toLocaleLowerCase())
+//                   }
+//                 />
+//               </div>
+//               <div>
+//                 <p className="font-semibold text-lg mt-2">{fruit.count}</p>
+//               </div>
+//               <div>
+//                 <IncreaseButton
+//                   handleClick={() =>
+//                     IncreaseCount(fruit.name.toLocaleLowerCase())
+//                   }
+//                 />
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+import IncreaseButtonNew from "./components/IncreaseButtonNew";
+import DecreaseButtonNew from "./components/DecreaseButtonNew";
+
 import { useState } from "react";
-import IncreaseButton from "./components/IncreaseButton";
-import DecreaseButton from "./components/DecreaseButton";
 const fruitDict = {
   apple: {
     name: "Apple",
@@ -726,65 +808,37 @@ const fruitDict = {
     name: "Mango",
     count: 0,
   },
-  pineapple: {
-    name: "Pineapple",
+  coconut: {
+    name: "Coconut",
+    count: 0,
+  },
+  kiwi: {
+    name: "Kiwi",
     count: 0,
   },
 };
-const App = () => {
-  const [fruits, setFruits] = useState(fruitDict);
 
-  const DecreaseCount = (fruit) => {
-    setFruits((prevState) => {
-      if (prevState[fruit].count > 0) {
-        return {
-          ...prevState,
-          [fruit]: {
-            ...prevState[fruit],
-            count: prevState[fruit].count - 1,
-          },
-        };
-      } else {
-        return prevState;
-      }
-    });
-  };
-  const IncreaseCount = (fruit) => {
-    setFruits((prevState) => {
-      return {
-        ...prevState,
-        [fruit]: {
-          ...prevState[fruit],
-          count: prevState[fruit].count + 1,
-        },
-      };
-    });
-  };
+export default function App() {
+  const [fruitArr, setFruitArr] = useState(fruitDict);
   return (
     <div>
-      <div className="text-center mt-40 space-y-8 select-none">
-        {Object.values(fruits).map((fruit, index) => (
-          <div key={index}>
+      <div className="mt-40">
+        {Object.values(fruitArr).map((fruit, index) => (
+          <div key={index} className="text-center mt-12 select-none">
             <div>
-              <p className="font-bold text-xl">{fruit.name}</p>
+              <div>
+                <p className="font-bold text-2xl">{fruit.name}</p>
+              </div>
             </div>
-            <div className="flex justify-center space-x-8 items-center">
+            <div className="flex space-x-4 items-center justify-center mt-4">
               <div>
-                <DecreaseButton
-                  handleClick={() =>
-                    DecreaseCount(fruit.name.toLocaleLowerCase())
-                  }
-                />
+                <DecreaseButtonNew />
               </div>
               <div>
-                <p className="font-semibold text-lg mt-2">{fruit.count}</p>
+                <p>{fruit.count}</p>
               </div>
               <div>
-                <IncreaseButton
-                  handleClick={() =>
-                    IncreaseCount(fruit.name.toLocaleLowerCase())
-                  }
-                />
+                <IncreaseButtonNew />
               </div>
             </div>
           </div>
@@ -792,6 +846,4 @@ const App = () => {
       </div>
     </div>
   );
-};
-
-export default App;
+}
