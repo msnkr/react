@@ -820,6 +820,7 @@ const fruitDict = {
 
 export default function App() {
   const [fruitArr, setFruitArr] = useState(fruitDict);
+  const [baset, setBasket] = useState({});
 
   const DecreaseCount = (name) => {
     setFruitArr((prevState) => {
@@ -880,6 +881,19 @@ export default function App() {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <div>
+          <p>Basket</p>
+        </div>
+        <div>
+          {Object.values(baset).map((basketItem, index) => (
+            <div className="flex space-x-4">
+              <p>{basketItem.name}</p>
+              <p>{basketItem.count}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
