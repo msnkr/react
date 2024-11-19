@@ -820,6 +820,35 @@ const fruitDict = {
 
 export default function App() {
   const [fruitArr, setFruitArr] = useState(fruitDict);
+
+  const DecreaseCount = (name) => {
+    setFruitArr((prevState) => {
+      if (prevState[name].count > 0) {
+        return {
+          ...prevState,
+          [name]: {
+            ...prevState[name],
+            count: prevState[name].count - 1,
+          },
+        };
+      } else {
+        return prevState;
+      }
+    });
+  };
+
+  const IncreaseCount = (name) => {
+    setFruitArr((prevState) => {
+      return {
+        ...prevState,
+        [name]: {
+          ...prevState[name],
+          count: prevState[name].count + 1,
+        },
+      };
+    });
+  };
+
   return (
     <div>
       <div className="mt-40">
@@ -832,13 +861,21 @@ export default function App() {
             </div>
             <div className="flex space-x-4 items-center justify-center mt-4">
               <div>
-                <DecreaseButtonNew />
+                <DecreaseButtonNew
+                  handleClick={() =>
+                    DecreaseCount(fruit.name.toLocaleLowerCase())
+                  }
+                />
               </div>
               <div>
                 <p>{fruit.count}</p>
               </div>
               <div>
-                <IncreaseButtonNew />
+                <IncreaseButtonNew
+                  handleClick={() =>
+                    IncreaseCount(fruit.name.toLocaleLowerCase())
+                  }
+                />
               </div>
             </div>
           </div>
