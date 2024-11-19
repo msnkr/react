@@ -803,23 +803,32 @@ const fruitDict = {
   apple: {
     name: "Apple",
     count: 0,
+    price: 2.0,
+    total: 0,
   },
   mango: {
     name: "Mango",
     count: 0,
+    price: 3.0,
+    total: 0,
   },
   coconut: {
     name: "Coconut",
     count: 0,
+    price: 4.0,
+    total: 0,
   },
   kiwi: {
     name: "Kiwi",
     count: 0,
+    price: 1.0,
+    total: 0,
   },
 };
 
 export default function App() {
   const [fruitArr, setFruitArr] = useState(fruitDict);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const DecreaseCount = (name) => {
     setFruitArr((prevState) => {
@@ -865,8 +874,9 @@ export default function App() {
         {Object.values(fruitArr).map((fruit, index) => (
           <div key={index} className="text-center mt-12 select-none">
             <div>
-              <div>
+              <div className="flex justify-center space-x-6">
                 <p className="font-bold text-2xl">{fruit.name}</p>
+                <p className="font-bold text-2xl">R{fruit.price}.00</p>
               </div>
             </div>
             <div className="flex space-x-4 items-center justify-center mt-4">
@@ -898,12 +908,18 @@ export default function App() {
         {Object.values(fruitArr).map((fruit, index) => {
           if (fruit.count > 0) {
             return (
-              <div key={index} className="grid grid-cols-3 px-8 mb-4">
+              <div
+                key={index}
+                className="grid grid-cols-4 px-8 mb-4 items-center"
+              >
                 <div>
                   <p>{fruit.name}</p>
                 </div>
                 <div>
                   <p>{fruit.count}</p>
+                </div>
+                <div>
+                  <p>Total: R{fruit.count * fruit.price}.00</p>
                 </div>
                 <div>
                   <button
@@ -917,6 +933,9 @@ export default function App() {
             );
           }
         })}
+      </div>
+      <div className="text-center">
+        <p>Full amount: R{totalPrice}.00</p>
       </div>
     </div>
   );
