@@ -910,7 +910,7 @@ export default function App() {
             return (
               <div
                 key={index}
-                className="grid grid-cols-4 xl:px-[800px] px-8 mb-4 items-center"
+                className="grid grid-cols-4 xl:px-[600px] px-8 mb-4 items-center"
               >
                 <div>
                   <p>{fruit.name}</p>
