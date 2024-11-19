@@ -820,7 +820,6 @@ const fruitDict = {
 
 export default function App() {
   const [fruitArr, setFruitArr] = useState(fruitDict);
-  const [basket, setBasket] = useState(fruitArr);
 
   const DecreaseCount = (name) => {
     setFruitArr((prevState) => {
@@ -849,6 +848,8 @@ export default function App() {
       };
     });
   };
+
+  const DeleteItem = (fruit) => {};
 
   return (
     <div>
@@ -884,16 +885,20 @@ export default function App() {
       </div>
       <div>
         <div>
-          <p>Basket</p>
+          <p className="text-2xl text-center my-12">Your Basket</p>
         </div>
-        <div>
-          {Object.values(basket).map((basketItem, index) => (
-            <div className="flex space-x-4">
-              <p>{basketItem.name}</p>
-              <p>{basketItem.count}</p>
-            </div>
-          ))}
-        </div>
+        {Object.values(fruitArr).map((fruit, index) => {
+          if (fruit.count > 0) {
+            return (
+              <div key={index} className="flex justify-center space-x-8">
+                <p onClick={() => DeleteItem(fruit.name.toLocaleLowerCase())}>
+                  {fruit.name}
+                </p>
+                <p>{fruit.count}</p>
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );
