@@ -898,18 +898,21 @@ export default function App() {
         {Object.values(fruitArr).map((fruit, index) => {
           if (fruit.count > 0) {
             return (
-              <div
-                key={index}
-                className="flex justify-center space-x-8 items-center"
-              >
-                <p>{fruit.name}</p>
-                <p>{fruit.count}</p>
-                <button
-                  onClick={() => DeleteItem(fruit.name.toLocaleLowerCase())}
-                  className="text-sm text-gray-400 font-bold border-2 px-3 py-1 rounded-full border-black"
-                >
-                  X
-                </button>
+              <div key={index} className="grid grid-cols-3 px-8 mb-4">
+                <div>
+                  <p>{fruit.name}</p>
+                </div>
+                <div>
+                  <p>{fruit.count}</p>
+                </div>
+                <div>
+                  <button
+                    onClick={() => DeleteItem(fruit.name.toLocaleLowerCase())}
+                    className="text-sm text-gray-400 font-bold border-2 px-3 py-1 rounded-full border-black"
+                  >
+                    X
+                  </button>
+                </div>
               </div>
             );
           }
