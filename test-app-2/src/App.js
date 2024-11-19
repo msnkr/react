@@ -849,7 +849,15 @@ export default function App() {
     });
   };
 
-  const DeleteItem = (fruit) => {};
+  const DeleteItem = (fruit) => {
+    setFruitArr((prevState) => ({
+      ...prevState,
+      [fruit]: {
+        ...prevState[fruit],
+        count: (prevState[fruit].count = 0),
+      },
+    }));
+  };
 
   return (
     <div>
@@ -890,11 +898,18 @@ export default function App() {
         {Object.values(fruitArr).map((fruit, index) => {
           if (fruit.count > 0) {
             return (
-              <div key={index} className="flex justify-center space-x-8">
-                <p onClick={() => DeleteItem(fruit.name.toLocaleLowerCase())}>
-                  {fruit.name}
-                </p>
+              <div
+                key={index}
+                className="flex justify-center space-x-8 items-center"
+              >
+                <p>{fruit.name}</p>
                 <p>{fruit.count}</p>
+                <button
+                  onClick={() => DeleteItem(fruit.name.toLocaleLowerCase())}
+                  className="text-sm text-gray-400 font-bold border-2 px-3 py-1 rounded-full border-black"
+                >
+                  X
+                </button>
               </div>
             );
           }
