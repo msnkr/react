@@ -1062,55 +1062,94 @@
 
 // export default App;
 
-import "./todo.css";
+// import "./todo.css";
 
-import React from "react";
+// import React from "react";
+// import { useState } from "react";
+// import AddLi from "./components/AddLi";
+
+// function App() {
+//   const [item, setItem] = useState("");
+//   const [arr, setArr] = useState([]);
+
+//   function handleClick() {
+//     setArr((prevValue) => [...prevValue, item]);
+//   }
+
+//   function handleChange(e) {
+//     const value = e.target.value;
+//     setItem(value);
+//   }
+
+//   function deleteItem(id) {
+//     setArr((prevItem) => {
+//       return prevItem.filter((item, index) => {
+//         return index !== id;
+//       });
+//     });
+//   }
+
+//   return (
+//     <div className="container">
+//       <div className="heading">
+//         <h1>To-Do List</h1>
+//       </div>
+//       <div className="form">
+//         <input type="text" onChange={handleChange} />
+//         <button>
+//           <span onClick={handleClick}>Add</span>
+//         </button>
+//       </div>
+//       <div>
+//         <ul>
+//           {arr.map((item, index) => (
+//             <div key={index}>
+//               <AddLi text={item} id={index} onChecked={deleteItem} />
+//             </div>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
 import { useState } from "react";
-import AddLi from "./components/AddLi";
 
-function App() {
-  const [item, setItem] = useState("");
-  const [arr, setArr] = useState([]);
+import cancelButton from "./images/cancel.svg";
 
-  function handleClick() {
-    setArr((prevValue) => [...prevValue, item]);
-  }
-
-  function handleChange(e) {
-    const value = e.target.value;
-    setItem(value);
-  }
-
-  function deleteItem(id) {
-    setArr((prevItem) => {
-      return prevItem.filter((item, index) => {
-        return index !== id;
-      });
-    });
-  }
-
+export default function App() {
+  const [arr, setArr] = useState(["milk", "bread", "coke", "make bed"]);
   return (
-    <div className="container">
-      <div className="heading">
-        <h1>To-Do List</h1>
-      </div>
-      <div className="form">
-        <input type="text" onChange={handleChange} />
-        <button>
-          <span onClick={handleClick}>Add</span>
-        </button>
+    <div className="text-center mx-20">
+      <div className="my-20">
+        <p className="text-xl font-bold uppercase">Todo App</p>
       </div>
       <div>
-        <ul>
-          {arr.map((item, index) => (
-            <div key={index}>
-              <AddLi text={item} id={index} onChecked={deleteItem} />
-            </div>
-          ))}
-        </ul>
+        <div className="lex justify-center items-center">
+          <input
+            className="border rounded-l-lg border-black h-[39px] pl-4"
+            placeholder="Add a item"
+          />
+          <button className="bg-black text-white px-4 py-2 rounded-r-lg">
+            Add
+          </button>
+        </div>
+        <div className="my-20">
+          <ul className="space-y-4">
+            {arr.map((item, index) => (
+              <div key={index} className="flex justify-evenly">
+                <li className="text-lg font-semibold capitalize w-1/2">
+                  {item}
+                </li>
+                <button>
+                  <img src={cancelButton} className="w-6 h-6" />
+                </button>
+              </div>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
 }
-
-export default App;
