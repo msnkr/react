@@ -1119,7 +1119,12 @@ import { useState } from "react";
 import cancelButton from "./images/cancel.svg";
 
 export default function App() {
+  const [listItem, setListItem] = useState("");
   const [arr, setArr] = useState(["milk", "bread", "coke", "make bed"]);
+  const GetListItem = (e) => {
+    const { name, value } = e.target;
+  };
+
   return (
     <div className="text-center mx-20">
       <div className="my-20">
@@ -1130,6 +1135,8 @@ export default function App() {
           <input
             className="border rounded-l-lg border-black h-[39px] pl-4"
             placeholder="Add a item"
+            name="input"
+            onChange={GetListItem}
           />
           <button className="bg-black text-white px-4 py-2 rounded-r-lg">
             Add
@@ -1139,7 +1146,7 @@ export default function App() {
           <ul className="space-y-4">
             {arr.map((item, index) => (
               <div key={index} className="flex justify-evenly">
-                <li className="text-lg font-semibold capitalize w-1/2">
+                <li className="text-lg font-semibold capitalize w-1/2 text-start">
                   {item}
                 </li>
                 <button>
