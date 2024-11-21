@@ -1178,3 +1178,31 @@
 //     </div>
 //   );
 // }
+
+export default function App() {
+  return (
+    <div className="text-center mt-12 font-mono">
+      <div>
+        <p className="text-2xl font-bold underline">Todo App</p>
+      </div>
+      <div>
+        <div className="mt-12 space-x-4">
+          <input
+            className="border-2 border-black rounded-lg px-2 py-1"
+            placeholder="Add a todo here..."
+          />
+          <button className="border-2 border-black rounded-lg px-2 py-1">
+            Add
+          </button>
+        </div>
+        <div className="mt-12">
+          <ul className="space-y-4 font-serif">
+            <li>Milk</li>
+            <li>Coffee</li>
+            <li>Tea</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
