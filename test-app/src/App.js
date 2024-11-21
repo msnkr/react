@@ -1114,67 +1114,67 @@
 // }
 
 // export default App;
-import { useState } from "react";
-import CancelButton from "./components/CancelButton";
+// import { useState } from "react";
+// import CancelButton from "./components/CancelButton";
 
-export default function App() {
-  const [listItem, setListItem] = useState("");
-  const [arr, setArr] = useState([]);
+// export default function App() {
+//   const [listItem, setListItem] = useState("");
+//   const [arr, setArr] = useState([]);
 
-  const GetListItem = (e) => {
-    const { name, value } = e.target;
-    setListItem(value);
-  };
+//   const GetListItem = (e) => {
+//     const { name, value } = e.target;
+//     setListItem(value);
+//   };
 
-  const saveItem = () => {
-    setListItem("");
-    setArr((prevState) => {
-      return [...prevState, listItem];
-    });
-  };
+//   const saveItem = () => {
+//     setListItem("");
+//     setArr((prevState) => {
+//       return [...prevState, listItem];
+//     });
+//   };
 
-  const deleteItem = (id) => {
-    setArr((prevState) => {
-      return prevState.filter((item, index) => {
-        return index !== id;
-      });
-    });
-  };
+//   const deleteItem = (id) => {
+//     setArr((prevState) => {
+//       return prevState.filter((item, index) => {
+//         return index !== id;
+//       });
+//     });
+//   };
 
-  return (
-    <div className="text-center mx-20">
-      <div className="my-20">
-        <p className="text-xl font-bold uppercase">Todo App</p>
-      </div>
-      <div>
-        <div className="lex justify-center items-center">
-          <input
-            className="border rounded-l-lg border-black h-[39px] pl-4"
-            placeholder="Add a item"
-            name="input"
-            onChange={GetListItem}
-            value={listItem}
-          />
-          <button
-            onClick={saveItem}
-            className="bg-black text-white px-4 py-2 rounded-r-lg"
-          >
-            Add
-          </button>
-        </div>
-        <div className="my-20">
-          <ul className="space-y-4">
-            {arr.map((item, index) => (
-              <div key={index} className="flex justify-evenly">
-                <li className="text-lg font-semibold capitalize w-1/2 text-start">
-                  {item}
-                </li>
-                <CancelButton item={deleteItem} id={index} />
-              </div>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-}
+//   return (
+//     <div className="text-center mx-20">
+//       <div className="my-20">
+//         <p className="text-xl font-bold uppercase">Todo App</p>
+//       </div>
+//       <div>
+//         <div className="lex justify-center items-center">
+//           <input
+//             className="border rounded-l-lg border-black h-[39px] pl-4"
+//             placeholder="Add a item"
+//             name="input"
+//             onChange={GetListItem}
+//             value={listItem}
+//           />
+//           <button
+//             onClick={saveItem}
+//             className="bg-black text-white px-4 py-2 rounded-r-lg"
+//           >
+//             Add
+//           </button>
+//         </div>
+//         <div className="my-20">
+//           <ul className="space-y-4">
+//             {arr.map((item, index) => (
+//               <div key={index} className="flex justify-evenly">
+//                 <li className="text-lg font-semibold capitalize w-1/2 text-start">
+//                   {item}
+//                 </li>
+//                 <CancelButton item={deleteItem} id={index} />
+//               </div>
+//             ))}
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
