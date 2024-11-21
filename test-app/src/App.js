@@ -1133,7 +1133,11 @@ export default function App() {
   };
 
   const deleteItem = (id) => {
-    setArr((prevState) => {});
+    setArr((prevState) => {
+      return prevState.filter((item, index) => {
+        return index !== id;
+      });
+    });
   };
 
   return (
