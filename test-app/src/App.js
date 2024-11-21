@@ -1116,13 +1116,21 @@
 // export default App;
 import { useState } from "react";
 
-import cancelButton from "./images/cancel.svg";
+import CancelButton from "./components/CancelButton";
 
 export default function App() {
   const [listItem, setListItem] = useState("");
-  const [arr, setArr] = useState(["milk", "bread", "coke", "make bed"]);
+  const [arr, setArr] = useState([]);
+
   const GetListItem = (e) => {
     const { name, value } = e.target;
+    setListItem(value);
+  };
+
+  const saveItem = () => {
+    setArr((prevState) => {
+      return [...prevState, listItem];
+    });
   };
 
   return (
@@ -1138,7 +1146,10 @@ export default function App() {
             name="input"
             onChange={GetListItem}
           />
-          <button className="bg-black text-white px-4 py-2 rounded-r-lg">
+          <button
+            onClick={saveItem}
+            className="bg-black text-white px-4 py-2 rounded-r-lg"
+          >
             Add
           </button>
         </div>
@@ -1149,9 +1160,7 @@ export default function App() {
                 <li className="text-lg font-semibold capitalize w-1/2 text-start">
                   {item}
                 </li>
-                <button>
-                  <img src={cancelButton} className="w-6 h-6" />
-                </button>
+                <CancelButton />
               </div>
             ))}
           </ul>
