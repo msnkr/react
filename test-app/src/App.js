@@ -1179,6 +1179,11 @@
 //   );
 // }
 
+import { useState } from "react";
+import AddListItem from "./components/AddListItem";
+
+const arr = ["milk", "tea", "coffee"];
+
 export default function App() {
   return (
     <div className="text-center mt-12 font-mono">
@@ -1186,20 +1191,22 @@ export default function App() {
         <p className="text-2xl font-bold underline">Todo App</p>
       </div>
       <div>
-        <div className="mt-12 space-x-4">
+        <div className="mt-12 space-x-2">
           <input
             className="border-2 border-black rounded-lg px-2 py-1"
             placeholder="Add a todo here..."
           />
-          <button className="border-2 border-black rounded-lg px-2 py-1">
+          <button className="border-2 border-black rounded-lg px-2 py-1 scale-90 hover:scale-100 duration-500">
             Add
           </button>
         </div>
         <div className="mt-12">
           <ul className="space-y-4 font-serif">
-            <li>Milk</li>
-            <li>Coffee</li>
-            <li>Tea</li>
+            {arr.map((item, index) => (
+              <div>
+                <AddListItem listItem={item} />
+              </div>
+            ))}
           </ul>
         </div>
       </div>
