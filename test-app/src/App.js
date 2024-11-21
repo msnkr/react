@@ -1127,6 +1127,7 @@ export default function App() {
   };
 
   const saveItem = () => {
+    setListItem("");
     setArr((prevState) => {
       return [...prevState, listItem];
     });
@@ -1152,6 +1153,7 @@ export default function App() {
             placeholder="Add a item"
             name="input"
             onChange={GetListItem}
+            value={listItem}
           />
           <button
             onClick={saveItem}
