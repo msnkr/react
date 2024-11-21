@@ -1182,9 +1182,30 @@
 import { useState } from "react";
 import AddListItem from "./components/AddListItem";
 
-const arr = ["milk", "tea", "coffee"];
-
 export default function App() {
+  const [currentItem, setCurrentItem] = useState("");
+  const [arr, setArr] = useState([]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCurrentItem(value);
+  };
+
+  const handleClick = () => {
+    setArr((prevState) => {
+      return [...prevState, currentItem];
+    });
+    setCurrentItem("");
+  };
+
+  const deleteItem = (idx) => {
+    setArr((prevState) => {
+      return prevState.filter((item, index) => {
+        return index !== idx;
+      });
+    });
+  };
+
   return (
     <div className="text-center mt-12 font-mono">
       <div>
@@ -1195,16 +1216,22 @@ export default function App() {
           <input
             className="border-2 border-black rounded-lg px-2 py-1"
             placeholder="Add a todo here..."
+            onChange={handleChange}
+            value={currentItem}
           />
-          <button className="border-2 border-black rounded-lg px-2 py-1 scale-90 hover:scale-100 duration-500">
+          <button
+            className="border-2 border-black rounded-lg px-2 py-1 scale-90 hover:scale-100 duration-500"
+            onClick={handleClick}
+          >
+            {" "}
             Add
           </button>
         </div>
         <div className="mt-12">
           <ul className="space-y-4 font-serif">
-            {arr.map((item, index) => (
-              <div>
-                <AddListItem listItem={item} />
+            {arr.map((listItem, index) => (
+              <div key={index}>
+                <AddListItem x={listItem} id={index} onChecked={deleteItem} />
               </div>
             ))}
           </ul>
