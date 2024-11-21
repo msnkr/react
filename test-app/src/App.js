@@ -1115,7 +1115,6 @@
 
 // export default App;
 import { useState } from "react";
-
 import CancelButton from "./components/CancelButton";
 
 export default function App() {
@@ -1132,6 +1131,8 @@ export default function App() {
       return [...prevState, listItem];
     });
   };
+
+  const deleteItem = (id) => {};
 
   return (
     <div className="text-center mx-20">
@@ -1160,7 +1161,7 @@ export default function App() {
                 <li className="text-lg font-semibold capitalize w-1/2 text-start">
                   {item}
                 </li>
-                <CancelButton />
+                <CancelButton item={deleteItem} id={index} />
               </div>
             ))}
           </ul>
