@@ -1132,7 +1132,9 @@ export default function App() {
     });
   };
 
-  const deleteItem = (id) => {};
+  const deleteItem = (id) => {
+    setArr((prevState) => {});
+  };
 
   return (
     <div className="text-center mx-20">
