@@ -1,7 +1,11 @@
-export default function Grid() {
+export default function Grid({ arr }) {
   return (
     <div>
-      <div></div>
+      {arr.map((x, index) => (
+        <div key={index}>
+          <img src={x} />
+        </div>
+      ))}
     </div>
   );
 }
