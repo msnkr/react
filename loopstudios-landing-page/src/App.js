@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import heroImgMobile from "./images/mobile/image-hero.jpg";
 import imageInteractiveMobile from "./images/mobile/image-interactive.jpg";
-import { mobileArr } from "./components/ImageArr";
+import { mobileArr, wordingArr } from "./components/ImageArr";
 import Grid from "./components/Grid";
 
 function App() {
@@ -47,7 +47,12 @@ function App() {
           </p>
         </div>
         <div>
-          <Grid arr={mobileArr} />
+          <Grid arr={mobileArr} wordingArr={wordingArr} />
+        </div>
+        <div className="text-center my-8">
+          <button className="text-xl uppercase border-2 border-black px-8 py-2">
+            See all
+          </button>
         </div>
       </div>
     </div>

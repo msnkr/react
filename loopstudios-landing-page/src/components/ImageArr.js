@@ -17,3 +17,14 @@ export const mobileArr = [
   theCuriosityMobile,
   fishEyeMobile,
 ];
+
+export const wordingArr = [
+  "Deep Earth",
+  "night arcade",
+  "soccer team vr",
+  "the grid",
+  "from up above vr",
+  "pocket borealis",
+  "the curiosity",
+  "make it fisheye",
+];
