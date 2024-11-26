@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import heroImgMobile from "./images/mobile/image-hero.jpg";
+import imageInteractiveMobile from "./images/mobile/image-interactive.jpg";
 
 function App() {
   return (
@@ -18,6 +19,32 @@ function App() {
             Immersive experiences that deliver
           </p>
         </div>
+      </div>
+      <div className="mt-12 px-12">
+        <div className="my-12">
+          <img src={imageInteractiveMobile} />
+        </div>
+        <div>
+          <p className="text-4xl uppercase font-thin tracking-wider text-center">
+            The leader in interactive vr
+          </p>
+        </div>
+        <div className="mt-8 text-center font-medium">
+          <p>
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+      <div className="mt-12 px-12">
+        <div className="my-12">
+          <p className="text-4xl uppercase font-thin tracking-wider text-center">
+            Our creations
+          </p>
+        </div>
+        <div></div>
       </div>
     </div>
   );
