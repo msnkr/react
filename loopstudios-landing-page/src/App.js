@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import heroImgMobile from "./images/mobile/image-hero.jpg";
 import imageInteractiveMobile from "./images/mobile/image-interactive.jpg";
-import ImageArr from "./components/ImageArr";
+import { mobileArr } from "./components/ImageArr";
 import Grid from "./components/Grid";
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           </p>
         </div>
         <div>
-          <Grid arr={ImageArr} />
+          <Grid arr={mobileArr} />
         </div>
       </div>
     </div>

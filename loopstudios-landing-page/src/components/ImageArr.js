@@ -7,7 +7,7 @@ import pocketBorealisMobile from "../images/mobile/image-pocket-borealis.jpg";
 import theCuriosityMobile from "../images/mobile/image-curiosity.jpg";
 import fishEyeMobile from "../images/mobile/image-fisheye.jpg";
 
-const mobileArr = [
+export const mobileArr = [
   deepEarthMobile,
   nightArcadeMobile,
   soccerTeamMobile,
@@ -17,5 +17,3 @@ const mobileArr = [
   theCuriosityMobile,
   fishEyeMobile,
 ];
-
-export default mobileArr;
