@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import heroImgMobile from "./images/mobile/image-hero.jpg";
 import imageInteractiveMobile from "./images/mobile/image-interactive.jpg";
 import { mobileArr, wordingArr } from "./components/ImageArr";
@@ -7,24 +8,24 @@ import Grid from "./components/Grid";
 function App() {
   return (
     <div>
-      <div className="relative">
+      <div className="relative navbar">
         <div>
           <Navbar />
         </div>
         <div>
-          <img src={heroImgMobile} />
+          <img src={heroImgMobile} alt="hero-image" />
         </div>
       </div>
-      <div>
+      <div className="hero-text">
         <div className="text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <p className="text-5xl uppercase border-2 border-white px-12 py-8 leading-10 font-extralight">
             Immersive experiences that deliver
           </p>
         </div>
       </div>
-      <div className="mt-12 px-12">
+      <div className="leader-section mt-12 px-12">
         <div className="my-12">
-          <img src={imageInteractiveMobile} />
+          <img src={imageInteractiveMobile} alt="leader-image" />
         </div>
         <div>
           <p className="text-4xl uppercase font-thin tracking-wider text-center">
@@ -40,7 +41,7 @@ function App() {
           </p>
         </div>
       </div>
-      <div className="mt-12 px-12">
+      <div className="grid-items mt-12 px-12">
         <div className="my-12">
           <p className="text-4xl uppercase font-thin tracking-wider text-center">
             Our creations
@@ -54,6 +55,9 @@ function App() {
             See all
           </button>
         </div>
+      </div>
+      <div className="footer bg-black mt-12 p-12">
+        <Footer />
       </div>
     </div>
   );

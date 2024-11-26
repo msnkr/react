@@ -9,7 +9,7 @@ export default function Grid({ arr, wordingArr }) {
           >
             {wordingArr[index]}
           </p>
-          <img className="py-4" src={x} />
+          <img className="py-4" src={x} alt={`${wordingArr[index]}-image`} />
         </div>
       ))}
     </div>
