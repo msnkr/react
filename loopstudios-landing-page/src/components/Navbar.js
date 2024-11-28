@@ -35,7 +35,7 @@ function Navbar() {
             <img
               onClick={handleClick}
               src={close}
-              className="absolute top-12 right-12 hover:animate-spin"
+              className="absolute top-14 right-12 hover:animate-spin"
             />
           </div>
           <ul className="text-white absolute top-1/2 -translate-y-1/2 left-16 text-3xl uppercase space-y-8 font-thin">
