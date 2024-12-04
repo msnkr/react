@@ -1179,59 +1179,102 @@
 //   );
 // }
 
+// import { useState } from "react";
+// import AddListItem from "./components/AddListItem";
+
+// export default function App() {
+//   const [currentItem, setCurrentItem] = useState("");
+//   const [arr, setArr] = useState([]);
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setCurrentItem(value);
+//   };
+
+//   const handleClick = () => {
+//     setArr((prevState) => {
+//       return [...prevState, currentItem];
+//     });
+//     setCurrentItem("");
+//   };
+
+//   const deleteItem = (idx) => {
+//     setArr((prevState) => {
+//       return prevState.filter((item, index) => {
+//         return index !== idx;
+//       });
+//     });
+//   };
+
+//   return (
+//     <div className="text-center mt-12 font-mono">
+//       <div>
+//         <p className="text-2xl font-bold underline">Todo App</p>
+//       </div>
+//       <div>
+//         <div className="mt-12 space-x-2">
+//           <input
+//             className="border-2 border-black rounded-lg px-2 py-1"
+//             placeholder="Add a todo here..."
+//             onChange={handleChange}
+//             value={currentItem}
+//           />
+//           <button
+//             className="border-2 border-black rounded-lg px-2 py-1 scale-90 hover:scale-100 duration-500"
+//             onClick={handleClick}
+//           >
+//             {" "}
+//             Add
+//           </button>
+//         </div>
+//         <div className="mt-12">
+//           <ul className="space-y-4 font-serif">
+//             {arr.map((listItem, index) => (
+//               <div key={index}>
+//                 <AddListItem x={listItem} id={index} onChecked={deleteItem} />
+//               </div>
+//             ))}
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+import ShowListItem from "./components/ShowListItem";
 import { useState } from "react";
-import AddListItem from "./components/AddListItem";
 
 export default function App() {
-  const [currentItem, setCurrentItem] = useState("");
-  const [arr, setArr] = useState([]);
+  const [listItem, setListItem] = useState([
+    "apple",
+    "guava",
+    "banana",
+    "mango",
+  ]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setCurrentItem(value);
+    console.log(name);
   };
 
-  const handleClick = () => {
-    setArr((prevState) => {
-      return [...prevState, currentItem];
-    });
-    setCurrentItem("");
-  };
-
-  const deleteItem = (idx) => {
-    setArr((prevState) => {
-      return prevState.filter((item, index) => {
-        return index !== idx;
-      });
-    });
-  };
+  const handleAdd = () => {};
 
   return (
-    <div className="text-center mt-12 font-mono">
-      <div>
-        <p className="text-2xl font-bold underline">Todo App</p>
-      </div>
-      <div>
-        <div className="mt-12 space-x-2">
+    <div>
+      <div className="mt-40">
+        <div className="space-x-8 text-center">
           <input
-            className="border-2 border-black rounded-lg px-2 py-1"
-            placeholder="Add a todo here..."
+            className="border-2 rounded-lg py-1"
+            name="input"
             onChange={handleChange}
-            value={currentItem}
           />
-          <button
-            className="border-2 border-black rounded-lg px-2 py-1 scale-90 hover:scale-100 duration-500"
-            onClick={handleClick}
-          >
-            {" "}
-            Add
-          </button>
+          <button className="border-2 rounded-lg px-2 py-1">Add</button>
         </div>
-        <div className="mt-12">
-          <ul className="space-y-4 font-serif">
-            {arr.map((listItem, index) => (
-              <div key={index}>
-                <AddListItem x={listItem} id={index} onChecked={deleteItem} />
+        <div className="relative mt-12">
+          <ul className="absolute top-0 left-1/3 -translate-x-1/2">
+            {listItem.map((fruit, idx) => (
+              <div key={idx}>
+                <ShowListItem listItem={fruit} />
               </div>
             ))}
           </ul>
