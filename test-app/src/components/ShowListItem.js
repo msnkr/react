@@ -1,5 +1,10 @@
-export default function ShowListItem({ listItem }) {
+export default function ShowListItem({ listItem, onChecked, idx }) {
   return (
-    <li className="cursor-pointer capitalize font-semibold">{listItem}</li>
+    <li
+      className="cursor-pointer capitalize font-semibold"
+      onClick={() => onChecked(idx)}
+    >
+      {listItem}
+    </li>
   );
 }

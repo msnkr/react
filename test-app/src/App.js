@@ -1253,6 +1253,14 @@ export default function App() {
     "mango",
   ]);
 
+  const deleteChange = (idx) => {
+    setListItem((prev) => {
+      return prev.filter((item, x) => {
+        return idx !== x;
+      });
+    });
+  };
+
   const handleChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
@@ -1281,7 +1289,11 @@ export default function App() {
           <ul className="grid grid-cols-3 gap-2">
             {listItem.map((fruit, idx) => (
               <div key={idx}>
-                <ShowListItem listItem={fruit} />
+                <ShowListItem
+                  onChecked={deleteChange}
+                  idx={idx}
+                  listItem={fruit}
+                />
               </div>
             ))}
           </ul>
