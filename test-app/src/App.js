@@ -1269,7 +1269,7 @@ export default function App() {
       <div className="mt-40">
         <div className="space-x-8 text-center">
           <input
-            className="border-2 rounded-lg py-1"
+            className="border-2 rounded-lg py-1 pl-4"
             name="input"
             onChange={handleChange}
           />
@@ -1280,7 +1280,7 @@ export default function App() {
         <div className="relative mt-12 text-center px-20">
           <ul className="grid grid-cols-3 gap-2">
             {listItem.map((fruit, idx) => (
-              <div className="" key={idx}>
+              <div key={idx}>
                 <ShowListItem listItem={fruit} />
               </div>
             ))}
