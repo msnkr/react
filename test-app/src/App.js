@@ -1254,7 +1254,7 @@ export default function App() {
   ]);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const value = e.target.value;
     setInputValue(value);
   };
 
