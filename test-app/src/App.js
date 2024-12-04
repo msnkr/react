@@ -1245,6 +1245,7 @@ import ShowListItem from "./components/ShowListItem";
 import { useState } from "react";
 
 export default function App() {
+  const [inputValue, setInputValue] = useState("");
   const [listItem, setListItem] = useState([
     "apple",
     "guava",
@@ -1254,10 +1255,14 @@ export default function App() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name);
+    setInputValue(value);
   };
 
-  const handleAdd = () => {};
+  const handleAdd = () => {
+    setListItem((prev) => {
+      return [...prev, inputValue];
+    });
+  };
 
   return (
     <div>
@@ -1268,12 +1273,14 @@ export default function App() {
             name="input"
             onChange={handleChange}
           />
-          <button className="border-2 rounded-lg px-2 py-1">Add</button>
+          <button className="border-2 rounded-lg px-2 py-1" onClick={handleAdd}>
+            Add
+          </button>
         </div>
-        <div className="relative mt-12">
-          <ul className="absolute top-0 left-1/3 -translate-x-1/2">
+        <div className="relative mt-12 text-center px-20">
+          <ul className="grid grid-cols-3 gap-2">
             {listItem.map((fruit, idx) => (
-              <div key={idx}>
+              <div className="" key={idx}>
                 <ShowListItem listItem={fruit} />
               </div>
             ))}
