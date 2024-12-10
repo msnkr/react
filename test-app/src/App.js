@@ -1246,6 +1246,20 @@ import { useState } from "react";
 
 export default function App() {
   const [arr, setArr] = useState(["milk", "eggs", "coffee"]);
+  const [change, setChange] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setChange(value);
+  };
+
+  const handleClick = () => {
+    setArr((prev) => {
+      return [...prev, change];
+    });
+    setChange("");
+  };
+
   return (
     <div className="mt-40 text-center">
       <div>
@@ -1257,10 +1271,15 @@ export default function App() {
             <input
               className="border-2 border-black rounded-lg pl-4 py-1"
               placeholder="Enter a todo"
+              onChange={handleChange}
+              name="input"
             />
           </div>
           <div>
-            <button className="py-1 px-2 border-2 border-black rounded-lg">
+            <button
+              className="py-1 px-2 border-2 border-black rounded-lg"
+              onClick={handleClick}
+            >
               Add
             </button>
           </div>
