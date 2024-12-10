@@ -1260,6 +1260,14 @@ export default function App() {
     setChange("");
   };
 
+  const handleOnChecked = (idx) => {
+    setArr((prev) => {
+      return prev.filter((item, index) => {
+        return idx !== index;
+      });
+    });
+  };
+
   return (
     <div className="mt-40 text-center">
       <div>
@@ -1289,8 +1297,12 @@ export default function App() {
       <div className="mt-12">
         <ul className="space-y-1">
           {arr.map((listItem, index) => (
-            <div>
-              <DisplayList arrItem={listItem} />
+            <div key={index}>
+              <DisplayList
+                onChecked={handleOnChecked}
+                idx={index}
+                arrItem={listItem}
+              />
             </div>
           ))}
         </ul>
