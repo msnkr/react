@@ -1240,3 +1240,37 @@
 //     </div>
 //   );
 // }
+
+import DisplayList from "./components/DisplayList";
+import { useState } from "react";
+
+export default function App() {
+  const [arr, setArr] = useState(["milk", "eggs", "coffee"]);
+  return (
+    <div className="mt-40 text-center">
+      <div>
+        <div>
+          <p>Todo App</p>
+        </div>
+        <div className="flex space-x-1 mt-4 justify-center">
+          <div>
+            <input
+              className="border-2 border-black rounded-lg pl-4 py-1"
+              placeholder="Enter a todo"
+            />
+          </div>
+          <div>
+            <button className="py-1 px-2 border-2 border-black rounded-lg">
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="mt-12">
+        <ul className="space-y-2">
+          <DisplayList arr={arr} />
+        </ul>
+      </div>
+    </div>
+  );
+}
