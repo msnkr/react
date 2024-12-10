@@ -1273,6 +1273,7 @@ export default function App() {
               placeholder="Enter a todo"
               onChange={handleChange}
               name="input"
+              value={change}
             />
           </div>
           <div>
