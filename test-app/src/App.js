@@ -1287,8 +1287,12 @@ export default function App() {
         </div>
       </div>
       <div className="mt-12">
-        <ul className="space-y-2">
-          <DisplayList arr={arr} />
+        <ul className="space-y-1">
+          {arr.map((listItem, index) => (
+            <div>
+              <DisplayList arrItem={listItem} />
+            </div>
+          ))}
         </ul>
       </div>
     </div>

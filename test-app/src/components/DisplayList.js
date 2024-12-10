@@ -1,11 +1,3 @@
-export default function DisplayList({ arr }) {
-  return (
-    <div>
-      {arr.map((x, index) => (
-        <div key={index}>
-          <li className="capitalize font-semibold cursor-pointer">{x}</li>
-        </div>
-      ))}
-    </div>
-  );
+export default function DisplayList({ arrItem }) {
+  return <li className="capitalize font-semibold">{arrItem}</li>;
 }
