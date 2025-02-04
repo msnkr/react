@@ -795,148 +795,156 @@
 // };
 
 // export default App;
-import IncreaseButtonNew from "./components/IncreaseButtonNew";
-import DecreaseButtonNew from "./components/DecreaseButtonNew";
+// import IncreaseButtonNew from "./components/IncreaseButtonNew";
+// import DecreaseButtonNew from "./components/DecreaseButtonNew";
 
-import { useState } from "react";
-const fruitDict = {
-  apple: {
-    name: "Apple",
-    count: 0,
-    price: 2.0,
-    total: 0,
-  },
-  mango: {
-    name: "Mango",
-    count: 0,
-    price: 3.0,
-    total: 0,
-  },
-  coconut: {
-    name: "Coconut",
-    count: 0,
-    price: 4.0,
-    total: 0,
-  },
-  kiwi: {
-    name: "Kiwi",
-    count: 0,
-    price: 1.0,
-    total: 0,
-  },
-};
+// import { useState } from "react";
+// const fruitDict = {
+//   apple: {
+//     name: "Apple",
+//     count: 0,
+//     price: 2.0,
+//     total: 0,
+//   },
+//   mango: {
+//     name: "Mango",
+//     count: 0,
+//     price: 3.0,
+//     total: 0,
+//   },
+//   coconut: {
+//     name: "Coconut",
+//     count: 0,
+//     price: 4.0,
+//     total: 0,
+//   },
+//   kiwi: {
+//     name: "Kiwi",
+//     count: 0,
+//     price: 1.0,
+//     total: 0,
+//   },
+// };
+
+// export default function App() {
+//   const [fruitArr, setFruitArr] = useState(fruitDict);
+//   const [totalPrice, setTotalPrice] = useState(0);
+
+//   const DecreaseCount = (name) => {
+//     setFruitArr((prevState) => {
+//       if (prevState[name].count > 0) {
+//         return {
+//           ...prevState,
+//           [name]: {
+//             ...prevState[name],
+//             count: prevState[name].count - 1,
+//           },
+//         };
+//       } else {
+//         return prevState;
+//       }
+//     });
+//   };
+
+//   const IncreaseCount = (name) => {
+//     setFruitArr((prevState) => {
+//       return {
+//         ...prevState,
+//         [name]: {
+//           ...prevState[name],
+//           count: prevState[name].count + 1,
+//         },
+//       };
+//     });
+//   };
+
+//   const DeleteItem = (fruit) => {
+//     setFruitArr((prevState) => ({
+//       ...prevState,
+//       [fruit]: {
+//         ...prevState[fruit],
+//         count: (prevState[fruit].count = 0),
+//       },
+//     }));
+//   };
+
+//   return (
+//     <div>
+//       <div className="mt-12">
+//         {Object.values(fruitArr).map((fruit, index) => (
+//           <div key={index} className="text-center mt-12 select-none">
+//             <div>
+//               <div className="flex justify-center space-x-6">
+//                 <p className="font-bold text-2xl">{fruit.name}</p>
+//                 <p className="font-bold text-2xl">R{fruit.price}.00</p>
+//               </div>
+//             </div>
+//             <div className="flex space-x-4 items-center justify-center mt-4">
+//               <div>
+//                 <DecreaseButtonNew
+//                   handleClick={() =>
+//                     DecreaseCount(fruit.name.toLocaleLowerCase())
+//                   }
+//                 />
+//               </div>
+//               <div>
+//                 <p>{fruit.count}</p>
+//               </div>
+//               <div>
+//                 <IncreaseButtonNew
+//                   handleClick={() =>
+//                     IncreaseCount(fruit.name.toLocaleLowerCase())
+//                   }
+//                 />
+//               </div>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//       <div>
+//         <div>
+//           <p className="text-2xl text-center my-12">Your Basket</p>
+//         </div>
+//         {Object.values(fruitArr).map((fruit, index) => {
+//           if (fruit.count > 0) {
+//             return (
+//               <div
+//                 key={index}
+//                 className="grid grid-cols-4 xl:px-[600px] px-8 mb-4 items-center"
+//               >
+//                 <div>
+//                   <p>{fruit.name}</p>
+//                 </div>
+//                 <div>
+//                   <p>{fruit.count}</p>
+//                 </div>
+//                 <div>
+//                   <p>Total: R{fruit.count * fruit.price}.00</p>
+//                 </div>
+//                 <div>
+//                   <button
+//                     onClick={() => DeleteItem(fruit.name.toLocaleLowerCase())}
+//                     className="text-sm text-gray-400 font-bold border-2 px-3 py-1 rounded-full border-black"
+//                   >
+//                     X
+//                   </button>
+//                 </div>
+//               </div>
+//             );
+//           }
+//         })}
+//       </div>
+//       <div className="text-center">
+//         <p>Full amount: R{totalPrice}.00</p>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default function App() {
-  const [fruitArr, setFruitArr] = useState(fruitDict);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  const DecreaseCount = (name) => {
-    setFruitArr((prevState) => {
-      if (prevState[name].count > 0) {
-        return {
-          ...prevState,
-          [name]: {
-            ...prevState[name],
-            count: prevState[name].count - 1,
-          },
-        };
-      } else {
-        return prevState;
-      }
-    });
-  };
-
-  const IncreaseCount = (name) => {
-    setFruitArr((prevState) => {
-      return {
-        ...prevState,
-        [name]: {
-          ...prevState[name],
-          count: prevState[name].count + 1,
-        },
-      };
-    });
-  };
-
-  const DeleteItem = (fruit) => {
-    setFruitArr((prevState) => ({
-      ...prevState,
-      [fruit]: {
-        ...prevState[fruit],
-        count: (prevState[fruit].count = 0),
-      },
-    }));
-  };
-
   return (
     <div>
-      <div className="mt-12">
-        {Object.values(fruitArr).map((fruit, index) => (
-          <div key={index} className="text-center mt-12 select-none">
-            <div>
-              <div className="flex justify-center space-x-6">
-                <p className="font-bold text-2xl">{fruit.name}</p>
-                <p className="font-bold text-2xl">R{fruit.price}.00</p>
-              </div>
-            </div>
-            <div className="flex space-x-4 items-center justify-center mt-4">
-              <div>
-                <DecreaseButtonNew
-                  handleClick={() =>
-                    DecreaseCount(fruit.name.toLocaleLowerCase())
-                  }
-                />
-              </div>
-              <div>
-                <p>{fruit.count}</p>
-              </div>
-              <div>
-                <IncreaseButtonNew
-                  handleClick={() =>
-                    IncreaseCount(fruit.name.toLocaleLowerCase())
-                  }
-                />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div>
-        <div>
-          <p className="text-2xl text-center my-12">Your Basket</p>
-        </div>
-        {Object.values(fruitArr).map((fruit, index) => {
-          if (fruit.count > 0) {
-            return (
-              <div
-                key={index}
-                className="grid grid-cols-4 xl:px-[600px] px-8 mb-4 items-center"
-              >
-                <div>
-                  <p>{fruit.name}</p>
-                </div>
-                <div>
-                  <p>{fruit.count}</p>
-                </div>
-                <div>
-                  <p>Total: R{fruit.count * fruit.price}.00</p>
-                </div>
-                <div>
-                  <button
-                    onClick={() => DeleteItem(fruit.name.toLocaleLowerCase())}
-                    className="text-sm text-gray-400 font-bold border-2 px-3 py-1 rounded-full border-black"
-                  >
-                    X
-                  </button>
-                </div>
-              </div>
-            );
-          }
-        })}
-      </div>
-      <div className="text-center">
-        <p>Full amount: R{totalPrice}.00</p>
-      </div>
+      <p>Hello, World!</p>
     </div>
   );
 }
