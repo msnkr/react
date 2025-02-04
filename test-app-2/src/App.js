@@ -947,20 +947,6 @@ import burger from "./images/burger.svg";
 export default function App() {
   return (
     <div>
-      <div class="navbar">
-        <div>
-          <img
-            src={logo}
-            class="w-20 absolute top-8 left-8 z-50 hover:cursor-pointer"
-          />
-        </div>
-        <div>
-          <img
-            src={burger}
-            class="w-10 absolute top-12 right-12 z-50 hover:cursor-pointer"
-          />
-        </div>
-      </div>
       <div class="hero-image relative">
         <img
           class="w-full h-dvh object-cover"
