@@ -944,7 +944,15 @@
 export default function App() {
   return (
     <div>
-      <p>Hello, World!</p>
+      <div class="hero-image relative">
+        <img
+          class="w-full h-dvh object-cover"
+          src={
+            "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          }
+        />
+        <div class="bg-black w-full h-dvh absolute top-0 opacity-40"></div>
+      </div>
     </div>
   );
 }
