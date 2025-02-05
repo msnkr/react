@@ -3,6 +3,7 @@ import logo from "./assets/logo.svg";
 import imageIntro from "./assets/image-intro-mobile.jpg";
 import introLeftMobile from "./assets/bg-pattern-intro-left-mobile.svg";
 import introRightMobile from "./assets/bg-pattern-intro-right-mobile.svg";
+import snappyProcess from "./assets/icon-snappy-process.svg";
 
 function App() {
   return (
@@ -38,6 +39,18 @@ function App() {
           <button className="border-2 px-8 py-4 mt-8">VIEW PLANS</button>
           <div className="absolute top-2/3 right-0">
             <img src={introRightMobile} alt="pattern" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="border border-black mt-[100px] w-1/2 mx-auto"></div>
+        <div className="text-center">
+          <p className="text-5xl font-fontDM mt-[50px]">We're different</p>
+          <div className="card-container">
+            <div className="mt-20 flex flex-col items-center justify-center">
+              <img src={snappyProcess} alt="snappy-process" />
+              <p className="mt-12 text-4xl font-fontDM">Snappy Process</p>
+            </div>
           </div>
         </div>
       </div>
