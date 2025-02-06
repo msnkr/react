@@ -4,6 +4,9 @@ import imageIntro from "./assets/image-intro-mobile.jpg";
 import introLeftMobile from "./assets/bg-pattern-intro-left-mobile.svg";
 import introRightMobile from "./assets/bg-pattern-intro-right-mobile.svg";
 import snappyProcess from "./assets/icon-snappy-process.svg";
+import affordablePrices from "./assets/icon-affordable-prices.svg";
+import peopleFirst from "./assets/icon-people-first.svg";
+import findOutMorePatternMobile from "./assets/bg-pattern-how-we-work-mobile.svg";
 
 function App() {
   return (
@@ -50,7 +53,42 @@ function App() {
             <div className="mt-20 flex flex-col items-center justify-center">
               <img src={snappyProcess} alt="snappy-process" />
               <p className="mt-12 text-4xl font-fontDM">Snappy Process</p>
+              <p className="mt-4 text-lg px-8">
+                Our application process can be completed in minutes, not hours.
+                Don't get stuck filling in tedious forms.
+              </p>
             </div>
+            <div className="mt-20 flex flex-col items-center justify-center">
+              <img src={affordablePrices} alt="snappy-process" />
+              <p className="mt-12 text-4xl font-fontDM">Snappy Process</p>
+              <p className="mt-4 text-lg px-8">
+                Our application process can be completed in minutes, not hours.
+                Don't get stuck filling in tedious forms.
+              </p>
+            </div>
+            <div className="mt-20 flex flex-col items-center justify-center">
+              <img src={peopleFirst} alt="people-first" />
+              <p className="mt-12 text-4xl font-fontDM">People first</p>
+              <p className="mt-4 text-lg px-8">
+                Our plans aren't full of conditions and clauses to prevent
+                payouts. We make sure your're covered when you need it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="bg-dark-violet h-[350px] mt-20 relative flex flex-col justify-center items-center text-center">
+          <img
+            className="absolute top-0 right-0"
+            src={findOutMorePatternMobile}
+            alt="pattern"
+          />
+          <div className="text-white z-50">
+            <p className="text-6xl font-fontDM">
+              Find out more about how we work
+            </p>
+            <button className="border px-8 py-4 mt-8">HOW WE WORK</button>
           </div>
         </div>
       </div>
