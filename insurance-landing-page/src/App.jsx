@@ -7,6 +7,7 @@ import snappyProcess from "./assets/icon-snappy-process.svg";
 import affordablePrices from "./assets/icon-affordable-prices.svg";
 import peopleFirst from "./assets/icon-people-first.svg";
 import findOutMorePatternMobile from "./assets/bg-pattern-how-we-work-mobile.svg";
+import footerMobile from "./assets/bg-pattern-footer-mobile.svg";
 
 function App() {
   return (
@@ -77,7 +78,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="p-8">
         <div className="bg-dark-violet h-[350px] mt-20 relative flex flex-col justify-center items-center text-center">
           <img
             className="absolute top-0 right-0"
@@ -90,6 +91,11 @@ function App() {
             </p>
             <button className="border px-8 py-4 mt-8">HOW WE WORK</button>
           </div>
+        </div>
+      </div>
+      <div className="footer-section mt-20">
+        <div className="flex flex-col justify-center items-center">
+          <img src={footerMobile} className="w-full" />
         </div>
       </div>
     </div>
