@@ -9,6 +9,11 @@ import peopleFirst from "./assets/icon-people-first.svg";
 import findOutMorePatternMobile from "./assets/bg-pattern-how-we-work-mobile.svg";
 import footerMobile from "./assets/bg-pattern-footer-mobile.svg";
 
+import facebookIcon from "./assets/icon-facebook.svg";
+import twitterIcon from "./assets/icon-twitter.svg";
+import pinterestIcon from "./assets/icon-pinterest.svg";
+import instagramIcon from "./assets/icon-instagram.svg";
+
 function App() {
   return (
     <div className="font-fontKarla">
@@ -94,8 +99,15 @@ function App() {
         </div>
       </div>
       <div className="footer-section mt-20">
-        <div className="flex flex-col justify-center items-center">
-          <img src={footerMobile} className="w-full" />
+        <div className="flex flex-col justify-center items-center relative">
+          <img src={footerMobile} className="w-full absolute" />
+          <img src={logo} className="w-[200px] z-50" />
+          <div className="flex z-50 mt-12 space-x-4">
+            <img src={facebookIcon} className="w-10" />
+            <img src={twitterIcon} className="w-10" />
+            <img src={pinterestIcon} className="w-10" />
+            <img src={instagramIcon} className="w-10" />
+          </div>
         </div>
       </div>
     </div>
