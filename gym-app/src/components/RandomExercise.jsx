@@ -7,7 +7,9 @@ export default function RandomExercise() {
     let randomIndex = Math.floor(Math.random() * exercises.length);
     exerciseArr.push(exercises[randomIndex]);
   }
-
+  console.log(
+    `../assets/exercises/${exercises[5].name.replace(/ /g, "_")}/0.jpg`
+  );
   return (
     <div>
       {exerciseArr.map((element, index) => {
