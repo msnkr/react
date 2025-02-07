@@ -1,26 +1,17 @@
 import exercises from "../assets/exercise.json";
+import { use, useState } from "react";
 
 export default function RandomExercise() {
-  let exerciseArr = [];
+  const [exerciseArr, setExerciseArr] = useState([]);
 
   for (let index = 0; index < 5; index++) {
     let randomIndex = Math.floor(Math.random() * exercises.length);
-    exerciseArr.push(exercises[randomIndex]);
   }
-  console.log(
-    `../assets/exercises/${exercises[5].name.replace(/ /g, "_")}/0.jpg`
-  );
+
+  console.log(exerciseArr);
   return (
     <div>
-      {exerciseArr.map((element, index) => {
-        return (
-          <div key={index}>
-            <p>{element.name}</p>
-            <p>{element.primaryMuscles}</p>
-            <p>{element.level}</p>
-          </div>
-        );
-      })}
+      <div></div>
     </div>
   );
 }
