@@ -1,4 +1,5 @@
 import "./App.css";
+import RandomExercise from "./components/RandomExercise";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       </div>
       <div className="mt-20 flex flex-col justify-center items-center">
         <div>
-          <p>Hello, World!</p>
+          <RandomExercise />
         </div>
       </div>
     </div>
