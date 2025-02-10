@@ -22,14 +22,17 @@ export default function RandomExercise() {
           return (
             <div
               key={index}
-              className="mt-6 flex flex-col justify-center items-center text-center"
+              className="mt-6 flex flex-col justify-center items-center text-center space-y-1"
             >
               <img
                 src={`../public/exercise-images/${exercise.images[0]}`}
                 alt={exercise.name}
                 className="w-full h-[200px] object-cover rounded-md"
               />
-              <p className="mt-2 text-2xl w-[300px]">{exercise.name}</p>
+              <p className="text-2xl">{exercise.name}</p>
+              <p className="capitalize text-gray-400">{exercise.level}</p>
+
+              <p className="text-xl capitalize">{exercise.primaryMuscles}</p>
             </div>
           );
         })}
