@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import exercies from "./assets/exercise.json";
 import RandomExercise from "./components/RandomExercise";
 import SearchBarComponent from "./components/SearchBarComponent";
 
@@ -13,7 +14,11 @@ function App() {
   };
 
   const handleOnClick = () => {
-    console.log(searchBar);
+    if (searchBar !== "") {
+      if (searchBar.toLowerCase() === "beginner") {
+        const beginnerExercises = exerci;
+      }
+    }
   };
 
   return (
