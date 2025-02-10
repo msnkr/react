@@ -18,13 +18,16 @@ export default function RandomExercise() {
       <div>
         {exerciseArr.map((exercise, index) => {
           return (
-            <div key={index} className="mt-12">
+            <div
+              key={index}
+              className="mt-12 flex flex-col justify-center items-center text-center"
+            >
               <img
                 src={`../public/exercise-images/${exercise.images[0]}`}
                 alt={exercise.name}
-                className="w-full h-[200px] object-cover"
+                className="w-full h-[200px] object-cover rounded-sm"
               />
-              <p className="text-2xl">{exercise.name}</p>
+              <p>{exercise.name}</p>
             </div>
           );
         })}
