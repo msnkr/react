@@ -10,9 +10,11 @@ export default function RandomExercise() {
       return [...prevExercise, exercises[randomIndex]];
     });
   };
+
   if (exerciseArr.length < 10) {
     addRandomExercise();
   }
+
   return (
     <div>
       <div>
