@@ -9,7 +9,7 @@ function App() {
         <p className="text-5xl font-semibold w-2/3">Welcome to my gym app</p>
         <p className="text-xl mt-8">Completely free of charge</p>
       </div>
-      <div className="mt-8 flex justify-center items-center">
+      <div className="mt-12 flex justify-center items-center">
         <input
           type="text"
           placeholder="Search by body part, level, etc.."
@@ -19,7 +19,7 @@ function App() {
           Search
         </button>
       </div>
-      <div className="mt-20 flex flex-col justify-center items-center">
+      <div className="mt-8 flex flex-col justify-center items-center">
         <div>
           <RandomExercise />
         </div>

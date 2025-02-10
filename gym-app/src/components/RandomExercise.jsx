@@ -20,14 +20,14 @@ export default function RandomExercise() {
           return (
             <div
               key={index}
-              className="mt-12 flex flex-col justify-center items-center text-center"
+              className="mt-6 flex flex-col justify-center items-center text-center"
             >
               <img
                 src={`../public/exercise-images/${exercise.images[0]}`}
                 alt={exercise.name}
-                className="w-full h-[200px] object-cover rounded-sm"
+                className="w-full h-[200px] object-cover rounded-md"
               />
-              <p>{exercise.name}</p>
+              <p className="mt-2 text-2xl w-[300px]">{exercise.name}</p>
             </div>
           );
         })}
