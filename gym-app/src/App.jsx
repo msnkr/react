@@ -3,6 +3,7 @@ import "./App.css";
 import RandomExercise from "./components/RandomExercise";
 
 function App() {
+  const [modal, setModal] = useState(false);
   const [searchBar, setSearchBar] = useState("");
 
   const handleChange = (e) => {
@@ -15,7 +16,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className={`${modal ? "invisible" : "visible"}`}>
       <div className="flex flex-col justify-center items-center text-center mt-20">
         <p className="text-xl font-semibold">Hi</p>
         <p className="text-5xl font-semibold w-2/3">Welcome to my gym app</p>
