@@ -3,9 +3,11 @@ import "./App.css";
 import exercises from "./assets/exercise.json";
 import RandomExercise from "./components/RandomExercise";
 import SearchBarComponent from "./components/SearchBarComponent";
+import DisplaySearched from "./components/DisplaySearched.jsx";
 
 function App() {
   const [currentExerciseSearch, setCurrentExerciseSearch] = useState([]);
+  const [currentSearch, setCurrentSearch] = useState("");
   const [modal, setModal] = useState(false);
   const [searchBar, setSearchBar] = useState("");
 
@@ -21,11 +23,11 @@ function App() {
           (exercise) => exercise.level === "beginner"
         );
         setCurrentExerciseSearch(currentExercise);
+        setCurrentSearch(searchBar);
         setModal(true);
       }
     }
   };
-  console.log(currentExerciseSearch);
   return (
     <div>
       <div className={`${modal ? "invisible hidden" : "visible"} duration-500`}>
@@ -41,33 +43,23 @@ function App() {
           </div>
         </div>
       </div>
-      <div className={`${modal ? "visible" : "invisible"} duration-500`}>
-        <div className="mt-20">
+      <div>
+        <div>
           <SearchBarComponent
             onSearch={handleChange}
             onChecked={handleOnClick}
           />
         </div>
-        {currentExerciseSearch.map((exercise, index) => {
-          return (
-            <div className="mt-20">
-              <div
-                key={index}
-                className="mt-6 flex flex-col justify-center items-center text-center space-y-1"
-              >
-                <img
-                  src={`../public/exercise-images/${exercise.images[1]}`}
-                  alt={exercise.name}
-                  className="w-full h-[200px] object-cover rounded-md"
-                />
-                <p className="text-2xl w-[300px]">{exercise.name}</p>
-                <p className="capitalize text-gray-400">{exercise.level}</p>
-
-                <p className="text-xl capitalize">{exercise.primaryMuscles}</p>
-              </div>
-            </div>
-          );
-        })}
+        <div className="mt-8">
+          <div>
+            <p className="text-xl text-center capitalize">
+              {currentSearch} exercises
+            </p>
+          </div>
+          <div>
+            <DisplaySearched exerciseArr={currentExerciseSearch} />
+          </div>
+        </div>
       </div>
     </div>
   );
