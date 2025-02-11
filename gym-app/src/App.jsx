@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import exercies from "./assets/exercise.json";
+import exercises from "./assets/exercise.json";
 import RandomExercise from "./components/RandomExercise";
 import SearchBarComponent from "./components/SearchBarComponent";
 
 function App() {
+  const [currentExerciseSearch, setCurrentExerciseSearch] = useState([]);
   const [modal, setModal] = useState(false);
   const [searchBar, setSearchBar] = useState("");
 
@@ -15,9 +16,7 @@ function App() {
 
   const handleOnClick = () => {
     if (searchBar !== "") {
-      if (searchBar.toLowerCase() === "beginner") {
-        const beginnerExercises = exerci;
-      }
+      return;
     }
   };
 
