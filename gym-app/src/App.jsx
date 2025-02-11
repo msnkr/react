@@ -30,7 +30,11 @@ function App() {
   };
   return (
     <div>
-      <div className={`${modal ? "invisible hidden" : "visible"} duration-500`}>
+      <div
+        className={`${
+          modal ? "invisible hidden" : "visible"
+        } duration-500 mb-20`}
+      >
         <div className="flex flex-col justify-center items-center text-center mt-20">
           <p className="text-xl font-semibold">Hi</p>
           <p className="text-5xl font-semibold w-2/3">Welcome to my gym app</p>
@@ -43,21 +47,21 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
+      <div className={`${modal ? "visible" : "invisible hidden"}`}>
         <div>
           <SearchBarComponent
             onSearch={handleChange}
             onChecked={handleOnClick}
           />
-        </div>
-        <div className="mt-8">
-          <div>
-            <p className="text-xl text-center capitalize">
-              {currentSearch} exercises
-            </p>
-          </div>
-          <div>
-            <DisplaySearched exerciseArr={currentExerciseSearch} />
+          <div className="mt-8">
+            <div>
+              <p className="text-xl text-center capitalize">
+                {currentSearch} exercises
+              </p>
+            </div>
+            <div className="my-8">
+              <DisplaySearched exerciseArr={currentExerciseSearch} />
+            </div>
           </div>
         </div>
       </div>

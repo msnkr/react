@@ -4,8 +4,9 @@ const DisplaySearched = ({ exerciseArr }) => {
       {exerciseArr.map((exercise, index) => {
         return (
           <div>
-            <p>{exercise.name}</p>
             <img src={`../public/exercise-images/${exercise.images[1]}`} />
+            <p>{exercise.name}</p>
+            <p>{exercise.primaryMuscle}</p>
           </div>
         );
       })}
