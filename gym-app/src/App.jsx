@@ -16,10 +16,15 @@ function App() {
 
   const handleOnClick = () => {
     if (searchBar !== "") {
-      return;
+      if (searchBar.toLowerCase() === "beginner") {
+        const beginnerExercise = exercises.filter(
+          (exercise) => exercise.level === "beginner"
+        );
+        setCurrentExerciseSearch(beginnerExercise);
+      }
     }
   };
-
+  console.log(currentExerciseSearch);
   return (
     <div className={`${modal ? "invisible" : "visible"}`}>
       <div className="flex flex-col justify-center items-center text-center mt-20">
