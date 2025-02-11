@@ -25,6 +25,13 @@ function App() {
         setCurrentExerciseSearch(currentExercise);
         setCurrentSearch(searchBar);
         setModal(true);
+      } else if (searchBar.toLocaleLowerCase() === "biceps") {
+        const currentExercise = exercises.filter(
+          (exercise) => exercise.primaryMuscles === "biceps"
+        );
+        setCurrentExerciseSearch(currentExercise);
+        setCurrentSearch(searchBar);
+        setModal(true);
       }
     }
   };
@@ -53,15 +60,15 @@ function App() {
             onSearch={handleChange}
             onChecked={handleOnClick}
           />
-          <div className="mt-8">
-            <div>
-              <p className="text-xl text-center capitalize">
-                {currentSearch} exercises
-              </p>
-            </div>
-            <div className="my-8">
-              <DisplaySearched exerciseArr={currentExerciseSearch} />
-            </div>
+        </div>
+        <div className="mt-8">
+          <div>
+            <p className="text-xl text-center capitalize">
+              {currentSearch} exercises
+            </p>
+          </div>
+          <div className="my-8">
+            <DisplaySearched exerciseArr={currentExerciseSearch} />
           </div>
         </div>
       </div>
