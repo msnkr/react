@@ -2,6 +2,7 @@ import exercises from "../assets/exercise.json";
 import { use, useState } from "react";
 
 export default function RandomExercise() {
+  const [modal, setModal] = useState(false);
   const [exerciseArr, setExerciseArr] = useState([]);
 
   const addRandomExercise = () => {
@@ -15,9 +16,15 @@ export default function RandomExercise() {
     addRandomExercise();
   }
 
+  const showExercise = () => {
+    setModal((prev) => {
+      return !prev;
+    });
+  };
+
   return (
     <div>
-      <div>
+      <div className={`${modal ? "invisible hidden" : "visible"}`}>
         {exerciseArr.map((exercise, index) => {
           return (
             <div
@@ -29,7 +36,12 @@ export default function RandomExercise() {
                 alt={exercise.name}
                 className="w-full h-[200px] object-cover rounded-md"
               />
-              <p className="text-2xl w-[300px]">{exercise.name}</p>
+              <p
+                className="text-2xl w-[300px] hover:cursor-pointer"
+                onClick={showExercise}
+              >
+                {exercise.name}
+              </p>
               <p className="capitalize text-gray-400">{exercise.level}</p>
 
               <p className="text-xl capitalize">{exercise.primaryMuscles}</p>
