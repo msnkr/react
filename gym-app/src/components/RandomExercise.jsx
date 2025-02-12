@@ -1,9 +1,11 @@
 import exercises from "../assets/exercise.json";
+import ShowExerciseComponent from "./ShowExerciseComponent";
 import { use, useState } from "react";
 
 export default function RandomExercise() {
   const [modal, setModal] = useState(false);
   const [exerciseArr, setExerciseArr] = useState([]);
+  const [displayExercise, setDisplayExercise] = useState("");
 
   const addRandomExercise = () => {
     let randomIndex = Math.floor(Math.random() * exercises.length);
@@ -16,10 +18,11 @@ export default function RandomExercise() {
     addRandomExercise();
   }
 
-  const showExercise = () => {
+  const showExercise = ({ name }) => {
     setModal((prev) => {
       return !prev;
     });
+    setDisplayExercise(name);
   };
 
   return (
@@ -38,7 +41,7 @@ export default function RandomExercise() {
               />
               <p
                 className="text-2xl w-[300px] hover:cursor-pointer"
-                onClick={showExercise}
+                onClick={() => showExercise(exercise)}
               >
                 {exercise.name}
               </p>
@@ -48,6 +51,9 @@ export default function RandomExercise() {
             </div>
           );
         })}
+      </div>
+      <div>
+        <ShowExerciseComponent name={displayExercise} />
       </div>
     </div>
   );
