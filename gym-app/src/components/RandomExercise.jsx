@@ -53,7 +53,7 @@ export default function RandomExercise() {
         })}
       </div>
       <div>
-        <ShowExerciseComponent name={displayExercise} />
+        <ShowExerciseComponent clickedName={displayExercise} />
       </div>
     </div>
   );
