@@ -5,6 +5,8 @@ import RandomExercise from "./components/RandomExercise";
 import SearchBarComponent from "./components/SearchBarComponent";
 import DisplaySearched from "./components/DisplaySearched.jsx";
 
+import { Link, Element } from "react-scroll";
+
 function App() {
   const [currentExerciseSearch, setCurrentExerciseSearch] = useState([]);
   const [currentSearch, setCurrentSearch] = useState("");
@@ -37,23 +39,30 @@ function App() {
   };
   return (
     <div>
-      <div
-        className={`${
-          modal ? "invisible hidden" : "visible"
-        } duration-500 mb-20`}
-      >
-        <div className="flex flex-col justify-center items-center text-center mt-20">
-          <p className="text-xl font-semibold">Hi</p>
-          <p className="text-5xl font-semibold w-2/3">Welcome to my gym app</p>
-          <p className="text-xl mt-8">Completely free of charge</p>
-        </div>
-        <SearchBarComponent onSearch={handleChange} onChecked={handleOnClick} />
-        <div className="mt-8 flex flex-col justify-center items-center">
-          <div>
-            <RandomExercise />
+      <Element name="start">
+        <div
+          className={`${
+            modal ? "invisible hidden" : "visible"
+          } duration-500 mb-20`}
+        >
+          <div className="flex flex-col justify-center items-center text-center mt-20">
+            <p className="text-xl font-semibold">Hi</p>
+            <p className="text-5xl font-semibold w-2/3">
+              Welcome to my gym app
+            </p>
+            <p className="text-xl mt-8">Completely free of charge</p>
+          </div>
+          <SearchBarComponent
+            onSearch={handleChange}
+            onChecked={handleOnClick}
+          />
+          <div className="mt-8 flex flex-col justify-center items-center">
+            <div>
+              <RandomExercise />
+            </div>
           </div>
         </div>
-      </div>
+      </Element>
       <div className={`${modal ? "visible" : "invisible hidden"}`}>
         <div>
           <SearchBarComponent

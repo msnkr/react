@@ -2,6 +2,8 @@ import exercises from "../assets/exercise.json";
 import ShowExerciseComponent from "./ShowExerciseComponent";
 import { use, useState } from "react";
 
+import { Link } from "react-scroll";
+
 export default function RandomExercise() {
   const [modal, setModal] = useState(false);
   const [exerciseArr, setExerciseArr] = useState([]);
@@ -39,12 +41,14 @@ export default function RandomExercise() {
                 alt={exercise.name}
                 className="w-full h-[200px] object-cover rounded-md"
               />
-              <p
-                className="text-2xl w-[300px] hover:cursor-pointer"
-                onClick={() => showExercise(exercise)}
-              >
-                {exercise.name}
-              </p>
+              <Link to="start" duration={100} smooth={false}>
+                <p
+                  className="text-2xl w-[300px] hover:cursor-pointer"
+                  onClick={() => showExercise(exercise)}
+                >
+                  {exercise.name}
+                </p>
+              </Link>
               <p className="capitalize text-gray-400">{exercise.level}</p>
 
               <p className="text-xl capitalize">{exercise.primaryMuscles}</p>
