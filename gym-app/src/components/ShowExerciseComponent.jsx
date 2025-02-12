@@ -1,4 +1,5 @@
 import exercises from "../assets/exercise.json";
+import arrow from "../assets/arrow.svg";
 
 const ShowExerciseComponent = ({ clickedName }) => {
   const data = exercises.filter((exercise) => exercise.name === clickedName);
@@ -23,7 +24,9 @@ const ShowExerciseComponent = ({ clickedName }) => {
                 <p className="capitalize">
                   Secondary muscle:
                   {exercise.secondaryMuscles.map((secondary, index) => {
-                    return <div>{exercise.secondaryMuscles[index]}</div>;
+                    return (
+                      <div key={index}>{exercise.secondaryMuscles[index]}</div>
+                    );
                   })}
                 </p>
                 <div className="mt-8">
