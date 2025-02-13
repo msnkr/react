@@ -41,15 +41,14 @@ function App() {
           </div>
         </div>
         <div>
-          <div>
+          {searchedExercises ? (
+            <Routes>
+              <Route path="/display-exercise" element={<DisplayExercise />} />
+            </Routes>
+          ) : (
             <RandomExercise arr={randomExerciseArr} />
-          </div>
-        </div>
-        <Routes>
-          {searchedExercises && (
-            <Route path="/display-exercise" element={<DisplayExercise />} />
           )}
-        </Routes>
+        </div>
       </div>
     </Router>
   );
