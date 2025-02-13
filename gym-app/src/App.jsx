@@ -22,7 +22,7 @@ function App() {
     getRandomExercise();
   }
 
-  const handleSearch = () => {
+  const handleSearch = (x) => {
     setSearchedExercises(true);
   };
 
@@ -30,10 +30,12 @@ function App() {
     <Router>
       <div>
         <div>
-          <div className="begin-wording my-12 text-center px-12">
-            <p className="text-4xl capitalize my-8">Welcome to my gym app</p>
+          <div className="begin-wording my-12 px-12">
+            <p className="text-4xl capitalize my-8 text-center">
+              Welcome to my gym app
+            </p>
             <p>
-              Search an exercise by name, or by level, by muscle or by machine
+              Search an exercise by name, by level, by muscle or by category.
             </p>
           </div>
           <div className="search-bar">

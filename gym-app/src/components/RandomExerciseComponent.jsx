@@ -16,6 +16,7 @@ const RandomExercise = ({ arr }) => {
               <p className="mt-2 text-xl font-semibold">{exercise.name}</p>
               <p>category: {exercise.category}</p>
               <p>level: {exercise.level}</p>
+              <p>Primary Muscle: {exercise.primaryMuscles}</p>
             </div>
           </div>
         );
