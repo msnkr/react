@@ -9,6 +9,7 @@ import RandomExercise from "./components/RandomExerciseComponent";
 
 function App() {
   const [randomExerciseArr, setRandomExerciseArr] = useState([]);
+  const [searchedExercises, setSearchedExercises] = useState(false);
 
   const getRandomExercise = () => {
     const randomIndex = Math.floor(Math.random() * exercises.length);
@@ -21,6 +22,10 @@ function App() {
     getRandomExercise();
   }
 
+  const handleSearch = () => {
+    setSearchedExercises(true);
+  };
+
   return (
     <Router>
       <div>
@@ -32,10 +37,7 @@ function App() {
             </p>
           </div>
           <div className="search-bar">
-            <SearchComponent />
-            <Routes>
-              <Route path="/display-exercise" element={<DisplayExercise />} />
-            </Routes>
+            <SearchComponent onChecked={handleSearch} />
           </div>
         </div>
         <div>
@@ -43,8 +45,14 @@ function App() {
             <RandomExercise arr={randomExerciseArr} />
           </div>
         </div>
+        <Routes>
+          {searchedExercises && (
+            <Route path="/display-exercise" element={<DisplayExercise />} />
+          )}
+        </Routes>
       </div>
     </Router>
   );
 }
+
 export default App;
