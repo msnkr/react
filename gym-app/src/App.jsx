@@ -22,8 +22,8 @@ function App() {
   return (
     <div>
       <div>
-        <div className="begin-wording">
-          <p>Welcome to my gym app</p>
+        <div className="begin-wording my-12 text-center px-12">
+          <p className="text-4xl capitalize my-8">Welcome to my gym app</p>
           <p>
             Search an exercise by name, or by level, by muscle or by machine
           </p>
