@@ -8,7 +8,7 @@ import snappyProcess from "./assets/icon-snappy-process.svg";
 
 function App() {
   return (
-    <div className="font-fontKarla">
+    <div className="font-fontKarla mb-40">
       <div className="navbar-section flex justify-between px-12 py-8 items-center">
         <div>
           <img src={logo} alt="logo" />
@@ -52,11 +52,11 @@ function App() {
         <div className="text-center mt-40">
           <p className="text-5xl font-fontDM">We're different</p>
         </div>
-        <div className="card flex flex-col justify-center items-center text-center">
+        <div className="card flex flex-col justify-center items-center text-center mt-20">
           <img src={snappyProcess} alt="snappy" />
-          <div>
-            <p> Snappy Process</p>
-            <p>
+          <div className="mt-8 space-y-8">
+            <p className="text-4xl font-fontDM">Snappy Process</p>
+            <p className="w-3/4 mx-auto">
               Our application process can be completed in minutes, not hours.
               Don’t get stuck filling in tedious forms.
             </p>
