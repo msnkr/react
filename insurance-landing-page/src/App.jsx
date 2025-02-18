@@ -19,7 +19,7 @@ function App() {
         <img src={mobileIntro} className="w-full -z-50" />
       </div>
       <div className="humanizing-section">
-        <div className="bg-dark-violet w-full h-[500px] relative">
+        <div className="bg-dark-violet w-full h-[450px] relative">
           <img
             src={mobilePatternLeft}
             alt="pattern"
@@ -30,14 +30,19 @@ function App() {
             alt="pattern"
             className="absolute right-0 top-2/3"
           />
-          <div className="text-white">
-            <p>Humanizing your insurance.</p>
-            <p>
+          <div className="text-white flex flex-col justify-center items-center text-center px-12 py-12">
+            <p className="text-5xl py-4 font-fontDM">
+              Humanizing your insurance.
+            </p>
+            <p className="py-2">
               {" "}
               Get your life insurance coverage easier and faster. We blend our
               expertise and technology to help you find the plan that’s right
               for you. Ensure you and your loved ones are protected.{" "}
             </p>
+            <button className="border px-3 py-2 mt-4 uppercase">
+              View Plans
+            </button>
           </div>
         </div>
       </div>
