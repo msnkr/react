@@ -86,7 +86,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="find-out-section p-8 relative"></div>
+      <div className="find-out-section p-8 relative bg-dark-violet">
+        <p className="text-white text-5xl">Find out more about how we work</p>
+        <img src={howWeWorkMobile} className="absolute bottom-0 right-0" />
+      </div>
     </div>
   );
 }
