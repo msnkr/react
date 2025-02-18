@@ -5,6 +5,8 @@ import mobilePatternLeft from "./assets/bg-pattern-intro-left-mobile.svg";
 import mobilePatternRight from "./assets/bg-pattern-intro-right-mobile.svg";
 
 import snappyProcess from "./assets/icon-snappy-process.svg";
+import affordablePrices from "./assets/icon-affordable-prices.svg";
+import peopleFirst from "./assets/icon-people-first.svg";
 
 function App() {
   return (
@@ -59,6 +61,26 @@ function App() {
             <p className="w-3/4 mx-auto">
               Our application process can be completed in minutes, not hours.
               Don’t get stuck filling in tedious forms.
+            </p>
+          </div>
+        </div>
+        <div className="card flex flex-col justify-center items-center text-center mt-12">
+          <img src={affordablePrices} alt="afordable" />
+          <div className="mt-8 space-y-8">
+            <p className="text-4xl font-fontDM">Affordable Prices</p>
+            <p className="w-3/4 mx-auto">
+              We don’t want you worrying about high monthly costs. Our prices
+              may be low, but we still offer the best coverage possible.
+            </p>
+          </div>
+        </div>
+        <div className="card flex flex-col justify-center items-center text-center mt-12">
+          <img src={peopleFirst} alt="people" />
+          <div className="mt-8 space-y-8">
+            <p className="text-4xl font-fontDM">People First</p>
+            <p className="w-3/4 mx-auto">
+              Our plans aren’t full of conditions and clauses to prevent
+              payouts. We make sure you’re covered when you need it.
             </p>
           </div>
         </div>
