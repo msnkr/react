@@ -7,6 +7,7 @@ import mobilePatternRight from "./assets/bg-pattern-intro-right-mobile.svg";
 import snappyProcess from "./assets/icon-snappy-process.svg";
 import affordablePrices from "./assets/icon-affordable-prices.svg";
 import peopleFirst from "./assets/icon-people-first.svg";
+import howWeWorkMobile from "./assets/bg-pattern-how-we-work-mobile.svg";
 
 function App() {
   return (
@@ -83,6 +84,14 @@ function App() {
               payouts. We make sure you’re covered when you need it.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="find-out-section p-8">
+        <div className="bg-dark-violet">
+          <div>
+            <p>Find out more about how we work</p>
+          </div>
+          <img src={howWeWorkMobile} />
         </div>
       </div>
     </div>
