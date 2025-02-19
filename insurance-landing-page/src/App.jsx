@@ -9,6 +9,8 @@ import affordablePrices from "./assets/icon-affordable-prices.svg";
 import peopleFirst from "./assets/icon-people-first.svg";
 import howWeWorkMobile from "./assets/bg-pattern-how-we-work-mobile.svg";
 
+import footerMobile from "./assets/bg-pattern-footer-mobile.svg";
+
 function App() {
   return (
     <div className="font-fontKarla mb-40">
@@ -86,10 +88,23 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="find-out-section p-8 relative bg-dark-violet">
-        <p className="text-white text-5xl">Find out more about how we work</p>
-        <img src={howWeWorkMobile} className="absolute bottom-0 right-0" />
+      <div className="find-out-section relative mt-20 p-8">
+        <div className="bg-dark-violet text-white relative h-[400px]">
+          <div className="flex flex-col justify-center items-center">
+            <p className="text-5xl font-fontDM text-center mt-20 z-50 mb-10">
+              Find out more about how we work
+            </p>
+            <button className="border px-3 py-2 mt-4 uppercase">
+              how we work
+            </button>
+          </div>
+          <img
+            src={howWeWorkMobile}
+            className="absolute bottom-0 right-0 h-full object-cover"
+          />
+        </div>
       </div>
+      <div className="footer-section mt-20"></div>
     </div>
   );
 }
