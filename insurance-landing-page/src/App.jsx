@@ -122,10 +122,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="relative flex flex-col justify-center items-center mt-20 text-center uppercase font-bold">
+      <div className="footer-2 relative flex flex-col justify-center items-center mt-20 text-center uppercase font-bold">
         <div>
-          <p className="mb-12 text-gray-400">Our Company</p>
-          <div className="space-y-6">
+          <p className="my-8 text-gray-400">Our Company</p>
+          <div className="space-y-4">
             <p>How we work</p>
             <p>Why insure?</p>
             <p>check price</p>
@@ -133,8 +133,8 @@ function App() {
           </div>
         </div>
         <div>
-          <p className="my-12 text-gray-400">help me</p>
-          <div className="space-y-6">
+          <p className="my-8 text-gray-400">help me</p>
+          <div className="space-y-4">
             <p>faq</p>
             <p>terms of use</p>
             <p>privacy policy</p>
@@ -142,16 +142,16 @@ function App() {
           </div>
         </div>
         <div>
-          <p className="my-12 text-gray-400">contact</p>
-          <div className="space-y-6">
+          <p className="my-8 text-gray-400">contact</p>
+          <div className="space-y-4">
             <p>sales</p>
             <p>support</p>
             <p>live chat</p>
           </div>
         </div>
         <div>
-          <p className="my-12 text-gray-400">others</p>
-          <div className="space-y-6">
+          <p className="my-8 text-gray-400">others</p>
+          <div className="space-y-4">
             <p>careers</p>
             <p>press</p>
             <p>licenses</p>
