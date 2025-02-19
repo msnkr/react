@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         "dark-violet": "hsl(256, 26%, 20%)",
+        "grayish-blue": "hsl(216, 30%, 68%)",
       },
       fontFamily: {
         fontDM: "DM Serif Display",

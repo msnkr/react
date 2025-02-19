@@ -23,7 +23,7 @@ function App() {
           <img src={logo} alt="logo" />
         </div>
         <div>
-          <img src={navIcon} />
+          <img src={navIcon} className="cursor-pointer" />
         </div>
       </div>
       <div className="hero-section">
@@ -57,15 +57,15 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="different-section">
+      <div className="different-section text-lg">
         <div className="text-center mt-40">
           <p className="text-5xl font-fontDM">We're different</p>
         </div>
-        <div className="card flex flex-col justify-center items-center text-center mt-20">
+        <div className="card flex flex-col justify-center items-center text-center mt-12">
           <img src={snappyProcess} alt="snappy" />
-          <div className="mt-8 space-y-8">
-            <p className="text-4xl font-fontDM">Snappy Process</p>
-            <p className="w-3/4 mx-auto">
+          <div className="mt-8 space-y-4">
+            <p className="text-3xl font-fontDM">Snappy Process</p>
+            <p className="w-3/4 mx-auto text-grayish-blue">
               Our application process can be completed in minutes, not hours.
               Don’t get stuck filling in tedious forms.
             </p>
@@ -73,9 +73,9 @@ function App() {
         </div>
         <div className="card flex flex-col justify-center items-center text-center mt-12">
           <img src={affordablePrices} alt="afordable" />
-          <div className="mt-8 space-y-8">
-            <p className="text-4xl font-fontDM">Affordable Prices</p>
-            <p className="w-3/4 mx-auto">
+          <div className="mt-8 space-y-4">
+            <p className="text-3xl font-fontDM">Affordable Prices</p>
+            <p className="w-3/4 mx-auto text-grayish-blue">
               We don’t want you worrying about high monthly costs. Our prices
               may be low, but we still offer the best coverage possible.
             </p>
@@ -83,9 +83,9 @@ function App() {
         </div>
         <div className="card flex flex-col justify-center items-center text-center mt-12">
           <img src={peopleFirst} alt="people" />
-          <div className="mt-8 space-y-8">
-            <p className="text-4xl font-fontDM">People First</p>
-            <p className="w-3/4 mx-auto">
+          <div className="mt-8 space-y-4">
+            <p className="text-3xl font-fontDM">People First</p>
+            <p className="w-3/4 mx-auto text-grayish-blue">
               Our plans aren’t full of conditions and clauses to prevent
               payouts. We make sure you’re covered when you need it.
             </p>
@@ -98,7 +98,7 @@ function App() {
             <p className="text-5xl font-fontDM text-center mt-20 z-50 mb-10">
               Find out more about how we work
             </p>
-            <button className="border px-3 py-2 mt-4 uppercase">
+            <button className="border-2 px-8 py-2 mt-4 uppercase">
               how we work
             </button>
           </div>
@@ -110,15 +110,15 @@ function App() {
       </div>
       <div className="footer-section mt-20 flex flex-col justify-center items-center relative">
         <div>
-          <img src={footerMobile} className="w-full" />
+          <img src={footerMobile} />
         </div>
-        <div className="flex flex-col justify-center items-center space-y-4 absolute bottom-0">
+        <div className="flex flex-col justify-center items-center space-y-8 absolute bottom-0">
           <img src={logo} />
           <div className="flex space-x-4">
-            <img src={facebookLogo} />
-            <img src={twitterLogo} />
-            <img src={pinterestLogo} />
-            <img src={instagramLogo} />
+            <img src={facebookLogo} className="w-8" />
+            <img src={twitterLogo} className="w-8" />
+            <img src={pinterestLogo} className="w-8" />
+            <img src={instagramLogo} className="w-8" />
           </div>
         </div>
       </div>
