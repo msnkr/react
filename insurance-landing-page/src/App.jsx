@@ -10,6 +10,10 @@ import peopleFirst from "./assets/icon-people-first.svg";
 import howWeWorkMobile from "./assets/bg-pattern-how-we-work-mobile.svg";
 
 import footerMobile from "./assets/bg-pattern-footer-mobile.svg";
+import facebookLogo from "./assets/icon-facebook.svg";
+import pinterestLogo from "./assets/icon-pinterest.svg";
+import instagramLogo from "./assets/icon-instagram.svg";
+import twitterLogo from "./assets/icon-twitter.svg";
 
 function App() {
   return (
@@ -104,7 +108,56 @@ function App() {
           />
         </div>
       </div>
-      <div className="footer-section mt-20"></div>
+      <div className="footer-section mt-20 flex flex-col justify-center items-center relative">
+        <div>
+          <img src={footerMobile} className="w-full" />
+        </div>
+        <div className="flex flex-col justify-center items-center space-y-4 absolute bottom-0">
+          <img src={logo} />
+          <div className="flex space-x-4">
+            <img src={facebookLogo} />
+            <img src={twitterLogo} />
+            <img src={pinterestLogo} />
+            <img src={instagramLogo} />
+          </div>
+        </div>
+      </div>
+      <div className="relative flex flex-col justify-center items-center mt-20 text-center uppercase font-semibold">
+        <div>
+          <p className="mb-12">Our Company</p>
+          <div className="space-y-6">
+            <p>How we work</p>
+            <p>Why insure?</p>
+            <p>check price</p>
+            <p>reviews</p>
+          </div>
+        </div>
+        <div>
+          <p className="my-12">help me</p>
+          <div className="space-y-6">
+            <p>faq</p>
+            <p>terms of use</p>
+            <p>privacy policy</p>
+            <p>cookies</p>
+          </div>
+        </div>
+        <div>
+          <p className="my-12">contact</p>
+          <div className="space-y-6">
+            <p>sales</p>
+            <p>support</p>
+            <p>live chat</p>
+          </div>
+        </div>
+        <div>
+          <p className="my-12">others</p>
+          <div className="space-y-6">
+            <p>careers</p>
+            <p>press</p>
+            <p>licenses</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
