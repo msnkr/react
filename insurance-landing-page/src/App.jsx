@@ -37,8 +37,11 @@ function App() {
             <img src={navIcon} className="cursor-pointer" onClick={handleNav} />
           </div>
         </div>
+
         <div
-          className={`${navbar ? "visible" : "invisible hidden"} main-content`}
+          className={`${
+            navbar ? "invisible hidden" : "visible bg-dark-violet"
+          } main-content`}
         >
           <div className="hero-section">
             <img src={mobileIntro} className="w-full -z-50" />
