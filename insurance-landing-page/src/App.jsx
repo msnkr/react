@@ -1,4 +1,5 @@
 import navIcon from "./assets/icon-hamburger.svg";
+import cancelNav from "./assets/icon-close.svg";
 import logo from "./assets/logo.svg";
 import mobileIntro from "./assets/image-intro-mobile.jpg";
 import mobilePatternLeft from "./assets/bg-pattern-intro-left-mobile.svg";
@@ -34,10 +35,27 @@ function App() {
             <img src={logo} alt="logo" />
           </div>
           <div>
-            <img src={navIcon} className="cursor-pointer" onClick={handleNav} />
+            <img
+              src={navbar ? cancelNav : navIcon}
+              className="cursor-pointer"
+              onClick={handleNav}
+            />
           </div>
         </div>
-
+        <div
+          className={`${
+            navbar
+              ? "bg-dark-violet w-full h-dvh visible"
+              : "hidden invisible bg-transparent"
+          } text-white`}
+        >
+          <div className="flex flex-col justify-center text-center items-center h-dvh uppercase space-y-4 text-xl">
+            <p>How we work</p>
+            <p>Blog</p>
+            <p>Account</p>
+            <p className="border-2 border-white px-8 py-2">View plans</p>
+          </div>
+        </div>
         <div
           className={`${
             navbar ? "invisible hidden" : "visible bg-dark-violet"
