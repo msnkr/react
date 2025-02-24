@@ -2,6 +2,7 @@ import navIcon from "./assets/icon-hamburger.svg";
 import cancelNav from "./assets/icon-close.svg";
 import logo from "./assets/logo.svg";
 import mobileIntro from "./assets/image-intro-mobile.jpg";
+import desktopIntro from "./assets/image-intro-desktop.jpg";
 import mobilePatternLeft from "./assets/bg-pattern-intro-left-mobile.svg";
 import mobilePatternRight from "./assets/bg-pattern-intro-right-mobile.svg";
 
