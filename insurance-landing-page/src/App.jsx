@@ -16,6 +16,8 @@ import pinterestLogo from "./assets/icon-pinterest.svg";
 import instagramLogo from "./assets/icon-instagram.svg";
 import twitterLogo from "./assets/icon-twitter.svg";
 
+import navPattern from "./assets/bg-pattern-mobile-nav.svg";
+
 import { useState } from "react";
 
 function App() {
@@ -44,21 +46,25 @@ function App() {
         </div>
         <div
           className={`${
-            navbar
-              ? "bg-dark-violet w-full h-dvh visible"
-              : "hidden invisible bg-transparent"
+            navbar ? "bg-dark-violet w-full visible" : "hidden invisible"
           } text-white`}
         >
-          <div className="flex flex-col justify-center text-center items-center h-dvh uppercase space-y-4 text-xl">
+          <div className="flex flex-col justify-center text-center items-center uppercase space-y-4 text-xl relative h-dvh pb-40">
             <p>How we work</p>
             <p>Blog</p>
             <p>Account</p>
             <p className="border-2 border-white px-8 py-2">View plans</p>
+            <div>
+              <img
+                src={navPattern}
+                className="absolute bottom-20 right-0 w-full"
+              />
+            </div>
           </div>
         </div>
         <div
           className={`${
-            navbar ? "invisible hidden" : "visible bg-dark-violet"
+            navbar ? "invisible hidden bg-transparent" : "visible"
           } main-content`}
         >
           <div className="hero-section">
