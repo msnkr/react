@@ -210,18 +210,23 @@
 import React, { useState, useEffect } from "react";
 
 function ExampleComponent() {
-  const [count, setCount] = useState(0);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   useEffect(() => {
-    // This code runs after every render
-    document.title = `You clicked ${count} times`;
-  }, [count]); // Only re-run the effect if count changes
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize), [];
+    };
+  });
 
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-    </div>
+    <>
+      <p className="text-center mt-96">{windowSize}:px</p>
+    </>
   );
 }
 
