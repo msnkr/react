@@ -238,7 +238,7 @@ function ExampleComponent() {
       <div>
         <img
           src={`${defaultImage}`}
-          className="w-full h-[400px] object-cover object-[90%_100%]"
+          className="w-full h-dvh object-cover object-[90%_100%]"
         />
       </div>
     </div>
