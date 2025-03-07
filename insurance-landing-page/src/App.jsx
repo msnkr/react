@@ -209,37 +209,39 @@
 // export default App;
 import React, { useState, useEffect } from "react";
 
+import small from "./assets/test-1.jpg";
+import big from "./assets/test-2.jpg";
+
 function ExampleComponent() {
-  const [bgColor, setBgColor] = useState();
+  const [defaultImage, setDefaultImage] = useState("");
 
   useEffect(() => {
-    const updateBackground = () => {
-      if (window.innerWidth < 718) {
-        setBgColor("bg-red-700");
+    const changeImage = () => {
+      if (window.innerWidth > 718) {
+        setDefaultImage(big);
       } else {
-        setBgColor("white");
+        setDefaultImage(small);
       }
     };
 
-    updateBackground();
+    changeImage();
 
-    window.addEventListener("resize", updateBackground);
+    window.addEventListener("resize", changeImage);
 
     return () => {
-      window.removeEventListener("resize", updateBackground);
+      window.removeEventListener("resize", changeImage);
     };
   }, []);
 
-  console.log(window.innerWidth);
-
   return (
-    <>
-      <div
-        className={`w-full h-dvh ${bgColor} text-white flex flex-col justify-center items-center`}
-      >
-        <p className="text-4xl font-semibold font-mono">Hello, World!</p>
+    <div>
+      <div>
+        <img
+          src={`${defaultImage}`}
+          className="w-full h-[400px] object-cover object-[90%_100%]"
+        />
       </div>
-    </>
+    </div>
   );
 }
 
