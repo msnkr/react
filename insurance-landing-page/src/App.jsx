@@ -153,7 +153,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="find-out-section relative mt-20 p-8">
+          <div className="find-out-section relative mt-20 p-12">
             <div className="bg-dark-violet text-white relative h-[400px]">
               <div className="flex flex-col justify-center items-center">
                 <p className="text-5xl font-fontDM text-center mt-20 z-50 mb-10">
