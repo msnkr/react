@@ -86,11 +86,14 @@ function App() {
             navbar ? "invisible hidden bg-transparent" : "visible"
           } main-content`}
         >
-          <div className="hero-section">
-            <img src={heroImage} className="w-full -z-50" />
+          <div className="hero-section relative">
+            <img
+              src={heroImage}
+              className="w-full -z-50 md:w-1/2 md:absolute top-1/3 right-8 md:z-50"
+            />
           </div>
           <div className="humanizing-section">
-            <div className="bg-dark-violet w-full h-[450px] relative">
+            <div className="bg-dark-violet w-full h-[450px] relative md:h-[800px]">
               <img
                 src={mobilePatternLeft}
                 alt="pattern"
