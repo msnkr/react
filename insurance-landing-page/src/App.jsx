@@ -210,22 +210,35 @@
 import React, { useState, useEffect } from "react";
 
 function ExampleComponent() {
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [bgColor, setBgColor] = useState();
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize(window.innerWidth);
+    const updateBackground = () => {
+      if (window.innerWidth < 718) {
+        setBgColor("bg-red-700");
+      } else {
+        setBgColor("white");
+      }
     };
 
-    window.addEventListener("resize", handleResize);
+    updateBackground();
+
+    window.addEventListener("resize", updateBackground);
+
     return () => {
-      window.removeEventListener("resize", handleResize), [];
+      window.removeEventListener("resize", updateBackground);
     };
-  });
+  }, []);
+
+  console.log(window.innerWidth);
 
   return (
     <>
-      <p className="text-center mt-96">{windowSize}:px</p>
+      <div
+        className={`w-full h-dvh ${bgColor} text-white flex flex-col justify-center items-center`}
+      >
+        <p className="text-4xl font-semibold font-mono">Hello, World!</p>
+      </div>
     </>
   );
 }
