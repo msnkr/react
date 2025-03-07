@@ -66,9 +66,9 @@ function App() {
         <div
           className={`${
             navbar ? "bg-dark-violet w-full visible" : "hidden invisible"
-          } text-white`}
+          } text-white `}
         >
-          <div className="flex flex-col justify-center text-center items-center uppercase space-y-4 text-xl relative h-dvh pb-40">
+          <div className="flex flex-col justify-center text-center items-center uppercase space-y-4 text-xl relative h-dvh pb-40 md:hidden md:invisible">
             <p>How we work</p>
             <p>Blog</p>
             <p>Account</p>
