@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     const handleImage = () => {
-      if (window.innerWidth > 718) {
+      if (window.innerWidth >= 768) {
         setHeroImage(desktopIntro);
       } else {
         setHeroImage(mobileIntro);
@@ -55,7 +55,7 @@ function App() {
           <div>
             <img src={logo} alt="logo" />
           </div>
-          <div>
+          <div className="md:hidden">
             <img
               src={navbar ? cancelNav : navIcon}
               className="cursor-pointer"
