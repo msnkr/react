@@ -5,11 +5,13 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ClickedPage from "../pages/ClickedPage";
 import NotFoundPage from "../pages/NotFoundPage.jsx";
+import ClickedItems from "../pages/ClickedItems.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/clicked", element: <ClickedPage /> },
   { path: "*", element: <NotFoundPage /> },
+  { path: "clicked/:id", element: <ClickedItems /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
