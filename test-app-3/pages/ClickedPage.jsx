@@ -19,11 +19,15 @@ const ClickedPage = () => {
       <ul>
         {clickedItemArr.map((item) => {
           return (
-            <div key={item.id}>
-              <Link to={`${item.id}`}>
-                <li>{item.title}</li>
-              </Link>
-            </div>
+            <Link
+              key={item.id}
+              to={{
+                pathname: `${item.id}`,
+                state: { title: item.title },
+              }}
+            >
+              <li>{item.title}</li>
+            </Link>
           );
         })}
       </ul>
