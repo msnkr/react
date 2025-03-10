@@ -20,7 +20,7 @@ const ClickedPage = () => {
         {clickedItemArr.map((item) => {
           return (
             <div key={item.id}>
-              <Link>
+              <Link to={`${item.id}`}>
                 <li>{item.title}</li>
               </Link>
             </div>

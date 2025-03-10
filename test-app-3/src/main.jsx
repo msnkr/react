@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/clicked", element: <ClickedPage /> },
   { path: "*", element: <NotFoundPage /> },
-  { path: "clicked/:id", element: <ClickedItems /> },
+  { path: "/clicked/:id", element: <ClickedItems /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
