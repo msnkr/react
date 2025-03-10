@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ClickedPage = () => {
   const clickedItemArr = [
@@ -19,13 +19,7 @@ const ClickedPage = () => {
       <ul>
         {clickedItemArr.map((item) => {
           return (
-            <Link
-              key={item.id}
-              to={{
-                pathname: `${item.id}`,
-                state: { title: item.title },
-              }}
-            >
+            <Link key={item.id} to={`${item.id}`}>
               <li>{item.title}</li>
             </Link>
           );
