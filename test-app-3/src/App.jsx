@@ -2,28 +2,30 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const App = () => {
-  const [user, setUser] = useState([]);
+  const [users, setUser] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/comments/")
-      .then((response) => response.json())
-      .then((json) => setUser(json));
+    fetch("https://dummyjson.com/users")
+      .then((res) => res.json())
+      .then((data) => setUser(data.users));
   }, []);
-
   return (
     <div>
-      <ul>
-        {user.map((comment, index) => (
-          <Link to={`${comment.id}`}>
-            <div>
-              <li key={comment.id}>
-                {comment.email} ||
-                {comment.id}
-              </li>
-            </div>
-          </Link>
-        ))}
-      </ul>
+      {users.map((user) => (
+        <div key={user.id}>
+          <div className="mt-4">
+            <Link to={`${user.id}`}>
+              <img src={user.image} />
+            </Link>
+          </div>
+          <div>
+            <p>
+              {user.firstName} {user.lastName}
+            </p>
+          </div>
+          <div></div>
+        </div>
+      ))}
     </div>
   );
 };
