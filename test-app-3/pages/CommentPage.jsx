@@ -2,20 +2,19 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const CommentPage = () => {
-  const [user, setUser] = useState([]);
   const { id } = useParams();
+  const [currentComment, setCurrentComment] = useState([]);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/comments/${id}`)
       .then((response) => response.json())
-      .then((json) => setUser(json));
-  }, [id]);
+      .then((json) => setCurrentComment(json));
+  }, []);
 
   return (
-    <div>
-      <p>{user.name}</p>
-      <p>{user.id}</p>
-    </div>
+    <>
+      <p>{currentComment.body}</p>
+    </>
   );
 };
 
