@@ -11,6 +11,7 @@ const CommentPage = () => {
       .then((data) => setUser(data.users[id]));
   }, []);
 
+  console.log(user);
   return (
     <div className="p-8">
       <div>
@@ -26,6 +27,7 @@ const CommentPage = () => {
           <p className="text-center">
             {user.firstName} {user.maidenName} {user.lastName}
           </p>
+          <p>{user.email}</p>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ const App = () => {
               <img src={user.image} />
             </div>
             <div>
-              <Link to={`${user.id}`}>
+              <Link to={`${user.id - 1}`}>
                 <p className="text-center font-2xl font-mono">
                   {user.firstName} {user.lastName}
                 </p>
