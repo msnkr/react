@@ -11,7 +11,25 @@ const CommentPage = () => {
       .then((data) => setUser(data.users[id]));
   }, []);
 
-  console.log(user);
+  return (
+    <div className="p-8">
+      <div>
+        <Link to={"/"}>
+          <button className="font-mono">Go Home</button>
+        </Link>
+      </div>
+      <div className="flex flex-col justify-center items-center">
+        <div>
+          <img src={user.image} alt="" />
+        </div>
+        <div>
+          <p className="text-center">
+            {user.firstName} {user.maidenName} {user.lastName}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default CommentPage;
