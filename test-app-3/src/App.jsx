@@ -2,30 +2,32 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const App = () => {
-  const [users, setUser] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetch("https://dummyjson.com/users")
       .then((res) => res.json())
-      .then((data) => setUser(data.users));
+      .then((data) => setUsers(data.users));
   }, []);
+
   return (
-    <div>
-      {users.map((user) => (
-        <div key={user.id}>
-          <div className="mt-4">
-            <Link to={`${user.id}`}>
+    <div className="flex flex-col justify-center items-center">
+      <div className="grid grid-cols-3">
+        {users.map((user) => (
+          <div key={user.id} className="p-8">
+            <div className="flex flex-col justify-center items-center">
               <img src={user.image} />
-            </Link>
+            </div>
+            <div>
+              <Link to={`${user.id}`}>
+                <p className="text-center font-2xl font-mono">
+                  {user.firstName} {user.lastName}
+                </p>
+              </Link>
+            </div>
           </div>
-          <div>
-            <p>
-              {user.firstName} {user.lastName}
-            </p>
-          </div>
-          <div></div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
