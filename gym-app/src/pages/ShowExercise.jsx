@@ -6,12 +6,17 @@ const ShowExercise = () => {
   const { id } = useParams();
   const [workout, setWorkout] = useState([]);
 
-  console.log(exercises[id]);
+  useEffect(() => {
+    setWorkout(exercises[id]);
+  });
 
   return (
-    <>
-      <p>Hello, World!</p>
-    </>
+    <div>
+      <div>
+        <p>{workout.name}</p>
+        <p>{workout.id}</p>
+      </div>
+    </div>
   );
 };
 
