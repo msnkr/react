@@ -30,7 +30,7 @@ const ShowExercise = () => {
         <p>Mechanic: {workout.mechanic}</p>
         <p>Equipment: {workout.equipment}</p>
         <p>Primary Muscle: {workout.primaryMuscles}</p>
-        <p>Secondary Muscle: {workout.secondaryMuscles}</p>
+        <p>Secondary Muscles: {workout.secondaryMuscles}</p>
       </div>
       <div className="mt-12 p-4">
         <p>{workout.instructions}</p>
