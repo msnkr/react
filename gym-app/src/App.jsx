@@ -9,7 +9,7 @@ function App() {
   const [randomExerciseArr, setRandomExerciseArr] = useState([]);
 
   useEffect(() => {
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < 5; index++) {
       let randomIndex = Math.floor(Math.random() * exercises.length);
       setRandomExerciseArr((prev) => {
         return [...prev, exercises[randomIndex]];

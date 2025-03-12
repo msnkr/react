@@ -30,7 +30,15 @@ const ShowExercise = () => {
         <p>Mechanic: {workout.mechanic}</p>
         <p>Equipment: {workout.equipment}</p>
         <p>Primary Muscle: {workout.primaryMuscles}</p>
-        <p>Secondary Muscles: {workout.secondaryMuscles}</p>
+        <p>Secondary Muscle: </p>
+        <div className="grid grid-cols-4">
+          {workout.secondaryMuscles &&
+            workout.secondaryMuscles.map((secondary, index) => (
+              <div key={index}>
+                <p>{secondary}</p>
+              </div>
+            ))}
+        </div>
       </div>
       <div className="mt-12 p-4">
         <p>{workout.instructions}</p>
@@ -39,7 +47,7 @@ const ShowExercise = () => {
         {workout.images &&
           workout.images.map((image, index) => (
             <div key={index}>
-              <img src={`../../public/exercise-images/${image}`} alt={index} />
+              <img src={`../../public/exercise-images/${image}`} alt={""} />
             </div>
           ))}
       </div>
