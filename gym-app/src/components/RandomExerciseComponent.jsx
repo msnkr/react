@@ -17,7 +17,6 @@ const RandomExercise = ({ arr }) => {
                 <p>category: {exercise.category}</p>
                 <p>level: {exercise.level}</p>
                 <p>Primary Muscle: {exercise.primaryMuscles}</p>
-                <p>{exercise.id}</p>
               </div>
             </div>
           </Link>

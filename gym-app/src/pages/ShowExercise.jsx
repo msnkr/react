@@ -10,14 +10,7 @@ const ShowExercise = () => {
     setWorkout(exercises[id]);
   });
 
-  return (
-    <div>
-      <div>
-        <p>{workout.name}</p>
-        <p>{workout.id}</p>
-      </div>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default ShowExercise;
