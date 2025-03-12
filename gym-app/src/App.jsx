@@ -1,7 +1,5 @@
 import "./App.css";
 import { use, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import DisplayExercise from "./pages/DisplayExercise";
 import exercises from "./assets/exercise.json";
 
 import SearchComponent from "./components/SearchComponent";
@@ -27,32 +25,22 @@ function App() {
   };
 
   return (
-    <Router>
+    <div>
       <div>
-        <div>
-          <div className="begin-wording my-12 px-12">
-            <p className="text-4xl capitalize my-8 text-center">
-              Welcome to my gym app
-            </p>
-            <p>
-              Search an exercise by name, by level, by muscle or by category.
-            </p>
-          </div>
-          <div className="search-bar">
-            <SearchComponent onChecked={handleSearch} />
-          </div>
+        <div className="begin-wording my-12 px-12">
+          <p className="text-4xl capitalize my-8 text-center">
+            Welcome to my gym app
+          </p>
+          <p>Search an exercise by name, by level, by muscle or by category.</p>
         </div>
-        <div>
-          {searchedExercises ? (
-            <Routes>
-              <Route path="/display-exercise" element={<DisplayExercise />} />
-            </Routes>
-          ) : (
-            <RandomExercise arr={randomExerciseArr} />
-          )}
+        <div className="search-bar">
+          <SearchComponent onChecked={handleSearch} />
         </div>
       </div>
-    </Router>
+      <div>
+        <RandomExercise arr={randomExerciseArr} />
+      </div>
+    </div>
   );
 }
 
