@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import exercises from "./assets/exercise.json";
+import exercises from "./assets/data.json";
 
 import SearchComponent from "./components/SearchComponent";
 import RandomExercise from "./components/RandomExerciseComponent";
