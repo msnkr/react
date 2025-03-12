@@ -1,21 +1,30 @@
 import exercises from "../assets/data.json";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const ShowExercise = () => {
   const { id } = useParams();
-  const [workout, setWorkout] = useState([]);
+  const [workout, setWorkout] = useState([null]);
 
   useEffect(() => {
     setWorkout(exercises[id]);
-  });
+  }, [id]);
+
+  if (!workout) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="p-8 ">
-      <div className="flex flex-col justify-center items-center">
+      <div>
+        <Link to={"/"}>
+          <button className="border px-4 py-2 rounded-lg">Go Home</button>
+        </Link>
+      </div>
+      <div className="flex flex-col justify-center items-center mt-12">
         <p className="text-3xl font-semibold">{workout.name}</p>
       </div>
-      <div className="capitalize">
+      <div className="capitalize mt-12 space-y-4">
         <p>Level: {workout.level}</p>
         <p>Force: {workout.force}</p>
         <p>Mechanic: {workout.mechanic}</p>
@@ -23,8 +32,17 @@ const ShowExercise = () => {
         <p>Primary Muscle: {workout.primaryMuscles}</p>
         <p>Secondary Muscle: {workout.secondaryMuscles}</p>
       </div>
-      <div></div>
-      <div>{workout.instructions}</div>
+      <div className="mt-12 p-4">
+        <p>{workout.instructions}</p>
+      </div>
+      <div className="mt-12 space-y-6">
+        {workout.images &&
+          workout.images.map((image, index) => (
+            <div key={index}>
+              <img src={`../../public/exercise-images/${image}`} alt={index} />
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
