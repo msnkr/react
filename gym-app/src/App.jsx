@@ -1,5 +1,5 @@
 import "./App.css";
-import { use, useState } from "react";
+import { useState, useEffect } from "react";
 import exercises from "./assets/exercise.json";
 
 import SearchComponent from "./components/SearchComponent";
@@ -7,22 +7,15 @@ import RandomExercise from "./components/RandomExerciseComponent";
 
 function App() {
   const [randomExerciseArr, setRandomExerciseArr] = useState([]);
-  const [searchedExercises, setSearchedExercises] = useState(false);
 
-  const getRandomExercise = () => {
-    const randomIndex = Math.floor(Math.random() * exercises.length);
-    setRandomExerciseArr((prev) => {
-      return [...prev, exercises[randomIndex]];
-    });
-  };
-
-  if (randomExerciseArr.length < 10) {
-    getRandomExercise();
-  }
-
-  const handleSearch = (x) => {
-    setSearchedExercises(true);
-  };
+  useEffect(() => {
+    for (let index = 0; index < 10; index++) {
+      let randomIndex = Math.floor(Math.random() * exercises.length);
+      setRandomExerciseArr((prev) => {
+        return [...prev, exercises[randomIndex]];
+      });
+    }
+  }, []);
 
   return (
     <div>
@@ -34,7 +27,7 @@ function App() {
           <p>Search an exercise by name, by level, by muscle or by category.</p>
         </div>
         <div className="search-bar">
-          <SearchComponent onChecked={handleSearch} />
+          <SearchComponent />
         </div>
       </div>
       <div>
