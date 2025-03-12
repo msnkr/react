@@ -5,11 +5,8 @@ const RandomExercise = ({ arr }) => {
     <div className="w-96 flex flex-col justify-center items-center mx-auto my-4">
       {arr.map((exercise, index) => {
         return (
-          <Link>
-            <div
-              key={index}
-              className="my-2 border p-4 rounded-lg shadow-lg w-80"
-            >
+          <Link key={exercise.id} to={`${exercise.id}`}>
+            <div className="my-2 border p-4 rounded-lg shadow-lg w-80">
               <img
                 src={`../../public/exercise-images/${exercise.images[1]}`}
                 alt="exercise-image"
