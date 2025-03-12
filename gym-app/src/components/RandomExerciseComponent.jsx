@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const RandomExercise = ({ arr }) => {
   return (
     <div className="w-96 flex flex-col justify-center items-center mx-auto my-4">
-      {arr.map((exercise, index) => {
+      {arr.map((exercise) => {
         return (
           <Link key={exercise.id} to={`${exercise.id}`}>
             <div className="my-2 border p-4 rounded-lg shadow-lg w-80">
