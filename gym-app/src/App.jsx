@@ -49,7 +49,15 @@ function App() {
         </div>
       </div>
       <div>
-        <RandomExercise arr={randomExerciseArr} />
+        {filteredExercise.length > 0 ? (
+          <div>
+            <RandomExercise arr={randomExerciseArr} />
+          </div>
+        ) : (
+          <div>
+            <RandomExercise arr={filteredExercise} />
+          </div>
+        )}
       </div>
     </div>
   );
