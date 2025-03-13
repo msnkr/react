@@ -2,6 +2,10 @@ import exercises from "../assets/data.json";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import weightIcon from "../../public/icons/weight.png";
+import levelIcon from "../../public/icons/level-up.png";
+import forceIcon from "../../public/icons/pull.png";
+
 const ShowExercise = () => {
   const { id } = useParams();
   const [workout, setWorkout] = useState([null]);
@@ -22,11 +26,20 @@ const ShowExercise = () => {
         </Link>
       </div>
       <div className="flex flex-col justify-center items-center mt-12">
-        <p className="text-3xl font-semibold">{workout.name}</p>
+        <div className="flex justify-center items-center space-x-8">
+          <img src={weightIcon} alt="weight-icon" className="w-20" />
+          <p className="text-3xl font-semibold">{workout.name}</p>
+        </div>
       </div>
       <div className="capitalize mt-12 space-y-4">
-        <p>Level: {workout.level}</p>
-        <p>Force: {workout.force}</p>
+        <div className="flex items-center space-x-2">
+          <img src={levelIcon} alt="level-icon" className="w-8" />
+          <p>Level: {workout.level}</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <img src={forceIcon} alt="level-icon" className="w-8" />
+          <p>Force: {workout.force}</p>
+        </div>
         <p>Mechanic: {workout.mechanic}</p>
         <p>Equipment: {workout.equipment}</p>
         <p>Primary Muscle: {workout.primaryMuscles}</p>
