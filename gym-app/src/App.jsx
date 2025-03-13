@@ -34,7 +34,6 @@ function App() {
       (exercise.mechanic && exercise.mechanic.includes(searchTerm))
     );
   });
-
   return (
     <div>
       <div>
@@ -42,14 +41,17 @@ function App() {
           <p className="text-4xl capitalize my-8 text-center">
             Welcome to my gym app
           </p>
-          <p>Search an exercise by name, by level, by muscle or by category.</p>
+          <p>
+            Search an exercise by level, primary muscle, category, equipment, or
+            mechanic.
+          </p>
         </div>
         <div className="search-bar">
           <SearchComponent searchItem={handleClick} />
         </div>
       </div>
       <div>
-        {filteredExercise.length > 0 ? (
+        {searchExercise === "" ? (
           <div>
             <RandomExercise arr={randomExerciseArr} />
           </div>
