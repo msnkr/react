@@ -7,6 +7,9 @@ const SearchComponent = ({ searchItem }) => {
     const { name, value } = e.target;
     setChange(value);
   };
+
+  const handleClear = () => {};
+
   return (
     <div className="flex justify-center items-center px-8 my-8">
       <div>
@@ -14,6 +17,7 @@ const SearchComponent = ({ searchItem }) => {
           placeholder="Search"
           className="border w-full px-4 py-1"
           onChange={handleChange}
+          value={change}
         />
       </div>
       <div>

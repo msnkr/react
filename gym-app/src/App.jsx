@@ -8,7 +8,6 @@ import RandomExercise from "./components/RandomExerciseComponent";
 function App() {
   const [randomExerciseArr, setRandomExerciseArr] = useState([]);
   const [searchExercise, setSearchExercise] = useState("");
-  const [searchFlag, setSearchFlag] = useState(false);
 
   useEffect(() => {
     for (let index = 0; index < 5; index++) {
@@ -24,9 +23,19 @@ function App() {
   };
 
   const filteredExercise = exercises.filter((exercise) => {
-    return exercise.primaryMuscles.includes(searchExercise.toLocaleLowerCase());
+    const searchTerm = searchExercise.toLocaleLowerCase();
+    return (
+      (exercise.primaryMuscles &&
+        exercise.primaryMuscles.includes(searchTerm)) ||
+      (exercise.category && exercise.category.includes(searchTerm)) ||
+      (exercise.equipment && exercise.equipment.includes(searchTerm)) ||
+      (exercise.force && exercise.force.includes(searchTerm)) ||
+      (exercise.level && exercise.level.includes(searchTerm)) ||
+      (exercise.mechanic && exercise.mechanic.includes(searchTerm))
+    );
   });
 
+  console.log(filteredExercise);
   return (
     <div>
       <div>
@@ -40,13 +49,8 @@ function App() {
           <SearchComponent searchItem={handleClick} />
         </div>
       </div>
-      <div className={`${searchFlag ? "hidden invisible" : "visible block"}`}>
+      <div>
         <RandomExercise arr={randomExerciseArr} />
-      </div>
-      <div className={`${searchFlag ? "visible block" : "hidden invisible"}`}>
-        {filteredExercise.map((exercise, index) => (
-          <p>{exercise.name}</p>
-        ))}
       </div>
     </div>
   );
