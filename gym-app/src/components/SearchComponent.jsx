@@ -1,6 +1,4 @@
 import { use, useState } from "react";
-import { Link } from "react-router-dom";
-import FilteredPage from "../pages/FilteredPage";
 
 const SearchComponent = ({ searchItem }) => {
   const [change, setChange] = useState("");
@@ -9,7 +7,6 @@ const SearchComponent = ({ searchItem }) => {
     const { name, value } = e.target;
     setChange(value);
   };
-
   return (
     <div className="flex justify-center items-center px-8 my-8">
       <div>
@@ -21,15 +18,11 @@ const SearchComponent = ({ searchItem }) => {
         />
       </div>
       <div>
-        <Link to={"/exercise"}>
-          <button
-            className="border px-2 py-1"
-            onClick={() => searchItem(change)}
-          >
-            Search
-          </button>
-        </Link>
+        <button className="border px-2 py-1" onClick={() => searchItem(change)}>
+          Search
+        </button>
       </div>
+      <div></div>
     </div>
   );
 };
