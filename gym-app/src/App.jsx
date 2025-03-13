@@ -8,6 +8,7 @@ import RandomExercise from "./components/RandomExerciseComponent";
 function App() {
   const [randomExerciseArr, setRandomExerciseArr] = useState([]);
   const [searchExercise, setSearchExercise] = useState("");
+  const [searchFlag, setSearchFlag] = useState(false);
 
   useEffect(() => {
     for (let index = 0; index < 5; index++) {
@@ -22,6 +23,10 @@ function App() {
     setSearchExercise(e);
   };
 
+  const filteredExercise = exercises.filter((exercise) => {
+    return exercise.primaryMuscles.includes(searchExercise.toLocaleLowerCase());
+  });
+
   return (
     <div>
       <div>
@@ -35,8 +40,13 @@ function App() {
           <SearchComponent searchItem={handleClick} />
         </div>
       </div>
-      <div>
+      <div className={`${searchFlag ? "hidden invisible" : "visible block"}`}>
         <RandomExercise arr={randomExerciseArr} />
+      </div>
+      <div className={`${searchFlag ? "visible block" : "hidden invisible"}`}>
+        {filteredExercise.map((exercise, index) => (
+          <p>{exercise.name}</p>
+        ))}
       </div>
     </div>
   );
