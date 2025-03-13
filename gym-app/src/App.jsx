@@ -7,6 +7,7 @@ import RandomExercise from "./components/RandomExerciseComponent";
 
 function App() {
   const [randomExerciseArr, setRandomExerciseArr] = useState([]);
+  const [searchExercise, setSearchExercise] = useState("");
 
   useEffect(() => {
     for (let index = 0; index < 5; index++) {
@@ -16,6 +17,10 @@ function App() {
       });
     }
   }, []);
+
+  const handleClick = (e) => {
+    setSearchExercise(e);
+  };
 
   return (
     <div>
@@ -27,7 +32,7 @@ function App() {
           <p>Search an exercise by name, by level, by muscle or by category.</p>
         </div>
         <div className="search-bar">
-          <SearchComponent />
+          <SearchComponent searchItem={handleClick} />
         </div>
       </div>
       <div>
