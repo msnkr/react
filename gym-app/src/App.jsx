@@ -22,20 +22,6 @@ function App() {
     setSearchExercise(e);
   };
 
-  const filteredExercise = exercises.filter((exercise) => {
-    const searchTerm = searchExercise.toLocaleLowerCase();
-    return (
-      (exercise.primaryMuscles &&
-        exercise.primaryMuscles.includes(searchTerm)) ||
-      (exercise.category && exercise.category.includes(searchTerm)) ||
-      (exercise.equipment && exercise.equipment.includes(searchTerm)) ||
-      (exercise.force && exercise.force.includes(searchTerm)) ||
-      (exercise.level && exercise.level.includes(searchTerm)) ||
-      (exercise.mechanic && exercise.mechanic.includes(searchTerm))
-    );
-  });
-
-  console.log(filteredExercise);
   return (
     <div>
       <div>
