@@ -38,7 +38,7 @@ function App() {
     <div>
       <div>
         <div className="begin-wording my-12 px-12">
-          <p className="text-4xl capitalize my-8 text-center">
+          <p className="text-4xl capitalize my-8 text-center px-12">
             Welcome to my gym app
           </p>
           <p>
