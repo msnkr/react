@@ -2,12 +2,6 @@ import exercises from "../assets/data.json";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import weightIcon from "../../public/icons/weight.png";
-import levelIcon from "../../public/icons/level-up.png";
-import forceIcon from "../../public/icons/pull.png";
-import categoryIcon from "../../public/icons/category.png";
-import equipmentIcon from "../../public/icons/weight.png";
-
 const ShowExercise = () => {
   const { id } = useParams();
   const [workout, setWorkout] = useState([null]);
@@ -27,7 +21,7 @@ const ShowExercise = () => {
           <button className="border px-4 py-2 rounded-lg">Go Home</button>
         </Link>
       </div>
-
+      <div className="text-4xl text-center">{workout.name}</div>
       <div className="mt-12 space-y-6">
         {workout.images &&
           workout.images.map((image, index) => (
@@ -35,6 +29,34 @@ const ShowExercise = () => {
               <img src={`../../public/exercise-images/${image}`} alt={""} />
             </div>
           ))}
+      </div>
+      <div className="capitalize m-4 space-y-2">
+        <p>
+          <span className="text-gray-400">Level: </span>
+          {workout.level}
+        </p>
+        <p>
+          <span className="text-gray-400">Equipment: </span>
+          {workout.equipment}
+        </p>
+        <p>
+          <span className="text-gray-400">Primary Muscle: </span>
+          {workout.primaryMuscles}
+        </p>
+        <p>
+          <span className="text-gray-400">Mechanic: </span>
+          {workout.force}
+        </p>
+        <p>
+          <span className="text-gray-400">Secondary Muscles: </span>
+          {workout.secondaryMuscles &&
+            workout.secondaryMuscles.map((secondary, index) => (
+              <p key={index}>{secondary}</p>
+            ))}
+        </p>
+        <div className="my-8">
+          <p>{workout.instructions}</p>
+        </div>
       </div>
     </div>
   );

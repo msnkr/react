@@ -25,6 +25,7 @@ function App() {
   const filteredExercise = exercises.filter((exercise) => {
     const searchTerm = searchExercise.toLocaleLowerCase();
     return (
+      (exercise.name && exercise.name.includes(searchTerm)) ||
       (exercise.primaryMuscles &&
         exercise.primaryMuscles.includes(searchTerm)) ||
       (exercise.category && exercise.category.includes(searchTerm)) ||
@@ -33,6 +34,7 @@ function App() {
       (exercise.level && exercise.level.includes(searchTerm)) ||
       (exercise.mechanic && exercise.mechanic.includes(searchTerm))
     );
+    console.log(searchTerm);
   });
   return (
     <div>
