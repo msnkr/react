@@ -47,13 +47,13 @@ const ShowExercise = () => {
           <span className="text-gray-400">Mechanic: </span>
           {workout.force}
         </p>
-        <p>
+        <div>
           <span className="text-gray-400">Secondary Muscles: </span>
           {workout.secondaryMuscles &&
             workout.secondaryMuscles.map((secondary, index) => (
               <p key={index}>{secondary}</p>
             ))}
-        </p>
+        </div>
         <div className="my-8">
           <p>{workout.instructions}</p>
         </div>
