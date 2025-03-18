@@ -5,8 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ShowExercise from "./pages/ShowExercise.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <App /> },
-  { path: ":id", element: <ShowExercise /> },
+  { path: "/musckles/", element: <App /> },
+  { path: "/musckles/:id", element: <ShowExercise /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

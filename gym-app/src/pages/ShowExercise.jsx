@@ -17,7 +17,7 @@ const ShowExercise = () => {
   return (
     <div>
       <div className="p-8">
-        <Link to={"/"}>
+        <Link to={"/musckles/"}>
           <button className="border px-4 py-2 rounded-lg">Go Home</button>
         </Link>
       </div>
@@ -26,7 +26,10 @@ const ShowExercise = () => {
         {workout.images &&
           workout.images.map((image, index) => (
             <div key={index}>
-              <img src={`../../public/exercise-images/${image}`} alt={""} />
+              <img
+                src={`../../musckles/public/exercise-images/${image}`}
+                alt={""}
+              />
             </div>
           ))}
       </div>
