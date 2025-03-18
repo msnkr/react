@@ -26,10 +26,7 @@ const ShowExercise = () => {
         {workout.images &&
           workout.images.map((image, index) => (
             <div key={index}>
-              <img
-                src={`../../musckles/public/exercise-images/${image}`}
-                alt={""}
-              />
+              <img src={`musckles/exercise-images/${image}`} alt={""} />
             </div>
           ))}
       </div>
