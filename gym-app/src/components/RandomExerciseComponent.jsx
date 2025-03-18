@@ -8,7 +8,7 @@ const RandomExercise = ({ arr }) => {
           <div key={exercise.id} className="my-8">
             <div className="my-2">
               <img
-                src={`exercise-images/${exercise.images[1]}`}
+                src={`/musckles/exercise-images/${exercise.images[1]}`}
                 alt="exercise-image"
                 className="w-full h-[300px] object-cover"
               />
