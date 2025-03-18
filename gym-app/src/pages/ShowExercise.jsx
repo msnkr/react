@@ -16,12 +16,12 @@ const ShowExercise = () => {
 
   return (
     <div>
-      <div className="p-8">
+      <div className="p-8 flex flex-col justify-center items-center">
         <Link to={"/musckles/"}>
           <button className="border px-4 py-2 rounded-lg">Go Home</button>
         </Link>
       </div>
-      <div className="text-4xl text-center">{workout.name}</div>
+      <div className="text-3xl text-center px-8">{workout.name}</div>
       <div className="mt-12 space-y-6">
         {workout.images &&
           workout.images.map((image, index) => (
