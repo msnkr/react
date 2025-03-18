@@ -23,7 +23,8 @@ function App() {
   };
 
   const filteredExercise = exercises.filter((exercise) => {
-    const searchTerm = searchExercise.toLocaleLowerCase();
+    const searchTerm = searchExercise.toLocaleLowerCase().trim();
+
     return (
       (exercise.name && exercise.name.includes(searchTerm)) ||
       (exercise.primaryMuscles &&
