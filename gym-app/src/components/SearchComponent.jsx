@@ -5,7 +5,7 @@ const SearchComponent = ({ searchItem }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setChange(value);
+    setChange(value.toLowerCase());
   };
   return (
     <div className="flex justify-center items-center px-8 my-8">
