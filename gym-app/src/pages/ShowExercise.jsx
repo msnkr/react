@@ -1,6 +1,7 @@
 import exercises from "../assets/data.json";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import SearchComponent from "../components/SearchComponent";
 
 const ShowExercise = () => {
   const { id } = useParams();
@@ -58,7 +59,7 @@ const ShowExercise = () => {
               <p key={index}>{secondary}</p>
             ))}
         </div>
-        <div className="my-8">
+        <div className="my-20">
           <p>{workout.instructions}</p>
         </div>
       </div>
