@@ -22,11 +22,15 @@ const ShowExercise = () => {
         </Link>
       </div>
       <div className="text-3xl text-center px-8">{workout.name}</div>
-      <div className="mt-12 space-y-6">
+      <div className="mt-12 space-y-6 lg:grid grid-cols-2 ">
         {workout.images &&
           workout.images.map((image, index) => (
             <div key={index}>
-              <img src={`/musckles/exercise-images/${image}`} alt={""} />
+              <img
+                src={`/musckles/exercise-images/${image}`}
+                alt={""}
+                className="lg:w-full"
+              />
             </div>
           ))}
       </div>
