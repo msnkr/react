@@ -1,7 +1,6 @@
 import exercises from "../assets/data.json";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import SearchComponent from "../components/SearchComponent";
 
 const ShowExercise = () => {
   const { id } = useParams();
@@ -17,12 +16,32 @@ const ShowExercise = () => {
 
   return (
     <div>
-      <div className="p-8 flex flex-col justify-center items-center">
+      <div className="p-8">
         <Link to={"/musckles/"}>
-          <button className="border px-4 py-2 rounded-lg">Go Home</button>
+          <button className="border px-4 py-2 rounded-lg flex space-x-4 cursor-pointer items-center">
+            <span className="mx-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                />
+              </svg>
+            </span>
+            Back
+          </button>
         </Link>
       </div>
-      <div className="text-3xl text-center px-8">{workout.name}</div>
+      <div className="text-3xl text-center px-8 lg:text-4xl font-semibold">
+        {workout.name}
+      </div>
       <div className="mt-12 space-y-6 lg:grid grid-cols-2 ">
         {workout.images &&
           workout.images.map((image, index) => (
@@ -35,7 +54,7 @@ const ShowExercise = () => {
             </div>
           ))}
       </div>
-      <div className="capitalize m-4 space-y-2">
+      <div className="capitalize m-4 space-y-2 lg:text-xl lg:px-20">
         <p>
           <span className="text-gray-400">Level: </span>
           {workout.level}
@@ -59,7 +78,7 @@ const ShowExercise = () => {
               <p key={index}>{secondary}</p>
             ))}
         </div>
-        <div className="my-20">
+        <div className="mt-8 mb-20">
           <p>{workout.instructions}</p>
         </div>
       </div>
