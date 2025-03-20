@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const RandomExercise = ({ arr }) => {
   return (
-    <div className="lg:grid grid-cols-4 gap-4 px-12">
+    <div className="lg:grid grid-cols-4 lg:gap-4 lg:px-12">
       {arr.map((exercise) => {
         return (
           <div key={exercise.id} className="my-8">
