@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import exercises from "./assets/data.json";
-import { useParams } from "react-router-dom";
 
 import SearchComponent from "./components/SearchComponent";
 import RandomExercise from "./components/RandomExerciseComponent";
@@ -9,7 +8,6 @@ import RandomExercise from "./components/RandomExerciseComponent";
 function App() {
   const [randomExerciseArr, setRandomExerciseArr] = useState([]);
   const [searchExercise, setSearchExercise] = useState("");
-  const { id } = useParams;
 
   useEffect(() => {
     for (let index = 0; index < 10; index++) {
@@ -39,7 +37,6 @@ function App() {
     );
   });
 
-  console.log(id);
   return (
     <div>
       <div>
