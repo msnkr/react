@@ -40,27 +40,35 @@ const ShowCategories = () => {
     <div className="capitalize space-y-12">
       <div>
         <p className="text-4xl font-semibold text-gray-400">Level</p>
-        {categories.level.map((x, index) => (
-          <p key={index}>{x}</p>
-        ))}
+        <div className="grid grid-cols-3">
+          {categories.level.map((x, index) => (
+            <p key={index}>{x}</p>
+          ))}
+        </div>
       </div>
       <div>
         <p className="text-4xl font-semibold text-gray-400">force</p>
-        {categories.force.map((x, index) => (
-          <p key={index}>{x}</p>
-        ))}
+        <div className="grid grid-cols-3">
+          {categories.force.map((x, index) => (
+            <p key={index}>{x}</p>
+          ))}
+        </div>
       </div>
       <div>
         <p className="text-4xl font-semibold text-gray-400">mechanic</p>
-        {categories.mechanic.map((x, index) => (
-          <p key={index}>{x}</p>
-        ))}
+        <div className="grid grid-cols-3">
+          {categories.mechanic.map((x, index) => (
+            <p key={index}>{x}</p>
+          ))}
+        </div>
       </div>
       <div>
         <p className="text-4xl font-semibold text-gray-400">equipment</p>
-        {categories.equipment.map((x, index) => (
-          <p key={index}>{x}</p>
-        ))}
+        <div className="grid grid-cols-3">
+          {categories.equipment.map((x, index) => (
+            <p key={index}>{x}</p>
+          ))}
+        </div>
       </div>
     </div>
   );
