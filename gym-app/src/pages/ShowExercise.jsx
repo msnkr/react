@@ -1,6 +1,7 @@
 import exercises from "../assets/data.json";
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ErrorPage from "./ErrorPage";
 
 const ShowExercise = () => {
   const { id } = useParams();
@@ -11,7 +12,7 @@ const ShowExercise = () => {
   }, [id]);
 
   if (!workout) {
-    return <div>Loading...</div>;
+    return <ErrorPage />;
   }
 
   return (
