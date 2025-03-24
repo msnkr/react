@@ -43,7 +43,7 @@ const ShowCategories = () => {
         <p className="text-4xl font-semibold text-gray-400 mb-8">Level</p>
         <div className="grid grid-cols-2 space-y-2">
           {categories.level.map((x, index) => (
-            <Link key={index} to={"/musckles/"}>
+            <Link key={index} to={`${x}`}>
               <p>{x}</p>
             </Link>
           ))}
