@@ -6,10 +6,10 @@ import data from "../assets/data.json";
 
 const Category = () => {
   const { id } = useParams();
-  const category = id;
+  const x = id;
 
   const filteredCategory = data.filter((exercise) => {
-    return exercise[category] === id;
+    return exercise[x] === id;
   });
 
   return (
