@@ -6,14 +6,22 @@ import data from "../assets/data.json";
 
 const Category = () => {
   const { id } = useParams();
-  const x = id;
 
   const filteredCategory = data.filter((exercise) => {
-    return exercise[x] === id;
+    return (
+      exercise.name === id ||
+      exercise.level === id ||
+      exercise.force === id ||
+      exercise.mechanic === id ||
+      exercise.equipment === id
+    );
   });
 
   return (
     <div>
+      <Link to={"/musckles/show-categories/"}>
+        <button>Home</button>
+      </Link>
       <RandomExercise arr={filteredCategory} />
     </div>
   );
