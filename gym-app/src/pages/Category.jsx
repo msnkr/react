@@ -5,15 +5,20 @@ import RandomExercise from "../components/RandomExerciseComponent";
 import data from "../assets/data.json";
 
 const Category = () => {
-  const { param } = useParams();
+  const { id } = useParams();
 
   const filteredCategory = data.filter((exercise) => {
-    return exercise[param] === param;
+    return exercise.level === id;
   });
 
   return (
     <div>
-      <RandomExercise arr={filteredCategory} />
+      {filteredCategory.map((exercise) => (
+        <div key={exercise.id}>
+          <p>{exercise.name}</p>
+          <p>{exercise.level}</p>
+        </div>
+      ))}
     </div>
   );
 };
