@@ -13,7 +13,7 @@ const ShowExerciseCategory = () => {
   return (
     <div>
       <div className="p-8">
-        <Link to={"/musckles/"}>
+        <Link to={"/musckles/show-categories/"}>
           <button className="border px-4 py-2 rounded-lg flex space-x-4 cursor-pointer items-center">
             <span className="mx-2">
               <svg
