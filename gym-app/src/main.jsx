@@ -13,6 +13,7 @@ const router = createBrowserRouter([
   { path: "/musckles/show-categories", element: <ShowCategories /> },
   { path: "*", element: <ErrorPage /> },
   { path: "/musckles/show-categories/:id", element: <Category /> },
+  { path: "/musckles/show-categories/:id/:id", element: <ShowExercise /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
