@@ -53,7 +53,9 @@ const ShowCategories = () => {
         <p className="text-4xl font-semibold text-gray-400 mb-8">force</p>
         <div className="grid grid-cols-2 space-y-2">
           {categories.force.map((x, index) => (
-            <p key={index}>{x}</p>
+            <Link key={index} to={`${x}`}>
+              <p>{x}</p>
+            </Link>
           ))}
         </div>
       </div>
@@ -61,7 +63,9 @@ const ShowCategories = () => {
         <p className="text-4xl font-semibold text-gray-400 mb-8">mechanic</p>
         <div className="grid grid-cols-2 space-y-2">
           {categories.mechanic.map((x, index) => (
-            <p key={index}>{x}</p>
+            <Link key={index} to={`${x}`}>
+              <p>{x}</p>
+            </Link>
           ))}
         </div>
       </div>
@@ -69,7 +73,9 @@ const ShowCategories = () => {
         <p className="text-4xl font-semibold text-gray-400 mb-8">equipment</p>
         <div className="grid grid-cols-2 space-y-2">
           {categories.equipment.map((x, index) => (
-            <p key={index}>{x}</p>
+            <Link key={index} to={`${x}`}>
+              <p>{x}</p>
+            </Link>
           ))}
         </div>
       </div>

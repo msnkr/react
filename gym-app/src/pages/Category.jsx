@@ -5,11 +5,10 @@ import RandomExercise from "../components/RandomExerciseComponent";
 import data from "../assets/data.json";
 
 const Category = () => {
-  const [categoryItem, setCategoryItem] = useState([]);
-  const { id } = useParams();
+  const { param } = useParams();
 
   const filteredCategory = data.filter((exercise) => {
-    return exercise.level === id;
+    return exercise[param] === param;
   });
 
   return (
