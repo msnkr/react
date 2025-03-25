@@ -6,19 +6,15 @@ import data from "../assets/data.json";
 
 const Category = () => {
   const { id } = useParams();
+  const category = id;
 
   const filteredCategory = data.filter((exercise) => {
-    return exercise.level === id;
+    return exercise[category] === id;
   });
 
   return (
     <div>
-      {filteredCategory.map((exercise) => (
-        <div key={exercise.id}>
-          <p>{exercise.name}</p>
-          <p>{exercise.level}</p>
-        </div>
-      ))}
+      <RandomExercise arr={filteredCategory} />
     </div>
   );
 };
