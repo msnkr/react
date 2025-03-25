@@ -20,7 +20,7 @@ const Category = () => {
   return (
     <div>
       <Link to={"/musckles/show-categories/"}>
-        <button>Home</button>
+        <button>Go back</button>
       </Link>
       <RandomExercise arr={filteredCategory} />
     </div>

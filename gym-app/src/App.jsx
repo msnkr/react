@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import exercises from "./assets/data.json";
 
 import SearchComponent from "./components/SearchComponent";
@@ -45,8 +46,11 @@ function App() {
             Welcome to my gym app
           </p>
           <p>
-            Search an exercise by level, primary muscle, category, equipment, or
-            mechanic.
+            Search an exercise by level, primary muscle,{" "}
+            <Link to={"/musckles/show-categories/"}>
+              <span className="font-semibold">category</span>
+            </Link>
+            , equipment, or mechanic.
           </p>
         </div>
         <div className="search-bar">
