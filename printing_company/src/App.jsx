@@ -97,18 +97,20 @@ function App() {
             </div>
             <div className="mt-8">
               Let’s Print Your Vision! Explore our{" "}
-              <span className="font-semibold underline underline-offset-8">
+              <span className="font-semibold underline underline-offset-8 cursor-pointer">
                 services
               </span>{" "}
               or Get a{" "}
-              <span className="font-semibold underline underline-offset-8">
+              <span className="font-semibold underline underline-offset-8 cursor-pointer">
                 Free Quote Today!
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div className="footer-section"></div>
+      <div className="footer-section">
+        <div></div>
+      </div>
     </div>
   );
 }
