@@ -1,5 +1,4 @@
 import "./App.css";
-import { Services } from "../components/Services.jsx";
 
 function App() {
   return (
@@ -56,9 +55,7 @@ function App() {
         <div className="services-section">
           <div className="text-center text-2xl uppercase font-semibold">
             <p>Our Services</p>
-            <div>
-              <Services />
-            </div>
+            <div></div>
           </div>
         </div>
       </div>
