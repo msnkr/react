@@ -1,5 +1,5 @@
 import "./App.css";
-import { Services } from "../components/Services";
+import { Services } from "../components/Services.jsx";
 
 function App() {
   return (

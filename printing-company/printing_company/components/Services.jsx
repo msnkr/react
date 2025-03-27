@@ -1,9 +1,5 @@
 const Services = ({ image, text, description }) => {
-  return (
-    <div className="w-full h-[200px]">
-      <p>{text}</p>
-    </div>
-  );
+  return <p>Hello, World!</p>;
 };
 
 export default Services;
