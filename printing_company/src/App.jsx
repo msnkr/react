@@ -1,5 +1,5 @@
 import "./App.css";
-import { servicesComponent } from "./components/servicesComponent";
+import ServicesComponent from "./components/servicesComponent";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           </svg>
         </div>
       </div>
-      <div className="body space-y-20">
+      <div className="body space-y-20 mb-20">
         <div className="hero-section">
           <div className="relative">
             <div className="bg-black h-[500px] absolute opacity-60 w-full"></div>
@@ -56,8 +56,43 @@ function App() {
         <div className="services-section">
           <div className="text-center text-2xl uppercase font-semibold">
             <p>Our Services</p>
+            <p className="capitalize text-sm mt-2">
+              See our printing{" "}
+              <span className="underline underline-offset-8 cursor-pointer">
+                services
+              </span>
+            </p>
             <div>
-              <servicesComponent />
+              <ServicesComponent
+                image={
+                  "https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+                text={"business cards"}
+              />
+              <ServicesComponent
+                image={
+                  "https://images.pexels.com/photos/6648412/pexels-photo-6648412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+                text={"catalogue"}
+              />
+              <ServicesComponent
+                image={
+                  "https://images.pexels.com/photos/7859092/pexels-photo-7859092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+                text={"flyers"}
+              />
+              <ServicesComponent
+                image={
+                  "https://images.pexels.com/photos/2422407/pexels-photo-2422407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+                text={"posters"}
+              />
+              <ServicesComponent
+                image={
+                  "https://images.pexels.com/photos/7648022/pexels-photo-7648022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+                text={"brouchures"}
+              />
             </div>
           </div>
         </div>
