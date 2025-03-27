@@ -100,9 +100,9 @@ function App() {
               <span className="font-semibold underline underline-offset-8">
                 services
               </span>{" "}
-              or{" "}
+              or Get a{" "}
               <span className="font-semibold underline underline-offset-8">
-                Get a Free Quote Today!
+                Free Quote Today!
               </span>
             </div>
           </div>
