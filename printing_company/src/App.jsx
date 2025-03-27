@@ -80,6 +80,31 @@ function App() {
                 high-quality prints at competitive rates.
               </p>
             </div>
+            <div className="mt-12">
+              <p>
+                At Tycole Media & Print, we bring your ideas to life with
+                high-quality litho printing, ensuring every project reflects
+                professionalism and excellence. Whether you need eye-catching
+                marketing materials, branded stationery, or custom packaging, we
+                are dedicated to delivering precision-crafted prints that help
+                your business stand out. <br /> <br />
+                With years of experience in the industry and a full online
+                computer-to-plate system, we guarantee sharp details, vibrant
+                colors, and durable prints that leave a lasting impression. From
+                small-scale projects to large commercial runs, we offer flexible
+                printing solutions tailored to your unique needs.
+              </p>
+            </div>
+            <div className="mt-8">
+              Let’s Print Your Vision! Explore our{" "}
+              <span className="font-semibold underline underline-offset-8">
+                services
+              </span>{" "}
+              or{" "}
+              <span className="font-semibold underline underline-offset-8">
+                Get a Free Quote Today!
+              </span>
+            </div>
           </div>
         </div>
       </div>
