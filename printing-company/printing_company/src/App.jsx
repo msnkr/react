@@ -1,4 +1,5 @@
 import "./App.css";
+import { Services } from "../components/Services";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           </svg>
         </div>
       </div>
-      <div className="body">
+      <div className="body space-y-20">
         <div className="hero-section">
           <div className="relative">
             <div className="bg-black h-[500px] absolute opacity-60 w-full"></div>
@@ -52,7 +53,14 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="services-section"></div>
+        <div className="services-section">
+          <div className="text-center text-2xl uppercase font-semibold">
+            <p>Our Services</p>
+            <div>
+              <Services />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
