@@ -4,9 +4,9 @@ import ServicesComponent from "./components/servicesComponent";
 function App() {
   return (
     <div>
-      <div className="font-semibold uppercase navbar flex justify-between p-8">
+      <div className="font-semibold uppercase navbar flex justify-between p-8 items-center">
         <div className=" font-mono mx-auto">
-          <p className="text-md underline">
+          <p className="underline">
             The <br /> printing <br /> company
           </p>
         </div>
@@ -30,12 +30,12 @@ function App() {
       <div className="body space-y-20 mb-20">
         <div className="hero-section">
           <div className="relative">
-            <div className="bg-black h-[500px] absolute opacity-60 w-full"></div>
+            <div className="bg-black h-[600px] absolute opacity-60 w-full"></div>
             <img
               src="https://images.pexels.com/photos/6648405/pexels-photo-6648405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[600px] object-cover"
             />
-            <div className="p-12 absolute top-0 left-0 text-white w-full h-[500px] flex flex-col justify-center items-center text-center space-y-12">
+            <div className="p-12 absolute top-0 left-0 text-white w-full h-[600px] flex flex-col justify-center items-center text-center space-y-12">
               <p>
                 Welcome to <br />
                 <span className="text-2xl font-semibold uppercase font-mono">
@@ -43,7 +43,7 @@ function App() {
                 </span>
               </p>
               <p>Your friendly local printing company</p>
-              <p>
+              <p className="text-2xl font-semibold font-mono">
                 Business cards, cataloges, pens,vehicle magnets, banners and all
                 your printing and branding needs.{" "}
               </p>
@@ -95,6 +95,9 @@ function App() {
               />
             </div>
           </div>
+        </div>
+        <div>
+          <div></div>
         </div>
       </div>
     </div>
