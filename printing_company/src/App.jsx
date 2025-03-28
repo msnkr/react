@@ -44,8 +44,11 @@ function App() {
         <div className="body space-y-12">
           <div className="hero-section">
             <div className="relative">
-              <div className="absolute top-0 left-0 w-full h-[450px] bg-black opacity-50"></div>
-              <img className="w-full h-[450px] object-cover" />
+              <div className="absolute top-0 left-0 w-full h-[450px] bg-black opacity-80 "></div>
+              <img
+                className="w-full h-[450px] object-cover"
+                src="https://images.pexels.com/photos/7653097/pexels-photo-7653097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              />
               <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center p-14 space-y-12 text-center">
                 <p>Passion, Pride and Precison in every Print</p>
                 <p className="text-xl font-semibold primary-font">
@@ -60,7 +63,9 @@ function App() {
           </div>
           <div className="services-section">
             <div className="px-14 space-y-8">
-              <p className="text-2xl primary-font">Our Services</p>
+              <p className="text-2xl primary-font text-cyan-800">
+                Our Services
+              </p>
               <p>
                 At Tycole Media & Print, we specialize in high-quality litho
                 printing to meet your business and personal printing needs.
@@ -68,20 +73,52 @@ function App() {
                 packaging solutions, we ensure every print is crafted with
                 precision and excellence.
               </p>
-              <p className="text-2xl primary-font">
+              <p className="text-2xl primary-font text-cyan-800">
                 Our printing services include{" "}
               </p>
-              <ServicesComponent text={"Brochures and Flyers"} />
-              <ServicesComponent text={"Custom Printed Boxes"} />
-              <ServicesComponent text={"Business Cards"} />
-              <ServicesComponent text={"Desk Pads & Notepads"} />
-              <ServicesComponent text={"Diaries & Calendars"} />
-              <ServicesComponent text={"Custom Printing Solutions"} />
+              <ServicesComponent
+                text={"Brochures and Flyers"}
+                image={
+                  "https://images.pexels.com/photos/7648514/pexels-photo-7648514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+              />
+              <ServicesComponent
+                text={"Custom Printed Boxes"}
+                image={
+                  "https://images.pexels.com/photos/6169151/pexels-photo-6169151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+              />
+              <ServicesComponent
+                text={"Business Cards"}
+                image={
+                  "https://images.pexels.com/photos/29821869/pexels-photo-29821869/free-photo-of-elegant-business-cards-on-white-fabric-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+              />
+              <ServicesComponent
+                text={"Desk Pads & Notepads"}
+                image={
+                  "https://images.pexels.com/photos/8761741/pexels-photo-8761741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+              />
+              <ServicesComponent
+                text={"Diaries & Calendars"}
+                image={
+                  "https://images.pexels.com/photos/29997001/pexels-photo-29997001/free-photo-of-colorful-floral-2025-planner-on-yellow-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+              />
+              <ServicesComponent
+                text={"Custom Printing Solutions"}
+                image={
+                  "https://images.pexels.com/photos/4473400/pexels-photo-4473400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                }
+              />
             </div>
           </div>
           <div className="about-section">
             <div className="px-14">
-              <p className="text-2xl mb-8 primary-font">Why choose us</p>
+              <p className="text-2xl mb-8 primary-font text-cyan-800">
+                Why choose us
+              </p>
               <div className="space-y-4">
                 <p>
                   <span className="font-semibold primary-font">
@@ -121,11 +158,11 @@ function App() {
               </div>
               <div className="mt-8">
                 Let’s Print Your Vision! Explore our{" "}
-                <span className="font-semibold underline underline-offset-8 cursor-pointer">
+                <span className="font-semibold underline underline-offset-8 cursor-pointer text-cyan-800">
                   services
                 </span>{" "}
                 or Get a{" "}
-                <span className="font-semibold underline underline-offset-8 cursor-pointer">
+                <span className="font-semibold underline underline-offset-8 cursor-pointer text-cyan-800">
                   Free Quote Today!
                 </span>
               </div>
@@ -163,7 +200,7 @@ function App() {
         </ul>
         <div
           onClick={handleNav}
-          className="absolute top-16 right-16 cursor-pointer hover:animate-spin"
+          className="absolute top-18 right-18 cursor-pointer hover:animate-spin"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
