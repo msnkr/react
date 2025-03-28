@@ -121,7 +121,17 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="footer-section mt-20">
+        <div className="footer-section">
+          <div className="p-12 space-y-2">
+            <p>
+              16 Something Road <br />
+              Somewhereburg, Johannesburg
+              <br />
+              Gauteng 2000
+            </p>
+            <p>071 234 5678</p>
+            <p>FakeEmail@Fake.com</p>
+          </div>
           <div>
             <FormComponent />
           </div>
