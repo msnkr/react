@@ -42,17 +42,17 @@ function App() {
         <div className="body space-y-12">
           <div className="hero-section">
             <div className="relative">
-              <div className="absolute top-0 left-0 w-full h-[400px] bg-black opacity-50"></div>
-              <img className="w-full h-[400px] object-cover" />
-              <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[400px] justify-center items-center p-12 space-y-8 text-center">
-                <p className="text-xl">
-                  Passion, Pride and Precison in every Print
-                </p>
-                <p className="text-2xl font-semibold">
+              <div className="absolute top-0 left-0 w-full h-[450px] bg-black opacity-50"></div>
+              <img className="w-full h-[450px] object-cover" />
+              <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center p-12 space-y-12 text-center">
+                <p>Passion, Pride and Precison in every Print</p>
+                <p className="text-xl font-semibold">
                   High-quality litho printing for brochures, business cards,
                   boxes, desk pads, diaries, and more.
                 </p>
-                <button className="border px-4 py-2">Get a quote</button>
+                <button className="border-2 px-4 py-2 font-semibold">
+                  Get a quote
+                </button>
               </div>
             </div>
           </div>
