@@ -155,7 +155,7 @@ function App() {
         </div>
       </div>
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
-        <ul className="w-full h-dvh flex flex-col justify-center px-12 space-y-12 font-semibold text-lg primary-font">
+        <ul className="w-full h-dvh flex flex-col justify-center px-12 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
           <li className="cursor-pointer">Home</li>
           <li className="cursor-pointer">Services</li>
           <li className="cursor-pointer">About Us</li>

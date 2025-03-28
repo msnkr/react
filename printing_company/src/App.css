@@ -28,3 +28,8 @@ body {
 .secondary-color {
   color: var(--secondary-color);
 }
+
+.bg-navbar-open {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
