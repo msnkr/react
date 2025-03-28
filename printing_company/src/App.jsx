@@ -20,7 +20,7 @@ function App() {
           showNav ? "invisible hidden" : "visible block"
         } duration-500`}
       >
-        <div className="navbar flex justify-between items-center p-12">
+        <div className="navbar flex justify-between items-center p-14">
           <div>
             <img src={logo} className="w-40 flex cursor-pointer" />
           </div>
@@ -46,7 +46,7 @@ function App() {
             <div className="relative">
               <div className="absolute top-0 left-0 w-full h-[450px] bg-black opacity-50"></div>
               <img className="w-full h-[450px] object-cover" />
-              <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center p-12 space-y-12 text-center">
+              <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center p-14 space-y-12 text-center">
                 <p>Passion, Pride and Precison in every Print</p>
                 <p className="text-xl font-semibold primary-font">
                   High-quality litho printing for brochures, business cards,
@@ -59,10 +59,8 @@ function App() {
             </div>
           </div>
           <div className="services-section">
-            <div className="px-12 space-y-8">
-              <p className="text-2xl primary-font secondary-color">
-                Our Services
-              </p>
+            <div className="px-14 space-y-8">
+              <p className="text-2xl primary-font">Our Services</p>
               <p>
                 At Tycole Media & Print, we specialize in high-quality litho
                 printing to meet your business and personal printing needs.
@@ -70,7 +68,7 @@ function App() {
                 packaging solutions, we ensure every print is crafted with
                 precision and excellence.
               </p>
-              <p className="text-2xl primary-font secondary-color">
+              <p className="text-2xl primary-font">
                 Our printing services include{" "}
               </p>
               <ServicesComponent text={"Brochures and Flyers"} />
@@ -82,10 +80,8 @@ function App() {
             </div>
           </div>
           <div className="about-section">
-            <div className="px-12">
-              <p className="text-2xl mb-8 primary-font secondary-color">
-                Why choose us
-              </p>
+            <div className="px-14">
+              <p className="text-2xl mb-8 primary-font">Why choose us</p>
               <div className="space-y-4">
                 <p>
                   <span className="font-semibold primary-font">
@@ -137,7 +133,7 @@ function App() {
           </div>
         </div>
         <div className="footer-section">
-          <div className="p-12 space-y-2">
+          <div className="p-14 space-y-2">
             <p>
               16 Something Road <br />
               Somewhereburg, Johannesburg
@@ -159,7 +155,7 @@ function App() {
         </div>
       </div>
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
-        <ul className="w-full h-dvh flex flex-col justify-center px-12 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
+        <ul className="w-full h-dvh flex flex-col justify-center px-14 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
           <li className="cursor-pointer">Home</li>
           <li className="cursor-pointer">Services</li>
           <li className="cursor-pointer">About Us</li>
