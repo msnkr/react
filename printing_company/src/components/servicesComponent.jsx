@@ -1,8 +1,8 @@
 const ServicesComponent = ({ text, image }) => {
   return (
-    <div className="relative">
-      <img src={image} className="w-full h-[300px]" />
-      <p className="absolute top-0 left-0 w-full h-[300px] flex justify-center items-center text-2xl font-semibold">
+    <div className="relative rounded-lg border">
+      <img src={image} className="w-full h-[300px] rounded-lg" />
+      <p className="p-4 cursor-pointer font-semibold underline underline-offset-8">
         {text}
       </p>
     </div>
