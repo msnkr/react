@@ -136,7 +136,7 @@ function App() {
         </ul>
         <div
           onClick={handleNav}
-          className="absolute top-12 right-12 cursor-pointer hover:animate-spin"
+          className="absolute top-16 right-16 cursor-pointer hover:animate-spin"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
