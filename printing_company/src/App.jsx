@@ -18,7 +18,7 @@ function App() {
       <div
         className={`${
           showNav ? "invisible hidden" : "visible block"
-        } mb-20 duration-500`}
+        } duration-500`}
       >
         <div className="navbar flex justify-between items-center p-12">
           <div>
@@ -146,14 +146,20 @@ function App() {
           <div>
             <FormComponent />
           </div>
+          <div className="mt-8 flex">
+            <div className="w-full h-[100px] bg-cyan-500"></div>
+            <div className="w-full h-[100px] bg-pink-500"></div>
+            <div className="w-full h-[100px] bg-yellow-500"></div>
+            <div className="w-full h-[100px] bg-black"></div>
+          </div>
         </div>
       </div>
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
         <ul className="w-full h-dvh flex flex-col justify-center px-12 space-y-12 font-semibold text-lg primary-font">
-          <li>Home</li>
-          <li>Services</li>
-          <li>About Us</li>
-          <li>Contact</li>
+          <li className="cursor-pointer">Home</li>
+          <li className="cursor-pointer">Services</li>
+          <li className="cursor-pointer">About Us</li>
+          <li className="cursor-pointer">Contact</li>
         </ul>
         <div
           onClick={handleNav}
