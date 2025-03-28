@@ -116,9 +116,7 @@ function App() {
           </div>
           <div className="about-section">
             <div className="px-14">
-              <p className="text-2xl mb-8 primary-font text-cyan-800">
-                Why choose us
-              </p>
+              <p className="text-2xl mb-8 primary-font">Why choose us</p>
               <div className="space-y-4">
                 <p>
                   <span className="font-semibold primary-font">
