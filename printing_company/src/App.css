@@ -25,15 +25,7 @@ body {
   color: white;
 }
 
-.secondary-color {
-  color: var(--secondary-color);
-}
-
 .bg-navbar-open {
   background-color: var(--background-color);
   color: var(--text-color);
-}
-
-.primary-color {
-  color: var(--primary-color);
 }
