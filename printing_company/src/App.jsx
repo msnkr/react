@@ -60,7 +60,9 @@ function App() {
           </div>
           <div className="services-section">
             <div className="px-12 space-y-8">
-              <p className="text-2xl primary-font">Our Services</p>
+              <p className="text-2xl primary-font secondary-color">
+                Our Services
+              </p>
               <p>
                 At Tycole Media & Print, we specialize in high-quality litho
                 printing to meet your business and personal printing needs.
@@ -68,8 +70,8 @@ function App() {
                 packaging solutions, we ensure every print is crafted with
                 precision and excellence.
               </p>
-              <p className="text-2xl primary-font">
-                Our printing services include:{" "}
+              <p className="text-2xl primary-font secondary-color">
+                Our printing services include{" "}
               </p>
               <ServicesComponent text={"Brochures and Flyers"} />
               <ServicesComponent text={"Custom Printed Boxes"} />
@@ -81,7 +83,9 @@ function App() {
           </div>
           <div className="about-section">
             <div className="px-12">
-              <p className="text-2xl mb-8 primary-font">Why choose us</p>
+              <p className="text-2xl mb-8 primary-font secondary-color">
+                Why choose us
+              </p>
               <div className="space-y-4">
                 <p>
                   <span className="font-semibold primary-font">
