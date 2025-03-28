@@ -16,7 +16,9 @@ function App() {
   return (
     <div>
       <div
-        className={`${showNav ? "invisible hidden" : "visible block"} mb-20`}
+        className={`${
+          showNav ? "invisible hidden" : "visible block"
+        } mb-20 duration-500`}
       >
         <div className="navbar flex justify-between items-center p-12">
           <div>
@@ -146,8 +148,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div className={showNav ? "relative navbar-list" : "invisible hidden"}>
-        <ul className="w-full h-dvh flex flex-col justify-center px-12 space-y-12 font-semibold text-lg">
+      <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
+        <ul className="w-full h-dvh flex flex-col justify-center px-12 space-y-12 font-semibold text-lg primary-font">
           <li>Home</li>
           <li>Services</li>
           <li>About Us</li>
