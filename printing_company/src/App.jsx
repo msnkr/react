@@ -2,17 +2,22 @@ import "./App.css";
 import { useState } from "react";
 import logo from "../public/tycole-logo.png";
 import ServicesComponent from "./components/servicesComponent";
+import FormComponent from "./components/FormComponent";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
 
   const handleNav = () => {
-    setShowNav(true);
+    setShowNav((prev) => {
+      return !prev;
+    });
   };
 
   return (
     <div>
-      <div className={showNav ? "hidden mb-20" : "block mb-20"}>
+      <div
+        className={`${showNav ? "invisible hidden" : "visible block"} mb-20`}
+      >
         <div className="navbar flex justify-between items-center p-12">
           <div>
             <img src={logo} className="w-40 flex cursor-pointer" />
@@ -116,8 +121,10 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="footer-section">
-          <div></div>
+        <div className="footer-section mt-20">
+          <div>
+            <FormComponent />
+          </div>
         </div>
       </div>
       <div className={showNav ? "relative navbar-list" : "invisible hidden"}>
