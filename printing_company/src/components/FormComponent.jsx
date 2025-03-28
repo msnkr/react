@@ -21,7 +21,9 @@ const FormComponent = () => {
         <label>Message:</label>
         <textarea className="border w-full p-4 h-40" />
       </div>
-      <button className="border px-4 py-1">Submit</button>
+      <button className="border-2 px-4 py-2 font-semibold cta-color">
+        Submit
+      </button>
     </div>
   );
 };

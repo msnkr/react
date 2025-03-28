@@ -46,11 +46,11 @@ function App() {
               <img className="w-full h-[450px] object-cover" />
               <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center p-12 space-y-12 text-center">
                 <p>Passion, Pride and Precison in every Print</p>
-                <p className="text-xl font-semibold">
+                <p className="text-xl font-semibold primary-font">
                   High-quality litho printing for brochures, business cards,
                   boxes, desk pads, diaries, and more.
                 </p>
-                <button className="border-2 px-4 py-2 font-semibold">
+                <button className="border-2 px-4 py-2 font-semibold cta-color">
                   Get a quote
                 </button>
               </div>
@@ -58,7 +58,7 @@ function App() {
           </div>
           <div className="services-section">
             <div className="px-12 space-y-8">
-              <p className="text-2xl">Our Services</p>
+              <p className="text-2xl primary-font">Our Services</p>
               <p>
                 At Tycole Media & Print, we specialize in high-quality litho
                 printing to meet your business and personal printing needs.
@@ -66,7 +66,9 @@ function App() {
                 packaging solutions, we ensure every print is crafted with
                 precision and excellence.
               </p>
-              <p className="text-2xl">Our printing services include: </p>
+              <p className="text-2xl primary-font">
+                Our printing services include:{" "}
+              </p>
               <ServicesComponent text={"Brochures and Flyers"} />
               <ServicesComponent text={"Custom Printed Boxes"} />
               <ServicesComponent text={"Business Cards"} />
@@ -77,20 +79,27 @@ function App() {
           </div>
           <div className="about-section">
             <div className="px-12">
-              <p className="text-2xl mb-8">Why choose us</p>
+              <p className="text-2xl mb-8 primary-font">Why choose us</p>
               <div className="space-y-4">
                 <p>
-                  <span className="font-semibold">Quality & Precision</span> –
-                  We use advanced litho printing technology to ensure sharp,
+                  <span className="font-semibold primary-font">
+                    Quality & Precision
+                  </span>{" "}
+                  – We use advanced litho printing technology to ensure sharp,
                   vibrant prints.
                 </p>
                 <p>
-                  <span className="font-semibold">Reliable Service</span> – We
-                  take pride in delivering on time and exceeding expectations.
+                  <span className="font-semibold primary-font">
+                    Reliable Service
+                  </span>{" "}
+                  – We take pride in delivering on time and exceeding
+                  expectations.
                 </p>
                 <p>
-                  <span className="font-semibold">Affordable Pricing</span> –
-                  Get high-quality prints at competitive rates.
+                  <span className="font-semibold primary-font">
+                    Affordable Pricing
+                  </span>{" "}
+                  – Get high-quality prints at competitive rates.
                 </p>
               </div>
               <div className="mt-12">
