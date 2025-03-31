@@ -40,9 +40,9 @@ const ServicePage = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={`${showNav ? "hidden invisible" : "block visible"} p-14`}>
         <div>
-          <p>Services</p>
+          <p className="text-2xl primary-font">Services</p>
           <p>
             At Tycole Media & Print, we specialize in high-quality printing
             solutions that bring your brand to life. With a commitment to
@@ -51,7 +51,7 @@ const ServicePage = () => {
           </p>
         </div>
         <div>
-          <p>Our Printing Services</p>
+          <p className="text-2xl primary-font">Our Printing Services</p>
           <ul>
             <li>
               Brochures – Professionally designed and printed brochures that
