@@ -40,12 +40,40 @@ const ServicePage = () => {
           </div>
         </div>
       </div>
-      <div
-        className={`${
-          showNav ? "hidden invisible" : "visible flex"
-        } flex-col justify-center items-center`}
-      >
-        <p className="text-2xl primary-font">Services</p>
+      <div>
+        <div>
+          <p>Services</p>
+          <p>
+            At Tycole Media & Print, we specialize in high-quality printing
+            solutions that bring your brand to life. With a commitment to
+            Passion, Pride, and Precision, we ensure every print product meets
+            the highest standards.
+          </p>
+        </div>
+        <div>
+          <p>Our Printing Services</p>
+          <ul>
+            <li>
+              Brochures – Professionally designed and printed brochures that
+              showcase your business with style.
+            </li>
+            <li>
+              Boxes – Custom packaging solutions tailored to your brand’s needs.
+            </li>
+            <li>
+              Business Cards – High-quality business cards that leave a lasting
+              impression.
+            </li>
+            <li>
+              Desk Pads – Practical and stylish desk pads for businesses and
+              professionals.
+            </li>
+            <li>
+              Diaries – Customized diaries to keep you organized in style.
+            </li>
+          </ul>
+        </div>
+        <div></div>
       </div>
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
         <ul className="w-full h-dvh flex flex-col justify-center px-14 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
