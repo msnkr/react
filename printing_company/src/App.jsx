@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import logo from "../public/tycole-logo.png";
 import ServicesComponent from "./components/servicesComponent";
 import FormComponent from "./components/FormComponent";
-import ServicePage from "./pages/ServicePage";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
