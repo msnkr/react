@@ -1,8 +1,10 @@
 import "./App.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../public/tycole-logo.png";
 import ServicesComponent from "./components/servicesComponent";
 import FormComponent from "./components/FormComponent";
+import ServicePage from "./pages/ServicePage";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -55,7 +57,7 @@ function App() {
                   High-quality litho printing for brochures, business cards,
                   boxes, desk pads, diaries, and more.
                 </p>
-                <button className="border-2 px-4 py-2 font-semibold cta-color">
+                <button className="border-2 px-4 py-2 font-semibold cta-color cursor-pointer">
                   Get a quote
                 </button>
               </div>
@@ -190,7 +192,9 @@ function App() {
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
         <ul className="w-full h-dvh flex flex-col justify-center px-14 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
           <li className="cursor-pointer">Home</li>
-          <li className="cursor-pointer">Services</li>
+          <Link to={"/services/"}>
+            <li className="cursor-pointer">Services</li>
+          </Link>
           <li className="cursor-pointer">About Us</li>
           <li className="cursor-pointer">Contact</li>
         </ul>
