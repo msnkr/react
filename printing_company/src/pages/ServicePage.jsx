@@ -40,8 +40,10 @@ const ServicePage = () => {
           </div>
         </div>
       </div>
-      <div className={`${showNav ? "hidden invisible" : "block visible"} p-14`}>
-        <div>
+      <div
+        className={`${showNav ? "hidden invisible" : "block visible"} mb-20`}
+      >
+        <div className="my-8 space-y-2 p-8">
           <p className="text-2xl primary-font">Services</p>
           <p>
             At Tycole Media & Print, we specialize in high-quality printing
@@ -50,30 +52,69 @@ const ServicePage = () => {
             the highest standards.
           </p>
         </div>
-        <div>
+        <div className="space-y-2 p-8">
           <p className="text-2xl primary-font">Our Printing Services</p>
-          <ul>
+          <ul className="space-y-2">
             <li>
-              Brochures – Professionally designed and printed brochures that
-              showcase your business with style.
+              <span className="font-semibold"> Brochures</span> – Professionally
+              designed and printed brochures that showcase your business with
+              style.
             </li>
             <li>
-              Boxes – Custom packaging solutions tailored to your brand’s needs.
+              <span className="font-semibold">Boxes</span> – Custom packaging
+              solutions tailored to your brand’s needs.
             </li>
             <li>
-              Business Cards – High-quality business cards that leave a lasting
-              impression.
+              <span className="font-semibold">Business Cards</span> –
+              High-quality business cards that leave a lasting impression.
             </li>
             <li>
-              Desk Pads – Practical and stylish desk pads for businesses and
-              professionals.
+              <span className="font-semibold">Desk Pads</span> – Practical and
+              stylish desk pads for businesses and professionals.
             </li>
             <li>
-              Diaries – Customized diaries to keep you organized in style.
+              <span className="font-semibold">Diaries</span> – Customized
+              diaries to keep you organized in style.
             </li>
           </ul>
         </div>
-        <div></div>
+        <div className="mt-12 relative">
+          <div>
+            <img className="w-full h-[350px]" />
+            <div className="absolute top-1/2 left-8 cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                />
+              </svg>
+            </div>
+            <div className="absolute top-1/2 right-8 cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
         <ul className="w-full h-dvh flex flex-col justify-center px-14 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
