@@ -194,7 +194,9 @@ function App() {
           <Link to={"/services/"}>
             <li className="cursor-pointer">Services</li>
           </Link>
-          <li className="cursor-pointer">About Us</li>
+          <Link to={"/about-us/"}>
+            <li className="cursor-pointer">About Us</li>
+          </Link>
           <li className="cursor-pointer">Contact</li>
         </ul>
         <div

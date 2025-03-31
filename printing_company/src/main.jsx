@@ -5,10 +5,12 @@ import "./index.css";
 import App from "./App.jsx";
 
 import ServicePage from "./pages/ServicePage.jsx";
+import AboutUsPage from "./pages/AboutUsPage.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/services/", element: <ServicePage /> },
+  { path: "/about-us/", element: <AboutUsPage /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

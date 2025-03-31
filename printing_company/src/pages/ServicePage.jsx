@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 
 const ServicePage = () => {
   const [showNav, setShowNav] = useState(false);
+
   const handleNav = () => {
     setShowNav((prev) => {
       return !prev;
     });
   };
+
   return (
     <div>
       <div
@@ -43,7 +45,7 @@ const ServicePage = () => {
       <div
         className={`${showNav ? "hidden invisible" : "block visible"} mb-20`}
       >
-        <div className="my-8 space-y-2 p-8">
+        <div className="services my-8 space-y-2 p-8">
           <p className="text-2xl primary-font">Services</p>
           <p>
             At Tycole Media & Print, we specialize in high-quality printing
@@ -52,7 +54,7 @@ const ServicePage = () => {
             the highest standards.
           </p>
         </div>
-        <div className="space-y-2 p-8">
+        <div className="printing-services space-y-2 p-8">
           <p className="text-2xl primary-font">Our Printing Services</p>
           <ul className="space-y-2">
             <li>
@@ -78,7 +80,7 @@ const ServicePage = () => {
             </li>
           </ul>
         </div>
-        <div className="mt-12 relative">
+        <div className="carousel mt-12 relative">
           <div>
             <img className="w-full h-[350px]" />
             <div className="absolute top-1/2 left-8 cursor-pointer">
@@ -115,6 +117,16 @@ const ServicePage = () => {
             </div>
           </div>
         </div>
+        <div className="mt-8 p-8">
+          Let’s Print Your Vision! Explore our{" "}
+          <span className="font-semibold underline underline-offset-8 cursor-pointer">
+            services
+          </span>{" "}
+          or Get a{" "}
+          <span className="font-semibold underline underline-offset-8 cursor-pointer">
+            Free Quote Today!
+          </span>
+        </div>
       </div>
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
         <ul className="w-full h-dvh flex flex-col justify-center px-14 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
@@ -124,7 +136,9 @@ const ServicePage = () => {
           <Link to={"/services/"}>
             <li className="cursor-pointer">Services</li>
           </Link>
-          <li className="cursor-pointer">About Us</li>
+          <Link to={"/about-us/"}>
+            <li className="cursor-pointer">About Us</li>
+          </Link>
           <li className="cursor-pointer">Contact</li>
         </ul>
         <div
