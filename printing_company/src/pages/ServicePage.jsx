@@ -1,9 +1,14 @@
 import logo from "../../public/tycole-logo.png";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const ServicePage = ({ nav }) => {
-  const showNav = false;
-
-  const handleNav = () => {};
+const ServicePage = () => {
+  const [showNav, setShowNav] = useState(false);
+  const handleNav = () => {
+    setShowNav((prev) => {
+      return !prev;
+    });
+  };
   return (
     <div>
       <div
@@ -12,9 +17,11 @@ const ServicePage = ({ nav }) => {
         } duration-500`}
       >
         <div className="navbar flex justify-between items-center p-14">
-          <div>
-            <img src={logo} className="w-40 flex cursor-pointer" />
-          </div>
+          <Link to={"/"}>
+            <div>
+              <img src={logo} className="w-40 flex cursor-pointer" />
+            </div>
+          </Link>
           <div className="cursor-pointer" onClick={handleNav}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,8 +40,43 @@ const ServicePage = ({ nav }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div
+        className={`${
+          showNav ? "hidden invisible" : "visible flex"
+        } flex-col justify-center items-center`}
+      >
         <p className="text-2xl primary-font">Services</p>
+      </div>
+      <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
+        <ul className="w-full h-dvh flex flex-col justify-center px-14 space-y-12 font-semibold text-lg primary-font bg-navbar-open">
+          <Link to={"/"}>
+            <li className="cursor-pointer">Home</li>
+          </Link>
+          <Link to={"/services/"}>
+            <li className="cursor-pointer">Services</li>
+          </Link>
+          <li className="cursor-pointer">About Us</li>
+          <li className="cursor-pointer">Contact</li>
+        </ul>
+        <div
+          onClick={handleNav}
+          className="absolute top-18 right-18 cursor-pointer hover:animate-spin"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   );
