@@ -48,37 +48,199 @@ const ServicePage = () => {
         <div className="services my-8 space-y-2 p-8">
           <p className="text-2xl primary-font">Services</p>
           <p>
-            At Tycole Media & Print, we specialize in high-quality printing
-            solutions that bring your brand to life. With a commitment to
-            Passion, Pride, and Precision, we ensure every print product meets
-            the highest standards.
+            At Tycole Media & Print, we offer a diverse range of high-quality
+            printing solutions designed to meet the needs of businesses,
+            individuals, and organizations. Whether you require marketing
+            materials, corporate stationery, or custom packaging, our advanced
+            printing technology and expertise ensure professional results every
+            time.
           </p>
         </div>
-        <div className="printing-services space-y-2 p-8">
-          <p className="text-2xl primary-font">Our Printing Services</p>
-          <ul className="space-y-2">
-            <li>
-              <span className="font-semibold"> Brochures</span> – Professionally
-              designed and printed brochures that showcase your business with
-              style.
-            </li>
-            <li>
-              <span className="font-semibold">Boxes</span> – Custom packaging
-              solutions tailored to your brand’s needs.
-            </li>
-            <li>
-              <span className="font-semibold">Business Cards</span> –
-              High-quality business cards that leave a lasting impression.
-            </li>
-            <li>
-              <span className="font-semibold">Desk Pads</span> – Practical and
-              stylish desk pads for businesses and professionals.
-            </li>
-            <li>
-              <span className="font-semibold">Diaries</span> – Customized
-              diaries to keep you organized in style.
-            </li>
-          </ul>
+        <div className="printing-services px-8 space-y-8">
+          <div>
+            <p className="text-2xl primary-font">
+              1. Commercial & Corporate Printing
+            </p>
+            <p>
+              We help businesses enhance their brand identity with high-end
+              corporate printing solutions, ensuring professionalism and
+              consistency across all materials.
+            </p>
+            <ul>
+              <li>
+                <span className="font-semibold">Business Cards</span> – Make a
+                lasting first impression with premium-quality business cards
+                available in matte, gloss, embossed, or foil finishes.
+              </li>
+              <li>
+                <span className="font-semibold">Letterheads & Envelopes</span> –
+                Elevate your company’s correspondence with custom-branded
+                letterheads and envelopes.
+              </li>
+              <li>
+                <span className="font-semibold">
+                  Annual Reports & Company Profiles
+                </span>{" "}
+                – Professionally printed reports, ideal for investors,
+                stakeholders, and internal use.
+              </li>
+              <li>
+                <span className="font-semibold">Presentation Folders</span> –
+                Keep your documents organized and create a polished, branded
+                look.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-2xl primary-font">
+              2. Marketing & Promotional Materials
+            </p>
+            <p>
+              A strong marketing presence starts with effective print
+              advertising. Our range of marketing materials is designed to help
+              you stand out.
+            </p>
+            <ul>
+              <li>
+                <span className="font-semibold">Brochures & Flyers</span> –
+                Informative and visually appealing print materials tailored to
+                promote your products or services.
+              </li>
+              <li>
+                <span className="font-semibold">Posters & Banners</span> –
+                High-quality, large-format prints for events, advertising, or
+                in-store promotions.
+              </li>
+              <li>
+                <span className="font-semibold">Stickers & Labels</span> -
+                Custom printed labels and stickers, perfect for branding,
+                product packaging, or promotional giveaways.
+              </li>
+              <li>
+                <span className="font-semibold">Calenders</span> – Branded wall
+                and desk calendars, great for corporate gifting and year-round
+                brand exposure.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-2xl primary-font">
+              3. Custom Packaging Solutions
+            </p>
+            <p>
+              Your packaging plays a crucial role in how your brand is
+              perceived. We provide tailored packaging solutions that combine
+              functionality with design excellence.
+            </p>
+            <ul>
+              <li>
+                <span className="font-semibold">Custom Printed Boxes</span> –
+                Ideal for retail, e-commerce, and product packaging.
+              </li>
+              <li>
+                <span className="font-semibold">Gift Bags & Packaging </span> –
+                Stylish and durable gift packaging for corporate and personal
+                use.
+              </li>
+              <li>
+                <span className="font-semibold">Swing Tags</span> – Essential
+                for fashion brands and retail businesses looking for premium
+                product tags.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-2xl primary-font">
+              4. Office & Stationery Printing
+            </p>
+            <p>
+              Boost workplace efficiency and professionalism with custom-printed
+              office supplies.
+            </p>
+            <ul>
+              <li>
+                <span className="font-semibold">Notepads & Desk Pads</span> –
+                Branded stationery to enhance office organization.
+              </li>
+              <li>
+                <span className="font-semibold">Diaries & Planners</span> –
+                Custom-branded organizational tools for businesses and
+                professionals.
+              </li>
+              <li>
+                <span className="font-semibold">Forms & NCR Books</span> –
+                Carbonless copy forms for invoices, receipts, and order books.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-2xl primary-font">
+              1. Commercial & Corporate Printing
+            </p>
+            <p>
+              We help businesses enhance their brand identity with high-end
+              corporate printing solutions, ensuring professionalism and
+              consistency across all materials.
+            </p>
+            <ul>
+              <li>
+                <span className="font-semibold">Business Cards</span> – Make a
+                lasting first impression with premium-quality business cards
+                available in matte, gloss, embossed, or foil finishes.
+              </li>
+              <li>
+                <span className="font-semibold">Letterheads & Envelopes</span> –
+                Elevate your company’s correspondence with custom-branded
+                letterheads and envelopes.
+              </li>
+              <li>
+                <span className="font-semibold">
+                  Annual Reports & Company Profiles
+                </span>{" "}
+                – Professionally printed reports, ideal for investors,
+                stakeholders, and internal use.
+              </li>
+              <li>
+                <span className="font-semibold">Presentation Folders</span> –
+                Keep your documents organized and create a polished, branded
+                look.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-2xl primary-font">
+              1. Commercial & Corporate Printing
+            </p>
+            <p>
+              We help businesses enhance their brand identity with high-end
+              corporate printing solutions, ensuring professionalism and
+              consistency across all materials.
+            </p>
+            <ul>
+              <li>
+                <span className="font-semibold">Business Cards</span> – Make a
+                lasting first impression with premium-quality business cards
+                available in matte, gloss, embossed, or foil finishes.
+              </li>
+              <li>
+                <span className="font-semibold">Letterheads & Envelopes</span> –
+                Elevate your company’s correspondence with custom-branded
+                letterheads and envelopes.
+              </li>
+              <li>
+                <span className="font-semibold">
+                  Annual Reports & Company Profiles
+                </span>{" "}
+                – Professionally printed reports, ideal for investors,
+                stakeholders, and internal use.
+              </li>
+              <li>
+                <span className="font-semibold">Presentation Folders</span> –
+                Keep your documents organized and create a polished, branded
+                look.
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="carousel mt-12 relative">
           <div>
