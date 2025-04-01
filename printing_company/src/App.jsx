@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import ServicesComponent from "./components/servicesComponent";
@@ -33,9 +34,11 @@ function App() {
                   High-quality litho printing for brochures, business cards,
                   boxes, desk pads, diaries, and more.
                 </p>
-                <button className="border-2 px-4 py-2 font-semibold cta-color cursor-pointer">
-                  Get a quote
-                </button>
+                <Link to={"/contact-us/"}>
+                  <button className="border-2 px-4 py-2 font-semibold cta-color cursor-pointer">
+                    Get a quote
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -132,28 +135,22 @@ function App() {
               </div>
               <div className="mt-8">
                 Let’s Print Your Vision! Explore our{" "}
-                <span className="font-semibold underline underline-offset-8 cursor-pointer">
-                  services
-                </span>{" "}
+                <Link to={"/services/"}>
+                  <span className="font-semibold underline underline-offset-8 cursor-pointer">
+                    services
+                  </span>
+                </Link>{" "}
                 or Get a{" "}
-                <span className="font-semibold underline underline-offset-8 cursor-pointer">
-                  Free Quote Today!
-                </span>
+                <Link to={"/contact-us/"}>
+                  <span className="font-semibold underline underline-offset-8 cursor-pointer">
+                    Free Quote Today!
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-        <div className="footer-section">
-          <div className="p-14 space-y-2">
-            <p>
-              16 Something Road <br />
-              Somewhereburg, Johannesburg
-              <br />
-              Gauteng 2000
-            </p>
-            <p>071 234 5678</p>
-            <p>FakeEmail@Fake.com</p>
-          </div>
+        <div className="mt-12">
           <div>
             <FormComponent />
           </div>

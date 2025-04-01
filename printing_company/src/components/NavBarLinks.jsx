@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import cancelIcon from "../assets/cancel-icon.svg";
+
 const NavBarLinks = ({ clicked }) => {
   return (
     <div>
@@ -21,22 +23,9 @@ const NavBarLinks = ({ clicked }) => {
       <div>
         <div
           onClick={() => clicked()}
-          className="absolute top-18 right-18 cursor-pointer hover:animate-spin"
+          className="absolute top-18 right-18 cursor-pointer"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="size-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
-          </svg>
+          <img src={cancelIcon} alt="cancel-icon" className="w-8" />
         </div>
       </div>
     </div>
