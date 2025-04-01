@@ -17,11 +17,7 @@ function App() {
 
   return (
     <div>
-      <div
-        className={`${
-          showNav ? "invisible hidden" : "visible block"
-        } duration-500`}
-      >
+      <div className={`${showNav ? "invisible hidden" : "visible block"}`}>
         <NavBar clicked={handleNav} />
         <div className="body space-y-12">
           <div className="hero-section">

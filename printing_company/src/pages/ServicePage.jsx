@@ -14,11 +14,7 @@ const ServicePage = () => {
 
   return (
     <div>
-      <div
-        className={`${
-          showNav ? "invisible hidden" : "visible block"
-        } duration-500`}
-      >
+      <div className={`${showNav ? "invisible hidden" : "visible block"}`}>
         <NavBar clicked={handleNav} />
       </div>
       <div
