@@ -9,7 +9,7 @@ const NavBar = ({ clicked }) => {
           <img src={logo} className="w-40 flex cursor-pointer" />
         </div>
       </Link>
-      <div className="cursor-pointer" onClick={() => clicked}>
+      <div className="cursor-pointer" onClick={() => clicked()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
