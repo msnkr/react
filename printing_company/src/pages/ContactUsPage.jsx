@@ -18,16 +18,16 @@ const ContactUsPage = () => {
         <NavBar clicked={handleNav} />
       </div>
       <div className="mb-20">
-        <div className="px-12">
+        <div className="px-12 py-8">
           <p>
             At Tycole Media & Print, we’re here to assist you with all your
             printing needs. Whether you have a question, need a quote, or want
             to discuss a custom project, our team is ready to help.
           </p>
         </div>
-        <div className="px-12">
+        <div className="px-12 space-y-4">
           <p className="text-2xl primary-font">Get in touch</p>
-          <ul>
+          <ul className="space-y-4">
             <li>
               <div className="flex">
                 <svg
@@ -138,7 +138,7 @@ const ContactUsPage = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="space-y-4 mt-12">
           <p className="text-2xl primary-font px-12">Request A Quote</p>
           <FormComponent />
         </div>
