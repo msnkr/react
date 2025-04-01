@@ -57,7 +57,7 @@ const ServicePage = () => {
           </p>
         </div>
         <div className="printing-services px-8 space-y-8">
-          <div>
+          <div className="space-y-4">
             <p className="text-2xl primary-font">
               1. Commercial & Corporate Printing
             </p>
@@ -91,7 +91,7 @@ const ServicePage = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="space-y-4">
             <p className="text-2xl primary-font">
               2. Marketing & Promotional Materials
             </p>
@@ -123,7 +123,7 @@ const ServicePage = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="space-y-4">
             <p className="text-2xl primary-font">
               3. Custom Packaging Solutions
             </p>
@@ -149,7 +149,7 @@ const ServicePage = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="space-y-4">
             <p className="text-2xl primary-font">
               4. Office & Stationery Printing
             </p>
@@ -173,71 +173,56 @@ const ServicePage = () => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="space-y-4">
             <p className="text-2xl primary-font">
-              1. Commercial & Corporate Printing
+              5. Large Format & Signage Printing
             </p>
             <p>
-              We help businesses enhance their brand identity with high-end
-              corporate printing solutions, ensuring professionalism and
-              consistency across all materials.
+              Make a bold statement with large-format printing that demands
+              attention.
             </p>
             <ul>
               <li>
-                <span className="font-semibold">Business Cards</span> – Make a
-                lasting first impression with premium-quality business cards
-                available in matte, gloss, embossed, or foil finishes.
+                <span className="font-semibold">Vehicle Branding</span> – Custom
+                decals and wraps to turn your company vehicles into mobile
+                billboards.
               </li>
               <li>
-                <span className="font-semibold">Letterheads & Envelopes</span> –
-                Elevate your company’s correspondence with custom-branded
-                letterheads and envelopes.
+                <span className="font-semibold">Wall & Window Graphics </span> –
+                Transform your office or storefront with high-impact wall murals
+                and window decals.
               </li>
               <li>
-                <span className="font-semibold">
-                  Annual Reports & Company Profiles
-                </span>{" "}
-                – Professionally printed reports, ideal for investors,
-                stakeholders, and internal use.
-              </li>
-              <li>
-                <span className="font-semibold">Presentation Folders</span> –
-                Keep your documents organized and create a polished, branded
-                look.
+                <span className="font-semibold">Signage & Billboards</span> –
+                Durable, weather-resistant signage solutions for outdoor and
+                indoor advertising.
               </li>
             </ul>
           </div>
-          <div>
+          <div className="space-y-4">
             <p className="text-2xl primary-font">
-              1. Commercial & Corporate Printing
+              6. Specialty & Custom Printing
             </p>
             <p>
-              We help businesses enhance their brand identity with high-end
-              corporate printing solutions, ensuring professionalism and
-              consistency across all materials.
+              Need something unique? We offer custom printing services to bring
+              your vision to life.
             </p>
             <ul>
               <li>
-                <span className="font-semibold">Business Cards</span> – Make a
-                lasting first impression with premium-quality business cards
-                available in matte, gloss, embossed, or foil finishes.
+                <span className="font-semibold">Embossing & Foil Stamping</span>{" "}
+                – Add a touch of elegance to invitations, business cards, and
+                more.
               </li>
               <li>
-                <span className="font-semibold">Letterheads & Envelopes</span> –
-                Elevate your company’s correspondence with custom-branded
-                letterheads and envelopes.
+                <span className="font-semibold">UV Spot Varnish</span> –
+                Highlight specific elements of your design with a glossy, raised
+                finish.
               </li>
               <li>
                 <span className="font-semibold">
-                  Annual Reports & Company Profiles
+                  Die-Cutting & Custom Shapes
                 </span>{" "}
-                – Professionally printed reports, ideal for investors,
-                stakeholders, and internal use.
-              </li>
-              <li>
-                <span className="font-semibold">Presentation Folders</span> –
-                Keep your documents organized and create a polished, branded
-                look.
+                – Create uniquely shaped prints to stand out from the crowd.
               </li>
             </ul>
           </div>
