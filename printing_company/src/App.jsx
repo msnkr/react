@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import ServicesComponent from "./components/servicesComponent";
 import FormComponent from "./components/FormComponent";
 import NavBarLinks from "./components/NavBarLinks";
+import FooterComponent from "./components/FooterComponent";
 
 function App() {
   const [showNav, setShowNav] = useState(false);
@@ -154,11 +155,8 @@ function App() {
           <div>
             <FormComponent />
           </div>
-          <div className="mt-8 flex">
-            <div className="w-full h-[100px] bg-cyan-500"></div>
-            <div className="w-full h-[100px] bg-pink-500"></div>
-            <div className="w-full h-[100px] bg-yellow-500"></div>
-            <div className="w-full h-[100px] bg-black"></div>
+          <div>
+            <FooterComponent />
           </div>
         </div>
       </div>
