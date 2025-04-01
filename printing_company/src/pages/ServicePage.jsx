@@ -66,7 +66,7 @@ const ServicePage = () => {
               corporate printing solutions, ensuring professionalism and
               consistency across all materials.
             </p>
-            <ul>
+            <ul className="list-disc list-inside">
               <li>
                 <span className="font-semibold">Business Cards</span> – Make a
                 lasting first impression with premium-quality business cards
@@ -100,7 +100,7 @@ const ServicePage = () => {
               advertising. Our range of marketing materials is designed to help
               you stand out.
             </p>
-            <ul>
+            <ul className="list-disc list-inside">
               <li>
                 <span className="font-semibold">Brochures & Flyers</span> –
                 Informative and visually appealing print materials tailored to
@@ -132,7 +132,7 @@ const ServicePage = () => {
               perceived. We provide tailored packaging solutions that combine
               functionality with design excellence.
             </p>
-            <ul>
+            <ul className="list-disc list-inside">
               <li>
                 <span className="font-semibold">Custom Printed Boxes</span> –
                 Ideal for retail, e-commerce, and product packaging.
@@ -157,7 +157,7 @@ const ServicePage = () => {
               Boost workplace efficiency and professionalism with custom-printed
               office supplies.
             </p>
-            <ul>
+            <ul className="list-disc list-inside">
               <li>
                 <span className="font-semibold">Notepads & Desk Pads</span> –
                 Branded stationery to enhance office organization.
@@ -181,7 +181,7 @@ const ServicePage = () => {
               Make a bold statement with large-format printing that demands
               attention.
             </p>
-            <ul>
+            <ul className="list-disc list-inside">
               <li>
                 <span className="font-semibold">Vehicle Branding</span> – Custom
                 decals and wraps to turn your company vehicles into mobile
@@ -207,7 +207,7 @@ const ServicePage = () => {
               Need something unique? We offer custom printing services to bring
               your vision to life.
             </p>
-            <ul>
+            <ul className="list-disc list-inside">
               <li>
                 <span className="font-semibold">Embossing & Foil Stamping</span>{" "}
                 – Add a touch of elegance to invitations, business cards, and
