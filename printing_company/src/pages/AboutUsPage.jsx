@@ -17,7 +17,7 @@ const AboutUsPage = () => {
     <div>
       <div className={`${showNav ? "hidden invisible" : "block visible"}`}>
         <NavBar clicked={handleNav} />
-        <div className="content-section mb-20">
+        <div className="content-section">
           <div className="px-12 py-4 space-y-4">
             <p className="text-2xl primary-font">
               The Tycole Printing Process: Crafting Perfection in Every Print

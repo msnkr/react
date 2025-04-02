@@ -18,9 +18,7 @@ const ServicePage = () => {
       <div className={`${showNav ? "invisible hidden" : "visible block"}`}>
         <NavBar clicked={handleNav} />
       </div>
-      <div
-        className={`${showNav ? "hidden invisible" : "block visible"} mb-20`}
-      >
+      <div className={`${showNav ? "hidden invisible" : "block visible"}`}>
         <div className="services my-8 space-y-2 p-8">
           <p className="text-2xl primary-font">Services</p>
           <p>
