@@ -10,10 +10,8 @@ import FooterComponent from "./components/FooterComponent";
 function App() {
   return (
     <div>
-      <div>
-        <div>
-          <NavBar />
-        </div>
+      <div className="navbar">
+        <NavBar />
       </div>
       <div className="body">
         <div className="hero-section">
@@ -135,14 +133,12 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="">
-        <div>
+        <div className="contact-section">
           <FormComponent />
         </div>
-        <div>
-          <FooterComponent />
-        </div>
+      </div>
+      <div className="footer-section">
+        <FooterComponent />
       </div>
     </div>
   );
