@@ -32,6 +32,16 @@ const AboutUsPage = () => {
           </div>
           <div className="px-12 py-4 space-y-4">
             <p className="text-2xl primary-font">
+              Step 1: Consultation & Concept Development
+            </p>
+            <p>
+              We help businesses enhance their brand identity with high-end
+              corporate printing solutions, ensuring professionalism and
+              consistency across all materials.
+            </p>
+          </div>
+          <div className="px-12 py-4 space-y-4">
+            <p className="text-2xl primary-font">
               Step 2: Design & Prepress Preparation
             </p>
             <p>
