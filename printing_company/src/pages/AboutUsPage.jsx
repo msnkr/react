@@ -2,6 +2,7 @@ import { use, useState } from "react";
 
 import NavBarLinks from "../components/NavBarLinks";
 import NavBar from "../components/NavBar";
+import FooterComponent from "../components/FooterComponent";
 
 const AboutUsPage = () => {
   const [showNav, setShowNav] = useState(false);
@@ -109,6 +110,7 @@ const AboutUsPage = () => {
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
         <NavBarLinks clicked={handleNav} />
       </div>
+      <FooterComponent />
     </div>
   );
 };

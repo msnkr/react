@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import NavBar from "../components/NavBar";
 import NavBarLinks from "../components/NavBarLinks";
+import FooterComponent from "../components/FooterComponent";
 
 const ServicePage = () => {
   const [showNav, setShowNav] = useState(false);
@@ -253,6 +254,7 @@ const ServicePage = () => {
       <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
         <NavBarLinks clicked={handleNav} />
       </div>
+      <FooterComponent />
     </div>
   );
 };
