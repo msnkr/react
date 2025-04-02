@@ -1,43 +1,46 @@
+import { useState } from "react";
 import images from "./images";
 
-const handleNext = () => {};
+import chevronRight from "../assets/chevron-right-icon.svg";
+import chevronLeft from "../assets/chevron-left-icon.svg";
 
 const CarouselComponent = () => {
+  const [imageState, setImageState] = useState(0);
+
+  const handleNext = () => {
+    if (imageState !== images.length - 1) {
+      setImageState(imageState + 1);
+    } else {
+      setImageState(0);
+    }
+  };
+
+  const handlePrev = () => {
+    if (imageState !== 0) {
+      setImageState(imageState - 1);
+    } else {
+      setImageState(0);
+    }
+  };
+
   return (
     <div className="carousel mt-12 relative">
       <div>
-        <img className="w-full h-[400px] object-cover" src={images[3]} />
-        <div className="absolute top-1/2 left-8 cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 19.5 8.25 12l7.5-7.5"
-            />
-          </svg>
+        <img
+          className="w-full h-[400px] object-cover"
+          src={images[imageState]}
+        />
+        <div
+          className="absolute top-1/2 left-8 cursor-pointer"
+          onClick={handlePrev}
+        >
+          <img className="w-12" src={chevronLeft} alt="left-icon" />
         </div>
-        <div className="absolute top-1/2 right-8 cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-            />
-          </svg>
+        <div
+          className="absolute top-1/2 right-8 cursor-pointer"
+          onClick={handleNext}
+        >
+          <img className="w-12" src={chevronRight} alt="right-icon" />
         </div>
       </div>
     </div>
