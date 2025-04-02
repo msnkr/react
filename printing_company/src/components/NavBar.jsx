@@ -4,7 +4,7 @@ import menuIcon from "../assets/menu-icon.svg";
 
 const NavBar = ({ clicked }) => {
   return (
-    <div className="navbar flex justify-between items-center p-14">
+    <div className="navbar flex justify-between items-center">
       <Link to={"/"}>
         <div>
           <img src={logo} className="w-40 flex cursor-pointer" />

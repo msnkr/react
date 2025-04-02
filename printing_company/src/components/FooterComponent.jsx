@@ -7,10 +7,10 @@ import emailIcon from "../assets/email-icon.svg";
 const FooterComponent = () => {
   return (
     <div>
-      <div className="px-12 py-8 mt-4">
-        <ul className="space-y-6">
+      <div className="">
+        <ul className="">
           <li>
-            <div className="flex space-x-2 space-y-2">
+            <div className="flex ">
               <img src={pinIcon} alt="location-icon" />
               <p>Address:</p>
             </div>
@@ -22,28 +22,28 @@ const FooterComponent = () => {
             </p>
           </li>
           <li>
-            <div className="flex space-x-2 space-y-2">
+            <div className="flex ">
               <img src={phoneIcon} alt="phone-icon" />
               <p> Telephone:</p>
             </div>
             <p>071 234 5678</p>
           </li>
           <li>
-            <div className="flex space-x-2 space-y-2">
+            <div className="flex ">
               <img src={faxIcon} alt="fax-icon" />
               <p>Fax:</p>
             </div>
             <p>011 345 6789</p>
           </li>
           <li>
-            <div className="flex space-x-2 space-y-2">
+            <div className="flex ">
               <img src={emailIcon} alt="email-icon" />
               <p> Email:</p>
             </div>
             <p>fake@fakeemail.com</p>
           </li>
           <li>
-            <div className="flex space-x-2 space-y-2">
+            <div className="flex ">
               <img src={timeIcon} alt="time-icon" />
               <p>Business Hours:</p>
             </div>

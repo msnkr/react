@@ -22,19 +22,19 @@ const ContactUsPage = () => {
     <div>
       <div className={`${showNav ? "hidden invisible" : "block visible"}`}>
         <NavBar clicked={handleNav} />
-        <div className="mb-20">
-          <div className="px-12 py-8">
+        <div className="">
+          <div className="">
             <p>
               At Tycole Media & Print, we’re here to assist you with all your
               printing needs. Whether you have a question, need a quote, or want
               to discuss a custom project, our team is ready to help.
             </p>
           </div>
-          <div className="px-12 space-y-4">
-            <p className="text-2xl primary-font">Get in touch</p>
-            <ul className="space-y-6">
+          <div className="">
+            <p className=" primary-font">Get in touch</p>
+            <ul className="">
               <li>
-                <div className="flex space-x-2 space-y-2">
+                <div className="flex ">
                   <img src={pinIcon} alt="location-icon" />
                   <p>Address:</p>
                 </div>
@@ -46,28 +46,28 @@ const ContactUsPage = () => {
                 </p>
               </li>
               <li>
-                <div className="flex space-x-2 space-y-2">
+                <div className="flex ">
                   <img src={phoneIcon} alt="phone-icon" />
                   <p> Telephone:</p>
                 </div>
                 <p>071 234 5678</p>
               </li>
               <li>
-                <div className="flex space-x-2 space-y-2">
+                <div className="flex ">
                   <img src={faxIcon} alt="fax-icon" />
                   <p>Fax:</p>
                 </div>
                 <p>011 345 6789</p>
               </li>
               <li>
-                <div className="flex space-x-2 space-y-2">
+                <div className="flex ">
                   <img src={emailIcon} alt="email-icon" />
                   <p> Email:</p>
                 </div>
                 <p>fake@fakeemail.com</p>
               </li>
               <li>
-                <div className="flex space-x-2 space-y-2">
+                <div className="flex ">
                   <img src={timeIcon} alt="time-icon" />
                   <p>Business Hours:</p>
                 </div>
@@ -79,8 +79,8 @@ const ContactUsPage = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-4 mt-12">
-            <p className="text-2xl primary-font px-12">Request A Quote</p>
+          <div className="">
+            <p className=" primary-font ">Request A Quote</p>
             <FormComponent />
           </div>
         </div>

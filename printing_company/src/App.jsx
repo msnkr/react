@@ -21,7 +21,7 @@ function App() {
     <div>
       <div className={`${showNav ? "invisible hidden" : "visible block"}`}>
         <NavBar clicked={handleNav} />
-        <div className="body space-y-12">
+        <div className="body">
           <div className="hero-section">
             <div className="relative">
               <div className="absolute top-0 left-0 w-full h-[450px] bg-black opacity-80 "></div>
@@ -29,14 +29,14 @@ function App() {
                 className="w-full h-[450px] object-cover"
                 src="https://images.pexels.com/photos/7653097/pexels-photo-7653097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               />
-              <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center p-14 space-y-12 text-center">
+              <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center text-center">
                 <p>Passion, Pride and Precison in every Print</p>
-                <p className="text-xl font-semibold primary-font">
+                <p className="text-xl primary-font">
                   High-quality litho printing for brochures, business cards,
                   boxes, desk pads, diaries, and more.
                 </p>
                 <Link to={"/contact-us/"}>
-                  <button className="border-2 px-4 py-2 font-semibold cta-color cursor-pointer">
+                  <button className="border-2 cta-color cursor-pointer">
                     Get a quote
                   </button>
                 </Link>
@@ -44,8 +44,8 @@ function App() {
             </div>
           </div>
           <div className="services-section">
-            <div className="px-14 space-y-8">
-              <p className="text-2xl primary-font">Our Services</p>
+            <div className="">
+              <p className=" primary-font">Our Services</p>
               <p>
                 At Tycole Media & Print, we specialize in high-quality litho
                 printing to meet your business and personal printing needs.
@@ -53,9 +53,7 @@ function App() {
                 packaging solutions, we ensure every print is crafted with
                 precision and excellence.
               </p>
-              <p className="text-2xl primary-font">
-                Our printing services include{" "}
-              </p>
+              <p className=" primary-font">Our printing services include </p>
               <ServicesComponent
                 text={"Brochures and Flyers"}
                 image={
@@ -95,31 +93,24 @@ function App() {
             </div>
           </div>
           <div className="about-section">
-            <div className="px-14">
-              <p className="text-2xl mb-8 primary-font">Why choose us</p>
-              <div className="space-y-4">
+            <div className="">
+              <p className=" primary-font">Why choose us</p>
+              <div className="">
                 <p>
-                  <span className="font-semibold primary-font">
-                    Quality & Precision
-                  </span>{" "}
-                  – We use advanced litho printing technology to ensure sharp,
+                  <span className="primary-font">Quality & Precision</span> – We
+                  use advanced litho printing technology to ensure sharp,
                   vibrant prints.
                 </p>
                 <p>
-                  <span className="font-semibold primary-font">
-                    Reliable Service
-                  </span>{" "}
-                  – We take pride in delivering on time and exceeding
-                  expectations.
+                  <span className="primary-font">Reliable Service</span> – We
+                  take pride in delivering on time and exceeding expectations.
                 </p>
                 <p>
-                  <span className="font-semibold primary-font">
-                    Affordable Pricing
-                  </span>{" "}
-                  – Get high-quality prints at competitive rates.
+                  <span className="primary-font">Affordable Pricing</span> – Get
+                  high-quality prints at competitive rates.
                 </p>
               </div>
-              <div className="mt-12">
+              <div className="">
                 <p>
                   At Tycole Media & Print, we bring your ideas to life with
                   high-quality litho printing, ensuring every project reflects
@@ -134,16 +125,16 @@ function App() {
                   flexible printing solutions tailored to your unique needs.
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="">
                 Let’s Print Your Vision! Explore our{" "}
                 <Link to={"/services/"}>
-                  <span className="font-semibold underline underline-offset-8 cursor-pointer">
+                  <span className="underline underline-offset-8 cursor-pointer">
                     services
                   </span>
                 </Link>{" "}
                 or Get a{" "}
                 <Link to={"/contact-us/"}>
-                  <span className="font-semibold underline underline-offset-8 cursor-pointer">
+                  <span className="underline underline-offset-8 cursor-pointer">
                     Free Quote Today!
                   </span>
                 </Link>
@@ -151,7 +142,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="mt-12">
+        <div className="">
           <div>
             <FormComponent />
           </div>
