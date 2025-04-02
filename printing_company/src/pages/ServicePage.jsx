@@ -16,10 +16,10 @@ const ServicePage = () => {
 
   return (
     <div>
-      <div className={`${showNav ? "invisible hidden" : "visible block"}`}>
+      <div>
         <NavBar clicked={handleNav} />
       </div>
-      <div className={`${showNav ? "hidden invisible" : "block visible"}`}>
+      <div>
         <div className="services">
           <p className="primary-font">Services</p>
           <p>
@@ -193,7 +193,7 @@ const ServicePage = () => {
           </span>
         </div>
       </div>
-      <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
+      <div>
         <NavBarLinks clicked={handleNav} />
       </div>
       <FooterComponent />

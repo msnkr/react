@@ -15,7 +15,7 @@ const AboutUsPage = () => {
 
   return (
     <div>
-      <div className={`${showNav ? "hidden invisible" : "block visible"}`}>
+      <div>
         <NavBar clicked={handleNav} />
         <div className="content-section">
           <div className="">
@@ -113,7 +113,7 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
-      <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
+      <div>
         <NavBarLinks clicked={handleNav} />
       </div>
       <FooterComponent />

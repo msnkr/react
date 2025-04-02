@@ -20,7 +20,7 @@ const ContactUsPage = () => {
   };
   return (
     <div>
-      <div className={`${showNav ? "hidden invisible" : "block visible"}`}>
+      <div>
         <NavBar clicked={handleNav} />
         <div className="">
           <div className="">
@@ -92,7 +92,7 @@ const ContactUsPage = () => {
         </div>
       </div>
 
-      <div className={`${showNav ? "visible block" : "hidden invisible"}`}>
+      <div>
         <NavBarLinks clicked={handleNav} />
       </div>
     </div>
