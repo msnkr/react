@@ -10,22 +10,7 @@
   ---cta-color: #007bff;
 }
 
-.primary-font {
+.sub-heading {
+  color: var(--primary-color);
   font-family: var(--primary-font);
-}
-
-body {
-  font-family: var(--secondary-font);
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.cta-color {
-  background-color: var(---cta-color);
-  color: white;
-}
-
-.bg-navbar-open {
-  background-color: var(--background-color);
-  color: var(--text-color);
 }

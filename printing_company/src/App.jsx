@@ -23,7 +23,7 @@ function App() {
             />
             <div className="absolute top-0 left-0 text-white flex flex-col w-full h-[450px] justify-center items-center text-center">
               <p>Passion, Pride and Precison in every Print</p>
-              <p className="text-xl primary-font">
+              <p className="">
                 High-quality litho printing for brochures, business cards,
                 boxes, desk pads, diaries, and more.
               </p>
@@ -36,8 +36,8 @@ function App() {
           </div>
         </div>
         <div className="services-section">
-          <div className="">
-            <p className=" primary-font">Our Services</p>
+          <div className="p-12 space-y-4">
+            <p className="sub-heading text-4xl">Our Services</p>
             <p>
               At Tycole Media & Print, we specialize in high-quality litho
               printing to meet your business and personal printing needs.
@@ -45,7 +45,9 @@ function App() {
               packaging solutions, we ensure every print is crafted with
               precision and excellence.
             </p>
-            <p className=" primary-font">Our printing services include </p>
+            <p className="sub-heading text-2xl">
+              Our printing services include{" "}
+            </p>
             <ServicesComponent
               text={"Brochures and Flyers"}
               image={
@@ -86,20 +88,19 @@ function App() {
         </div>
         <div className="about-section">
           <div className="">
-            <p className=" primary-font">Why choose us</p>
+            <p className="sub-heading text-4xl">Why choose us</p>
             <div className="">
               <p>
-                <span className="primary-font">Quality & Precision</span> – We
-                use advanced litho printing technology to ensure sharp, vibrant
-                prints.
+                <span className="">Quality & Precision</span> – We use advanced
+                litho printing technology to ensure sharp, vibrant prints.
               </p>
               <p>
-                <span className="primary-font">Reliable Service</span> – We take
-                pride in delivering on time and exceeding expectations.
+                <span className="">Reliable Service</span> – We take pride in
+                delivering on time and exceeding expectations.
               </p>
               <p>
-                <span className="primary-font">Affordable Pricing</span> – Get
-                high-quality prints at competitive rates.
+                <span className="">Affordable Pricing</span> – Get high-quality
+                prints at competitive rates.
               </p>
             </div>
             <div className="">
