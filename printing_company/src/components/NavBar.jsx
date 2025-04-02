@@ -13,7 +13,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className={`${showNav ? "mb-30" : ""} relative duration-500`}>
+    <div className={`${showNav ? "mb-30" : ""} relative duration-400`}>
       <div className="p-12 flex justify-between items-center">
         <div>
           <img src={logo} className="w-[200px]" />
