@@ -5,8 +5,6 @@ import NavBarLinks from "../components/NavBarLinks";
 import FooterComponent from "../components/FooterComponent";
 import CarouselComponent from "../components/CarouselComponent";
 
-import calendarOne from "../assets/images/calendar-1.jpg";
-
 const ServicePage = () => {
   const [showNav, setShowNav] = useState(false);
 
