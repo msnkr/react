@@ -20,7 +20,7 @@ const ServicePage = () => {
         <NavBar clicked={handleNav} />
       </div>
       <div className={`${showNav ? "hidden invisible" : "block visible"}`}>
-        <div className="services my-8 space-y-2 p-8">
+        <div className="services space-y-2 p-12">
           <p className="text-2xl primary-font">Services</p>
           <p>
             At Tycole Media & Print, we offer a diverse range of high-quality
@@ -31,7 +31,7 @@ const ServicePage = () => {
             time.
           </p>
         </div>
-        <div className="printing-services px-8 space-y-8">
+        <div className="printing-services px-12 space-y-8">
           <div className="space-y-4">
             <p className="text-2xl primary-font">
               1. Commercial & Corporate Printing
@@ -41,7 +41,7 @@ const ServicePage = () => {
               corporate printing solutions, ensuring professionalism and
               consistency across all materials.
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-outside">
               <li>
                 <span className="font-semibold">Business Cards</span> – Make a
                 lasting first impression with premium-quality business cards
@@ -75,7 +75,7 @@ const ServicePage = () => {
               advertising. Our range of marketing materials is designed to help
               you stand out.
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-outside">
               <li>
                 <span className="font-semibold">Brochures & Flyers</span> –
                 Informative and visually appealing print materials tailored to
@@ -107,7 +107,7 @@ const ServicePage = () => {
               perceived. We provide tailored packaging solutions that combine
               functionality with design excellence.
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-outside">
               <li>
                 <span className="font-semibold">Custom Printed Boxes</span> –
                 Ideal for retail, e-commerce, and product packaging.
@@ -132,7 +132,7 @@ const ServicePage = () => {
               Boost workplace efficiency and professionalism with custom-printed
               office supplies.
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-outside">
               <li>
                 <span className="font-semibold">Notepads & Desk Pads</span> –
                 Branded stationery to enhance office organization.
@@ -156,7 +156,7 @@ const ServicePage = () => {
               Make a bold statement with large-format printing that demands
               attention.
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-outside">
               <li>
                 <span className="font-semibold">Vehicle Branding</span> – Custom
                 decals and wraps to turn your company vehicles into mobile
@@ -182,7 +182,7 @@ const ServicePage = () => {
               Need something unique? We offer custom printing services to bring
               your vision to life.
             </p>
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-outside">
               <li>
                 <span className="font-semibold">Embossing & Foil Stamping</span>{" "}
                 – Add a touch of elegance to invitations, business cards, and
@@ -205,7 +205,7 @@ const ServicePage = () => {
         <div>
           <CarouselComponent />
         </div>
-        <div className="mt-8 p-8">
+        <div className="mt-8 p-12">
           Let’s Print Your Vision! Explore our{" "}
           <span className="font-semibold underline underline-offset-8 cursor-pointer">
             services

@@ -60,7 +60,7 @@ const AboutUsPage = () => {
               With our state-of-the-art Litho and Digital printing technology,
               we bring your designs to life with sharp details and rich colors.
               Our printing methods allow for:
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-outside">
                 <li>
                   <span className="font-semibold">Bulk Printing</span> – Ideal
                   for large-scale projects, ensuring consistency across
@@ -88,7 +88,7 @@ const AboutUsPage = () => {
               From business cards to brochures, we offer precise cutting,
               folding, and binding solutions to give your prints a professional
               and polished finish. Our range of binding options includes:
-              <ul className="list-disc list-inside">
+              <ul className="list-disc list-outside">
                 <li>
                   <span className="font-semibold">Perfect Binding</span> – Ideal
                   for books, catalogues, and annual reports.
