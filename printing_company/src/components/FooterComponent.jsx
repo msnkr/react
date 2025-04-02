@@ -8,44 +8,50 @@ const FooterComponent = () => {
   return (
     <div>
       <div className="px-12 py-8 mt-4">
-        <ul className="space-y-4">
+        <ul className="space-y-6">
           <li>
-            <div className="flex">
+            <div className="flex space-x-2 space-y-2">
               <img src={pinIcon} alt="location-icon" />
-              Address:
+              <p>Address:</p>
             </div>
-            16 Something Road, Somewhereburg, Johannesburg
-            <br />
-            Gauteng 2000
+            <p>
+              16 Something Road,
+              <br /> Somewhereburg, Johannesburg
+              <br />
+              Gauteng 2000
+            </p>
           </li>
           <li>
-            <div className="flex">
+            <div className="flex space-x-2 space-y-2">
               <img src={phoneIcon} alt="phone-icon" />
-              Telephone:
+              <p> Telephone:</p>
             </div>
-            071 234 5678
+            <p>071 234 5678</p>
           </li>
           <li>
-            <div className="flex">
+            <div className="flex space-x-2 space-y-2">
               <img src={faxIcon} alt="fax-icon" />
-              Fax:
+              <p>Fax:</p>
             </div>
-            011 345 6789
+            <p>011 345 6789</p>
           </li>
           <li>
-            <div className="flex">
+            <div className="flex space-x-2 space-y-2">
               <img src={emailIcon} alt="email-icon" />
-              Email:
+              <p> Email:</p>
             </div>
-            fake@fakeemail.com
+            <p>fake@fakeemail.com</p>
           </li>
           <li>
-            <div className="flex">
+            <div className="flex space-x-2 space-y-2">
               <img src={timeIcon} alt="time-icon" />
-              Business Hours:
+              <p>Business Hours:</p>
             </div>
-            Monday - Friday : 8:00 - 17:00 <br /> Saturday : 9:00 - 14:00 <br />{" "}
-            Sundays & Public Holidays: Closed
+            <p>
+              {" "}
+              Monday - Friday : 8:00 AM - 17:00 PM <br /> Saturday : 9:00 AM -
+              14:00 PM <br /> Sundays & Public Holidays: Closed
+            </p>
           </li>
         </ul>
       </div>
