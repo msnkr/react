@@ -34,7 +34,7 @@ const ServicePage = () => {
         <div className="printing-services px-12 space-y-8">
           <div className="space-y-4">
             <p className="text-2xl primary-font">
-              1. Commercial & Corporate Printing
+              Commercial & Corporate Printing
             </p>
             <p>
               We help businesses enhance their brand identity with high-end
@@ -68,7 +68,7 @@ const ServicePage = () => {
           </div>
           <div className="space-y-4">
             <p className="text-2xl primary-font">
-              2. Marketing & Promotional Materials
+              Marketing & Promotional Materials
             </p>
             <p>
               A strong marketing presence starts with effective print
@@ -99,9 +99,7 @@ const ServicePage = () => {
             </ul>
           </div>
           <div className="space-y-4">
-            <p className="text-2xl primary-font">
-              3. Custom Packaging Solutions
-            </p>
+            <p className="text-2xl primary-font">Custom Packaging Solutions</p>
             <p>
               Your packaging plays a crucial role in how your brand is
               perceived. We provide tailored packaging solutions that combine
@@ -126,7 +124,7 @@ const ServicePage = () => {
           </div>
           <div className="space-y-4">
             <p className="text-2xl primary-font">
-              4. Office & Stationery Printing
+              Office & Stationery Printing
             </p>
             <p>
               Boost workplace efficiency and professionalism with custom-printed
@@ -150,7 +148,7 @@ const ServicePage = () => {
           </div>
           <div className="space-y-4">
             <p className="text-2xl primary-font">
-              5. Large Format & Signage Printing
+              Large Format & Signage Printing
             </p>
             <p>
               Make a bold statement with large-format printing that demands
@@ -175,9 +173,7 @@ const ServicePage = () => {
             </ul>
           </div>
           <div className="space-y-4">
-            <p className="text-2xl primary-font">
-              6. Specialty & Custom Printing
-            </p>
+            <p className="text-2xl primary-font">Specialty & Custom Printing</p>
             <p>
               Need something unique? We offer custom printing services to bring
               your vision to life.
