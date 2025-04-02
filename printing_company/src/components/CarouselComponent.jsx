@@ -34,13 +34,13 @@ const CarouselComponent = () => {
           className="absolute top-1/2 left-8 cursor-pointer"
           onClick={handlePrev}
         >
-          <img className="w-12" src={chevronLeft} alt="left-icon" />
+          <img className="w-20" src={chevronLeft} alt="left-icon" />
         </div>
         <div
           className="absolute top-1/2 right-8 cursor-pointer"
           onClick={handleNext}
         >
-          <img className="w-12" src={chevronRight} alt="right-icon" />
+          <img className="w-20" src={chevronRight} alt="right-icon" />
         </div>
       </div>
     </div>
