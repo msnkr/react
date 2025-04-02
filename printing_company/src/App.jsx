@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <div className={`${showNav ? "invisible hidden" : "visible block"}`}>
+      <div>
         <NavBar clicked={handleNav} />
         <div className="body">
           <div className="hero-section">
@@ -151,7 +151,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className={`${showNav ? "visible block" : "invisible hidden"}`}>
+      <div>
         <NavBarLinks clicked={handleNav} />
       </div>
     </div>
