@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import NavBar from "../components/NavBar";
-import NavBarLinks from "../components/NavBarLinks";
 import FormComponent from "../components/FormComponent";
 
 import pinIcon from "../assets/pin-icon.svg";
@@ -11,17 +9,9 @@ import timeIcon from "../assets/time-icon.svg";
 import emailIcon from "../assets/email-icon.svg";
 
 const ContactUsPage = () => {
-  const [showNav, setShowNav] = useState(false);
-
-  const handleNav = () => {
-    setShowNav((prev) => {
-      return !prev;
-    });
-  };
   return (
     <div>
       <div>
-        <NavBar clicked={handleNav} />
         <div className="">
           <div className="">
             <p>
@@ -90,10 +80,6 @@ const ContactUsPage = () => {
           <div className="w-full h-[100px] bg-yellow-500"></div>
           <div className="w-full h-[100px] bg-black"></div>
         </div>
-      </div>
-
-      <div>
-        <NavBarLinks clicked={handleNav} />
       </div>
     </div>
   );

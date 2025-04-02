@@ -1,24 +1,11 @@
 import { useState } from "react";
 
-import NavBar from "../components/NavBar";
-import NavBarLinks from "../components/NavBarLinks";
 import FooterComponent from "../components/FooterComponent";
 import CarouselComponent from "../components/CarouselComponent";
 
 const ServicePage = () => {
-  const [showNav, setShowNav] = useState(false);
-
-  const handleNav = () => {
-    setShowNav((prev) => {
-      return !prev;
-    });
-  };
-
   return (
     <div>
-      <div>
-        <NavBar clicked={handleNav} />
-      </div>
       <div>
         <div className="services">
           <p className="primary-font">Services</p>
@@ -193,9 +180,7 @@ const ServicePage = () => {
           </span>
         </div>
       </div>
-      <div>
-        <NavBarLinks clicked={handleNav} />
-      </div>
+
       <FooterComponent />
     </div>
   );

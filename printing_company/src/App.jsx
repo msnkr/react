@@ -2,25 +2,14 @@ import "./App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import NavBar from "./components/NavBar";
 import ServicesComponent from "./components/servicesComponent";
 import FormComponent from "./components/FormComponent";
-import NavBarLinks from "./components/NavBarLinks";
 import FooterComponent from "./components/FooterComponent";
 
 function App() {
-  const [showNav, setShowNav] = useState(false);
-
-  const handleNav = () => {
-    setShowNav((prev) => {
-      return !prev;
-    });
-  };
-
   return (
     <div>
       <div>
-        <NavBar clicked={handleNav} />
         <div className="body">
           <div className="hero-section">
             <div className="relative">
@@ -151,9 +140,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
-        <NavBarLinks clicked={handleNav} />
-      </div>
+      <div></div>
     </div>
   );
 }
