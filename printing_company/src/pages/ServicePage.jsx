@@ -8,9 +8,9 @@ const ServicePage = () => {
       <div>
         <Navbar />
       </div>
-      <div className="services">
-        <p className="primary-font">Services</p>
-        <p>
+      <div className="services px-12">
+        <p className="headings">Services</p>
+        <p className="mt-2">
           At Tycole Media & Print, we offer a diverse range of high-quality
           printing solutions designed to meet the needs of businesses,
           individuals, and organizations. Whether you require marketing
@@ -19,138 +19,143 @@ const ServicePage = () => {
           time.
         </p>
       </div>
-      <div className="printing-services">
+      <div className="printing-services mt-12 px-12">
         <div className="">
-          <p className="primary-font">Commercial & Corporate Printing</p>
+          <p className="headings mb-2">Commercial & Corporate Printing</p>
           <p>
             We help businesses enhance their brand identity with high-end
             corporate printing solutions, ensuring professionalism and
             consistency across all materials.
           </p>
-          <ul className="list-disc list-outside">
+          <ul className="list-disc list-outside space-y-2 mt-2">
             <li>
-              <span className="">Business Cards</span> – Make a lasting first
-              impression with premium-quality business cards available in matte,
-              gloss, embossed, or foil finishes.
+              <span className="sub-headings">Business Cards</span> – Make a
+              lasting first impression with premium-quality business cards
+              available in matte, gloss, embossed, or foil finishes.
             </li>
             <li>
-              <span className="">Letterheads & Envelopes</span> – Elevate your
-              company’s correspondence with custom-branded letterheads and
-              envelopes.
+              <span className="sub-headings">Letterheads & Envelopes</span> –
+              Elevate your company’s correspondence with custom-branded
+              letterheads and envelopes.
             </li>
             <li>
-              <span className="">Annual Reports & Company Profiles</span> –
-              Professionally printed reports, ideal for investors, stakeholders,
-              and internal use.
+              <span className="sub-headings">
+                Annual Reports & Company Profiles
+              </span>{" "}
+              – Professionally printed reports, ideal for investors,
+              stakeholders, and internal use.
             </li>
             <li>
-              <span className="">Presentation Folders</span> – Keep your
-              documents organized and create a polished, branded look.
+              <span className="sub-headings">Presentation Folders</span> – Keep
+              your documents organized and create a polished, branded look.
             </li>
           </ul>
         </div>
-        <div className="">
-          <p className="primary-font">Marketing & Promotional Materials</p>
+        <div className=" mt-12">
+          <p className="headings mb-2">Marketing & Promotional Materials</p>
           <p>
             A strong marketing presence starts with effective print advertising.
             Our range of marketing materials is designed to help you stand out.
           </p>
-          <ul className="list-disc list-outside">
+          <ul className="list-disc list-outside mt-2 space-y-2">
             <li>
-              <span className="">Brochures & Flyers</span> – Informative and
-              visually appealing print materials tailored to promote your
-              products or services.
+              <span className="sub-headings">Brochures & Flyers</span> –
+              Informative and visually appealing print materials tailored to
+              promote your products or services.
             </li>
             <li>
-              <span className="">Posters & Banners</span> – High-quality,
-              large-format prints for events, advertising, or in-store
-              promotions.
+              <span className="sub-headings">Posters & Banners</span> –
+              High-quality, large-format prints for events, advertising, or
+              in-store promotions.
             </li>
             <li>
-              <span className="">Stickers & Labels</span> - Custom printed
-              labels and stickers, perfect for branding, product packaging, or
-              promotional giveaways.
+              <span className="sub-headings">Stickers & Labels</span> - Custom
+              printed labels and stickers, perfect for branding, product
+              packaging, or promotional giveaways.
             </li>
             <li>
-              <span className="">Calenders</span> – Branded wall and desk
-              calendars, great for corporate gifting and year-round brand
+              <span className="sub-headings">Calenders</span> – Branded wall and
+              desk calendars, great for corporate gifting and year-round brand
               exposure.
             </li>
           </ul>
         </div>
         <div className="">
-          <p className="primary-font">Custom Packaging Solutions</p>
+          <p className="headings mt-12 mb-2">Custom Packaging Solutions</p>
           <p>
             Your packaging plays a crucial role in how your brand is perceived.
             We provide tailored packaging solutions that combine functionality
             with design excellence.
           </p>
-          <ul className="list-disc list-outside">
+          <ul className="list-disc list-outside mt-2 space-y-2">
             <li>
-              <span className="">Custom Printed Boxes</span> – Ideal for retail,
-              e-commerce, and product packaging.
+              <span className="sub-headings">Custom Printed Boxes</span> – Ideal
+              for retail, e-commerce, and product packaging.
             </li>
             <li>
-              <span className="">Gift Bags & Packaging </span> – Stylish and
-              durable gift packaging for corporate and personal use.
+              <span className="sub-headings">Gift Bags & Packaging </span> –
+              Stylish and durable gift packaging for corporate and personal use.
             </li>
             <li>
-              <span className="">Swing Tags</span> – Essential for fashion
-              brands and retail businesses looking for premium product tags.
+              <span className="sub-headings">Swing Tags</span> – Essential for
+              fashion brands and retail businesses looking for premium product
+              tags.
             </li>
           </ul>
         </div>
         <div className="">
-          <p className="primary-font">Office & Stationery Printing</p>
+          <p className="mt-12 headings mb-2">Office & Stationery Printing</p>
           <p>
             Boost workplace efficiency and professionalism with custom-printed
             office supplies.
           </p>
-          <ul className="list-disc list-outside">
+          <ul className="list-disc list-outside mt-2 space-y-2">
             <li>
-              <span className="">Notepads & Desk Pads</span> – Branded
-              stationery to enhance office organization.
+              <span className="sub-headings">Notepads & Desk Pads</span> –
+              Branded stationery to enhance office organization.
             </li>
             <li>
-              <span className="">Diaries & Planners</span> – Custom-branded
-              organizational tools for businesses and professionals.
+              <span className="sub-headings">Diaries & Planners</span> –
+              Custom-branded organizational tools for businesses and
+              professionals.
             </li>
             <li>
-              <span className="">Forms & NCR Books</span> – Carbonless copy
-              forms for invoices, receipts, and order books.
+              <span className="sub-headings">Forms & NCR Books</span> –
+              Carbonless copy forms for invoices, receipts, and order books.
             </li>
           </ul>
         </div>
         <div className="">
-          <p className="primary-font">Large Format & Signage Printing</p>
+          <p className="mt-12 headings mb-2">Large Format & Signage Printing</p>
           <p>
             Make a bold statement with large-format printing that demands
             attention.
           </p>
-          <ul className="list-disc list-outside">
+          <ul className="list-disc list-outside mt-2 space-y-2">
             <li>
-              <span className="">Vehicle Branding</span> – Custom decals and
-              wraps to turn your company vehicles into mobile billboards.
+              <span className="sub-headings">Vehicle Branding</span> – Custom
+              decals and wraps to turn your company vehicles into mobile
+              billboards.
             </li>
             <li>
-              <span className="">Wall & Window Graphics </span> – Transform your
-              office or storefront with high-impact wall murals and window
-              decals.
+              <span className="sub-headings">Wall & Window Graphics </span> –
+              Transform your office or storefront with high-impact wall murals
+              and window decals.
             </li>
             <li>
-              <span className="">Signage & Billboards</span> – Durable,
-              weather-resistant signage solutions for outdoor and indoor
-              advertising.
+              <span className="sub-headings">Signage & Billboards</span> –
+              Durable, weather-resistant signage solutions for outdoor and
+              indoor advertising.
             </li>
           </ul>
         </div>
         <div className="">
-          <p className="primary-font">Specialty & Custom Printing</p>
+          <p className="headings mt-12 mb-2">Specialty & Custom Printing</p>
           <p>
             Need something unique? We offer custom printing services to bring
             your vision to life.
           </p>
-          <ul className="list-disc list-outside">
+          <ul className="list-disc list-outside mt-2 space-y-2 mb-12">
             <li>
               <span className="">Embossing & Foil Stamping</span> – Add a touch
               of elegance to invitations, business cards, and more.
