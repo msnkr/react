@@ -157,16 +157,16 @@ const ServicePage = () => {
           </p>
           <ul className="list-disc list-outside mt-2 space-y-2 mb-12">
             <li>
-              <span className="">Embossing & Foil Stamping</span> – Add a touch
-              of elegance to invitations, business cards, and more.
+              <span className="sub-headings">Embossing & Foil Stamping</span> –
+              Add a touch of elegance to invitations, business cards, and more.
             </li>
             <li>
-              <span className="">UV Spot Varnish</span> – Highlight specific
-              elements of your design with a glossy, raised finish.
+              <span className="sub-headings">UV Spot Varnish</span> – Highlight
+              specific elements of your design with a glossy, raised finish.
             </li>
             <li>
-              <span className="">Die-Cutting & Custom Shapes</span> – Create
-              uniquely shaped prints to stand out from the crowd.
+              <span className="sub-headings">Die-Cutting & Custom Shapes</span>{" "}
+              – Create uniquely shaped prints to stand out from the crowd.
             </li>
           </ul>
         </div>
