@@ -126,13 +126,13 @@ function App() {
             <div className=" my-12">
               Let’s Print Your Vision! Explore our{" "}
               <Link to={"/services/"}>
-                <span className="underline underline-offset-8 cursor-pointer">
+                <span className="underline underline-offset-8 cursor-pointer sub-headings">
                   services
                 </span>
               </Link>{" "}
               or Get a{" "}
               <Link to={"/contact-us/"}>
-                <span className="underline underline-offset-8 cursor-pointer">
+                <span className="underline underline-offset-8 cursor-pointer sub-headings">
                   Free Quote Today!
                 </span>
               </Link>

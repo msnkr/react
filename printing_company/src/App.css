@@ -32,3 +32,7 @@ body {
 .button-item {
   background-color: var(--primary-color);
 }
+
+.small-item {
+  font-size: 15px;
+}
