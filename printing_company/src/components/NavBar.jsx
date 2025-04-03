@@ -13,8 +13,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className={`${showNav ? "mb-30" : ""} relative duration-400`}>
-      <div className="p-12 flex justify-between items-center">
+    <div className={`${showNav ? "mb-40" : ""} relative duration-500`}>
+      <div className="px-12 pt-12 pb-0 flex justify-between items-center">
         <div>
           <img src={logo} className="w-[200px]" />
         </div>
@@ -26,8 +26,10 @@ const NavBar = () => {
       </div>
       <div
         className={`${
-          showNav ? "block visible opacity-100" : "hidden invisible opacity-0"
-        } absolute top-32 right-14`}
+          showNav
+            ? " visible opacity-100 duration-1000"
+            : " invisible opacity-0 duration-300"
+        } absolute top-32 right-14 `}
       >
         <ul className="text-right font-semibold">
           <Link to={"/"}>

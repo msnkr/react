@@ -8,7 +8,7 @@ const ServicePage = () => {
       <div>
         <Navbar />
       </div>
-      <div className="services px-12">
+      <div className="services px-12 mt-12">
         <p className="headings">Services</p>
         <p className="mt-2">
           At Tycole Media & Print, we offer a diverse range of high-quality

@@ -13,7 +13,7 @@ function App() {
       <div className="navbar">
         <NavBar />
       </div>
-      <div className="body">
+      <div className="body mt-12">
         <div className="hero-section">
           <div className="relative">
             <div className="absolute top-0 left-0 w-full h-[500px] bg-black opacity-80 "></div>
