@@ -8,7 +8,7 @@ const ServicePage = () => {
       <div>
         <Navbar />
       </div>
-      <div className="services px-12 mt-12 lg:px-42">
+      <div className="services px-12 mt-12 lg:px-42 lg:mt-40">
         <p className="headings">Services</p>
         <p className="mt-2">
           At Tycole Media & Print, we offer a diverse range of high-quality
@@ -19,7 +19,7 @@ const ServicePage = () => {
           time.
         </p>
       </div>
-      <div className="printing-services mt-12 px-12 lg:px-42">
+      <div className="printing-services mt-12 px-12 lg:px-42 ">
         <div className="">
           <p className="headings mb-2">Commercial & Corporate Printing</p>
           <p>
@@ -51,7 +51,7 @@ const ServicePage = () => {
             </li>
           </ul>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 ">
           <p className="headings mb-2">Marketing & Promotional Materials</p>
           <p>
             A strong marketing presence starts with effective print advertising.
@@ -81,7 +81,7 @@ const ServicePage = () => {
           </ul>
         </div>
         <div className="">
-          <p className="headings mt-12 mb-2">Custom Packaging Solutions</p>
+          <p className="headings mt-12 mb-2 ">Custom Packaging Solutions</p>
           <p>
             Your packaging plays a crucial role in how your brand is perceived.
             We provide tailored packaging solutions that combine functionality
@@ -104,7 +104,7 @@ const ServicePage = () => {
           </ul>
         </div>
         <div className="">
-          <p className="mt-12 headings mb-2">Office & Stationery Printing</p>
+          <p className="mt-12 headings mb-2 ">Office & Stationery Printing</p>
           <p>
             Boost workplace efficiency and professionalism with custom-printed
             office supplies.
@@ -126,7 +126,9 @@ const ServicePage = () => {
           </ul>
         </div>
         <div className="">
-          <p className="mt-12 headings mb-2">Large Format & Signage Printing</p>
+          <p className="mt-12 headings mb-2 ">
+            Large Format & Signage Printing
+          </p>
           <p>
             Make a bold statement with large-format printing that demands
             attention.
@@ -150,7 +152,7 @@ const ServicePage = () => {
           </ul>
         </div>
         <div className="">
-          <p className="headings mt-12 mb-2">Specialty & Custom Printing</p>
+          <p className="headings mt-12 mb-2 ">Specialty & Custom Printing</p>
           <p>
             Need something unique? We offer custom printing services to bring
             your vision to life.

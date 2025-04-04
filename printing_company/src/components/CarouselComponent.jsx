@@ -24,7 +24,7 @@ const CarouselComponent = () => {
   };
 
   return (
-    <div className="carousel relative">
+    <div className="carousel relative lg:mt-20">
       <div>
         <img
           className="w-full h-[400px] lg:h-dvh object-cover"

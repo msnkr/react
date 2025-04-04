@@ -13,7 +13,7 @@ const ContactUsPage = () => {
       <div>
         <Navbar />
       </div>
-      <div className="mt-12">
+      <div className="mt-12 lg:mt-40">
         <div className="px-12 lg:px-42">
           <p>
             At Tycole Media & Print, we’re here to assist you with all your
