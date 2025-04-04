@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const FormComponent = () => {
   return (
-    <div className="px-12 my-12">
+    <div className="px-12 my-12 lg:px-32">
       <div className="space-y-2">
         <div>
           <label className="small-item">Email: </label>
