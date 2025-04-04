@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <div className={`${showNav ? "mb-40" : ""} relative duration-500`}>
-      <div className="px-12 pt-12 pb-0 flex justify-between items-center">
+      <div className="px-12 pt-12 lg:px-20 lg:pt-20 pb-0 flex justify-between items-center">
         <div>
           <img src={logo} className="w-[200px]" />
         </div>
@@ -47,7 +47,7 @@ const NavBar = () => {
             </Link>
           </ul>
         </div>
-        <div className="hidden invisible lg:block lg:visible absolute top-18 right-14">
+        <div className="hidden invisible lg:block lg:visible absolute top-26 right-24">
           <ul className="text-right font-semibold flex space-x-8">
             <Link to={"/"}>
               <li className="py-1">Home</li>

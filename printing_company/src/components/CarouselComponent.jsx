@@ -27,7 +27,7 @@ const CarouselComponent = () => {
     <div className="carousel relative">
       <div>
         <img
-          className="w-full h-[400px] object-cover"
+          className="w-full h-[400px] lg:h-dvh object-cover"
           src={images[imageState]}
         />
         <div

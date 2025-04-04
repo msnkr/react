@@ -13,7 +13,7 @@ function App() {
       <div className="navbar">
         <NavBar />
       </div>
-      <div className="body mt-12">
+      <div className="body mt-12 lg:mt-20">
         <div className="hero-section">
           <div className="relative">
             <div className="absolute top-0 left-0 w-full h-[500px] bg-black opacity-80 "></div>
@@ -38,7 +38,7 @@ function App() {
           </div>
         </div>
         <div className="services-section">
-          <div className="px-12 mt-12 lg:px-32">
+          <div className="px-12 mt-12 lg:px-42 lg:mt-20">
             <p className="headings">Our Services</p>
             <p>
               At Tycole Media & Print, we specialize in high-quality litho
@@ -47,7 +47,7 @@ function App() {
               packaging solutions, we ensure every print is crafted with
               precision and excellence.
             </p>
-            <p className="my-2 headings mt-12">
+            <p className="my-2 headings mt-12 lg:mt-20">
               Our printing services include:{" "}
             </p>
             <div className="space-y-12 lg:grid grid-cols-3 gap-4">
@@ -91,7 +91,7 @@ function App() {
           </div>
         </div>
         <div className="about-section">
-          <div className="mt-20 px-12 lg:px-32">
+          <div className="mt-20 px-12 lg:px-42 lg:mt-20">
             <p className="sub-heading text-4xl my-2 headings">Why choose us</p>
             <ul className="list-disc list-outside space-y-2">
               <li>

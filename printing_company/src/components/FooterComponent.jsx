@@ -7,7 +7,7 @@ import emailIcon from "../assets/email-icon.svg";
 const FooterComponent = () => {
   return (
     <div>
-      <div className="px-12 my-12 lg:px-32">
+      <div className="px-12 my-12 lg:px-42 lg:mt-20">
         <ul className="space-y-4">
           <li>
             <div className="flex space-x-2">

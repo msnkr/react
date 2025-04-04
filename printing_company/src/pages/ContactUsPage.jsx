@@ -14,14 +14,14 @@ const ContactUsPage = () => {
         <Navbar />
       </div>
       <div className="mt-12">
-        <div className=" px-12">
+        <div className="px-12 lg:px-42">
           <p>
             At Tycole Media & Print, we’re here to assist you with all your
             printing needs. Whether you have a question, need a quote, or want
             to discuss a custom project, our team is ready to help.
           </p>
         </div>
-        <div className="px-12">
+        <div className="px-12 lg:px-42">
           <p className="headings mt-12 mb-2">Get in touch</p>
           <ul className="">
             <li>
@@ -71,7 +71,7 @@ const ContactUsPage = () => {
           </ul>
         </div>
         <div className="">
-          <p className="headings mt-12 px-12">Request A Quote</p>
+          <p className="headings mt-12 px-12 lg:px-42">Request A Quote</p>
           <FormComponent />
         </div>
       </div>

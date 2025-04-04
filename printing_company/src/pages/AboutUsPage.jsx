@@ -7,7 +7,7 @@ const AboutUsPage = () => {
       <div>
         <NavBar />
       </div>
-      <div className="content-section px-12">
+      <div className="content-section px-12 lg:px-42">
         <div className="">
           <p className="headings mt-12 mb-2">
             The Tycole Printing Process: Crafting Perfection in Every Print

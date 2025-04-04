@@ -8,7 +8,7 @@ const ServicePage = () => {
       <div>
         <Navbar />
       </div>
-      <div className="services px-12 mt-12">
+      <div className="services px-12 mt-12 lg:px-42">
         <p className="headings">Services</p>
         <p className="mt-2">
           At Tycole Media & Print, we offer a diverse range of high-quality
@@ -19,7 +19,7 @@ const ServicePage = () => {
           time.
         </p>
       </div>
-      <div className="printing-services mt-12 px-12">
+      <div className="printing-services mt-12 px-12 lg:px-42">
         <div className="">
           <p className="headings mb-2">Commercial & Corporate Printing</p>
           <p>
@@ -51,7 +51,7 @@ const ServicePage = () => {
             </li>
           </ul>
         </div>
-        <div className=" mt-12">
+        <div className="mt-12">
           <p className="headings mb-2">Marketing & Promotional Materials</p>
           <p>
             A strong marketing presence starts with effective print advertising.
